@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 # fill the structure with the themes data
 our %META;
@@ -198,6 +198,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metabatman
 
+=item metabrowser
+
 =item metacrypto
 
 =item metadilbert
@@ -234,6 +236,10 @@ The following themes are available in this version:
 =item batman
 
 The fight sound effects from the 60s serial.
+
+=item browser
+
+Some famous web browsers.
 
 =item crypto
 
@@ -719,3 +725,6 @@ schoenmaker bongo_shaftsbury maijstral achtfaden sachsa mantissa
 alice bob charlie doris eve fred ginger harry irene janet 
 # simpsons
 bart lisa marge homer maggie moe mr_burns itchy scratchy grampa ned snowball
+# browser
+mozilla netscape msie mosaic links lynx w3m opera galeon konqueror safari
+camino dillo amaya arachne omniweb planetweb voyager
