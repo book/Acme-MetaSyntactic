@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 # fill the structure with the themes data
 our %META;
@@ -200,6 +200,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metabrowser
 
+=item metabuffy
+
 =item metacrypto
 
 =item metadilbert
@@ -246,6 +248,11 @@ The fight sound effects from the 60s serial.
 =item browser
 
 Some famous web browsers.
+
+=item buffy
+
+The characters from London.pm's favorite serial.
+Courtesy of L<http://buffyology.johnhorner.nu/>.
 
 =item crypto
 
@@ -771,4 +778,9 @@ Goldfinger                      From_Russia_With_Love Dr_No
 alpha   bravo charlie  delta echo foxtrot golf  hotel  india juliet  kilo
 lima    mike  november oscar papa quebec  romeo sierra tango uniform victor
 whiskey xray  yankee   zulu
+# buffy
+Adam Angel Anya Buffy Cordelia Darla Dawn Drusilla Faith Giles Glory
+Jenny Jonathan Joyce Kendra Oz Snyder Prof_Walsh Riley Spike Tara
+The_Master The_Mayor Warren Wesley Willow Xander
+
 
