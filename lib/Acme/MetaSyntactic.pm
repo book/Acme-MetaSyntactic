@@ -177,11 +177,9 @@ There are also some class methods:
 This class method adds a new theme to the list.
 It also creates all the convenience methods needed.
 
-=item themes()
+=item themes( )
 
 Return the sorted list of all available themes.
-
-=back
 
 =back
 
