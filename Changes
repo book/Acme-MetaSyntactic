@@ -1,5 +1,9 @@
 Revision history for Acme-MetaSyntactic
 
+0.13 Sun Mar  6 21:33:00 CET 2005
+        [NEW WEEKLY THEMES 2005/03/14]
+        - loremipsum (Jérôme Fenal)
+
 0.12 Sun Mar  6 20:15:11 CET 2005
         [ENHANCEMENTS]
         - To prevent endless growth of the Acme::MetaSyntactic module,
