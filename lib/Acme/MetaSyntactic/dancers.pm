@@ -26,9 +26,6 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.12, published on March 7, 2005.
 
-Patched to contain valid identifiers in version 0.15,
-published on March 28, 2005.
-
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -115,7 +112,7 @@ Flemmimg_Flindt
 Florence_Branca
 Florence_Clerc
 Florence_Lambert
-Francoise_Legree
+Françoise_Legree
 Frederic_David
 Geraldine_Wiart
 Ghislaine_Fallou
@@ -136,7 +133,7 @@ Jacqueline_Rayet
 Jacques_Namont
 Jean_Christophe_Guerri
 Jean_Claude_Ciappara
-Jean_Francois_Creteaux
+Jean_François_Creteaux
 Jean_Guillaume_Bart
 Jean_Guizerix
 Jean_Hugues_Tanto
@@ -222,7 +219,7 @@ Peter_Van_Dijk
 Philippe_Gerbet
 Pierina_Legnani
 Pierre_Darde
-Pierre_Francois_Vilanoba
+Pierre_François_Vilanoba
 Pierre_Retif
 Rachel_Rufer
 Richard_Wilk
