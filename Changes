@@ -1,8 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
-0.06 Sun Jan 16 19:44:39 CET 2005
+0.06 Tue Jan 18 01:21:27 CET 2005
         [BIG FUX]
         - themes() didn't work correctly in scalar context.
+        [SMILL FAX]
+        - meta did issue a warning when called without arguments.
+          Rafael Garcia-Suarez provided a patch, which I modified
+          so that no args means default theme.
         [NEW WEEKLY THEME]
         - tld (Scott Lanning suggested ISO 3166 country codes)
 
