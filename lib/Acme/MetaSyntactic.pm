@@ -98,8 +98,9 @@ sub load_data {
     my $fh;
     { no strict 'refs'; $fh = *{"$theme\::DATA"}{IO}; }
 
-    my $item = undef;
+    my $item;
     my @items;
+    $$item = "";
     while(<$fh>) {
         /^#\s*(\w+.*)$/ && do {
             push @items, $item;
