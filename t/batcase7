@@ -1,0 +1,2 @@
+use Acme::MetaSyntactic;
+print metaname( batman => 1 );
