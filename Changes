@@ -1,5 +1,22 @@
 Revision history for Acme-MetaSyntactic
 
+0.05 Sun Jan 16 18:30:29 CET 2005
+        [ANNOUNCE]
+        - From now on, releases should happen on a weekly
+          basis, every monday morning (CET)... A new list every week!
+        - Email me with suggestions (and lists).
+        [STUPID ME]
+        - 0.04 was released too soon, so this version:
+          + puts the coverage back at 100% (one missing test in 0.04
+            had the coverage fall to 97.8%. Darn.)
+          + removes the compromising "log" file (which was there since 0.01)
+          + removes the "Build" file (which was there since 0.01, as well)
+        [TOOLS]
+        - script/meta is a simple front-end, useful with $EDITOR
+        [THEMES]
+        - New theme:
+          + browser (with a little help from Sébastien Aperghis-Tramoni)
+
 0.04 Sat Jan 15 10:50:00 CET 2005
         - Correct a typo in Markefile.PL (thanks to Mike Castle)
         - The method themes() returns the sorted list of available themes
@@ -13,7 +30,7 @@ Revision history for Acme-MetaSyntactic
         - New themes (the names in parentheses indicate who suggested
           the theme and/or provided the list):
           + dilbert (Sébastien Aperghis-Tramoni)
-          + donmatin (Vahe Sarkissian)
+          + donmartin (Vahe Sarkissian)
           + pynchon (David Landgren)
           + robin
 
