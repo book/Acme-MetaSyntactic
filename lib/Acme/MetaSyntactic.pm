@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 # fill the structure with the themes data
 our %META;
@@ -212,6 +212,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metafoo
 
+=item metahhgg
+
 =item metajamesbond
 
 =item metaphonetic
@@ -276,6 +278,11 @@ The characters from the popular serial.
 =item foo
 
 The classic. This is the default theme.
+
+=item hhgg
+
+Characters and other names from Douglas Adams's "Hitchicker's Guide 
+to the Galaxy" book series.
 
 =item jamesbond
 
@@ -793,3 +800,7 @@ The_Master The_Mayor Warren Wesley Willow Xander
 BBStevie bedit Bvi calvin e3 Elvis exvi elwin javi jVi Lemmy levee nvi
 Oak_Hill_vi PVIC trived tvi vigor vile vim Watcom_VI WinVi viper virus
 xvi
+# hhgg
+answer arthur babelfish beeblebrox bugblatter_beast eccentrica_gallumbits 
+fenchurch ford heartofgold jeltz kwaltz magrathea marvin milliways 
+pan_galactic_gargle_blaster slartibartfast trillian vogon wonko zaphod
