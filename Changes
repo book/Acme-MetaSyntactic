@@ -1,5 +1,38 @@
 Revision history for Acme-MetaSyntactic
 
+0.12
+        [ENHANCEMENTS]
+        - To prevent endless growth of the Acme::MetaSyntactic module,
+          and support various theme behaviours, support for subclasses
+          has been added.
+        - The first subclass is Acme::MetaSyntactic::List, which
+          reproduces the previous behaviour of selecting a number
+          of random items from a list, with no repetition until
+          the list is exhausted.
+        - The 17 existing themes have been converted to the new scheme.
+        [USAGE]
+        - Acme::MetaSyntactic is a dependency for a least one module!
+          Bot::MetaSyntactic, which is the core of the meta bot running
+          on irc://irc.perl.org/perlfr
+        [INCOMPATIBILITIES]
+        - the API has changed a little:
+          + Acme::MetaSyntactic does not has methods named after the
+            themes any more
+          + The name() method now accept the theme name as its first
+            parameter
+          + name( [ $theme, ] 0 ) now returns the full list of names
+        [COVERAGE]
+        - Code coverage is still 100%, but I had to resort to a hack
+          to achieve this feat.
+        [NEW BEHAVIOURS]
+        - Acme::MetaSyntactic::List is the classic "random item from a list"
+          that existed until now
+        [ANNOUNCE]
+        - More behaviour subclasses will follow!
+        [NEW WEEKLY THEME 2005/03/07]
+        - dancers (a birthday gift and homage to my wife, who was born
+          on March 7th, 30 years ago)
+
 0.11 Tue Feb 22 17:03:14 CET 2005
         [NEW WEEKLY THEME 2005/02/28]
         - hhgg (Aldo Calpini)
