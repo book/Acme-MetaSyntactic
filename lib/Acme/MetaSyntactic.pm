@@ -5,10 +5,10 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
+# fill the structure with the themes data
 our %META;
-
 {
   my $key;
   local $/ = '#';
@@ -79,6 +79,8 @@ sub add_theme {
     }
 }
 
+sub themes { sort keys %META }
+
 # PRIVATE HELPER SUB
 sub _add_method {
     my $theme = shift;
@@ -102,7 +104,7 @@ _add_method( $_ ) for keys %META;
 
 =head1 NAME
 
-Acme::MetaSyntactic - Themed metasyntactic variables
+Acme::MetaSyntactic - Themed metasyntactic variables names
 
 =head1 SYNOPSIS
 
@@ -164,7 +166,9 @@ If C<$theme> is omitted, the default theme is C<foo>.
 
 Return C<$count> items from the theme given in the constructor.
 
-There is also one class method:
+=back
+
+There are also some class methods:
 
 =over 4
 
@@ -172,6 +176,10 @@ There is also one class method:
 
 This class method adds a new theme to the list.
 It also creates all the convenience methods needed.
+
+=item themes()
+
+Return the sorted list of all available themes.
 
 =back
 
@@ -192,6 +200,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metabatman
 
+=item metacrypto
+
 =item metadilbert
 
 =item metadonmartin
@@ -205,6 +215,8 @@ See C<name()>. The default is the same as for the OO interface.
 =item metarobin
 
 =item metashadok
+
+=item metasimpsons
 
 =item metatoto
 
@@ -224,6 +236,11 @@ The following themes are available in this version:
 =item batman
 
 The fight sound effects from the 60s serial.
+
+=item crypto
+
+The classic characters from crypto and protocol
+communications texts.
 
 =item dilbert
 
@@ -248,15 +265,19 @@ Character names from Thomas Pynchon's books.
 =item robin
 
 Robin's exclamations, from the Batman 60's serial
-(it's a great source of metasyntac^Wsilly stuff).
+(this serial's a great source of metasyntac^Wsilly stuff).
 
 =item shadok
 
 The whole shadok vocabulary. 4 words.
 
+=item simpsons
+
+The cast of the animated series.
+
 =item toto
 
-The French metasyntactic names.
+The traditional French metasyntactic names.
 
 =back
 
@@ -324,6 +345,11 @@ but also provided a first list.
 
 The C<pynchon> list will probably grow in future versions, as
 he goes through his books.
+
+=item anonymous,
+
+who suggested Alice, Bob and friends. A little Googling provided 
+a partial list.
 
 =back
 
@@ -691,3 +717,7 @@ mordac ted phil elbonia pointy_haired_boss
 porpentine slothrop stencil profane   godolphin  yoyodyne
 waste      sferics  oedipa  mondaugen eigenvalue schlozhauer
 schoenmaker bongo_shaftsbury maijstral achtfaden sachsa mantissa
+# crypto
+alice bob charlie doris eve fred ginger harry irene janet 
+# simpsons
+bart lisa marge homer maggie moe mr_burns itchy scratchy grampa ned snowball
