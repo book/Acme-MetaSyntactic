@@ -12,6 +12,7 @@ WriteMakefile(
         'Test::More' => 0,
         'List::Util' => 0,
     },
+    EXE_FILES           => [ 'script/meta' ],
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Acme-MetaSyntactic-*' },
 );

@@ -11,6 +11,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'List::Util' => 0,
     },
+    script_files        => [ 'script/meta' ],
     add_to_cleanup      => [ 'Acme-MetaSyntactic-*' ],
 );
 
