@@ -4,7 +4,7 @@ use List::Util 'shuffle';
 use Acme::MetaSyntactic ();
 
 sub import {
-    # export the function
+    # export the metaany function
     my $callpkg = caller;
     my $meta    = Acme::MetaSyntactic::any->new;
     no strict 'refs';
@@ -29,7 +29,7 @@ Acme::MetaSyntactic::any - Items from any theme.
 =head1 DESCRIPTION
 
 This theme simply selects a theme at random from all available
-themes, and return names from it.
+themes, and returns names from it.
 
 =head1 METHODS
 
