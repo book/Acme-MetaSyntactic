@@ -1,0 +1,62 @@
+#!/usr/bin/perl 
+use strict;
+use warnings;
+use Acme::MetaSyntactic;
+use List::Util 'first';
+use Getopt::Long;
+
+my %conf = ( whitespace => 0 );
+GetOptions( \%conf, "whitespace|ws!" )
+  or die << 'EOT';
+Available options:
+  --whitespace      : return metasyntactical names separated by whitespace
+EOT
+
+$\ = $/;
+my $sep = $conf{whitespace} ? ' ' : $\;
+
+my $theme = shift;
+die "Theme '$theme' does not exist!\n"
+  . "Available themes: @{[ Acme::MetaSyntactic->themes ]}\n"
+  unless first { $_ eq $theme } Acme::MetaSyntactic->themes;
+
+my $meta = Acme::MetaSyntactic->new( $theme );
+print join $sep, $meta->name( shift || 1 );
+
+__END__
+
+=head1 NAME
+
+meta - A simple front-end to Acme::MetaSyntactic
+
+=head1 SYNOPSIS
+
+B<meta> [ I<--whitespace|ws> ] I<theme> [ I<count> ]
+
+=head1 DESCRIPTION
+
+B<meta> is a simple front-end to Acme::MetaSyntactic.
+
+A few examples should make it easy to understand what it does and how
+it works:
+
+    $ meta batman
+    powie
+    $ meta donmartin 3
+    kloong
+    thoof_foing
+    weeooweeeoooo
+    $ meta -ws browser 4
+    arachne netscape voyager w3m
+
+=head1 AUTHOR
+
+Philippe "BooK" Bruhat, C<< <book@cpan.org> >>.
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2005 Philippe 'BooK' Bruhat, All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
