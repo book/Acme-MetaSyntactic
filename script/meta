@@ -5,11 +5,17 @@ use Acme::MetaSyntactic;
 use Getopt::Long;
 
 my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!" )
+GetOptions( \%conf, "whitespace|ws!", "version" )
   or die << 'EOT';
 Available options:
   --whitespace      : return metasyntactical names separated by whitespace
+  --version         : print version information and exit
 EOT
+
+if( $conf{version} ) {
+    print "meta, a simple front-end to Acme::MetaSyntactic version $Acme::MetaSyntactic::VERSION\n";
+    exit;
+}
 
 $\ = $/;
 my $sep = $conf{whitespace} ? ' ' : $\;
@@ -20,7 +26,9 @@ die "Theme '$theme' does not exist!\n"
   unless Acme::MetaSyntactic->has_theme( $theme );
 
 my $meta = Acme::MetaSyntactic->new( $theme );
-print join $sep, $meta->name( shift || 1 );
+my $count = shift;
+$count = 1 unless defined $count;
+print join $sep, $meta->name( $count );
 
 __END__
 
