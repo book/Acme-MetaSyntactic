@@ -7,7 +7,7 @@ __PACKAGE__->init();
 
 =head1 NAME
 
-Acme::MetaSyntactic::pumpking - The pumpking theme
+Acme::MetaSyntactic::pumpkings - The pumpkings theme
 
 =head1 DESCRIPTION
 
