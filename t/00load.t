@@ -1,8 +1,9 @@
-use Test::More tests => 1;
+use Test::More;
 
-BEGIN {
-use_ok( 'Acme::MetaSyntactic' );
-}
+my @modules = qw(
+    Acme::MetaSyntactic
+    Acme::MetaSyntactic::List
+);
 
-diag( "Testing Acme::MetaSyntactic $Acme::MetaSyntactic::VERSION" );
-diag( "Available themes: @{[ sort keys %Acme::MetaSyntactic::META ]}" );
+plan tests => scalar @modules;
+use_ok( $_ ) for @modules;
