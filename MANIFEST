@@ -14,6 +14,7 @@ lib/Acme/MetaSyntactic/foo.pm
 lib/Acme/MetaSyntactic/hhgg.pm
 lib/Acme/MetaSyntactic/jamesbond.pm
 lib/Acme/MetaSyntactic/List.pm
+lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pynchon.pm
 lib/Acme/MetaSyntactic/robin.pm

@@ -3,9 +3,9 @@ Revision history for Acme-MetaSyntactic
 0.12 Sun Mar  6 20:15:11 CET 2005
         [ENHANCEMENTS]
         - To prevent endless growth of the Acme::MetaSyntactic module,
-          and support various theme behaviours, support for behaviour
-          classes has been added.
-        - The first behaviour class is Acme::MetaSyntactic::List, which
+          and support various theme behaviours, support for subclasses
+          has been added.
+        - The first subclass is Acme::MetaSyntactic::List, which
           reproduces the previous behaviour of selecting a number
           of random items from a list, with no repetition until
           the list is exhausted.
@@ -30,7 +30,7 @@ Revision history for Acme-MetaSyntactic
         [ANNOUNCE]
         - More behaviour subclasses will follow!
         [NEW WEEKLY THEMES 2005/03/07]
-        - any     [a metatheme (!) that returns names from a random theme]
+        - any     [a metatheme(!) that returns names from a random theme]
         - dancers [a birthday gift and homage to my wife,
                    who was born on March 7th, 30 years ago]
 
