@@ -417,8 +417,19 @@ Don Martin's comic-books) and provided a link to a comprehensive list.
 
 =item Sébastien Aperghis-Tramoni,
 
-who actually uses it, to do what he thinks is the only sensible thing
+who actually uses it, to do what he thinks is the only logical thing
 to do with Acme::MetaSyntactic: an IRC bot! See L<Bot::MetaSyntactic>.
+
+    #perlfr Sat Mar  5 01:15 CET 2005
+    <Maddingue> BooK: bon, l'API de AMS, tu l'as changé alors ?
+    <BooK> je sais pas
+    <Maddingue> comment on fait pour invoquer ton merder 
+    <BooK> ca se mélange dans ma tete
+    <BooK> je peux te montrer des use case
+    <Maddingue> je veux juste savoir si tu vas changer la commande meta
+    <Maddingue> BooK: parce que j'ai fais la seule chose qui me semblait
+                logique de faire avec ton module
+    <BooK> un robot irc
 
 =back
 
