@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 our %META = (
     foo => [
@@ -44,14 +44,34 @@ our %META = (
     ],
     toto => [ qw( toto titi tata tutu pipo ) ],
 );
+our $Theme = 'foo'; # the default functional theme
+
+my $imported = 0;
+my @callers = ();
+sub import {
+    my $class = shift;
+    $Theme = shift if @_;
+
+    my $callpkg = caller;
+    push @callers, $callpkg;
+    $imported++;
+
+    for my $theme ( "name", keys %META ) {
+        no strict 'refs';
+        *{"$callpkg\::meta$theme"} = \&{"meta$theme"};
+    }
+}
 
 sub new {
-    my ( $class, $theme ) = ( @_, "foo" ); # dumb default
+    my ( $class, $theme ) = ( @_, $Theme ); # same default everywhere
 
     # defer croaking until name() is actually called
 
     bless { theme => $theme, cache => {} }, $class;
 }
+
+# the functions actually hide an instance
+my $meta = Acme::MetaSyntactic->new( $Theme );
 
 # PRIVATE
 sub _name {
@@ -62,7 +82,7 @@ sub _name {
       unless exists $META{$theme};
 
     my $list = $self->{cache}{$theme} ||= [];
-    push @$list, shuffle @{ $META{$theme} } if @$list < $count;
+    push @$list, shuffle @{ $META{$theme} } while @$list < $count;
 
     splice( @$list, 0, $count );
 }
@@ -71,6 +91,7 @@ sub name {
     my $self = shift; 
     $self->_name( $self->{theme}, @_ );
 }
+sub metaname { $meta->_name( $Theme, @_ ) };
 
 # CLASS METHOD
 sub add_theme {
@@ -90,6 +111,12 @@ sub _add_method {
     *{$theme} = sub {
         my $self = shift; 
         $self->_name( $theme, @_ );
+    };
+    *{"meta$theme"} = sub { $meta->_name( $theme, @_ ) };
+    if( $imported ) {
+        for my $pkg ( @callers ) {
+            *{"$pkg\::meta$theme"} = \&{"meta$theme"};
+        }
     }
 }
 
@@ -110,12 +137,25 @@ Acme::MetaSyntactic - Themed metasyntactic variables
 
     my $meta = Acme::MetaSyntactic->new( 'shadok' );
     
-    $meta->name;      # return a single name (at random) from the theme
-    $meta->name( 4 ); # return 4 distinct names
+    print $meta->name;            # return a single name
+    my @names = $meta->name( 4 ); # return 4 distinct names (if possible)
 
     # you can temporarily switch theme (NOT RECOMMENDED)
-    $meta->foo;       # return 1 name from theme foo
-    $meta->foo(2);    # return 2 names from theme foo
+    my $foo = $meta->foo;       # return 1 name from theme foo
+    my @foo = $meta->foo(2);    # return 2 names from theme foo
+
+
+    # but why would you need an instance variable?
+    use Acme::MetaSyntactic 'batman';
+
+    print metaname;
+    my @names = metaname( 4 );
+
+    # the convenience functions are still here:
+    print join $/, metabatman( 5 );
+
+    # but a one-liner is even better
+    perl -MAcme::MetaSyntactic=batman -le 'print metaname'
 
 =head1 DESCRIPTION
 
@@ -169,7 +209,26 @@ after the theme.
 
 =head1 FUNCTIONS
 
-The functional interface will be implemented in version 0.02.
+The functional interface provides the following functions:
+
+=over 4
+
+=item metaname( $count )
+
+See C<name()>. The default is the same as for the OO interface.
+
+=item metabatman
+=item metaflintstones
+=item metafoo
+=item metashadok
+=item metatoto
+
+The convenience functions are exported as expected.
+
+If new themes are added with the C<add_theme()> class method, the
+convenience functions will be created (and exported) as well.
+
+=back
 
 =head1 THEMES
 
@@ -234,7 +293,8 @@ See L<http://use.perl.org/~BooK/journal/22301>.
 
 =item Rafael Garcia-Suarez,
 
-who apparently plans to use it.
+who apparently plans to use it. Especially now that it's usable in
+one-liners.
 
 =back
 
