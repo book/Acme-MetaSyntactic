@@ -1,7 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
-0.01    Fri Jan 14 00:32:02 CET 2005
-        First version, with only an OO interface.
+0.02 Fri Jan 14 01:50:42 CET 2005
+        - The module now exports all meta* functions.
+        - If many items are requested, the module will supply as many
+          as requested, as randomly as possible.
 
-        Themes: batman, flintstones, foo, shadok, toto.
+0.01 Fri Jan 14 00:32:02 CET 2005
+        - First version, with only an OO interface.
+
+         Themes: batman, flintstones, foo, shadok, toto.
 
