@@ -6,7 +6,7 @@ use Carp;
 use File::Basename;
 use File::Spec;
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 # some class data
 our $Theme = 'foo'; # default theme
@@ -54,10 +54,13 @@ sub import {
 }
 
 sub new {
-    my ( $class, $theme ) = ( @_, $Theme ); # same default everywhere
+    my ( $class, @args ) = ( @_ );
+    my $theme;
+    $theme = shift @args if @args % 2;
+    $theme = $Theme unless $theme; # same default everywhere
 
     # defer croaking until name() is actually called
-    bless { theme => $theme, meta => {} }, $class;
+    bless { theme => $theme, args => \@args, meta => {} }, $class;
 }
 
 # CLASS METHODS
@@ -148,7 +151,8 @@ sub name {
             croak $@ if $@;
             $META{$theme} = 1; # loaded
         }
-        $self->{meta}{$theme} = "Acme::MetaSyntactic::$theme"->new;
+        $self->{meta}{$theme} =
+          "Acme::MetaSyntactic::$theme"->new( @{ $self->{args} } );
     }
 
     $self->{meta}{$theme}->name( $count );
@@ -240,7 +244,8 @@ the theme is the one passed to the constructor.
 If C<$count> is omitted, it defaults to C<1>.
 
 If C<$count> is C<0>, the whole list is returned (this may vary depending
-on the "beahaviour" of the theme).
+on the "behaviour" of the theme) in list context, and the size of the
+list in scalar context.
 
 =back
 
