@@ -1,7 +1,8 @@
+use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 
-plan tests => 6;
+plan tests => 8;
 
 SHADOK: {
     my $meta = Acme::MetaSyntactic->new('shadok');
@@ -30,6 +31,23 @@ NOTEXIST: {
         qr/Metasyntactic list nonexistent does not exist!/,
         "Non-existent theme"
     );
+}
+
+MORE: {
+    my $meta = Acme::MetaSyntactic->new('shadok');
+    my %seen;
+
+    my %test;
+    @test{ qw( ga bu zo meu ) } = (1) x 4;
+
+    my @names;
+    push @names, $meta->name( 5 );
+    is( scalar @names, 5, "name() returned five items out of 4" );
+
+    $test{$names[-1]}++;
+
+    $seen{$_}++ for @names;
+    is_deeply( \%seen, \%test, "Got one item twice" );
 }
 
 DEFAULT: {
