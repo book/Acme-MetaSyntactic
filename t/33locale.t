@@ -6,7 +6,7 @@ use Acme::MetaSyntactic;
 END {
     my @langs = Acme::MetaSyntactic::digits->languages();
 
-    plan tests => 3 * ( @langs + 1 ) + 1;
+    plan tests => 4 * ( @langs + 1 ) + 1;
 
     is_deeply( [ sort @langs ], [ qw( en fr it yi ) ], "All languages" );
 
@@ -14,6 +14,7 @@ END {
         my $meta   = Acme::MetaSyntactic::digits->new(@$args);
         my $lang   = $args->[1] || 'en';
         my @digits = $meta->name;
+        is( $meta->lang, $lang, "lang() is $lang" );
         is( @digits, 1, "Single item ($lang)" );
         @digits = $meta->name(4);
         is( @digits, 4, "Four items ($lang)" );
