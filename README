@@ -15,6 +15,13 @@ Here is Acme::MetaSyntactic, designed to fulfill your metasyntactic
 needs. No more will you scratch your head in search of a good variable
 name!
 
+UPDATE
+
+As from January 17, 2005, the module is updated every week with a new
+list. If you think a important list is missing from the module, please
+send it to me. If you think something's missing from a list, please
+send me a patch.
+
 INSTALL
 
 To install this module, run the following commands:
