@@ -2,7 +2,7 @@ use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 
-plan tests => 6;
+plan tests => 7;
 
 my @bots = qw( purl url sarko bender );
 my $meta = Acme::MetaSyntactic->new( 'bots' );
@@ -30,3 +30,9 @@ ok( exists( $seen{$_} ), "the bots() method" ) for @names;
 
 is_deeply( [ sort @themes, "bots" ], [ Acme::MetaSyntactic->themes ],
   "Themes list updated" );
+
+is(
+    scalar Acme::MetaSyntactic->themes,
+    scalar @{ [ Acme::MetaSyntactic->themes ] },
+    "themes() works in scalar context"
+);

@@ -1,5 +1,11 @@
 Revision history for Acme-MetaSyntactic
 
+0.06 Sun Jan 16 19:44:39 CET 2005
+        [BIG FUX]
+        - themes() didn't work correctly in scalar context.
+        [NEW WEEKLY THEME]
+        - tld (Scott Lanning suggested ISO 3166 country codes)
+
 0.05 Sun Jan 16 18:30:29 CET 2005
         [ANNOUNCE]
         - From now on, releases should happen on a weekly
