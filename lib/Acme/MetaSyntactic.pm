@@ -99,8 +99,10 @@ sub load_data {
     { no strict 'refs'; $fh = *{"$theme\::DATA"}{IO}; }
 
     my $item = undef;
+    my @items;
     while(<$fh>) {
         /^#\s*(\w+.*)$/ && do {
+            push @items, $item;
             $item = $data;
             my $last;
             my @keys = split /\s+/, $1;
@@ -109,6 +111,12 @@ sub load_data {
             next;
         };
         $$item .= $_;
+    }
+    # clean up the items
+    for( @items, $item ) {
+        $$_ =~ s/\A\s*//;
+        $$_ =~ s/\s*\z//;
+        $$_ =~ s/\s+/ /g;
     }
     return $data;
 }
