@@ -20,6 +20,10 @@ Rafael Garcia-Suarez.
 
 Introduced in version 0.09, published on February 7, 2005.
 
+=head1 SEE ALSO
+
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
+
 =cut
 
 __DATA__

@@ -21,7 +21,7 @@ Introduced in version 0.07 (heh), published on January 31, 2005.
 
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 =cut
 

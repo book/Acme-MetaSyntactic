@@ -20,9 +20,11 @@ Aldo Calpini.
 
 Introduced in version 0.11, published on February 28, 2005.
 
+Updated by Philippe "BooK" Bruhat in version 0.14, published on March 21, 2005.
+
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 =cut
 
@@ -31,3 +33,4 @@ __DATA__
 answer arthur babelfish beeblebrox bugblatter_beast eccentrica_gallumbits 
 fenchurch ford heartofgold jeltz kwaltz magrathea marvin milliways 
 pan_galactic_gargle_blaster slartibartfast trillian vogon wonko zaphod
+fortytwo

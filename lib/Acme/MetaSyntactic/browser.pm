@@ -19,6 +19,10 @@ Philippe "BooK" Bruhat, Sébastien Aperghis-Tramoni.
 
 Introduced in version 0.05, published on January 16, 2005.
 
+=head1 SEE ALSO
+
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
+
 =cut
 
 __DATA__

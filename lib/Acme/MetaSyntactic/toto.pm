@@ -19,7 +19,7 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.01, published on January 14, 2005.
 
-Updated in 0.12, thanks to Jérôme Fenal.
+Updated by Jérôme Fenal in version 0.12, published on March 7, 2005.
 
 =head1 SEE ALSO
 

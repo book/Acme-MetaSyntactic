@@ -26,6 +26,10 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.12, published on March 7, 2005.
 
+=head1 SEE ALSO
+
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
+
 =head1 PRIVATE MESSAGES
 
 Happy birthday!

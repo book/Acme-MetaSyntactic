@@ -29,7 +29,7 @@ Introduced in version 0.13, published on March 14, 2005.
 
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 =cut
 
