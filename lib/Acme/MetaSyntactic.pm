@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 # fill the structure with the themes data
 our %META;
@@ -212,6 +212,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metajamesbond
 
+=item metaphonetic
+
 =item metapynchon
 
 =item metarobin
@@ -269,6 +271,10 @@ The classic. This is the default theme.
 =item jamesbond
 
 The list of James Bond movies.
+
+=item phonetic
+
+The NATO official phonetic alphabet.
 
 =item pynchon
 
@@ -761,3 +767,8 @@ For_Your_Eyes_Only              Moonraker             The_Spy_Who_Loved_Me
 The_Man_With_the_Golden_Gun     Live_and_Let_Die      Diamonds_Are_Forever  
 On_Her_Majesty_s_Secret_Service You_Only_Live_Twice   Thunderball     
 Goldfinger                      From_Russia_With_Love Dr_No
+# phonetic
+alpha   bravo charlie  delta echo foxtrot golf  hotel  india juliet  kilo
+lima    mike  november oscar papa quebec  romeo sierra tango uniform victor
+whiskey xray  yankee   zulu
+
