@@ -1,6 +1,6 @@
 Revision history for Acme-MetaSyntactic
 
-0.12
+0.12 Sun Mar  6 20:15:11 CET 2005
         [ENHANCEMENTS]
         - To prevent endless growth of the Acme::MetaSyntactic module,
           and support various theme behaviours, support for subclasses
@@ -12,8 +12,8 @@ Revision history for Acme-MetaSyntactic
         - The 17 existing themes have been converted to the new scheme.
         [USAGE]
         - Acme::MetaSyntactic is a dependency for a least one module!
-          Bot::MetaSyntactic, which is the core of the meta bot running
-          on irc://irc.perl.org/perlfr
+          Praise Bot::MetaSyntactic, which is the core of the meta bot
+          running on irc://irc.perl.org/perlfr
         [INCOMPATIBILITIES]
         - the API has changed a little:
           + Acme::MetaSyntactic does not has methods named after the
@@ -29,9 +29,10 @@ Revision history for Acme-MetaSyntactic
           that existed until now
         [ANNOUNCE]
         - More behaviour subclasses will follow!
-        [NEW WEEKLY THEME 2005/03/07]
-        - dancers (a birthday gift and homage to my wife, who was born
-          on March 7th, 30 years ago)
+        [NEW WEEKLY THEMES 2005/03/07]
+        - any     [a metatheme(!) that returns names from a random theme]
+        - dancers [a birthday gift and homage to my wife,
+                   who was born on March 7th, 30 years ago]
 
 0.11 Tue Feb 22 17:03:14 CET 2005
         [NEW WEEKLY THEME 2005/02/28]
