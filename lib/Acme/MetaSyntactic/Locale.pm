@@ -2,6 +2,7 @@ package Acme::MetaSyntactic::Locale;
 use strict;
 use Acme::MetaSyntactic (); # do not export metaname and friends
 use List::Util qw( shuffle );
+use Carp;
 
 sub init {
     my $class = caller(0);
@@ -11,6 +12,7 @@ sub init {
     for my $lang ( keys %{ $data->{names} } ) {
         @{${"$class\::Locale"}{$lang}} = split /\s+/, $data->{names}{$lang};
     }
+    croak "$class defines no default language" unless $data->{default};
     ${"$class\::Default"} = $data->{default};
 
     # export the function
@@ -74,7 +76,7 @@ sub lang { $_[0]->{lang} }
 
 sub languages {
     my $class = shift;
-    $class = ref( $class ) || $class;
+    $class = ref $class if ref $class;
 
     no strict 'refs';
     return keys %{"$class\::Locale"};
