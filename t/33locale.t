@@ -6,9 +6,16 @@ use Acme::MetaSyntactic;
 END {
     my @langs = Acme::MetaSyntactic::digits->languages();
 
-    plan tests => 4 * ( @langs + 1 ) + 1;
+    plan tests => 4 * ( @langs + 1 ) + 3;
 
-    is_deeply( [ sort @langs ], [ qw( en fr it yi ) ], "All languages" );
+    my %items = map { $_ => 1 } @{ $Acme::MetaSyntactic::digits::Locale{en} };
+    ok( exists $items{ metadigits() }, "Got a digit from the list" );
+
+    is_deeply( [ sort @langs ], [qw( en fr it yi )], "All languages (class)" );
+
+    @langs = Acme::MetaSyntactic::digits->new()->languages();
+    is_deeply( [ sort @langs ],
+        [qw( en fr it yi )], "All languages (instance)" );
 
     for my $args ( [], map { [ lang => $_ ] } @langs ) {
         my $meta   = Acme::MetaSyntactic::digits->new(@$args);
