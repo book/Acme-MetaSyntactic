@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Acme::MetaSyntactic',
-    AUTHOR              => 'Philippe 'BooK' Bruhat <book@cpan.org>',
+    AUTHOR              => 'Philippe "BooK" Bruhat <book@cpan.org>',
     VERSION_FROM        => 'lib/Acme/MetaSyntactic.pm',
     ABSTRACT_FROM       => 'lib/Acme/MetaSyntactic.pm',
     PL_FILES            => {},
