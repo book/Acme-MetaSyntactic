@@ -5,7 +5,7 @@ use warnings;
 use Carp;
 use List::Util qw( shuffle );
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 # fill the structure with the themes data
 our %META;
@@ -228,6 +228,8 @@ See C<name()>. The default is the same as for the OO interface.
 
 =item metatoto
 
+=item metaviclones
+
 The convenience functions are exported as expected.
 
 If new themes are added with the C<add_theme()> class method, the
@@ -307,6 +309,11 @@ The list of top-level domainnames.
 =item toto
 
 The traditional French metasyntactic names.
+
+=item viclones
+
+A list of B<vi> clones, as maintained by Sven Guckes on
+L<http://www.saki.com.au/mirror/vi/clones.php3>.
 
 =back
 
@@ -782,5 +789,7 @@ whiskey xray  yankee   zulu
 Adam Angel Anya Buffy Cordelia Darla Dawn Drusilla Faith Giles Glory
 Jenny Jonathan Joyce Kendra Oz Snyder Prof_Walsh Riley Spike Tara
 The_Master The_Mayor Warren Wesley Willow Xander
-
-
+# viclones
+BBStevie bedit Bvi calvin e3 Elvis exvi elwin javi jVi Lemmy levee nvi
+Oak_Hill_vi PVIC trived tvi vigor vile vim Watcom_VI WinVi viper virus
+xvi
