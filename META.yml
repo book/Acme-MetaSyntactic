@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Acme-MetaSyntactic
-version: 0.04
+version: 0.05
 author:
   - Philippe "BooK" Bruhat <book@cpan.org>
 abstract: Themed metasyntactic variables names
@@ -11,5 +11,5 @@ requires:
 provides:
   Acme::MetaSyntactic:
     file: lib/Acme/MetaSyntactic.pm
-    version: 0.04
+    version: 0.05
 generated_by: Module::Build version 0.26
