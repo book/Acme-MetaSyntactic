@@ -5,6 +5,7 @@ CVS/.*
 \.tgz$
 \.tar\.gz$
 \.SKIP$
+^\.lwpcookies$
 ^mess/
 ^tmp/
 ^blib/
