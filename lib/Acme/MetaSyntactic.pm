@@ -274,19 +274,23 @@ following data:
 
     # names
     bam zowie plonk
+    powie kapow
     # multi level
-    abc def
+      abc    def
+    # empty
     # multi lingual
     fr de
 
-C<load_data()> will return the following data structure:
+C<load_data()> will return the following data structure (the string
+is trimmed, newlines and duplicate whitespace characters are squashed):
 
     {
-        names => "bam zowie plonk\n",
+        names => "bam zowie plonk powie kapow",
         multi => {
-            level   => "abc def\n",
-            lingual => "fr de\n",
-        }
+            level   => "abc def",
+            lingual => "fr de",
+        },
+        empty => ""
     }
 
 For example, Acme::MetaSyntactic::List uses the single parameter C<names>
