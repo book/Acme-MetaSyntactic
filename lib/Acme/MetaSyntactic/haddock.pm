@@ -1,0 +1,149 @@
+package Acme::MetaSyntactic::haddock;
+use strict;
+use Acme::MetaSyntactic::Locale;
+our @ISA = qw( Acme::MetaSyntactic::Locale );
+__PACKAGE__->init();
+1;
+
+=head1 NAME
+
+Acme::MetaSyntactic::haddock - Tintin's Captain Haddock fierce expressions
+
+=head1 DESCRIPTION
+
+Captain Haddock's expressions from the comic-book I<Tintin et Milou>,
+by Hergé.
+
+The French list comes from L<http://www.bdenvrac.com/doc/tinsultes.html>.
+
+The English list was compiled 
+from L<http://members.fortunecity.com/tintinsnowy/characters/abuses.html>
+and L<http://www.tintinologist.org/guides/lists/curses.html>.
+
+Tintin was translated in many languages, please send my your lists.
+
+=head1 CONTRIBUTOR
+
+Jérôme Fenal.
+
+Introduced in version 0.15, published on March 28, 2005.
+
+=head1 SEE ALSO
+
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::Locale>.
+
+=cut
+
+__DATA__
+# default
+fr
+# names fr
+Accapareur Amiral_de_bateau_lavoir Amphitryon Anacoluthe
+Analphabete Analphabete_diplome Anthropophage Anthropopitheque Apache
+Apprenti_dictateur_a_la_noix_de_coco Arlequin Astronaute_d_eau_douce
+Athlete_complet Autocrate Autodidacte Azteque Babouin Bachi_bouzouk
+Bande_de_Ku_Klux_Klans Bandit Barbare Bayadere_de_carnaval Bibendum
+Boit_sans_soif Bougre_de_creme_d_emplatre_a_la_graisse_de_herisson
+Bougre_de_faux_jetons_a_la_sauce_tartare Bougre_de_jets_d_eau_ambulants
+Bougre_de_malappris Bougre_de_sauvage Brontosaure Brute
+Bulldozer_a_reaction Canaille Canaque Cannibale Cannibale_emplume
+Casse_pieds Catachrese Cataplasme Cercopitheque Chauffard Chenapan
+Cholera Chouette_mal_empaillee Cloporte Coleoptere Coloquinte Coquin
+Cornemuse Cornichon Cornichon_diplome Corsaire Coupe_jarret Cow_boy
+Creme_d_emplatre Cretin_de_l_Himalaya Cretin_des_Alpes Cretin_des_Balcans
+Cromagnon Cyanure Cyclone Cyclotron Cyrano_a_quatre_pattes Demon
+Diablesse Diplodocus Doryphore Dynamiteur Ecornifleur Ecraseur Ectoplasme
+Ectoplasme_a_roulettes Egoiste Emplatre Emplatre_a_la_creme_de_herisson
+Empoisonneur Energumene Enrage Epouvantail Esclavagiste Escogriffe Escroc
+Espece_de_bayadere_de_carnaval Espece_de_projectile_guide Espece_de_zouave
+Fatma_de_prisunic Faux_jeton Flibustier Flibustier_de_carnaval Forban
+Freres_de_la_cote Froussard Galopin Gangster Garde_cote_a_la_mie_de_pain
+Gargarisme Garnement Gibier_de_potence Gredin Grenouille
+Gros_plein_de_soupe Grotesque_polichinelle Gyroscope Heretique Hors_la_loi
+Hurluberlu Hydrocarbure Iconoclaste Invertebre Ivrogne Jet_d_eau_ambulant
+Jocrisse Judas Jus_de_reglisse Khroumirs Lache Lascar Logarithme
+Loup_garou_a_la_graisse_de_renoncule_de_mille_tonnerres_de_Brest Macaque
+Macrocephale Malappris Malotru Mamelouk Marchand_de_tapis_ou_de_guano
+Marin_d_eau_douce Megacycle Megalomane Mercanti Mercenaire Merinos
+Merinos_mal_peigne Mille_marmottes Mille_millions_de_mille_sabords
+Mille_sabords Mille_tonnerres Miserable Mitrailleur_a_bavette Mouchard
+Moujiks Moule_a_gaufre Moussaillon Mufle Mussolini_de_carnaval
+Naufrageur Negrier Noix_de_coco Nyctalope Olibrius Ophicleide
+Ornithorynque Orycterope Ostrogoth Ours_mal_leche Pacte_a_quatre
+Pantoufle Papou Papou_des_Carpathes Paranoiaque Parasite Patagon
+Patapouf Patate Peaux_rouges Peronnelle Perroquet_bavard Phenomene
+Phlebotome Phylloxera Pignouf Pirate_d_eau_douce Pirate_du_ciel Polygraphe
+Porc_epic_mal_embouche Poussiere Profiteur Projectile_guide Protozoaire
+Pyromane Pyrophore Que_le_grand_cric_me_croque Rapace Rat Ravachol
+Renegat Rhizopode Rocambole Sacripant Sajou Saltimbanque Sapajou
+Sapristi Satrape Sauvage Sauvage_d_aerolithe Scelerat Schizophrene
+Scolopendre Scorpion Serpent Simili_Martien_a_la_graisse_de_cabestan
+Sinapisme Soulographe Tchouck_tchouck_nougat Technocrate Terroriste
+Tete_de_lard Tete_de_mule Tigresse Tonnerre_de_Brest Topinambour
+Tortionnaire Trafiquant_de_chair_humaine Traine_potence Traitre
+Troglodyte Trompe_la_mort Vampire Vandale Va_nu_pieds Vaurien
+Vegetarien Vercingetorix_de_carnaval Ver_de_terre Vermicelle
+Vermine Vieille_perruche_bavarde Vieux_cachalot Vipere Visigoth
+Vivisectionniste Voleur Voleur_d_enfants Zapoteque Zebre Zigomar Zouave
+Zouave_interplanetaire Zoulou
+# names en
+Aardvark Abecedarians Abominable_Snowman Aborigine
+Addle_pated_lumps_of_anthracite Anachronisms Anacoluthon
+Anacoluthons Anamorphic_aardvark Anthracite Anthropithecus
+Anthropophagus Artichoke Artichokes Autocrats Aztecs Baboon Baboons
+Baby_snatchers Bagpipers Bald_headed_budgerigar Balkan_beetle
+Bandit Bandits Bashi_bazouk Bashi_bazouks Beast Beastly_things
+Beasts Belemnite Billions_of_Bilious_Blue_Blistering_Barnacles
+Billions_of_billious_barbecued_blue_blistering_barnacles
+Billions_of_Blue_Blistering_Barnacles Blackamoor Black_beetles
+Blackbird Blackguard Blackguards Black_marketeers Black_Marketers
+Blistereing_blundering_birdbrain Blistering_Barnacles Bloodsuckers
+Blue_blistering_barnacles Blue_Blistering_Bell_Bottomed_Balderdash
+Blunderbuss Bodysnatcher Body_snatcher Bollard Bone_idle_builder
+Bootlegger Borgia Bottled_bilge_water Bougainvillea Brat Breathalyser
+Brigand Brigands Brontosaurus Brutes Bucaneers Buccaneer Bully
+Butcher Butchers Cachinnating_cockatoo Cannibal Cannibals
+Carpathian_caterpillar Carpet_seller Carpetsellers Caterpillars
+Centipede Cercopithecus Cheat Clever_dick Cockleshell Coconuts
+Coelacanth Coelcanth Coleoptera Colocynths Corsair Cowards Crabapples
+Crab_apples Crackpot_contraption Cro_Magnon Crooks Cry_babies
+ctatorial_duck_billed_diplodocus Cushion_footed_quadrupeds Cyclone
+Cyclotron Diplodocus Dipsomaniac Dizzards Dogs Doryphore Doryphores
+Duck_billed_platypus Dunderheaded_coconuts Dunder_headed_Ethelreds
+Dynamiter Ectoplasm Ectoplasmic_by_product Ectoplasms Egoists
+Fancy_dress_Facist Fancy_dress_Fatima Fancy_dress_freebooters Fatfaces
+Fat_faces Filibuster Filibusters Flaming_Jack_in_a_box Fourlegged_Cyrano
+Fraud Freshwater_spaceman Freshwater_swabs Fuzzy_wuzzy Gallows_fodder
+Gang_of_Theives Gang_of_thieves Gangsters Gherkin Gibbering_anthropoids
+Gibbering_ghost Gobbledgook Gobbledygook Gogglers Goosecaps Guano_gatherer
+Gyroscope Harlequin Heretic Highwayman Hi_jackers Hooligans Hydrocarbon
+Iconoclast Iconoclasts Infernal_mileage_merchants Interplanetary_goat
+Interplanetary_pirate Invertebrate Jackanapes Jack_pudding Jellied_eel
+Jellyfish Kleptomaniacs Ku_Klux_Klan Lily_livered_landlubbers Liquorice
+Loathsome_brute Lubberscum Lubbery_scum Macrocephalic_baboon Mameluke
+Meddlesome_cabin_boy Megalomaniac Miserable_blundering_barbecued_blister
+Miserable_earthworms Miserable_earth_worms Miserable_miser
+Miserable_molecule_of_mildew Misguided_missles Mister_Mule Monopolizers
+Monster Morons Moth_eaten_marmot Moujik Moujiks Mountebanks
+Mserable_blundering_barbequed_blister Mule Musical_morons Nanny_goat
+Nincompoop Nitwits Nitwitted_ninepins Nitwitted_nine_pins Numbskulls
+Nyctalop Nyctalops Odd_toed_ungulate Olympic_Athlete Ophicleides
+Orangoutang Ostrogoth Pachyrhizus Paranoiac Parasites Patagonian
+Patagonians Pestilential_pachyderm Pestilential_Pachyderm Phylloxera
+Picaroon Pickled_herrings Pig_headed Pirates Pithecanthropic_montebanks
+Pithecanthropuses Pockmark Pockmarks Politican Politician
+Poltroons Polygraphs Polynesian Poor_loon Prattling_porpoise
+Prize_purple_jellyfishes Profiteer Profiteers Psychopath
+Purple_profiteering_jellyfish Pyrographers Raggle_taggle_ruminants
+Rapscallion Rats Rhizopods Roadhogs Road_hogs Rubberneck Ruffian
+San_Theolodite Saucy_tramp Savages Scoffing_braggart Scorpion Sea_gherkins
+Sea_lice Shipwreckers Slavertrader Slave_trader Slubberdegullions
+Snake Sparrows Spitfire Squawking_popinjay Steamroller Stoolpigeon
+Sub_tropical_sea_louse Subtropical_sea_louse Swine Sycophant Tapiocans
+Technocrat Ten_thousand_thundering_typhoons Terrapin Terrapins Terrorists
+Thundering_misguided_missile Thundering_typhoons Tin_hatted_tyrants Toads
+Toffee_noses Torturers Traitors Tramps Tribe_of_savages Troglodytes
+Turncoats Twister Two_timing_Tartar_Twisters Two_timing_troglodyte
+Two_timing_Troglodytes Vagabonds Vampires Vandal Vegetarian Vermicellis
+Villain Viper Visigoths Vivisectionists Vulture Weevils Whippersnapper
+Whipper_Snapper Wildcat Woodlice Wreckers Zapotecs
