@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use Acme::MetaSyntactic;
-use List::Util 'first';
 use Getopt::Long;
 
 my %conf = ( whitespace => 0 );
@@ -18,7 +17,7 @@ my $sep = $conf{whitespace} ? ' ' : $\;
 my $theme = shift || $Acme::MetaSyntactic::Theme;
 die "Theme '$theme' does not exist!\n"
   . "Available themes: @{[ Acme::MetaSyntactic->themes ]}\n"
-  unless first { $_ eq $theme } Acme::MetaSyntactic->themes;
+  unless Acme::MetaSyntactic->has_theme( $theme );
 
 my $meta = Acme::MetaSyntactic->new( $theme );
 print join $sep, $meta->name( shift || 1 );
