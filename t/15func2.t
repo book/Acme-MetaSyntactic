@@ -11,7 +11,7 @@ my %seen = map { $_ => 1 } @Acme::MetaSyntactic::batman::List;
 ok( exists $seen{$names[0]}, "metabatman" );
 
 is_deeply(
-    [ sort grep { /^meta/ } keys %:: ],
+    [ sort grep { /^meta\w+$/ } keys %:: ],
     [qw( metabatman )],
     "Default exported function"
 );
