@@ -48,6 +48,8 @@ t/22uniq.t
 t/30list.t
 t/31any.t
 t/33locale.t
+t/33locale_fail.t
+t/33locale_win32.t
 t/50usecase.t
 t/99coverhack.t
 t/batcase1
