@@ -1,4 +1,4 @@
-package Acme::MetaSyntactic::pumpking;
+package Acme::MetaSyntactic::pumpkings;
 use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
