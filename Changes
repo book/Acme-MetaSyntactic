@@ -1,10 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
-0.16 Fri Mar 25 00:49:33 CET 2005
+0.16 Fri Apr  1 11:31:27 CEST 2005
         [ENHANCEMENTS]
         - The new Acme::MetaSyntactic::Locale allows for multilingual themes
         - The first theme to use this behaviour is "haddock"
         - Still 100% coverage (even cover Win32 code under Unix)
+        [BUGFIX]
+        - Corrected a bug that only appeared if Acme::MetaSyntactic
+          was installed in directories containing whitespace
+          (thanks to Max Maischein for testing under such conditions!)
         [NEW WEEKLY THEME 2005/04/04]
         - haddock (Jérôme Fenal)
       
