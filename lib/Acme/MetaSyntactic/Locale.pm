@@ -63,7 +63,8 @@ sub new {
             $self->{lang} = $ENV{LANGUAGE} || $ENV{LANG};
         }
     }
-    $self->{lang} = substr( $self->{lang} || ${"$class\::Default"}, 0, 2 );
+    $self->{lang} = ${"$class\::Default"} unless $self->{lang};
+    $self->{lang} = substr( $self->{lang}, 0, 2 );
 
     # fall back to last resort
     $self->{lang} = ${"$class\::Default"}
