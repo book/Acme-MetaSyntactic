@@ -1,13 +1,21 @@
 Revision history for Acme-MetaSyntactic
 
+0.04 Sat Jan 15 10:50:00 CET 2005
+        - Correct a typo in Markefile.PL (thanks to Mike Castle)
+        - The method themes() returns the sorted list of available themes
+        - New themes:
+          + crypto (anonymous)
+          + simpsons
+
 0.03 Fri Jan 14 21:39:03 CET 2005
         - Documentation patches
         - Put everything in __DATA__ to make adding new themes easier
-        - New themes:
+        - New themes (the names in parentheses indicate who suggested
+          the theme and/or provided the list):
           + dilbert (Sébastien Aperghis-Tramoni)
           + donmatin (Vahe Sarkissian)
           + pynchon (David Landgren)
-          + robin (Philippe Bruhat)
+          + robin
 
 0.02 Fri Jan 14 01:50:42 CET 2005
         - The module now exports all meta* functions.
