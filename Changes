@@ -1,5 +1,13 @@
 Revision history for Acme-MetaSyntactic
 
+0.16 Fri Mar 25 00:49:33 CET 2005
+        [ENHANCEMENTS]
+        - The new Acme::MetaSyntactic::Locale allows for multilingual themes
+        - The first theme to use this behaviour is "haddock"
+        - Still 100% coverage (even cover Win32 code under Unix)
+        [NEW WEEKLY THEME 2005/04/04]
+        - haddock (Jérôme Fenal)
+      
 0.15 Thu Mar 17 17:52:45 CET 2005
         [NEW WEEKLY THEME 2005/03/28]
         - python (Ricardo Signes)
@@ -13,7 +21,7 @@ Revision history for Acme-MetaSyntactic
         [ANNOUNCE]
         - This module is a dependency for two other modules!
           + Bot::MetaSyntactic is the base for the meta bot on #perlfr
-          + Acme::MetaSyntactic::RefactorCode will replace you boring
+          + Acme::MetaSyntactic::RefactorCode will replace your boring
             metasyntactic variables with shiny new ones
 
 0.14 Mon Mar 14 11:02:51 CET 2005
