@@ -21,3 +21,4 @@ CVS/.*
 ^cover_db/
 ^_build/
 t/up2date
+^Acme-MetaSyntactic
