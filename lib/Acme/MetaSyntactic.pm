@@ -322,7 +322,8 @@ This module could not have been possible without:
 =item Some sillyness
 
 See L<http://use.perl.org/~BooK/journal/22301>,
-and the follow-up L<http://use.perl.org/~BooK/journal/22710>.
+the follow-up L<http://use.perl.org/~BooK/journal/22710>,
+and the announce L<http://use.perl.org/~BooK/journal/22732>.
 
 =item The Batman serial from the 60s (it was shown in France in the 80s).
 
