@@ -102,6 +102,9 @@ __DATA__ section and fully initialise it.
 
 Return $count names (default: C<1>).
 
+Using C<0> will return the whole list in list context, and the size of the
+list in scalar context.
+
 =back
 
 =head1 AUTHOR
