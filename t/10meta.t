@@ -2,7 +2,7 @@ use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 
-plan tests => 8;
+plan tests => 10;
 
 SHADOK: {
     my $meta = Acme::MetaSyntactic->new('shadok');
@@ -50,14 +50,28 @@ MORE: {
     is_deeply( \%seen, \%test, "Got one item twice" );
 }
 
+ZERO: {
+    my $meta = Acme::MetaSyntactic->new( 'toto' );
+    my @names = sort $meta->name( 0 );
+
+    no warnings;
+    my @all   = sort @Acme::MetaSyntactic::toto::List;
+
+    is_deeply( \@names, \@all, "name(0) returns the whole list" );
+
+    my $count = $meta->name( 0 );
+    is( $count, scalar @all, "name(0) is scalar context returns the count" );
+}
+
 DEFAULT: {
     my $meta = Acme::MetaSyntactic->new();
-    my %seen = map { $_ => 0 } @{ $Acme::MetaSyntactic::META{foo} };
 
+    no warnings;
     my @names = $meta->name;
+    my %seen = map { $_ => 0 } @Acme::MetaSyntactic::foo::List;
     ok( exists $seen{$names[0]}, "From the default list" );
 
-    %seen = map { $_ => 1 } $meta->shadok( 4 );
+    %seen = map { $_ => 1 } $meta->name( shadok => 4 );
     is_deeply(
         \%seen,
         { ga => 1, bu => 1, zo => 1, meu => 1 },
