@@ -30,7 +30,7 @@ Introduced in version 0.12, published on March 7, 2005.
 
 Happy birthday!
 
-C<<Philippe <3 Estelle.>>
+C<< Philippe <3 Estelle. >>
 
 =cut
 
