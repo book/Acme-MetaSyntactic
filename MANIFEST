@@ -11,9 +11,11 @@ lib/Acme/MetaSyntactic/dilbert.pm
 lib/Acme/MetaSyntactic/donmartin.pm
 lib/Acme/MetaSyntactic/flintstones.pm
 lib/Acme/MetaSyntactic/foo.pm
+lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
 lib/Acme/MetaSyntactic/jamesbond.pm
 lib/Acme/MetaSyntactic/List.pm
+lib/Acme/MetaSyntactic/Locale.pm
 lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
@@ -45,6 +47,7 @@ t/21format.t
 t/22uniq.t
 t/30list.t
 t/31any.t
+t/33locale.t
 t/50usecase.t
 t/99coverhack.t
 t/batcase1
@@ -54,5 +57,15 @@ t/batcase4
 t/batcase5
 t/batcase6
 t/batcase7
+t/haddockcase_en3
+t/haddockcase_en4
+t/haddockcase_en5
+t/haddockcase_fr1
+t/haddockcase_fr2
+t/haddockcase_fr3
+t/haddockcase_fr4
+t/haddockcase_fr5
+t/haddockcase_fr6
+t/NoLang.pm
 t/pod-coverage.t
 t/pod.t
