@@ -26,6 +26,9 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.12, published on March 7, 2005.
 
+Patched to contain valid identifiers in version 0.15,
+published on March 28, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
