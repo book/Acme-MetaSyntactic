@@ -15,6 +15,7 @@ our %META;
 # fetch the list of standard themes
 {
     my $dir = dirname( $INC{'Acme/MetaSyntactic.pm'} );
+    $dir =~ s/(\s)/\\$1/g; # protect against directories with whitespace
     %META =
       map { ( fileparse( $_, qr/\.pm$/ ) )[0] => 0 }
       glob File::Spec->catfile( $dir, MetaSyntactic => "*.pm" );
