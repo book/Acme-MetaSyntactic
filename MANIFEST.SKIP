@@ -19,3 +19,4 @@ CVS/.*
 ^.cvsignore$
 ^cover_db/
 ^_build/
+t/up2date
