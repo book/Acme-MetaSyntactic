@@ -26,7 +26,7 @@ Tintin was translated in many languages, please send my your lists.
 
 Jérôme Fenal.
 
-Introduced in version 0.15, published on March 28, 2005.
+Introduced in version 0.16, published on April 4, 2005.
 
 =head1 SEE ALSO
 
