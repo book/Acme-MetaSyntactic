@@ -38,7 +38,7 @@ t/16import.t
 t/17import.t
 t/20theme.t
 t/30list.t
-t/50case.t
+t/50usecase.t
 t/99coverhack.t
 t/batcase1
 t/batcase2
