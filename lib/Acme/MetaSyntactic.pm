@@ -6,7 +6,7 @@ use Carp;
 use File::Basename;
 use File::Spec;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 # some class data
 our $Theme = 'foo'; # default theme
