@@ -26,7 +26,7 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.03, published on January 14, 2005.
 
-Removed duplicates in version 0.15, published on March 28, 2005.
+Duplicates removed in version 0.15, published on March 28, 2005.
 
 =head1 SEE ALSO
 
