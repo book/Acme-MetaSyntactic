@@ -1,5 +1,21 @@
 Revision history for Acme-MetaSyntactic
 
+0.15 Thu Mar 17 17:52:45 CET 2005
+        [NEW WEEKLY THEME 2005/03/28]
+        - python (Ricardo Signes)
+        [THEME UPDATES]
+        - dancers (removed bad characters)
+        - dilbert (removed duplicates)
+        - donmartin (removed duplicates)
+        - robin (removed duplicates)
+        [ENHANCEMENTS]
+        - cleaned up the result of load_data()
+        [ANNOUNCE]
+        - This module is a dependency for two other modules!
+          + Bot::MetaSyntactic is the base for the meta bot on #perlfr
+          + Acme::MetaSyntactic::RefactorCode will replace you boring
+            metasyntactic variables with shiny new ones
+
 0.14 Mon Mar 14 11:02:51 CET 2005
         [NEW WEEKLY THEME 2005/03/21]
         - pumpkings (Rafael Garcia-Suarez)
