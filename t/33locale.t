@@ -6,7 +6,7 @@ use Acme::MetaSyntactic;
 END {
     my @langs = Acme::MetaSyntactic::digits->languages();
 
-    plan tests => 4 * ( @langs + 1 ) + 5;
+    plan tests => 4 * ( @langs + 2 ) + 5;
 
     my %items = map { $_ => 1 } @{ $Acme::MetaSyntactic::digits::Locale{en} };
     ok( exists $items{ metadigits() }, "Got a digit from the list" );
@@ -17,9 +17,10 @@ END {
     is_deeply( [ sort @langs ],
         [qw( en fr it yi )], "All languages (instance)" );
 
-    for my $args ( [], map { [ lang => $_ ] } @langs ) {
+    for my $args ( [], map { [ lang => $_ ] } @langs, 'zz' ) {
         my $meta   = Acme::MetaSyntactic::digits->new(@$args);
         my $lang   = $args->[1] || 'en';
+        $lang = 'en' if $lang eq 'zz'; # check fallback to default
         my @digits = $meta->name;
         is( $meta->lang, $lang, "lang() is $lang" );
         is( @digits, 1, "Single item ($lang)" );
