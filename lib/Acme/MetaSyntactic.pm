@@ -322,7 +322,8 @@ who not only named all the machines in the C<mongueurs.net> (C<stencil>,
 C<sferics> and C<profane>) after characters from Thomas Pynchon's books,
 but also provided a first list.
 
-The C<pynchon> list will probably be updated in future versions.
+The C<pynchon> list will probably grow in future versions, as
+he goes through his books.
 
 =back
 
@@ -425,7 +426,7 @@ holy_gambles                       holy_gemini
 holy_geography                     holy_ghost_writer
 holy_giveaways                     holy_Golden_Gate
 holy_graft_zepplin                 holy_grammar
-holy_graveyard                     holy_greed_
+holy_graveyard                     holy_greed
 holy_green_card                    holy_guacamole
 holy_gullibility                   holy_gunpowder
 holy_haberdashery                  holy_hailstorms
