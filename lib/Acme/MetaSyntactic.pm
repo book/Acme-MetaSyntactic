@@ -38,6 +38,7 @@ sub import {
       : @_;
 
     $Theme = $themes[0] if @themes;
+    $meta = Acme::MetaSyntactic->new( $Theme );
 
     # export the metaname() function
     no strict 'refs';
@@ -113,7 +114,7 @@ sub load_data {
 }
 
 # main function
-sub metaname { $meta->name( $Theme, @_ ) };
+sub metaname { $meta->name( @_ ) };
 
 # corresponding method
 sub name {
@@ -297,10 +298,10 @@ be exported. All of them behave like the following:
 
 =over 4
 
-=item metaname( $count )
+=item metaname( [ $theme, ] $count )
 
-Return C<$count> items from the "default" list. See below how to change
-what the default is.
+Return C<$count> items from theme C<$theme>. If no theme is given,
+the theme is "default" theme. See below how to change what the default is.
 
 =back
 
