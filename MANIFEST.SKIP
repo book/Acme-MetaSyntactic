@@ -10,6 +10,7 @@ CVS/.*
 ^blib/
 ^dist/
 ^html/
+^Build$
 ^Makefile$
 ^Makefile\.[a-z]+$
 ^pm_to_blib$
