@@ -2,10 +2,13 @@ use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 
-plan tests => 5;
+plan tests => 6;
 
 my @bots = qw( purl url sarko bender );
 my $meta = Acme::MetaSyntactic->new( 'bots' );
+
+# existing themes
+my @themes = Acme::MetaSyntactic->themes;
 
 # yep, you can add the theme after creating the instance
 Acme::MetaSyntactic->add_theme( bots => [ @bots ] );
@@ -25,3 +28,5 @@ $meta = Acme::MetaSyntactic->new( 'batman' );
 
 ok( exists( $seen{$_} ), "the bots() method" ) for @names;
 
+is_deeply( [ sort @themes, "bots" ], [ Acme::MetaSyntactic->themes ],
+  "Themes list updated" );
