@@ -2,16 +2,17 @@ use Test::More;
 use strict;
 use Acme::MetaSyntactic;
 
-plan tests => 1 + scalar keys %Acme::MetaSyntactic::META;
+plan tests => 2;
 
+# the default list
+no warnings;
 my @names = metaname();
-my %seen = map { $_ => 1 } @{ $Acme::MetaSyntactic::META{foo} };
+my %seen = map { $_ => 1 } @Acme::MetaSyntactic::foo::List;
 ok( exists $seen{$names[0]}, "metaname" );
 
-for my $name ( keys %Acme::MetaSyntactic::META ) {
-    no strict 'refs';
-    @names = "meta$name"->();
-    %seen = map { $_ => 1 } @{ $Acme::MetaSyntactic::META{$name} };
-    ok( exists $seen{$names[0]}, "meta$name" );
-}
+is_deeply(
+    [ sort grep { /^meta/ } keys %:: ],
+    [qw( metaname )],
+    "Default exported function"
+);
 
