@@ -2,7 +2,7 @@ use Test::More;
 use strict;
 use Acme::MetaSyntactic;
 
-plan tests => 6;
+plan tests => 1 + scalar keys %Acme::MetaSyntactic::META;
 
 my @names = metaname();
 my %seen = map { $_ => 1 } @{ $Acme::MetaSyntactic::META{foo} };
