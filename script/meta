@@ -15,7 +15,7 @@ EOT
 $\ = $/;
 my $sep = $conf{whitespace} ? ' ' : $\;
 
-my $theme = shift;
+my $theme = shift || $Acme::MetaSyntactic::Theme;
 die "Theme '$theme' does not exist!\n"
   . "Available themes: @{[ Acme::MetaSyntactic->themes ]}\n"
   unless first { $_ eq $theme } Acme::MetaSyntactic->themes;
@@ -40,6 +40,8 @@ B<meta> is a simple front-end to Acme::MetaSyntactic.
 A few examples should make it easy to understand what it does and how
 it works:
 
+    $ meta
+    baz
     $ meta batman
     powie
     $ meta donmartin 3
@@ -48,6 +50,9 @@ it works:
     weeooweeeoooo
     $ meta -ws browser 4
     arachne netscape voyager w3m
+
+In short, the default theme is C<foo>, the default count is 1, the default
+separator is C<$/>, but you can replace it by whitespace with I<--ws>.
 
 =head1 AUTHOR
 
