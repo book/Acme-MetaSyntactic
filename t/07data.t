@@ -5,15 +5,16 @@ use Acme::MetaSyntactic;
 
 plan tests => 1;
 
-my $data = Acme::MetaSyntactic->load_data( 'Acme::MetaSyntactic::test' );
+my $data = Acme::MetaSyntactic->load_data('Acme::MetaSyntactic::test');
 is_deeply(
     $data,
     {
-        foo   => "bar\n",
+        foo   => "bar",
         names => {
-            en => "name\non 3\nlines\n",
-            fr => "et en\nfrançais\n",
+            en => "name on 3 lines",
+            fr => "et en français",
         },
+        empty => { but => { long => { chain => "" } } },
     },
     "read DATA correctly"
 );
@@ -26,6 +27,8 @@ bar
 name
 on 3
 lines
+# empty but long chain
 # names fr
-et en
+   et en
 français
+
