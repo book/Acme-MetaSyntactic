@@ -1,0 +1,15 @@
+Build
+Build.PL
+Changes
+lib/Acme/MetaSyntactic.pm
+log
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/00load.t
+t/05class.t
+t/10meta.t
+t/20theme.t
+t/pod-coverage.t
+t/pod.t

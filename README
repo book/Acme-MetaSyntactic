@@ -1,0 +1,42 @@
+
+Acme::MetaSyntactic - Themed metasyntactic variables
+
+DESCRIPTION
+
+When writing code examples, it's always easy at the beginning:
+
+    my $foo = "bar";
+    $foo .= "baz";   # barbaz
+
+But one gets quickly stuck with the same old boring examples. Does it
+have to be this way? I say "No".
+
+Here is Acme::MetaSyntactic, designed to fulfill your metasyntactic
+needs. No more will you scratch your head in search of a good variable
+name!
+
+INSTALL
+
+To install this module, run the following commands:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+
+Alternatively, to install with ExtUtils::MakeMaker, you can use the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2005 Philippe 'BooK' Bruhat
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
