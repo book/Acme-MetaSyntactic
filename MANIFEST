@@ -10,6 +10,8 @@ README
 t/00load.t
 t/05class.t
 t/10meta.t
+t/15func.t
+t/16import.t
 t/20theme.t
 t/pod-coverage.t
 t/pod.t
