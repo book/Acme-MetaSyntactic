@@ -26,6 +26,8 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.03, published on January 14, 2005.
 
+Removed duplicates in version 0.15, published on March 28, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -114,7 +116,7 @@ holy_hood_wink                     holy_hoofbeats
 holy_horseshoes                    holy_hostage
 holy_hot_foot                      holy_hot_spot
 holy_Houdini                       holy_human_collector_s_item
-holy_human_pearls                  holy_human_pearls
+holy_human_pearlS
 holy_human_pressure_cookers        holy_human_surfboards
 holy_hunting_horn                  holy_hurricane
 holy_hutzpah                       holy_hydraulics
@@ -162,7 +164,7 @@ holy_pin_cushions                  holy_polar_front
 holy_polar_ice_sheet               holy_popcorn
 holy_precision                     holy_pseudonym
 holy_purple_cannibals              holy_puzzlers
-holy_rainbow                       holy_rainbow
+holy_rainbow
 holy_rats_in_a_trap                holy_rat_trap
 holy_ravioli                       holy_razor_s_edge
 holy_recompense                    holy_red_herring
