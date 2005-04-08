@@ -3,9 +3,11 @@ use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 
-plan tests => 1;
+plan tests => 2;
 
+$_ = 'canari';
 my $data = Acme::MetaSyntactic->load_data('Acme::MetaSyntactic::test');
+is( $_, 'canari', "load_data does not stomp the canari" );
 is_deeply(
     $data,
     {
