@@ -1,6 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+0.17 Sat Apr  9 00:38:51 CEST 2005
+        [NEW WEEKLY THEME 2005/04/11]
+        - elements (Sébastien Aperghis-Tramoni)
+        [BUGFIX]
+        - load_data() does not destroy $_ any more
+
 0.16 Fri Apr  1 11:31:27 CEST 2005
+        [NEW WEEKLY THEME 2005/04/04]
+        - haddock (Jérôme Fenal)
         [ENHANCEMENTS]
         - The new Acme::MetaSyntactic::Locale allows for multilingual themes
         - The first theme to use this behaviour is "haddock"
@@ -9,8 +17,6 @@ Revision history for Acme-MetaSyntactic
         - Corrected a bug that only appeared if Acme::MetaSyntactic
           was installed in directories containing whitespace
           (thanks to Max Maischein for testing under such conditions!)
-        [NEW WEEKLY THEME 2005/04/04]
-        - haddock (Jérôme Fenal)
       
 0.15 Thu Mar 17 17:52:45 CET 2005
         [NEW WEEKLY THEME 2005/03/28]
