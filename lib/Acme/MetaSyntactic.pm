@@ -105,18 +105,23 @@ sub load_data {
     my $item;
     my @items;
     $$item = "";
-    while(<$fh>) {
-        /^#\s*(\w+.*)$/ && do {
-            push @items, $item;
-            $item = $data;
-            my $last;
-            my @keys = split /\s+/, $1;
-            $last = $item,$item = $item->{$_} ||= {} for @keys;
-            $item = \( $last->{$keys[-1]} = "" );
-            next;
-        };
-        $$item .= $_;
+
+    {
+        local $_;
+        while (<$fh>) {
+            /^#\s*(\w+.*)$/ && do {
+                push @items, $item;
+                $item = $data;
+                my $last;
+                my @keys = split /\s+/, $1;
+                $last = $item, $item = $item->{$_} ||= {} for @keys;
+                $item = \( $last->{ $keys[-1] } = "" );
+                next;
+            };
+            $$item .= $_;
+        }
     }
+
     # clean up the items
     for( @items, $item ) {
         $$_ =~ s/\A\s*//;
