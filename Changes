@@ -1,10 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
-0.17 Sat Apr  9 00:38:51 CEST 2005
+0.17 Sun Apr 10 00:22:56 CEST 2005
         [NEW WEEKLY THEME 2005/04/11]
         - elements (Sébastien Aperghis-Tramoni)
+        [ENHANCEMENTS]
+        - now looks for Acme::MetaSyntactic themes everywhere in @INC
+          (not only in the directory where Acme::MetaSyntactic is installed)
         [BUGFIX]
         - load_data() does not destroy $_ any more
+        - the bugfix in 0.16 did not fix the "whitespace in install dir" bug,
+          but the @INC enhancement did (thanks to Olivier Mengué for pointing
+          me to File::Glob)
 
 0.16 Fri Apr  1 11:31:27 CEST 2005
         [NEW WEEKLY THEME 2005/04/04]
