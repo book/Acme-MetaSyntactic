@@ -48,6 +48,7 @@ END {
 
     # we don't need no Windows
     $INC{"Win32/Locale.pm"} = 1;
+    no warnings 'redefine';
     *Win32::Locale::get_language = sub { 'it' };
     $^O   = 'MSWin32';
     $meta = Acme::MetaSyntactic::digits->new;
