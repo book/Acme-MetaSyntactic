@@ -14,7 +14,7 @@ This theme provides the English names of the chemical elements,
 as given in the standard periodic table, up to the 118th element. 
 
 The default list is the list of chemical symbols. The language code
-for this list is C<sym>.
+for this list is C<x-elements> (an extension to RFC 3066).
 
 =head1 CONTRIBUTOR
 
@@ -30,8 +30,8 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::Locale>.
 
 __DATA__
 # default
-sym
-# names sym
+x-elements
+# names x-elements
 H  He Li Be B C N O  F  Ne Na Mg Al Si P  S  Cl Ar K  Ca Sc Ti Vn Cr Mn
 Fe Co Ni Cu Zn Ga Ge As Se Br Ky Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd Ag Cd In
 Sn Sb Te I  Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta
