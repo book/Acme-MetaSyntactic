@@ -15,7 +15,7 @@ The list of James Bond movies.
 
 =head1 CONTRIBUTOR
 
-FIXME
+Philippe "BooK" Bruhat.
 
 Introduced in version 0.07 (heh), published on January 31, 2005.
 
