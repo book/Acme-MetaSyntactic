@@ -1,9 +1,9 @@
 use Test::More;
+use File::Find;
+use strict;
 
-my @modules = qw(
-    Acme::MetaSyntactic
-    Acme::MetaSyntactic::List
-);
-
+my @modules;
+find( sub { push @modules, $File::Find::name if /^[A-Z].*\.pm$/ }, 'blib/lib' );
+    
 plan tests => scalar @modules;
-use_ok( $_ ) for @modules;
+use_ok( $_ ) for map { s!/!::!g;s/\.pm$//;s/^blib::lib:://; $_ } sort @modules;
