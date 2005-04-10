@@ -122,7 +122,29 @@ Acme::MetaSyntactic::Locale - Base class for multilingual themes
 =head1 DESCRIPTION
 
 C<Acme::MetaSyntactic::Locale> is the base class for all themes that are
-meant to return a random excerpt from a predefined list.
+meant to return a random excerpt from a predefined list I<that depends
+on the language>.
+
+The language is selected at construction time from:
+
+=over 4
+
+=item 1.
+
+the given C<lang> parameter,
+
+=item 2.
+
+the current locale, as given by the environment variables C<LANGUAGE>,
+C<LANG> or (under Win32) Win32::Locale.
+
+=item 3.
+
+the default language for the selected theme.
+
+=back
+
+The language codes should conform to the RFC 3066 and ISO 639 standard.
 
 =head1 METHODS
 
@@ -140,8 +162,9 @@ If no C<lang> parameter is given, Acme::MetaSyntactic::Locale will try
 to find the user locale (with the help of environment variables
 C<LANGUAGE>, C<LANG> and Win32::Locale).
 
-$lang is a two-letter language code (ISO 3166, RFC 3066). If the list
-is not available in the requested language, the default is used.
+C<$lang> is a two-letter (or three (or more)) language code (taken from
+the official lists of RFC 3066 and ISO 369 standards). If the list is
+not available in the requested language, the default is used.
 
 =item init()
 
