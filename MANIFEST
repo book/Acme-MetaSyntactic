@@ -52,8 +52,10 @@ t/31any.t
 t/33locale.t
 t/33locale_fail.t
 t/33locale_win32.t
+t/40inc.t
 t/50usecase.t
 t/99coverhack.t
+t/Acme/MetaSyntactic/digits.pm
 t/batcase1
 t/batcase2
 t/batcase3
