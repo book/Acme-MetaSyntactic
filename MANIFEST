@@ -1,6 +1,7 @@
 Build.PL
 Changes
 lib/Acme/MetaSyntactic.pm
+lib/Acme/MetaSyntactic/amber.pm
 lib/Acme/MetaSyntactic/any.pm
 lib/Acme/MetaSyntactic/batman.pm
 lib/Acme/MetaSyntactic/browser.pm
@@ -63,6 +64,7 @@ t/batcase4
 t/batcase5
 t/batcase6
 t/batcase7
+t/batcase8
 t/haddockcase_en3
 t/haddockcase_en4
 t/haddockcase_en5
