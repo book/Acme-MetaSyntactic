@@ -5,22 +5,21 @@ use Acme::MetaSyntactic::any;
 {
     no warnings;
     my ( $i, $j ) = ( 0, 0 );
-    *List::Util::shuffle =
-      sub { my @t = sort @_; push @t, shift @t for 1 .. $i; $i++; @t };
-    *Acme::MetaSyntactic::any::shuffle =
+    *List::Util::shuffle = sub { sort @_ }; # item selection
+    *Acme::MetaSyntactic::any::shuffle =    # theme selection
       sub { my @t = sort @_; push @t, shift @t for 1 .. $j; $j++; @t };
 }
 
 my @tests = (
-    [qw(aieee)],                    # batman
-    [qw(arachne camino)],           # browser
-    [qw(Anya Buffy Cordelia)],      # buffy
-    [qw(doris eve fred ginger)],    # crypto
+    [qw(Amber)],                     # amber
+    [qw(aieee aiieee awk awkkkkkk)], # batman
+    [qw(amaya arachne camino)],      # browser
+    [qw(Adam Angel Anya Buffy)],     # buffy
 );
 
 plan tests => scalar @tests;
 for my $test (@tests) {
     my @names = metaany( scalar @$test );
-    is_deeply( \@names, $test, "Got names from a theme" );
+    is_deeply( \@names, $test, 'Got names from a "random" theme' );
 }
 
