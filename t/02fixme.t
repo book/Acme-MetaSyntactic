@@ -14,7 +14,7 @@ while (<>) {
 }
 continue {
     if (eof) {
-        is( $fixme, 0, "No FIXME/XXX found" );
+        is( $fixme, 0, "No FIXME/XXX found in $ARGV" );
         $fixme = 0;
     }
 }
