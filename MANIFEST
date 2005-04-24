@@ -19,6 +19,7 @@ lib/Acme/MetaSyntactic/jamesbond.pm
 lib/Acme/MetaSyntactic/List.pm
 lib/Acme/MetaSyntactic/Locale.pm
 lib/Acme/MetaSyntactic/loremipsum.pm
+lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/pynchon.pm
