@@ -14,7 +14,7 @@ sub import {
 sub name {
     my $self  = shift;
     my $theme =
-      ( shuffle( grep { $_ ne 'any' } Acme::MetaSyntactic->themes ) )[0];
+      ( shuffle( grep { !/^(?:any|random)$/ } Acme::MetaSyntactic->themes ) )[0];
     Acme::MetaSyntactic::metaname( $theme, @_ );
 }
 
