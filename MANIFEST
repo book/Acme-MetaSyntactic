@@ -8,6 +8,7 @@ lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
 lib/Acme/MetaSyntactic/crypto.pm
 lib/Acme/MetaSyntactic/dancers.pm
+lib/Acme/MetaSyntactic/debian.pm
 lib/Acme/MetaSyntactic/dilbert.pm
 lib/Acme/MetaSyntactic/donmartin.pm
 lib/Acme/MetaSyntactic/elements.pm
