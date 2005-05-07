@@ -189,6 +189,11 @@ Return the languages supported by the theme.
 
 =back
 
+=head1 SEE ALSO
+
+I<Codes for the Representation of Names of Languages>, at
+L<http://www.loc.gov/standards/iso639-2/langcodes.html>.
+
 =head1 AUTHOR
 
 Philippe 'BooK' Bruhat, C<< <book@cpan.org> >>
