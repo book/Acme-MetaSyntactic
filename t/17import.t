@@ -3,9 +3,10 @@ use strict;
 use t::NoLang;
 use Acme::MetaSyntactic ':all';
 
-plan tests => keys(%Acme::MetaSyntactic::META) - 2;
+my @themes = sort grep { !/^(?:any|random)/ } keys %Acme::MetaSyntactic::META;
+plan tests => scalar @themes;
 
-for my $name ( sort grep { !/^(?:any|random)/ } keys %Acme::MetaSyntactic::META ) {
+for my $name ( @themes ) {
     no strict 'refs';
     my @names = "meta$name"->();
     my %isa = map { $_ => 1 } @{"Acme::MetaSyntactic::$name\::ISA"};
