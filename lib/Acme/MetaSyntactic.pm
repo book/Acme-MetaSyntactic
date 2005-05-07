@@ -387,6 +387,12 @@ The theme is a simple collection of names. An object instance will
 return names at random from the list, and not repeat any until the list
 is exhausted.
 
+=item Acme::MetaSyntactic::Locale
+
+The theme is made of several collections of names, each associated with
+a "language". The language is either passed as a constructor parameter,
+extracted from the environment or a default is selected.
+
 =back
 
 Over time, new theme "behaviours" will be added. 
