@@ -10,13 +10,13 @@ for my $theme (@themes) {
     eval "require Acme::MetaSyntactic::$theme;";
     diag "$theme $@" if $@;
     my %isa = map { $_ => 1 } @{"Acme::MetaSyntactic::$theme\::ISA"};
-    if ( exists $isa{'Acme::MetaSyntactic::List'} ) {
-        push @metas, "Acme::MetaSyntactic::$theme"->new();
-    }
-    elsif ( exists $isa{'Acme::MetaSyntactic::Locale'} ) {
+    if( exists $isa{'Acme::MetaSyntactic::Locale'} ) {
         for my $lang ( "Acme::MetaSyntactic::$theme"->languages() ) {
             push @metas, "Acme::MetaSyntactic::$theme"->new( lang => $lang );
         }
+    }
+    else {
+        push @metas, "Acme::MetaSyntactic::$theme"->new();
     }
 }
 
