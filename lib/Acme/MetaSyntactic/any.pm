@@ -15,10 +15,15 @@ sub name {
     my $self  = shift;
     my $theme =
       ( shuffle( grep { !/^(?:any|random)$/ } Acme::MetaSyntactic->themes ) )[0];
-    Acme::MetaSyntactic::metaname( $theme, @_ );
+    $self->{meta}->name( $theme, @_ );
 }
 
-sub new { bless {}, shift }
+sub new {
+    my $class = shift;
+
+    # we need a full Acme::MetaSyntactic object, to support AMS::Locale
+    return bless { meta => Acme::MetaSyntactic->new( @_ ) }, $class;
+}
 
 1;
 
@@ -31,13 +36,21 @@ Acme::MetaSyntactic::any - Items from any theme.
 This theme simply selects a theme at random from all available
 themes, and returns names from it.
 
+The selection is done in such a manner that you'll see no repetition
+in the items returned from a given theme, until all items from the
+theme have been seen.
+
 =head1 METHODS
 
 =over 4
 
-=item new()
+=item new( @args )
 
 Create a new instance.
+
+The parameters will be used to create the underlying Acme::MetaSyntactic
+object, and will be passed to the randomly chosen theme. This can be
+useful for themes deriving from Acme::MetaSyntactic::Locale.
 
 =item name( $count )
 
