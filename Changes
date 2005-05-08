@@ -1,5 +1,18 @@
 Revision history for Acme-MetaSyntactic
 
+0.21 Sun May  8 02:13:27 CEST 2005
+        [NEW WEEKLY THEME 2005/05/09]
+        - alphabet
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::any's constructor now accepts parameters,
+          which can modify the behaviour of the chosen themes (e.g.
+          the themes derived from Acme::MetaSyntactic::Locale)
+        - Acme::MetaSyntactic::any now ensures there will be no repetition
+          in a given theme until all items from the theme have been seen.
+        [DOCUMENTATION]
+        - Acme::MetaSyntactic::Locale is now listed among the available
+          behaviours in Acme::MetaSyntactic
+
 0.20 Mon May  2 02:10:32 CEST 2005
         [NEW WEEKLY THEME 2005/05/02]
         - debian
