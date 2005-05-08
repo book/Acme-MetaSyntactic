@@ -1,5 +1,6 @@
 use Test::More;
 use Acme::MetaSyntactic::any;
+use t::NoLang;
 
 # "alter" the shuffle method
 {
@@ -11,6 +12,7 @@ use Acme::MetaSyntactic::any;
 }
 
 my @tests = (
+    [qw(a b c)],                     # alphabet
     [qw(Amber)],                     # amber
     [qw(aieee aiieee awk awkkkkkk)], # batman
     [qw(amaya arachne camino)],      # browser
