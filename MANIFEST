@@ -1,6 +1,7 @@
 Build.PL
 Changes
 lib/Acme/MetaSyntactic.pm
+lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
 lib/Acme/MetaSyntactic/any.pm
 lib/Acme/MetaSyntactic/batman.pm
