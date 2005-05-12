@@ -26,6 +26,7 @@ lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/pynchon.pm
 lib/Acme/MetaSyntactic/python.pm
+lib/Acme/MetaSyntactic/quantum.pm
 lib/Acme/MetaSyntactic/robin.pm
 lib/Acme/MetaSyntactic/shadok.pm
 lib/Acme/MetaSyntactic/tld.pm
