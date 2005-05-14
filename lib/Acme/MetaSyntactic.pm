@@ -61,7 +61,7 @@ sub new {
     $theme = $Theme unless $theme; # same default everywhere
 
     # defer croaking until name() is actually called
-    bless { theme => $theme, args => \@args, meta => {} }, $class;
+    bless { theme => $theme, args => { @args }, meta => {} }, $class;
 }
 
 # CLASS METHODS
@@ -158,7 +158,7 @@ sub name {
             $META{$theme} = 1; # loaded
         }
         $self->{meta}{$theme} =
-          "Acme::MetaSyntactic::$theme"->new( @{ $self->{args} } );
+          "Acme::MetaSyntactic::$theme"->new( %{ $self->{args} } );
     }
 
     $self->{meta}{$theme}->name( $count );
