@@ -61,6 +61,24 @@ it works:
 In short, the default theme is C<foo>, the default count is 1, the default
 separator is C<$/>, but you can replace it by whitespace with I<--ws>.
 
+=head1 SUCCESS STORIES
+
+B<meta> is the script of choice for a new generation of hackers.
+Here are a few comments from satisfied users:
+
+=over 4
+
+=item *
+
+I<C<Acme::MetaSyntactic> makes me more productive when I have to write
+regression tests for my Perl modules. No more do I spend time looking
+for variable names! It simply changed my life.>
+
+-- Rafael Garcia-Suarez, pumpking,
+used AMS when writing tests for Sub::Identify.
+
+=back
+
 =head1 AUTHOR
 
 Philippe "BooK" Bruhat, C<< <book@cpan.org> >>.

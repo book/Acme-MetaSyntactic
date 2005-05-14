@@ -39,6 +39,9 @@ Alternatively, to install with ExtUtils::MakeMaker, you can use the following co
     make test
     make install
 
+SUCCESS STORIES
+
+See the documentation for meta(1).
 
 COPYRIGHT AND LICENCE
 
