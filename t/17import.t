@@ -3,7 +3,7 @@ use strict;
 use t::NoLang;
 use Acme::MetaSyntactic ':all';
 
-my @themes = sort grep { !/^(?:any|random)/ } keys %Acme::MetaSyntactic::META;
+my @themes = sort grep { !/^(?:any|random)$/ } keys %Acme::MetaSyntactic::META;
 plan tests => scalar @themes;
 
 for my $name ( @themes ) {
