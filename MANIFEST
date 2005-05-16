@@ -29,6 +29,7 @@ lib/Acme/MetaSyntactic/python.pm
 lib/Acme/MetaSyntactic/quantum.pm
 lib/Acme/MetaSyntactic/robin.pm
 lib/Acme/MetaSyntactic/shadok.pm
+lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
 lib/Acme/MetaSyntactic/toto.pm
 lib/Acme/MetaSyntactic/viclones.pm
