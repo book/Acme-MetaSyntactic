@@ -1,5 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+0.24 Mon May 30 00:33:41 CEST 2005
+        [NEW WEEKLY THEME 2005/05/30]
+        - magicroundabout (Cédric Bouvier)
+        [THEME UPDATE]
+        - magic8ball (4 items were missing)
+        [ENHANCEMENT]
+        - meta now supports a --themes option that lists all the available
+          themes
+
 0.23 Mon May 16 13:41:36 CEST 2005
         [NEW WEEKLY THEME 2005/05/23]
         - teletubbies
