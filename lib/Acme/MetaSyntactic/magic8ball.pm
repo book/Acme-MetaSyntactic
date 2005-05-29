@@ -29,6 +29,8 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.19, published on April 25, 2005.
 
+Corrected (4 items were missing) in version 0.24, published on May 30, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -37,20 +39,23 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 __DATA__
 # names
+As_I_See_It_Yes
 Ask_Again_Later
 Better_Not_Tell_You_Now
+Cannot_Predict_Now
 Concentrate_and_Ask_Again
-Don_t_Count_on_It
+Don_t_Count_On_It
 It_Is_Certain
+It_Is_Decidedly_So
 Most_Likely
-My_Reply_is_No
+My_Reply_Is_No
 My_Sources_Say_No
-No
 Outlook_Good
 Outlook_Not_So_Good
 Reply_Hazy_Try_Again
 Signs_Point_to_Yes
+Very_Doubtful
+Without_a_Doubt
 Yes
 Yes_Definitely
 You_May_Rely_On_It
-
