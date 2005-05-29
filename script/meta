@@ -5,15 +5,20 @@ use Acme::MetaSyntactic;
 use Getopt::Long;
 
 my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!", "version" )
+GetOptions( \%conf, "whitespace|ws!", "version", "themes" )
   or die << 'EOT';
 Available options:
   --whitespace      : return metasyntactical names separated by whitespace
   --version         : print version information and exit
+  --themes          : print the list of themes and exit
 EOT
 
 if( $conf{version} ) {
     print "meta, a simple front-end to Acme::MetaSyntactic version $Acme::MetaSyntactic::VERSION\n";
+    exit;
+}
+if( $conf{themes} ) {
+    print "$_\n" for Acme::MetaSyntactic->themes;
     exit;
 }
 
