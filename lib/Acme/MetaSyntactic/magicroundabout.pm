@@ -1,6 +1,6 @@
 package Acme::MetaSyntactic::magicroundabout;
 use strict;
-use Acme::MetaSyntactic::List;
+use Acme::MetaSyntactic::Locale;
 our @ISA = qw( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
 1;
