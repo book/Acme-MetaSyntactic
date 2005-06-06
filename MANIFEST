@@ -23,6 +23,7 @@ lib/Acme/MetaSyntactic/Locale.pm
 lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
+lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/pynchon.pm
@@ -60,7 +61,9 @@ t/33locale.t
 t/33locale_fail.t
 t/33locale_win32.t
 t/40inc.t
+t/41count.t
 t/50usecase.t
+t/51useall.t
 t/99coverhack.t
 t/Acme/MetaSyntactic/digits.pm
 t/batcase1
