@@ -1,0 +1,11 @@
+use Test::More;
+use Acme::MetaSyntactic;
+
+plan tests => 1;
+
+my $count = $Acme::MetaSyntactic::VERSION;
+$count =~ s/^0\.//;
+$count += 8;
+
+is( scalar Acme::MetaSyntactic->themes, $count, "Correct number of themes" );
+
