@@ -1,5 +1,15 @@
 Revision history for Acme-MetaSyntactic
 
+0.26 Tue Jun 14 00:49:48 CEST 2005
+        [NEW WEEKLY THEME 2005/06/13]
+        - simpsons
+        [HEY, SIMPSONS IS NOT NEW! IT WAS ADDED IN VERSION 0.04!!]
+        - Sorry, the theme disappeared in version 0.12, when I made
+          the change to the behaviour-based architecture
+        - What's the point of having 100% coverage, when things like
+          this happen?
+        - Hey, nobody complained until now!
+
 0.25 Mon Jun  6 22:48:33 CEST 2005
         [NEW WEEKLY THEME 2005/06/06]
         - pasta
