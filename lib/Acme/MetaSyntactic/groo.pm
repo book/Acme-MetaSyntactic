@@ -14,7 +14,7 @@ Acme::MetaSyntactic::groo - The Groo the Wanderer theme
 A list of characters from the I<Groo the Wanderer> long-running
 comic-book authored by Sergio Aragonès and Mark Evanier.
 
-If you are intersted in Groo, you should have a look at
+If you are interested in Groo, you should have a look at
 L<http://www.groo.com/>, L<http://www.povonline.com/> and
 L<http://www.sergioaragones.com/>.
 
