@@ -1,4 +1,5 @@
 package Acme::MetaSyntactic::digits;
+use strict;
 use Acme::MetaSyntactic::Locale;
 our @ISA = ( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
