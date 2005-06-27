@@ -1,4 +1,5 @@
 package Acme::MetaSyntactic::quantum;
+use strict;
 use Acme::MetaSyntactic::List;
 @ISA = qw(Acme::MetaSyntactic::List);
 __PACKAGE__->init();
