@@ -1,5 +1,13 @@
 Revision history for Acme-MetaSyntactic
 
+0.29 Sun Jul  3 18:12:07 CEST 2005
+        [NEW WEEKLY THEME 2005/07/04]
+        - punctuation
+        [THEME UPDATES]
+        - dilbert
+        [RAISE MY KWALITEE]
+        - added "use strict;" to AMS::elements and AMS::quantum
+
 0.28 Sun Jun 26 20:29:51 CEST 2005
         [NEW WEEKLY THEME 2005/06/27]
         - oulipo
