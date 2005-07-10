@@ -410,7 +410,7 @@ be notified of progress on your bug as I make changes.
 
 If you think this modules lacks a particular set of metasyntactic
 variables, please send me a list, as well as a generation algorithm
-(either one of the built-ins any, list, combine, or a new one from your
+(either one of the built-ins (AMS::List, AMS::Locale), or a new one of your
 invention)
 
 =head1 ACKNOWLEDGEMENTS
@@ -430,15 +430,13 @@ and the announce L<http://use.perl.org/~BooK/journal/22732>.
 =item The Batman serial from the 60s (it was shown in France in the 80s).
 
 my wife loves it, I name most of my machines after the bat fight sound
-effects (C<zowie>, C<klonk>, C<zlonk>) and I even own a CD of the serial's
-theme music.
+effects (C<zowie>, C<klonk>, C<zlonk>), I even own a CD of the serial's
+theme music and the DVD of the movie.
 
 =item Rafael Garcia-Suarez,
 
 who apparently plans to use it. Especially now that it's usable in
 one-liners.
-
-=item 
 
 =item Vahe Sarkissian,
 
@@ -460,6 +458,12 @@ to do with Acme::MetaSyntactic: an IRC bot! See L<Bot::MetaSyntactic>.
     <Maddingue> BooK: parce que j'ai fais la seule chose qui me semblait
                 logique de faire avec ton module
     <BooK> un robot irc
+
+=item Jérôme Fenal,
+
+who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
+Acme::MetaSyntactic fulfill its role: rename your boring variables
+with silly names.
 
 =back
 
