@@ -7,5 +7,5 @@ my $count = $Acme::MetaSyntactic::VERSION;
 $count =~ s/^0\.//;
 $count += 7;
 
-is( scalar Acme::MetaSyntactic->themes, $count, "Correct number of themes" );
+is( scalar Acme::MetaSyntactic->themes, $count, "$count themes" );
 
