@@ -7,6 +7,7 @@ lib/Acme/MetaSyntactic/any.pm
 lib/Acme/MetaSyntactic/batman.pm
 lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
+lib/Acme/MetaSyntactic/counting_rhyme.pm
 lib/Acme/MetaSyntactic/crypto.pm
 lib/Acme/MetaSyntactic/dancers.pm
 lib/Acme/MetaSyntactic/debian.pm
