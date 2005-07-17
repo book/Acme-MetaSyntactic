@@ -25,6 +25,7 @@ lib/Acme/MetaSyntactic/Locale.pm
 lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
+lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/phonetic.pm
