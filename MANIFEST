@@ -26,6 +26,7 @@ lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
 lib/Acme/MetaSyntactic/monty_spam.pm
+lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/phonetic.pm
@@ -58,6 +59,7 @@ t/15func.t
 t/15func2.t
 t/16import.t
 t/17import.t
+t/18import.t
 t/20theme.t
 t/21format.t
 t/22uniq.t
