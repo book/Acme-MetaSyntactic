@@ -1,5 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
+0.32 Mon Jul 25 01:44:42 CEST 2005
+        [NEW WEEKLY THEME 2005/07/25]
+        - octothorpe
+        [ENHANCEMENTS]
+        - Correctly defined the import() method for each AMS subclass.
+          Using any Acme::MetaSyntactic::theme with the empty list () will
+          now prevent the metatheme() function to be created.
+        [COVERAGE]
+        - Coverage is not 100% any more (99.6% under Linux and 99.4% under
+          Windows), but I think I'll mostly blame Devel::Cover ;-)
+
 0.31 Sun Jul 17 16:27:17 CEST 2005
         [NEW WEEKLY THEME 2005/07/18]
         - monty_spam
