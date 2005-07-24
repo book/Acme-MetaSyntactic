@@ -5,19 +5,16 @@ use List::Util qw( shuffle );
 
 sub init {
     my $class = caller(0);
-    my $data  = Acme::MetaSyntactic->load_data( $class );
+    my $data  = Acme::MetaSyntactic->load_data($class);
     no strict 'refs';
     no warnings;
     @{"$class\::List"} = split /\s+/, $data->{names};
-
-    # export the function
-    my $callpkg = caller(1); # init is called from the subclass
-    my $theme   = (split/::/, $class)[-1];
-    my $meta    = $class->new;
-    *{"$callpkg\::meta$theme"} = sub { $meta->name( @_ ) };
-}
-
-sub import {
+    *{"$class\::import"} = sub {
+        my $callpkg = caller(0);
+        my $theme   = ( split /::/, $class )[-1];
+        my $meta    = $class->new;
+        *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
+      };
 }
 
 sub name {

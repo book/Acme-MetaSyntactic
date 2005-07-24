@@ -15,14 +15,12 @@ sub init {
     croak "$class defines no default language" unless $data->{default};
     ${"$class\::Default"} = $data->{default};
 
-    # export the function
-    my $callpkg = caller(1); # init is called from the subclass
-    my $theme   = (split/::/, $class)[-1];
-    my $meta    = $class->new;
-    *{"$callpkg\::meta$theme"} = sub { $meta->name( @_ ) };
-}
-
-sub import {
+    *{"$class\::import"} = sub {
+        my $callpkg = caller(0);
+        my $theme   = ( split /::/, $class )[-1];
+        my $meta    = $class->new;
+        *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
+      };
 }
 
 sub name {
