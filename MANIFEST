@@ -29,6 +29,7 @@ lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pasta.pm
+lib/Acme/MetaSyntactic/peanuts.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/punctuation.pm
