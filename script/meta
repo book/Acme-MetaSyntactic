@@ -4,24 +4,28 @@ use warnings;
 use Acme::MetaSyntactic;
 use Getopt::Long;
 
-my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!", "version", "themes" )
-  or die << 'EOT';
+my $usage = << 'EOT';
+Usage: meta [ --whitespace|ws ] theme [ count ]
 Available options:
+  --help            : print this message and exit
   --whitespace      : return metasyntactical names separated by whitespace
   --version         : print version information and exit
   --themes          : print the list of themes and exit
 EOT
 
-if( $conf{version} ) {
-    print "meta, a simple front-end to Acme::MetaSyntactic version $Acme::MetaSyntactic::VERSION\n";
-    exit;
-}
-if( $conf{themes} ) {
-    print "$_\n" for Acme::MetaSyntactic->themes;
-    exit;
-}
+my %conf = ( whitespace => 0 );
+GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help" )
+  or die $usage;
 
+# informative options
+print STDERR
+"meta, a simple front-end to Acme::MetaSyntactic version $Acme::MetaSyntactic::VERSION\n"
+  if $conf{version};
+print STDERR $usage if $conf{help};
+print map "$_\n", Acme::MetaSyntactic->themes if $conf{themes};
+exit if $conf{themes} || $conf{version} || $conf{help};
+
+# real processing starts here
 $\ = $/;
 my $sep = $conf{whitespace} ? ' ' : $\;
 
