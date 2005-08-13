@@ -16,6 +16,7 @@ lib/Acme/MetaSyntactic/donmartin.pm
 lib/Acme/MetaSyntactic/elements.pm
 lib/Acme/MetaSyntactic/flintstones.pm
 lib/Acme/MetaSyntactic/foo.pm
+lib/Acme/MetaSyntactic/garbage.pm
 lib/Acme/MetaSyntactic/groo.pm
 lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
