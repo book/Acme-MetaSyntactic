@@ -1,8 +1,11 @@
 Revision history for Acme-MetaSyntactic
 
-0.35 Sat Aug 13 22:58:24 CEST 2005
+0.35 Sat Aug 13 23:25:22 CEST 2005
         [NEW WEEKLY THEME 2005/08/15]
         - garbage (Jérôme Fenal)
+        [ENHANCEMENTS]
+        - the meta(1) command-line now has an usage line
+          and recognises the --help option
 
 0.34 Sun Aug  7 22:37:41 CEST 2005
         [NEW WEEKLY THEME 2005/08/08]
