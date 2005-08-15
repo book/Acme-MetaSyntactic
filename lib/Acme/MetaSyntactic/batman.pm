@@ -16,6 +16,9 @@ The fight sound effects from the 60s serial.
 All the bat sounds come from this page:
 L<http://www.usfamily.net/web/wpattinson/otr/batman/batfight.htm>
 
+You can find photos of the serie's onomatopoeias here:
+L<http://www.batmania.com.ar/paginas/serie_onomatopeyas.htm>.
+
 =head1 CONTRIBUTOR
 
 Philippe Bruhat.
