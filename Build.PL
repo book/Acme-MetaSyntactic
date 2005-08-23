@@ -10,6 +10,8 @@ my $builder = Module::Build->new(
     requires => {
         'Test::More' => 0,
         'List::Util' => 0,
+        'File::Glob' => 0,
+        'List::Util' => 0,
     },
     script_files        => [ 'script/meta' ],
     add_to_cleanup      => [ 'Acme-MetaSyntactic-*' ],
