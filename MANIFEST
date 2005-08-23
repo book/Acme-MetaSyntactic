@@ -22,6 +22,7 @@ lib/Acme/MetaSyntactic/groo.pm
 lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
 lib/Acme/MetaSyntactic/jamesbond.pm
+lib/Acme/MetaSyntactic/jerkcity.pm
 lib/Acme/MetaSyntactic/List.pm
 lib/Acme/MetaSyntactic/Locale.pm
 lib/Acme/MetaSyntactic/loremipsum.pm
