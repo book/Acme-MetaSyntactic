@@ -11,6 +11,7 @@ plan tests => scalar @ARGV;
 my $fixme = 0;
 while (<>) {
     $fixme++ if /FIXME|XXX/;
+    $fixme-- if /XXX/ and $ARGV =~ /currency/; # AMS::currenct has XXX
 }
 continue {
     if (eof) {
