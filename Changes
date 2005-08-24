@@ -8,6 +8,9 @@ Revision history for Acme-MetaSyntactic
           new: it's now a subclass of Acme::MetaSyntactic::Locale,
           and supports Swahili, French, English, German and Italian
           lists (as well as the good old NATO).
+        [TICKET CLOSED]
+        - #14276 on rt.cpan.org (multilingual phonetic, with unofficial
+          Swahili alphabet)
 
 0.37 Tue Aug 23 23:34:36 CEST 2005
         [NEW WEEKLY THEME 2005/08/29]
@@ -275,6 +278,7 @@ Revision history for Acme-MetaSyntactic
         - New themes:
           + crypto (anonymous)
           + simpsons
+        - closed ticket #9725 on rt.cpan.org (wishlist)
 
 0.03 Fri Jan 14 21:39:03 CET 2005
         - Documentation patches
@@ -285,6 +289,7 @@ Revision history for Acme-MetaSyntactic
           + donmartin (Vahe Sarkissian)
           + pynchon (David Landgren)
           + robin
+        - closed ticket #9731 on rt.cpan.org (discussion)
 
 0.02 Fri Jan 14 01:50:42 CET 2005
         - The module now exports all meta* functions.
