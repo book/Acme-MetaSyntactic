@@ -1,5 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+0.38 Wed Aug 24 15:48:21 CEST 2005
+        [NEW WEEKLY THEME 2005/09/05]
+        - phonetic
+        [HEY, PHONETIC IS NOT NEW! IT WAS ADDED IN VERSION 0.08!!]
+        - Well, the theme has changed enough that I can consider it
+          new: it's now a subclass of Acme::MetaSyntactic::Locale,
+          and supports Swahili, French, English, German and Italian
+          lists (as well as the good old NATO).
+
 0.37 Tue Aug 23 23:34:36 CEST 2005
         [NEW WEEKLY THEME 2005/08/29]
         - jerkcity (Rafael Garcia-Suarez)
