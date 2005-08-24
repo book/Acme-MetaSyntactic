@@ -1,7 +1,7 @@
 package Acme::MetaSyntactic::phonetic;
 use strict;
-use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use Acme::MetaSyntactic::Locale;
+our @ISA = qw( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
 1;
 
@@ -11,22 +11,55 @@ Acme::MetaSyntactic::phonetic - The phonetic theme
 
 =head1 DESCRIPTION
 
-The NATO official phonetic alphabet.
+Several phonetic alphabets.
+
+Most of them come from this list:
+L<http://montgomery.cas.muohio.edu/meyersde/PhoneticAlphabets.htm>
 
 =head1 CONTRIBUTOR
 
-Michel Rodriguez.
+Michel Rodriguez provided the first list (NATO official phonetic alphabet).
+
+Added Swahili and English on request of David Landgren, thus closing
+RT ticket #14276.
+While I was at it, I also added French, German and Italian.
 
 Introduced in version 0.08, published on February 7, 2005.
 
+Updated to handle multilingual phonetics in version 0.38,
+published on September 5, 2005.
+
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::Locale>.
 
 =cut
 
 __DATA__
-# names
+# default
+nato
+# names nato
 alpha   bravo charlie  delta echo foxtrot golf  hotel  india juliet  kilo
 lima    mike  november oscar papa quebec  romeo sierra tango uniform victor
 whiskey xray  yankee   zulu
+# names en
+Able Baker Charlie Dog   Edward Fox   George How  Item  Jiga   King    Love
+Mike Nan   Oboe   Peter  Queen  Roger Sugar  Tape Uncle Victor William X-Ray
+Yoke Zebra
+# names sw
+Ali    Banda  Chakechake Dodoma Entebe Fumba Gogo Homa Imba   Jambo KenyaLala
+Mama   Nakuru Ona        Punda  Kyela  Rangi Simu Tatu Uganda Vitu  Wali
+Eksrei Yai    Zanzibar
+# names fr
+Anatole Berthe Celestin Desire  Eugene  Emile  Francois Gaston Henri Irma
+Joseph  Kleber Louis    Marcel  Nicolas Oscar  Pierre  Quintal Raoul Suzanne
+Therese Ursule Victor   William Xavier  Yvonne Zoe
+# names de
+Anton     Bertha Caesar  Dora   Emil    Friedrich Gustav   Heinrich Ida
+Jakob     Konrad Ludwig  Martha Nordpol Otto      Paula    Quelle   Richard
+Siegfried Schule Theodor Ulrich Viktor  Wilhelm   Xantippe Ypsilon  Zeppelin
+# names it
+Ancona Bologna Como    Domodossola Empoli Firenze  Genova Hacca        Imola
+Jolly  Kappa   Livorno Milano      Napoli Otranto  Pisa   Quartomiglio Roma
+Savona Torino  Udine   Venezia     Wagner Xilofono York   Zara
+
