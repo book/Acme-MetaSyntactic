@@ -37,6 +37,8 @@ provided the English version.
 
 Introduced in version 0.30, published on July 11, 2005.
 
+Patched a typo in version 0.39, published on September 12, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -49,7 +51,7 @@ en
 # names en 
 eenie meeny miny moe
 catch a tiger by the toe 
-if he holers let him go 
+if he hollers let him go 
 # names fr
 am stram gram
 pique et colegram
