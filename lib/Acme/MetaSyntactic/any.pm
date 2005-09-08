@@ -3,6 +3,8 @@ use strict;
 use List::Util 'shuffle';
 use Acme::MetaSyntactic ();
 
+our $Theme = 'any';
+
 sub import {
     # export the metaany function
     my $callpkg = caller;
@@ -25,7 +27,7 @@ sub new {
     return bless { meta => Acme::MetaSyntactic->new( @_ ) }, $class;
 }
 
-sub theme { 'any' };
+sub theme { $Theme };
 
 1;
 
