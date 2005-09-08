@@ -58,6 +58,7 @@ t/01load.t
 t/02fixme.t
 t/05class.t
 t/07data.t
+t/08theme.t
 t/10meta.t
 t/11namespace.t
 t/12fail.t
