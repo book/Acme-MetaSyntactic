@@ -44,7 +44,7 @@ lima    mike  november oscar papa quebec  romeo sierra tango uniform victor
 whiskey xray  yankee   zulu
 # names en
 Able Baker Charlie Dog   Edward Fox   George How  Item  Jiga   King    Love
-Mike Nan   Oboe   Peter  Queen  Roger Sugar  Tape Uncle Victor William X-Ray
+Mike Nan   Oboe   Peter  Queen  Roger Sugar  Tape Uncle Victor William X_Ray
 Yoke Zebra
 # names sw
 Ali    Banda  Chakechake Dodoma Entebe Fumba Gogo Homa Imba   Jambo KenyaLala
