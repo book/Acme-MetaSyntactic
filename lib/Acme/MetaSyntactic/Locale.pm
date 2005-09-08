@@ -14,10 +14,11 @@ sub init {
     }
     croak "$class defines no default language" unless $data->{default};
     ${"$class\::Default"} = $data->{default};
+    ${"$class\::Theme"}   = ( split /::/, $class )[-1];
 
     *{"$class\::import"} = sub {
         my $callpkg = caller(0);
-        my $theme   = ( split /::/, $class )[-1];
+        my $theme   = ${"$class\::Theme"};
         my $meta    = $class->new;
         *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
       };
@@ -77,6 +78,12 @@ sub languages {
 
     no strict 'refs';
     return keys %{"$class\::Locale"};
+}
+
+sub theme {
+    my $class = ref $_[0] || $_[0];
+    no strict 'refs';
+    return ${"$class\::Theme"};
 }
 
 1;
@@ -184,6 +191,10 @@ Return the selected language for this instance.
 =item languages()
 
 Return the languages supported by the theme.
+
+=item theme()
+
+Return the theme name.
 
 =back
 

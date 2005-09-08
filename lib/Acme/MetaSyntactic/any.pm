@@ -25,6 +25,8 @@ sub new {
     return bless { meta => Acme::MetaSyntactic->new( @_ ) }, $class;
 }
 
+sub theme { 'any' };
+
 1;
 
 =head1 NAME
@@ -55,6 +57,10 @@ useful for themes deriving from Acme::MetaSyntactic::Locale.
 =item name( $count )
 
 Implement the name() method for this class.
+
+=item theme()
+
+Return the theme name (C<any>).
 
 =back
 

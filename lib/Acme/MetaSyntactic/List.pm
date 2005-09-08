@@ -8,10 +8,11 @@ sub init {
     my $data  = Acme::MetaSyntactic->load_data($class);
     no strict 'refs';
     no warnings;
+    ${"$class\::Theme"} = ( split /::/, $class )[-1];
     @{"$class\::List"} = split /\s+/, $data->{names};
     *{"$class\::import"} = sub {
         my $callpkg = caller(0);
-        my $theme   = ( split /::/, $class )[-1];
+        my $theme   = ${"$class\::Theme"};
         my $meta    = $class->new;
         *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
       };
@@ -40,6 +41,12 @@ sub new {
     my $class = shift;
 
     bless { cache => [] }, $class;
+}
+
+sub theme {
+    my $class = ref $_[0] || $_[0];
+    no strict 'refs';
+    return ${"$class\::Theme"};
 }
 
 1;
@@ -101,6 +108,10 @@ Return $count names (default: C<1>).
 
 Using C<0> will return the whole list in list context, and the size of the
 list in scalar context.
+
+=item theme()
+
+Return the theme name.
 
 =back
 
