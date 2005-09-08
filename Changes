@@ -1,10 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
-0.39 Sun Aug 28 23:13:13 CEST 2005
+0.39 Thu Sep  8 10:41:25 CEST 2005
         [NEW WEEKLY THEME 2005/09/12]
         - stars (Rafael Garcia-Suarez)
         [THEME UPDATES]
         - counting_rhyme (David Landgren spotted a typo)
+        - phonetic (Gábor Szabó had a test failure)
+        [ENHANCEMENTS]
+        - Each theme now has a theme() method, for reflexion
+        [TESTS]
+        - the list validity is now tested for all locales for subclasses
+          of Acme::MetaSyntactic::Locale (thanks to Gábor Szabó)
 
 0.38 Wed Aug 24 15:48:21 CEST 2005
         [NEW WEEKLY THEME 2005/09/05]
