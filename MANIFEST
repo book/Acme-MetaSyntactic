@@ -48,6 +48,7 @@ lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
 lib/Acme/MetaSyntactic/toto.pm
 lib/Acme/MetaSyntactic/viclones.pm
+lib/Acme/MetaSyntactic/yapc.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml

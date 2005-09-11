@@ -1,5 +1,11 @@
 Revision history for Acme-MetaSyntactic
 
+0.40 Sun Sep 11 21:35:04 CEST 2005
+        [NEW WEEKLY THEME 2005/09/19]
+        - yapc (Mark Fowler)
+        [TESTS]
+        - increased coverage for the theme() method
+
 0.39 Thu Sep  8 10:41:25 CEST 2005
         [NEW WEEKLY THEME 2005/09/12]
         - stars (Rafael Garcia-Suarez)
