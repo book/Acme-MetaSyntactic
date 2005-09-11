@@ -11,7 +11,7 @@ Acme::MetaSyntactic::apollo - The Apollo theme
 
 =head1 DESCRIPTION
 
-As from Apollo IX, the command and lunar modules of Project Apollo were
+As from Apollo 9, the command and lunar modules of Project Apollo were
 given radio call signs. This list document them.
 
 Source: I<A Man on the Moon>, by Andrew Chaikin.
