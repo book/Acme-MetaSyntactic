@@ -14,6 +14,7 @@ use t::NoLang;
 my @tests = (
     [qw(a b c)],                     # alphabet
     [qw(Amber)],                     # amber
+    [qw(America Antares Aquarius)],  # apollo
     [qw(aieee aiieee awk awkkkkkk)], # batman
     [qw(amaya arachne camino)],      # browser
     [qw(Adam Angel Anya Buffy)],     # buffy

@@ -4,6 +4,7 @@ lib/Acme/MetaSyntactic.pm
 lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
 lib/Acme/MetaSyntactic/any.pm
+lib/Acme/MetaSyntactic/apollo.pm
 lib/Acme/MetaSyntactic/batman.pm
 lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
