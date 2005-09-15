@@ -12,7 +12,7 @@ BATMAN: {
     my %items = map { $_ => 1 } @Acme::MetaSyntactic::batman::List;
 
     for (@batmancases) {
-        my $result = `$^X -Mblib -Mstrict -w $_`;
+        my $result = `$^X "-Mblib" "-Mstrict" -w $_`;
         is( $? >> 8, 0, "$_ ran successfully" );
         ok( exists $items{$result},
             "'$result' is an item from the batman theme" );
