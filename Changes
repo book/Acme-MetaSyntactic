@@ -1,8 +1,17 @@
 Revision history for Acme-MetaSyntactic
 
-0.41
+0.41 Sun Sep 25 22:31:48 CEST 2005
         [NEW WEEKLY THEME 2005/09/26]
         - apollo (Jean Forget)
+        [THEME UPDATES]
+        - pynchon (David Landgren gave me 70 new items)
+        [ENHANCEMENTS]
+        - Win32::Locale is now the last after $ENV{LANGUAGE} and $ENV{LANG}
+          under Win32 (it was previously the only possibility)
+        [TICKET CLOSED]
+        - #14691 on rt.cpan.org (thanks to Barbie, who ran the tests
+          under Win32, I discovered I didn't really knew %INC, and
+          that I forgot that use = require + import)
 
 0.40 Sun Sep 11 21:35:04 CEST 2005
         [NEW WEEKLY THEME 2005/09/19]
