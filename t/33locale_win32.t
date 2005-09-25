@@ -1,5 +1,6 @@
 use Test::More;
 use Acme::MetaSyntactic::haddock;
+use t::NoLang;
 
 plan tests => 1;
 
