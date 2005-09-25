@@ -48,7 +48,7 @@ sub import {
 
     # load the classes in @themes
     for my $theme( @themes ) {
-        eval "require Acme::MetaSyntactic::$theme;";
+        eval "require Acme::MetaSyntactic::$theme; import Acme::MetaSyntactic::$theme;";
         croak $@ if $@;
         *{"$callpkg\::meta$theme"} = sub { $meta->name( $theme, @_ ) };
     }
