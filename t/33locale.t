@@ -31,7 +31,21 @@ END {
     }
 
     # tests for the various language schemes
+    # by order of preference LANGUAGE > LANG > Win32::Locale
     my $meta;
+
+    {
+        # we don't need no Windows to test this
+        local $INC{"Win32/Locale.pm"} = 1;
+        local $^W = 0;
+        *Win32::Locale::get_language = sub { 'it' };
+
+        $^O   = 'MSWin32';
+        $meta = Acme::MetaSyntactic::digits->new;
+    }
+
+    is_deeply( [ sort $meta->name(0) ],
+        [ sort @{ $Acme::MetaSyntactic::digits::Locale{it} } ], "MSWin32" );
 
     $ENV{LANG} = 'fr';
     $meta = Acme::MetaSyntactic::digits->new;
@@ -43,14 +57,6 @@ END {
     is_deeply( [ sort $meta->name(0) ],
         [ sort @{ $Acme::MetaSyntactic::digits::Locale{yi} } ], "LANGUAGE" );
 
-    # we don't need no Windows
-    $INC{"Win32/Locale.pm"} = 1;
-    no warnings 'redefine';
-    *Win32::Locale::get_language = sub { 'it' };
-    $^O   = 'MSWin32';
-    $meta = Acme::MetaSyntactic::digits->new;
-    is_deeply( [ sort $meta->name(0) ],
-        [ sort @{ $Acme::MetaSyntactic::digits::Locale{it} } ], "MSWin32" );
 }
 
 package Acme::MetaSyntactic::digits;
