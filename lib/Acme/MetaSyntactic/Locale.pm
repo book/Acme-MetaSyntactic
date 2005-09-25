@@ -54,8 +54,8 @@ sub new {
 
     # compute some defaults
     if( ! exists $self->{lang} ) {
-        $self->{lang} = $ENV{LANGUAGE} || $ENV{LANG};
-        if( $^O eq 'MSWin32' ) {
+        $self->{lang} = $ENV{LANGUAGE} || $ENV{LANG} || '';
+        if( !$self->{lang} && $^O eq 'MSWin32' ) {
             eval { require Win32::Locale; };
             $self->{lang} = Win32::Locale::get_language() unless $@;
         }
