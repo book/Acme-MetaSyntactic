@@ -34,6 +34,13 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 __DATA__
 # names
-porpentine slothrop stencil profane   godolphin  yoyodyne
-waste      sferics  oedipa  mondaugen eigenvalue schlozhauer
-schoenmaker bongo_shaftsbury maijstral achtfaden sachsa mantissa
+porpentine slothrop stencil profane godolphin yoyodyne waste
+sferics oedipa mondaugen eigenvalue schlozhauer schoenmaker
+bongo_shaftsbury maijstral achtfaden sachsa mantissa angevine
+anthroresearch apocheir aquilina barkhausen basilisco bergomask beukes
+bodine boeblich bondelschwaartz borracho carruthers_pillow chiclitz chobb
+contango covess delgado dnubietna dupiro echerze eckstine fairing falange
+fauchard fazzo fenice flake fleische foppl gadrulfi gascoigne gebrail
+gerfaut geronimo girgis gland gonzi goodfellow gottschalk groomsman
+halidom katz khevenhuller_metsch kholsky knoop lazar lepsius leutwein
+lowenstein manganese mannaro
