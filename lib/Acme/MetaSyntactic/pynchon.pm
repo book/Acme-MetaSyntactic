@@ -26,6 +26,8 @@ David Landgren.
 
 Introduced in version 0.03, published on January 14, 2005.
 
+Updated by David Landgren in version 0.41, published on September 26, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
