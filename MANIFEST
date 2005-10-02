@@ -14,6 +14,7 @@ lib/Acme/MetaSyntactic/currency.pm
 lib/Acme/MetaSyntactic/dancers.pm
 lib/Acme/MetaSyntactic/debian.pm
 lib/Acme/MetaSyntactic/dilbert.pm
+lib/Acme/MetaSyntactic/discworld.pm
 lib/Acme/MetaSyntactic/donmartin.pm
 lib/Acme/MetaSyntactic/elements.pm
 lib/Acme/MetaSyntactic/flintstones.pm
