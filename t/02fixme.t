@@ -10,8 +10,9 @@ plan tests => scalar @ARGV;
 # check that no file contains a FIXME / XXX
 my $fixme = 0;
 while (<>) {
-    $fixme++ if /FIXME|XXX/;
-    $fixme-- if /XXX/ and $ARGV =~ /currency/; # AMS::currenct has XXX
+    $fixme++ if /FIXME/;
+    next if $ARGV =~ /currency|roman/; # currency and romain contain XXX
+    $fixme++ if /XXX/;
 }
 continue {
     if (eof) {
