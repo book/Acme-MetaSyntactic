@@ -42,6 +42,7 @@ lib/Acme/MetaSyntactic/pynchon.pm
 lib/Acme/MetaSyntactic/python.pm
 lib/Acme/MetaSyntactic/quantum.pm
 lib/Acme/MetaSyntactic/robin.pm
+lib/Acme/MetaSyntactic/roman.pm
 lib/Acme/MetaSyntactic/services.pm
 lib/Acme/MetaSyntactic/shadok.pm
 lib/Acme/MetaSyntactic/simpsons.pm
