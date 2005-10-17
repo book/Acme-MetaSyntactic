@@ -19,6 +19,8 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.07 (heh), published on January 31, 2005.
 
+Updated in version 0.45, published on October 24, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -27,6 +29,7 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 __DATA__
 # names
+Casino_Royale
 Die_Another_Day                 The_World_is_Not_Enough
 Tomorrow_Never_Dies             GoldenEye             Licence_To_Kill
 The_Living_Daylights            A_View_to_a_Kill      Octopussy           
