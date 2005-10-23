@@ -1,5 +1,11 @@
 Revision history for Acme-MetaSyntactic
 
+0.45 Sun Oct 23 15:09:15 CEST 2005
+        [NEW WEEKLY THEME 2005/10/24]
+        - booze (Nicholas Clark)
+        [THEME UPDATE]
+        - jamesbond (new movie title is public)
+
 0.44 Fri Oct 14 14:48:49 CEST 2005
         [NEW WEEKLY THEME 2005/10/17]
         - constellations
@@ -172,11 +178,11 @@ Revision history for Acme-MetaSyntactic
 0.20 Mon May  2 02:10:32 CEST 2005
         [NEW WEEKLY THEME 2005/05/02]
         - debian
-  
+
 0.19 Sun Apr 24 23:22:04 CEST 2005
         [NEW WEEKLY THEME 2005/04/25]
         - magic8ball
- 
+
 0.18 Mon Apr 11 07:35:40 CEST 2005
         [NEW WEEKLY THEME 2005/04/18]
         - amber (Offer Kaye)
@@ -205,7 +211,7 @@ Revision history for Acme-MetaSyntactic
         - Corrected a bug that only appeared if Acme::MetaSyntactic
           was installed in directories containing whitespace
           (thanks to Max Maischein for testing under such conditions!)
-      
+
 0.15 Thu Mar 17 17:52:45 CET 2005
         [NEW WEEKLY THEME 2005/03/28]
         - python (Ricardo Signes)
@@ -287,7 +293,7 @@ Revision history for Acme-MetaSyntactic
 0.07 Tue Jan 18 01:24:35 CET 2005
         [NEW WEEKLY THEME 2005/01/31]
         - jamesbond (heh)
-     
+
 0.06 Tue Jan 18 01:21:27 CET 2005
         [BIG FUX]
         - themes() didn't work correctly in scalar context.
