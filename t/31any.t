@@ -14,10 +14,10 @@ use t::NoLang;
 my @tests = (
     [qw(a b c)],                     # alphabet
     [qw(Amber)],                     # amber
+    [qw(alces_alces antler caribou)],# antlers
     [qw(America Antares Aquarius)],  # apollo
     [qw(aieee aiieee awk awkkkkkk)], # batman
     [qw(absinthe beer cider)],       # booze
-    [qw(amaya arachne camino)],      # browser
 );
 
 plan tests => scalar @tests;

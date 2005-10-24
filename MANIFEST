@@ -3,6 +3,7 @@ Changes
 lib/Acme/MetaSyntactic.pm
 lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
+lib/Acme/MetaSyntactic/antlers.pm
 lib/Acme/MetaSyntactic/any.pm
 lib/Acme/MetaSyntactic/apollo.pm
 lib/Acme/MetaSyntactic/batman.pm
