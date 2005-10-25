@@ -416,6 +416,8 @@ invention)
 =head1 ACKNOWLEDGEMENTS
 
 Individual contributors are listed in the individual theme files.
+Look at the included F<CONTRIBUTORS> file for the list of all
+contributors (23 in this version).
 
 However, this module could not have been possible without:
 
