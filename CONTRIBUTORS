@@ -1,12 +1,16 @@
 The following people contributed to Acme::MetaSyntactic,
-either by proposing theme ideas, by updating existing themes,
-by sending bug reports or by sending complete lists of items
-for new or existing themes.
+either by proposing theme ideas, updating existing themes,
+sending bug reports, running the test suite on their machine
+and sending me the report or sending complete lists of items
+for new or existing themes. Thanks for all the work I didn't
+have to do!
 
-They are listed below in order of appearance:
+They are listed below in chronological order (of when I actually
+used their contributions):
 * Vahe Sarkissian
 * David Landgren
 * Sébastien Aperghis-Tramoni
+* Mike Castle
 * anonymous
 * Scott Lanning
 * Michel Rodriguez
@@ -14,6 +18,8 @@ They are listed below in order of appearance:
 * Aldo Calpini
 * Jérôme Fenal
 * Ricardo Signes
+* Hakim ???
+* Max Maischein
 * Offer Kaye
 * Cédric Bouvier
 * Jean Forget
