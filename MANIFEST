@@ -1,5 +1,6 @@
 Build.PL
 Changes
+CONTRIBUTORS
 lib/Acme/MetaSyntactic.pm
 lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
@@ -20,6 +21,7 @@ lib/Acme/MetaSyntactic/dilbert.pm
 lib/Acme/MetaSyntactic/discworld.pm
 lib/Acme/MetaSyntactic/donmartin.pm
 lib/Acme/MetaSyntactic/elements.pm
+lib/Acme/MetaSyntactic/facecards.pm
 lib/Acme/MetaSyntactic/flintstones.pm
 lib/Acme/MetaSyntactic/foo.pm
 lib/Acme/MetaSyntactic/garbage.pm
@@ -86,6 +88,7 @@ t/40inc.t
 t/41count.t
 t/50usecase.t
 t/51useall.t
+t/98contributors.t
 t/99coverhack.t
 t/Acme/MetaSyntactic/digits.pm
 t/batcase1
