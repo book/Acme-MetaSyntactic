@@ -1,5 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
+0.47 Mon Oct 31 19:30:44 CET 2005
+        [NEW WEEKLY THEME 2005/11/07]
+        - facecards (Estelle Souche)
+        [THEME UPDATES]
+        - counting_rhyme (Dutch couting rhyme by Abigail)
+        - discworld (Jean Forget added 35 new items)
+        - yapc (Missing cities added by Abigail)
+        [NEW FILES]
+        - the CONTRIBUTORS file lists all the people who helped me
+          with Acme::MetaSyntactic. Thanks to you all!
+
 0.46 Mon Oct 24 11:21:53 CEST 2005
         [NEW WEEKLY THEME 2005/10/31]
         - antlers (Gaal Yahas)
