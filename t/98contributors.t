@@ -13,7 +13,7 @@ close $fh;
 # check the total in Acme::MetaSyntactic
 my $total = 0;
 my $file = catfile(qw{ lib Acme MetaSyntactic.pm });
-open my $fh, '<', $file or die "Can't open $file: $!";
+open $fh, '<', $file or die "Can't open $file: $!";
 while (<$fh>) {
     /contributors \((\d+) in this version\)/ && do {
         $total = $1;
