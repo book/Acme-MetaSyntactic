@@ -20,6 +20,7 @@ lib/Acme/MetaSyntactic/debian.pm
 lib/Acme/MetaSyntactic/dilbert.pm
 lib/Acme/MetaSyntactic/discworld.pm
 lib/Acme/MetaSyntactic/donmartin.pm
+lib/Acme/MetaSyntactic/dwarves.pm
 lib/Acme/MetaSyntactic/elements.pm
 lib/Acme/MetaSyntactic/facecards.pm
 lib/Acme/MetaSyntactic/flintstones.pm

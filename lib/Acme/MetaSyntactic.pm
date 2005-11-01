@@ -7,7 +7,7 @@ use File::Basename;
 use File::Spec;
 use File::Glob;
 
-our $VERSION = '0.47';
+our $VERSION = '0.48';
 
 # some class data
 our $Theme = 'foo'; # default theme
@@ -417,7 +417,7 @@ invention)
 
 Individual contributors are listed in the individual theme files.
 Look at the included F<CONTRIBUTORS> file for the list of all
-contributors (28 in this version).
+contributors (29 in this version).
 
 However, this module could not have been possible without:
 
