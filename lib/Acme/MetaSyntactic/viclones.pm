@@ -3,6 +3,16 @@ use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
+
+our %Remote = (
+    source  => 'http://www.saki.com.au/mirror/vi/clones.php3',
+    extract => sub {
+        return
+            map { y!- /!__!d; /clone/ ? () : $_ }
+            $_[0] =~ /^<dt>\s*([^[\n\(]+?)(?:\s*\([^)]+\))?\s*\[/gm;
+    },
+);
+
 1;
 
 =head1 NAME
@@ -19,6 +29,8 @@ L<http://www.saki.com.au/mirror/vi/clones.php3>.
 Philippe "BooK" Bruhat.
 
 Introduced in version 0.10, published on February 21, 2005.
+
+Added a remote list in version 0.49, published on November 21, 2005.
 
 =head1 SEE ALSO
 

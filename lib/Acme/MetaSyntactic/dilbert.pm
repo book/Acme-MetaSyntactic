@@ -3,6 +3,16 @@ use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
+
+our %Remote = (
+    source  => 'http://www.triviaasylum.com/dilbert/diltriv.html',
+    extract => sub {
+        return
+            map { y!- '/!___ !; s/\.//g; split ' ', lc }
+            $_[0] =~ m!<b>([^<]+)</b>!gm;
+    },
+);
+
 1;
 
 =head1 NAME
@@ -25,6 +35,8 @@ Introduced in version 0.03, published on January 14, 2005.
 Duplicate removed in version 0.15, published on March 28, 2005.
 
 Updated with a brand new list in version 0.29, published on July 4, 2005.
+
+Remote list added and theme updated in version 0.49, published on November 21, 2005.
 
 =head1 SEE ALSO
 
@@ -61,4 +73,4 @@ the_boss tim timmy tina toby todd tom too_helpful_guy topper toxic_tom
 traylor uncle_albert uncle_max uncle_ned upholsterygeist virginia
 waldo wally walter wendel wendy will willy wilson wilt_gandhi winston
 world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
-
+tex
