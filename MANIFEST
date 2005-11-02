@@ -42,11 +42,13 @@ lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/peanuts.pm
 lib/Acme/MetaSyntactic/phonetic.pm
+lib/Acme/MetaSyntactic/pm_groups.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/punctuation.pm
 lib/Acme/MetaSyntactic/pynchon.pm
 lib/Acme/MetaSyntactic/python.pm
 lib/Acme/MetaSyntactic/quantum.pm
+lib/Acme/MetaSyntactic/RemoteList.pm
 lib/Acme/MetaSyntactic/robin.pm
 lib/Acme/MetaSyntactic/roman.pm
 lib/Acme/MetaSyntactic/services.pm
@@ -85,10 +87,12 @@ t/31any.t
 t/33locale.t
 t/33locale_fail.t
 t/33locale_win32.t
+t/35remote.t
 t/40inc.t
 t/41count.t
 t/50usecase.t
 t/51useall.t
+t/90up2date.t
 t/98contributors.t
 t/99coverhack.t
 t/Acme/MetaSyntactic/digits.pm
@@ -112,3 +116,4 @@ t/haddockcase_fr6
 t/NoLang.pm
 t/pod-coverage.t
 t/pod.t
+t/remote
