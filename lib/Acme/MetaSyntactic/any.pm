@@ -29,6 +29,8 @@ sub new {
 
 sub theme { $Theme };
 
+sub has_remotelist { };
+
 1;
 
 =head1 NAME
@@ -64,6 +66,10 @@ Implement the name() method for this class.
 
 Return the theme name (C<any>).
 
+=item has_remotelist()
+
+Always return false.
+
 =back
 
 =head1 CONTRIBUTOR
@@ -71,6 +77,10 @@ Return the theme name (C<any>).
 Philippe Bruhat, upon request of Sébastien Aperghis-Tramoni.
 
 Introduced in version 0.12, published on March 7, 2005.
+
+Updated to conform with interface changes required by
+C<Acme::MetaSyntactic::Updatable> in version 0.49, published
+on November 21, 2005.
 
 =head1 SEE ALSO
 
