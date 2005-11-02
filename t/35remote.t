@@ -65,19 +65,19 @@ EOC
 
     is_deeply(
         [ sort $dummy->name(0) ],
-        [ sort $dummy->fetch_list() ],
+        [ sort $dummy->remote_list() ],
         'Same "remote" list'
     );
 
     is_deeply(
         [ sort $dummy->name(0) ],
-        [ sort Acme::MetaSyntactic::dummy->fetch_list() ],
+        [ sort Acme::MetaSyntactic::dummy->remote_list() ],
         'Same "remote" list'
     );
 
     # test failing network
     $Acme::MetaSyntactic::dummy::Remote{source} = 'fail';
-    is_deeply( [ $dummy->fetch_list() ], [], 'Empty list when network fails' ); 
+    is_deeply( [ $dummy->remote_list() ], [], 'Empty list when network fails' ); 
 }
 
 # a test package
