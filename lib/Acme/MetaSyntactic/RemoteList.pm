@@ -31,7 +31,7 @@ sub source {
 sub has_remotelist { return defined $_[0]->source(); }
 
 # main method: return the list from the remote source
-sub fetch_list {
+sub remote_list {
     my $class = ref $_[0] || $_[0];
     return unless $class->has_remotelist();
 
@@ -131,6 +131,8 @@ the C<source> key.
 
 =back
 
+C<LWP::Simple> is used to download the remote data.
+
 All existing C<Acme::MetaSyntactic> behaviours
 (C<Acme::MetaSyntactic::List> and C<Acme::MetaSyntactic::Locale> are
 subclasses of C<Acme::MetaSyntactic::RemoteList>.
@@ -142,7 +144,7 @@ C<Acme::MetaSyntactic> theme:
 
 =over 4
 
-=item fetch_list()
+=item remote_list()
 
 Returns the list of items available at the remote source, or an empty
 list in case of error.
