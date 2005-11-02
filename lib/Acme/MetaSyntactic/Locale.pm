@@ -1,8 +1,11 @@
 package Acme::MetaSyntactic::Locale;
 use strict;
 use Acme::MetaSyntactic (); # do not export metaname and friends
+use Acme::MetaSyntactic::RemoteList;
 use List::Util qw( shuffle );
 use Carp;
+
+our @ISA = qw( Acme::MetaSyntactic::RemoteList );
 
 sub init {
     my $class = caller(0);
