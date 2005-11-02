@@ -25,11 +25,19 @@ sub init {
         my $meta    = $class->new;
         *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
       };
+
+    ${"$class\::meta"} = $class->new();
 }
 
 sub name {
     my ( $self, $count ) = @_;
     my $class = ref $self;
+
+    if( ! $class ) { # called as a class method!
+        $class = $self;
+        no strict 'refs';
+        $self = ${"$class\::meta"};
+    }
 
     if ( defined $count && $count == 0 ) {
         no strict 'refs';
