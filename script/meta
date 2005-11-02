@@ -5,16 +5,17 @@ use Acme::MetaSyntactic;
 use Getopt::Long;
 
 my $usage = << 'EOT';
-Usage: meta [ --whitespace|ws ] theme [ count ]
+Usage: meta [ options ] theme [ count ]
 Available options:
   --help            : print this message and exit
-  --whitespace      : return metasyntactical names separated by whitespace
+  --whitespace|--ws : return metasyntactical names separated by whitespace
   --version         : print version information and exit
   --themes          : print the list of themes and exit
+  --remote          : fetch the remote list (if available) and print it
 EOT
 
 my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help" )
+GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "fetch" )
   or die $usage;
 
 # informative options
@@ -35,9 +36,19 @@ die "Theme '$theme' does not exist!\n"
   unless Acme::MetaSyntactic->has_theme( $theme );
 
 my $meta = Acme::MetaSyntactic->new( $theme );
-my $count = shift;
-$count = 1 unless defined $count;
-print join $sep, $meta->name( $count );
+
+if ( $conf{remote} ) {
+    my $module = "Acme::MetaSyntactic::$theme";
+    eval "require $module;";
+    die "Theme '$theme' is not updatable!\n"
+        unless $module->has_remotelist();
+    print join $sep, sort $module->remote_list();
+}
+else {
+    my $count = shift;
+    $count = 1 unless defined $count;
+    print join $sep, $meta->name($count);
+}
 
 __END__
 
@@ -47,7 +58,7 @@ meta - A simple front-end to Acme::MetaSyntactic
 
 =head1 SYNOPSIS
 
-B<meta> [ I<--whitespace|ws> ] I<theme> [ I<count> ]
+B<meta> [ I<--whitespace|ws> ] [ I<--remote> ] [ I<--help> ] [ I<--version> ] I<theme> [ I<count> ]
 
 =head1 DESCRIPTION
 
@@ -69,6 +80,34 @@ it works:
 
 In short, the default theme is C<foo>, the default count is 1, the default
 separator is C<$/>, but you can replace it by whitespace with I<--ws>.
+
+=head1 COMMAND-LINE OPTIONS
+
+The following command-line options are available:
+
+=over 4
+
+=item I<--whitespace>, I<--ws>
+
+Print all items on a single line, separated by space.
+
+=item I<--remote>
+
+Fetch the remote list (if available) and print it.
+
+=item I<--themes>
+
+Print the list of available themes.
+
+=item I<--version>
+
+Print version information.
+
+=item I<--help>
+
+Print a short help message.
+
+=back
 
 =head1 SUCCESS STORIES
 
