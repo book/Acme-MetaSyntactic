@@ -7,7 +7,7 @@ __PACKAGE__->init();
 
 =head1 NAME
 
-Acme::MetaSyntactic::alphabet - Learn you ABC in various languages
+Acme::MetaSyntactic::alphabet - Learn your ABC in various languages
 
 =head1 DESCRIPTION
 
