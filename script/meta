@@ -15,7 +15,7 @@ Available options:
 EOT
 
 my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "fetch" )
+GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "remote" )
   or die $usage;
 
 # informative options
