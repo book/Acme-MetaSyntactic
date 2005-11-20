@@ -10,9 +10,9 @@ plan tests => scalar @ARGV;
 # check that no file contains a FIXME / XXX
 my $fixme = 0;
 while (<>) {
-    $fixme++ if /FIXME/;
+    $fixme++ if /\bFIXME\b/;
     next if $ARGV =~ /currency|roman/; # currency and romain contain XXX
-    $fixme++ if /XXX/;
+    $fixme++ if /\bXXX\b/;
 }
 continue {
     if (eof) {
