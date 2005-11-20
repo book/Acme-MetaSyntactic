@@ -1,7 +1,6 @@
 # Publication date (planed or effective) of each distribution.
 # Theme changes are listed in the third field.
 
-# the first half
 0.01	14 jan 2005	batman, flintstones, foo, shadok, toto
 0.02	14 jan 2005	[no new theme]
 0.03	14 jan 2005	dilbert, donmartin, pynchon, robin
@@ -52,4 +51,8 @@
 0.48	14 Nov 2005	dwarves
 0.49	21 Nov 2005	pm_groups
 0.50	28 Nov 2005	pauseid
+0.51	05 Dec 2005	weekdays
+0.52	12 Dec 2005	us_presidents
+0.53	19 Dec 2005	opcodes
+0.54	26 Dec 2005	barbapapa
 
