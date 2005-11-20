@@ -1,4 +1,4 @@
-use Test::More tests => 17;
+use Test::More tests => 19;
 use strict;
 
 # mock LWP::Simple
@@ -28,6 +28,13 @@ is( Acme::MetaSyntactic::shadok->source(), undef, 'shadok source() empty' );
 my $shadok = Acme::MetaSyntactic::shadok->new();
 ok( ! $shadok->has_remotelist(), 'No remote list for shadok object' );
 is( $shadok->source(), undef, 'shadok object source() empty' );
+
+# try to get the list anyway
+is( $shadok->remote_list(), undef, 'No remote list for shadok object' );
+
+# default version of extract
+is( $shadok->extract( 'zlonk aieee' ), 'zlonk aieee', "Default extract()" );
+
 
 # theme with a remote list
 use Acme::MetaSyntactic::dilbert ();
@@ -60,8 +67,9 @@ list
 EOC
     is_deeply( [ Acme::MetaSyntactic::dummy->extract($content) ],
         [qw( meu zo bu ga )], 'extract() class method' );
+    # this is now a generated method
     is_deeply( [ $dummy->extract($content) ],
-        [qw( meu zo bu ga )], 'extract() class method' );
+        [qw( meu zo bu ga )], 'extract() object method' );
 
     is_deeply(
         [ sort $dummy->name(0) ],
