@@ -1,10 +1,11 @@
 use strict;
 use Test::More;
 use File::Spec::Functions;
+use File::Glob;
 
-my @batmancases    = glob catfile(qw(t batcase*));
-my @haddockcasesfr = glob catfile(qw(t haddockcase_fr*));
-my @haddockcasesen = glob catfile(qw(t haddockcase_en*));
+my @batmancases    = File::Glob::bsd_glob catfile(qw(t batcase*));
+my @haddockcasesfr = File::Glob::bsd_glob catfile(qw(t haddockcase_fr*));
+my @haddockcasesen = File::Glob::bsd_glob catfile(qw(t haddockcase_en*));
 plan tests => 2 * ( @batmancases + @haddockcasesfr + @haddockcasesen );
 
 BATMAN: {
