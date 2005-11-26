@@ -1,6 +1,7 @@
 Build.PL
 Changes
 CONTRIBUTORS
+DATES
 lib/Acme/MetaSyntactic.pm
 lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
@@ -58,6 +59,7 @@ lib/Acme/MetaSyntactic/stars.pm
 lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
 lib/Acme/MetaSyntactic/toto.pm
+lib/Acme/MetaSyntactic/unicode.pm
 lib/Acme/MetaSyntactic/viclones.pm
 lib/Acme/MetaSyntactic/yapc.pm
 Makefile.PL
