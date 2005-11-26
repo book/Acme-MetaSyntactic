@@ -10,13 +10,13 @@ my $data = Acme::MetaSyntactic->load_data('Acme::MetaSyntactic::test');
 is( $_, 'canari', "load_data does not stomp the canari" );
 is_deeply(
     $data,
-    {
-        foo   => "bar",
+    {   foo   => "bar",
         names => {
             en => "name on 3 lines",
             fr => "et en français",
         },
-        empty => { but => { long => { chain => "" } } },
+        long =>
+            { chain => { empty => '', not => { empty => 'zlonk powie' } } },
     },
     "read DATA correctly"
 );
@@ -29,7 +29,9 @@ bar
 name
 on 3
 lines
-# empty but long chain
+# long chain empty
+# long chain not empty
+zlonk powie
 # names fr
    et en
 français
