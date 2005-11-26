@@ -1,5 +1,18 @@
 Revision history for Acme-MetaSyntactic
 
+0.50 Sat Nov 26 20:15:57 CET 2005
+        [NEW WEEKLY THEME 2005/11/28]
+        - unicode
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::List and Acme::MetaSyntactic::Locale-based
+          theme can now supply their lists to __PACKAGE__->init(), instead
+          of storing them in __DATA__. The data format must be the same
+          as the one that load_data() returns.
+        [FILE UPDATE]
+        - Oops. The DATE file was not listed in the MANIFEST file, 
+          and therefore not included in version 0.49.
+        - DATE now lists all planned themes for 2005.
+
 0.49 Sun Nov 20 15:58:38 CET 2005
         [NEW WEEKLY THEME 2005/11/21]
         - pm_groups
