@@ -8,8 +8,13 @@ use Carp;
 our @ISA = qw( Acme::MetaSyntactic::RemoteList );
 
 sub init {
+    my ($self, $data) = @_;
     my $class = caller(0);
-    my $data  = Acme::MetaSyntactic->load_data( $class );
+
+    $data ||= Acme::MetaSyntactic->load_data($class);
+    croak "The optional argument to init must be a hash reference"
+      if ref $data ne 'HASH';
+
     no strict 'refs';
     no warnings;
     for my $lang ( keys %{ $data->{names} } ) {
