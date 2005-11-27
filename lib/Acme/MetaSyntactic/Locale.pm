@@ -55,8 +55,10 @@ sub name {
     my $list = $self->{cache};
     {
         no strict 'refs';
-        push @$list, shuffle @{ ${"$class\::Locale"}{ $self->{lang} } }
-          while @$list < $count;
+        if( @{ ${"$class\::Locale"}{ $self->{lang} } } ) {
+            push @$list, shuffle @{ ${"$class\::Locale"}{ $self->{lang} } }
+              while @$list < $count;
+        }
     }
     splice( @$list, 0, $count );
 }

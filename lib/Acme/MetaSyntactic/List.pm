@@ -48,7 +48,9 @@ sub name {
     my $list = $self->{cache};
     {
       no strict 'refs';
-      push @$list, shuffle @{"$class\::List"} while @$list < $count;
+      if (@{"$class\::List"}) {
+          push @$list, shuffle @{"$class\::List"} while @$list < $count;
+      }
     }
     splice( @$list, 0, $count );
 }
