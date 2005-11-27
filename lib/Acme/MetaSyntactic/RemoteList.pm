@@ -36,22 +36,23 @@ sub remote_list {
     return unless $class->has_remotelist();
 
     # check that we can access the network
-    eval { require LWP::Simple; };
+    eval { require LWP::UserAgent; };
     if ($@) {
-        carp "LWP::Simple not available: $@";
+        carp "LWP::UserAgent not available: $@";
         return;
     }
 
     # fetch the content
-    my $src     = $class->source();
-    my $content = LWP::Simple::get($src);
-    if ( !defined $content ) {
-        carp "Failed to get content at $src";
+    my $src = $class->source();
+    my $ua  = LWP::UserAgent->new( env_proxy => 1 );
+    my $res = $ua->request( HTTP::Request->new( GET => $src ) );
+    if ( ! $res->is_success() ) {
+        carp "Failed to get content at $src (" . $res->status_line() . ")";
         return;
     }
 
     # extract, cleanup and return the data
-    my @items = $class->extract($content);
+    my @items = $class->extract( $res->content() );
 
     return @items;
 }
