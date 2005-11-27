@@ -8,6 +8,11 @@ my $tests = 2 * @themes;
 
 plan tests => $tests;
 
+# allow testing only a few themes
+my %test = map { $_ => 1 } @ARGV
+         ? map {"Acme::MetaSyntactic::$_"} @ARGV
+         : @themes;
+
 SKIP: {
 
     # this test must be explicitely requested
@@ -33,26 +38,29 @@ SKIP: {
 
     # compare each theme data with the network
     for my $theme (@themes) {
-        my $current = [ sort map {lc} $theme->name(0) ];
-        my $online  = [ sort map {lc} $theme->remote_list() ];
+
+    SKIP: {
+            skip "$theme ignored upon request", 2 if !$test{$theme};
+            my $current = [ sort map {lc} $theme->name(0) ];
+            my $online  = [ sort map {lc} $theme->remote_list() ];
 
         SKIP: {
-            skip "Fetching remote items for $theme probably failed", 2
-                if @$online == 0;
+                skip "Fetching remote items for $theme probably failed", 2
+                    if @$online == 0;
 
-            # count
-            is( scalar @$current,
-                scalar @$online,
-                "$theme has @{[scalar @$online]} items"
-            );
+                # count
+                is( scalar @$current,
+                    scalar @$online,
+                    "$theme has @{[scalar @$online]} items"
+                );
 
-            # details
-            Test::Differences::eq_or_diff(
-                $current, $online,
-                "$theme is up to date",
-                { context => 1 }
-            );
+                # details
+                Test::Differences::eq_or_diff(
+                    $current, $online,
+                    "$theme is up to date",
+                    { context => 1 }
+                );
+            }
         }
     }
-
 }
