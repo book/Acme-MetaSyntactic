@@ -4,13 +4,20 @@ use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
 
 {
-    my $data = '';
+    # a very basic list
+    my $data = join ' ',
+        map { ( "LATIN_CAPITAL_LETTER_$_", "LATIN_SMALL_LETTER_$_" ) }
+        'A' .. 'Z';
+
+    # try to find better
     if ( $] >= 5.006 && $] < 5.007003  ) {
-        $data = require 'unicode/Name.pl';
+        eval { $data = require 'unicode/Name.pl'; };
     }
     elsif ( $] >= 5.007003 ) {
-        $data = require 'unicore/Name.pl';
+        eval { $data = require 'unicore/Name.pl'; };
     }
+
+    # clean up the list
     $data = join ' ',
         map  { s/ \(.*\)//; y/- /_/; $_ }
         grep { $_ ne '<control>' }    # what's this for a character name?
