@@ -5,10 +5,10 @@ our @ISA = qw( Acme::MetaSyntactic::List );
 
 {
     my $data = '';
-    if ( $] =~ /^5\.006/ ) {
+    if ( $] >= 5.006 && $] < 5.007003  ) {
         $data = require 'unicode/Name.pl';
     }
-    elsif ( $] =~ /^5\.008/ ) {
+    elsif ( $] >= 5.007003 ) {
         $data = require 'unicore/Name.pl';
     }
     $data = join ' ',
@@ -41,6 +41,9 @@ Thanks to Sébastien Aperghis-Tramoni for his help in finding
 F<unicore/Name.pl>.
 
 Introduced in version 0.50, published on November 28, 2005.
+
+Updated to support more Perl versions in version 0.51, published
+on December 5, 2005.
 
 =head1 SEE ALSO
 
