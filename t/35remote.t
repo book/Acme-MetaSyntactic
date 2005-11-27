@@ -1,18 +1,6 @@
 use Test::More tests => 19;
 use strict;
 
-# mock LWP::Simple
-BEGIN {
-    $INC{'LWP/Simple.pm'} = 1;
-    *LWP::Simple::get = sub {
-        my $file = shift;
-        return undef if $file eq 'fail';
-
-        open my $fh, $file or die "Can't open $file: $!";
-        return do { local $/; scalar <$fh> };
-    };
-}
-
 # test the helper subs
 is( Acme::MetaSyntactic::RemoteList::tr_accent('a é ö ì À + ='),
     'a e o i A + =', 'tr_accent' );
@@ -94,10 +82,11 @@ use strict;
 
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
+use Cwd;
 
 # data regarding the updates
 our %Remote = (
-    source  => 't/remote',
+    source  => 'file://' . cwd() . '/t/remote',
     extract => sub {
         my $content = shift;
         my @items       =
