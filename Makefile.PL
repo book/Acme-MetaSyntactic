@@ -9,8 +9,8 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Acme/MetaSyntactic.pm',
     PL_FILES            => {},
     PREREQ_PM => {
+        'perl'       => '5.006',
         'Test::More' => 0,
-        'List::Util' => 0,
         'File::Glob' => 0,
         'List::Util' => 0,
     },
