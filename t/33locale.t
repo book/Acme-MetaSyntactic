@@ -6,13 +6,20 @@ use Acme::MetaSyntactic;
 END {
     my @langs = Acme::MetaSyntactic::digits->languages();
 
-    plan tests => 4 * ( @langs + 2 ) + 5;
+    plan tests => 4 * ( @langs + 2 ) + 7;
 
-    is_deeply( [ sort @langs ], [qw( en fr it yi )], "All languages (class)" );
+    is_deeply(
+        [ sort @langs ],
+        [qw( en fr it x-chiendent yi )],
+        "All languages (class)"
+    );
 
     @langs = Acme::MetaSyntactic::digits->new()->languages();
-    is_deeply( [ sort @langs ],
-        [qw( en fr it yi )], "All languages (instance)" );
+    is_deeply(
+        [ sort @langs ],
+        [qw( en fr it x-chiendent yi )],
+        "All languages (instance)"
+    );
 
     for my $args ( [], map { [ lang => $_ ] } @langs, 'zz' ) {
         my $meta   = Acme::MetaSyntactic::digits->new(@$args);
@@ -50,12 +57,26 @@ END {
     $ENV{LANG} = 'fr';
     $meta = Acme::MetaSyntactic::digits->new;
     is_deeply( [ sort $meta->name(0) ],
-        [ sort @{ $Acme::MetaSyntactic::digits::Locale{fr} } ], "LANG" );
+        [ sort @{ $Acme::MetaSyntactic::digits::Locale{fr} } ], "LANG fr" );
 
     $ENV{LANGUAGE} = 'yi';
     $meta = Acme::MetaSyntactic::digits->new;
     is_deeply( [ sort $meta->name(0) ],
-        [ sort @{ $Acme::MetaSyntactic::digits::Locale{yi} } ], "LANGUAGE" );
+        [ sort @{ $Acme::MetaSyntactic::digits::Locale{yi} } ], "LANGUAGE yi" );
+
+    delete @ENV{qw( LANG LANGUAGE ) };
+
+    $ENV{LANG} = 'x-chiendent';
+    $meta = Acme::MetaSyntactic::digits->new;
+    is_deeply( [ sort $meta->name(0) ],
+        [ sort @{ $Acme::MetaSyntactic::digits::Locale{'x-chiendent'} } ],
+        "LANG x-chiendent" );
+
+    $ENV{LANGUAGE} = 'x-chiendent';
+    $meta = Acme::MetaSyntactic::digits->new;
+    is_deeply( [ sort $meta->name(0) ],
+        [ sort @{ $Acme::MetaSyntactic::digits::Locale{'x-chiendent'} } ],
+        "LANGUAGE x-chiendent" );
 
 }
 
@@ -76,3 +97,5 @@ zero un deux trois quatre cinq six sept huit neuf
 zero uno due tre quattro cinque sei sette otto nove
 # names yi
 nul eyn tsvey dray fir finf zeks zibn akht nayn
+# names x-chiendent
+nain deuil toit carte sein scie sexe huitre veuf disque
