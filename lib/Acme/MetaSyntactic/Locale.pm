@@ -79,7 +79,7 @@ sub new {
         }
     }
     $self->{lang} = ${"$class\::Default"} unless $self->{lang};
-    $self->{lang} = substr( $self->{lang}, 0, 2 );
+    ($self->{lang}) = $self->{lang} =~ /^([-a-z]+)/;
 
     # fall back to last resort
     $self->{lang} = ${"$class\::Default"}
