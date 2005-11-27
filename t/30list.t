@@ -1,4 +1,4 @@
-use Test::More tests => 3;
+use Test::More tests => 6;
 use strict;
 use Acme::MetaSyntactic;
 
@@ -17,3 +17,18 @@ is( @fab, 4, "Four items" );
 no warnings;
 my @all = sort @Acme::MetaSyntactic::beatles::List;
 is_deeply( \@fab, \@all, "All items" );
+
+# test for empty lists
+Acme::MetaSyntactic->add_theme( null => [ ] );
+my $null = Acme::MetaSyntactic::null->new();
+
+my @null = $null->name; 
+is( @null, 0, "Single item (none)" );
+@null = $null->name( 4 );
+is( @null, 0, "Four items (none)" );
+
+@null = sort $null->name( 0 );
+no warnings;
+@all = sort @Acme::MetaSyntactic::null::List;
+is_deeply( \@null, \@all, "All items (none)" );
+
