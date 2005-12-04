@@ -1,5 +1,24 @@
 Revision history for Acme-MetaSyntactic
 
+0.51 Sun Dec  4 19:06:02 CET 2005
+        [NEW WEEKLY THEME 2005/12/05]
+        - weekdays (Abigail)
+        [ENHANCEMENTS]
+        - Added support for empty lists (prevents AMS from falling into
+          an infinite loop), thanks to Abigail
+        - Better support in Acme::MetaSyntactic::Locale for language
+          tags longer than 2 characters
+        - Acme::MetaSyntactic::RemoteList now uses LWP::UserAgent to fetch
+          remote lists
+        [THEME UPDATES]
+        - booze (see below)
+        - dilbert
+        - unicode (better support for various Perl versions and a very basic
+          default list)
+        [TICKET CLOSED]
+        - #16256 on rt.cpan.org (David Landgren provided 11 new beverages
+          and corrected a typo in AMS::booze)
+
 0.50 Sat Nov 26 20:15:57 CET 2005
         [NEW WEEKLY THEME 2005/11/28]
         - unicode
@@ -9,9 +28,9 @@ Revision history for Acme-MetaSyntactic
           of storing them in __DATA__. The data format must be the same
           as the one that load_data() returns.
         [FILE UPDATE]
-        - Oops. The DATE file was not listed in the MANIFEST file, 
+        - Oops. The DATES file was not listed in the MANIFEST file, 
           and therefore not included in version 0.49.
-        - DATE now lists all planned themes for 2005.
+        - DATES now lists all planned themes for 2005.
 
 0.49 Sun Nov 20 15:58:38 CET 2005
         [NEW WEEKLY THEME 2005/11/21]
@@ -29,7 +48,7 @@ Revision history for Acme-MetaSyntactic
           pm_groups.
         - meta now has a --remote option that prints the remote list of items
         [NEW FILE]
-        - the DATE file lists all themes added since the beginning,
+        - the DATES file lists all themes added since the beginning,
           with date and version information, as well as planned
           additions. This version lists all themes up to version 0.50.
 
