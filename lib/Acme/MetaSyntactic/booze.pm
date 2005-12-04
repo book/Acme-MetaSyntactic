@@ -7,7 +7,7 @@ __PACKAGE__->init();
 
 =head1 NAME
 
-Acme::MetaSyntactic::booze - The booze theme (not for tea-totalers)
+Acme::MetaSyntactic::booze - The booze theme (not for teetotalers)
 
 =head1 DESCRIPTION
 
@@ -19,6 +19,9 @@ Nicholas Clark, after seeing BooK's talk at YAPC::Europe 2005 and amazed
 that there was such an obvious omission.
 
 Introduced in version 0.45, published on October 24, 2005.
+
+Updated in version 0.51 (thus closing RT ticket #16256 opened by David
+Landgren), published on December 5, 2005.
 
 =head1 BUGS
 
@@ -48,4 +51,14 @@ whiskey
 port
 sherry
 absinthe
-
+ale
+mead
+brandy
+champagne
+ouzo
+martini
+vermouth
+suze
+tequila
+amaretto
+drambuie
