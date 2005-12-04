@@ -38,6 +38,14 @@ Updated with a brand new list in version 0.29, published on July 4, 2005.
 
 Remote list added and theme updated in version 0.49, published on November 21, 2005.
 
+Later updates:
+
+=over 4
+
+=item version 0.51, published on December 5, 2005
+
+=back
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -73,4 +81,4 @@ the_boss tim timmy tina toby todd tom too_helpful_guy topper toxic_tom
 traylor uncle_albert uncle_max uncle_ned upholsterygeist virginia
 waldo wally walter wendel wendy will willy wilson wilt_gandhi winston
 world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
-tex flashy petricia
+tex flashy petricia tim_zumph earl lefty
