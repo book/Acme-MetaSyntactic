@@ -123,9 +123,20 @@ regression tests for my Perl modules. No more do I spend time looking
 for variable names! It simply changed my life.>
 
 -- Rafael Garcia-Suarez, pumpking,
-used AMS when writing tests for Sub::Identify.
+used AMS when writing tests for C<Sub::Identify>.
 
 =back
+
+=head1 EXAMPLES OF USE
+
+Ever needed to debug with the help of a few C<print()> statements?
+Simply map some keystrokes to insert a warning where you want it.
+With B<meta>, you will never need to think about what write in the
+string argument:
+
+    nmap _wa :r!meta donmartin<CR>iwarn"<Esc>A";<Esc>==
+
+(This mapping kindly given by Rafael Garcia-Suarez.)
 
 =head1 AUTHOR
 
