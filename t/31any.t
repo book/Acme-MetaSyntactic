@@ -17,7 +17,7 @@ my @tests = (
     [qw(alces_alces antler caribou)],# antlers
     [qw(America Antares Aquarius)],  # apollo
     [qw(aieee aiieee awk awkkkkkk)], # batman
-    [qw(absinthe beer cider)],       # booze
+    [qw(absinthe ale amaretto)],     # booze
 );
 
 plan tests => scalar @tests;
