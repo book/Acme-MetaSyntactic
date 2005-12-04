@@ -13,6 +13,7 @@ my $builder = Module::Build->new(
         'File::Glob' => 0,
         'List::Util' => 0,
     },
+    recommends          => { 'LWP::UserAgent' => 2 },
     script_files        => [ 'script/meta' ],
     add_to_cleanup      => [ 'Acme-MetaSyntactic-*' ],
 );
