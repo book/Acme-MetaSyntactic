@@ -60,6 +60,7 @@ lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
 lib/Acme/MetaSyntactic/toto.pm
 lib/Acme/MetaSyntactic/unicode.pm
+lib/Acme/MetaSyntactic/us_presidents.pm
 lib/Acme/MetaSyntactic/viclones.pm
 lib/Acme/MetaSyntactic/weekdays.pm
 lib/Acme/MetaSyntactic/yapc.pm
