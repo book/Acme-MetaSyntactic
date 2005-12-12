@@ -18,7 +18,7 @@ our %Remote = (
 
 =head1 NAME
 
-Acme::MetaSyntactic::us_presidents - The presidents of the USA theme.
+Acme::MetaSyntactic::us_presidents - The presidents of the USA theme
 
 =head1 DESCRIPTION
 

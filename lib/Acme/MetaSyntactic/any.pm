@@ -35,7 +35,7 @@ sub has_remotelist { };
 
 =head1 NAME
 
-Acme::MetaSyntactic::any - Items from any theme.
+Acme::MetaSyntactic::any - Items from any theme
 
 =head1 DESCRIPTION
 
