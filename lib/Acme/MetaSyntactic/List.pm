@@ -22,7 +22,7 @@ sub init {
     *{"$class\::import"} = sub {
         my $callpkg = caller(0);
         my $theme   = ${"$class\::Theme"};
-        my $meta    = $class->new;
+        my $meta    = $class->new();
         *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
       };
     ${"$class\::meta"} = $class->new();

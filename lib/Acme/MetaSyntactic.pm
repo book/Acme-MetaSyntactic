@@ -7,7 +7,7 @@ use File::Basename;
 use File::Spec;
 use File::Glob;
 
-our $VERSION = '0.52';
+our $VERSION = '0.53';
 
 # some class data
 our $Theme = 'foo'; # default theme
@@ -184,7 +184,7 @@ Acme::MetaSyntactic - Themed metasyntactic variables names
     # this sets the default theme and loads Acme::MetaSyntactic::shadok
     my $meta = Acme::MetaSyntactic->new( 'shadok' );
     
-    print $meta->name;            # return a single name
+    print $meta->name();          # return a single name
     my @names = $meta->name( 4 ); # return 4 distinct names (if possible)
 
     # you can temporarily switch theme
