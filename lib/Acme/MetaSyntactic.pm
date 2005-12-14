@@ -148,13 +148,10 @@ sub name {
         ( $theme, $count ) = ( $self->{theme}, 1 );
     }
 
-    croak "Metasyntactic list $theme does not exist!"
-      unless exists $META{$theme};
-
-    unless( exists $self->{meta}{$theme} ) {
-        unless( $META{$theme} ) {
+    if( ! exists $self->{meta}{$theme} ) {
+        if( ! $META{$theme} ) {
             eval "require Acme::MetaSyntactic::$theme;";
-            croak $@ if $@;
+            croak "Metasyntactic list $theme does not exist!" if $@;
             $META{$theme} = 1; # loaded
         }
         $self->{meta}{$theme} =
