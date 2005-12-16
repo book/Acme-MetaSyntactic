@@ -125,6 +125,12 @@ for variable names! It simply changed my life.>
 -- Rafael Garcia-Suarez, pumpking,
 used AMS when writing tests for C<Sub::Identify>.
 
+=item *
+
+I<C<Acme::MetaSyntactic> gave names for regression tests in the Perl core>
+
+See L<http://public.activestate.com/cgi-bin/perlbrowse?patch=26370>.
+
 =back
 
 =head1 EXAMPLES OF USE
