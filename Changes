@@ -1,5 +1,15 @@
 Revision history for Acme-MetaSyntactic
 
+0.53 Mon Dec 19 20:38:37 CET 2005
+        [NEW WEEKLY THEME 2005/12/19]
+        - opcodes (Abigail)
+        [ENHANCEMENTS]
+        - the list of themes (as returned by themes() is still computed
+          at startup, but if new themes appear while the current script
+          is running, they can be "required" without a restart
+        [THEME UPDATE]
+        - dilbert
+
 0.52 Sun Dec 11 21:24:21 CET 2005
         [NEW WEEKLY THEME 2005/12/12]
         - us_presidents (Abigail)
