@@ -26,12 +26,11 @@ SKIP: {
 
     # need the network too
     skip "Network looks down - couldn't reach Google", $tests
-        unless 'http://www.google.com/intl/en/';
+        unless LWP::Simple::get( 'http://www.google.com/intl/en/' );
 
     # need Test::Differences
     eval { require Test::Differences; };
-    skip "Test::Differences required for testing up-to-dateness", $tests
-        if $@;
+    my $has_test_diff = $@ eq '';
 
     # a little warning
     diag "Testing @{[scalar @themes]} themes using the network (may take a while)";
@@ -55,11 +54,16 @@ SKIP: {
                 );
 
                 # details
-                Test::Differences::eq_or_diff(
-                    $current, $online,
-                    "$theme is up to date",
-                    { context => 1 }
-                );
+                if( $has_test_diff ) {
+                    Test::Differences::eq_or_diff(
+                        $current, $online,
+                        "$theme is up to date",
+                        { context => 1 }
+                    );
+                }
+                else {
+                    is_deeply( $current, $online, "$theme is up to date" );
+                }
             }
         }
     }
