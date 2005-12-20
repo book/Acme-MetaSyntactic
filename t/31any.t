@@ -16,6 +16,7 @@ my @tests = (
     [qw(Amber)],                     # amber
     [qw(alces_alces antler caribou)],# antlers
     [qw(America Antares Aquarius)],  # apollo
+    [qw(Barbabelle Barbalala)],      # barbapapa
     [qw(aieee aiieee awk awkkkkkk)], # batman
     [qw(absinthe ale amaretto)],     # booze
 );
