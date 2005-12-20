@@ -8,6 +8,7 @@ lib/Acme/MetaSyntactic/amber.pm
 lib/Acme/MetaSyntactic/antlers.pm
 lib/Acme/MetaSyntactic/any.pm
 lib/Acme/MetaSyntactic/apollo.pm
+lib/Acme/MetaSyntactic/barbapapa.pm
 lib/Acme/MetaSyntactic/batman.pm
 lib/Acme/MetaSyntactic/booze.pm
 lib/Acme/MetaSyntactic/browser.pm
