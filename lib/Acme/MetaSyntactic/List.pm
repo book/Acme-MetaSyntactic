@@ -12,7 +12,7 @@ sub init {
     my $class = caller(0);
 
     $data ||= Acme::MetaSyntactic->load_data($class);
-    croak "The optional argument to init must be a hash reference"
+    croak "The optional argument to init() must be a hash reference"
       if ref $data ne 'HASH';
 
     no strict 'refs';
