@@ -21,7 +21,7 @@ many other languages.
 
 Abigail (English).
 
-Philippe "BooK" Bruhat (all the others languages, thanks to Estelle
+Philippe "BooK" Bruhat (all the others languages, many thanks to Estelle
 Souche for her help with the Yiddish names).
 
 Introduced in version 0.51, published on December 5, 2005.
