@@ -18,25 +18,25 @@ in games (who'll be the wolf?)
 
 =head2 English
 
-Eeny, meeny, miny, moe
-Catch a tiger by the toe
-If he hollers let him go,
-Eeny, meeny, miny, moe.
+    Eeny, meeny, miny, moe
+    Catch a tiger by the toe
+    If he hollers let him go,
+    Eeny, meeny, miny, moe.
 
 =head2 French
 
-Am, stram, gram,
-Pique et pique et colégram
-Bourre, bourre et ratatam
-Am, stram, gram.
+    Am, stram, gram,
+    Pique et pique et colégram
+    Bourre, bourre et ratatam
+    Am, stram, gram.
 
 =head2 DUTCH
 
-Iene, miene, mutte,
-tien pond grutten,
-tien pond kaas,
-Iene, miene, mutte,
-is de baas.
+    Iene, miene, mutte,
+    tien pond grutten,
+    tien pond kaas,
+    Iene, miene, mutte,
+    is de baas.
 
 =head1 CONTRIBUTORS
 
