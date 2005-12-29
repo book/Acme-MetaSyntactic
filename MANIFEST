@@ -46,6 +46,7 @@ lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/peanuts.pm
 lib/Acme/MetaSyntactic/phonetic.pm
 lib/Acme/MetaSyntactic/pm_groups.pm
+lib/Acme/MetaSyntactic/pokemon.pm
 lib/Acme/MetaSyntactic/pumpkings.pm
 lib/Acme/MetaSyntactic/punctuation.pm
 lib/Acme/MetaSyntactic/pynchon.pm
