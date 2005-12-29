@@ -32,6 +32,9 @@ Philippe "BooK" Bruhat
 
 Introduced in version 0.49, published on November 21, 2005.
 
+Updated in version 0.56 (28 groups disappeared and 4 groups were created),
+published on January 9, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -55,7 +58,6 @@ Amiga_pm
 Amsterdam_pm
 Anchorage_pm
 Angola_pm
-AnnArbor_pm
 Argentina_pm
 Asheville_pm
 Athens_pm
@@ -76,7 +78,6 @@ Belgrade_pm
 Berlin_pm
 Bielefeld_pm
 Birmingham_pm
-Bloomington_Normal_pm
 Boise_pm
 Bologna_pm
 Boston_pm
@@ -91,7 +92,6 @@ Budapest_pm
 Buffalo_pm
 Burnaby_pm
 CAMEL_pm
-CGI_pm
 CaFe_pm
 Calgary_pm
 Cambridge_pm
@@ -102,7 +102,6 @@ Caracas_pm
 Cascais_pm
 Cascavel_pm
 Cedar_Valley_Perl_Mongers_pm
-CentralCoast_pm
 Champaign_Urbana_pm
 Charleston_pm
 Charlotte_pm
@@ -118,7 +117,6 @@ Columbia_pm
 Copenhagen_pm
 CostaRica_pm
 Csy_pm
-DBI_pm
 DC_pm
 DFW_pm
 Dayton_pm
@@ -136,15 +134,12 @@ Eindhoven_pm
 Erlangen_pm
 Fortaleza_pm
 Frankfurt_pm
-Gabrovo_pm
 Gainesville_pm
 Galicia_pm
 Geneva_pm
 German_pm
 Glasgow_pm
 Gombe_pm
-Goteborg_pm
-Granada_pm
 GrandRapids_pm
 Guadalajara_pm
 Guatemala_pm
@@ -157,11 +152,9 @@ Helsingborg_pm
 HongKong_pm
 Houston_pm
 HudsonValley_pm
-Humboldt_pm
 Iassy_pm
 Israel_pm
 Istanbul_pm
-Izmir_pm
 JERL_pm
 JPL_pm
 Jacksonville_pm
@@ -169,13 +162,11 @@ Jakarta_pm
 Jalisco_pm
 Jerusalem_pm
 Jogja_pm
-Kamloops_pm
 Kansai_pm
 KansasCity_pm
 Kaohsiung_pm
 KernCounty_pm
 Kiel_pm
-Knoxville_pm
 Kolkata_pm
 Korean_Perl_User_Group_pm
 LA_Belle_pm
@@ -184,7 +175,6 @@ LagunaNiguel_pm
 LasVegas_pm
 Lawton_pm
 Lebanon_pm
-Leuven_pm
 Lexington_pm
 Lisbon_pm
 Ljubljana_pm
@@ -205,10 +195,9 @@ Mexico_pm
 Miami_pm
 Mignon_pm
 MiltonKeynes_pm
-Milwaukee_pm
 Minneapolis_pm
 Mk_pm
-Montr_eacute_al_pm
+Montreal_pm
 Morris_County_pm
 Moscow_pm
 Munich_pm
@@ -232,13 +221,12 @@ Omaha_pm
 OrangeCounty_pm
 Orlando_pm
 Oslo_pm
-Oxford_pm
+PBP_pm
 PDX_pm
 Paderborn_pm
 Pakistan_pm
 Paris_pm
 PerlSemNY_pm
-Perth_pm
 PhPerl_pm
 Philadelphia_pm
 Phoenix_pm
@@ -248,7 +236,6 @@ Pittsburgh_pm
 PortoAlegre_pm
 Porto_pm
 Pound_Perl_pm
-Prague_pm
 Princeton_pm
 Pune_pm
 Purdue_pm
@@ -258,8 +245,7 @@ RenoTahoe_pm
 RhodeIsland_pm
 Richmond_pm
 Rio_pm
-Rioja_pm
-Rochester_pm
+Rockford_pm
 Roederbergweg_pm
 Roma_pm
 Rousse_pm
@@ -279,7 +265,7 @@ Seneca_pm
 Shadrinsk_pm
 Shibuya_pm
 SiouxLand_pm
-Sofia_pm
+SoCo_pm
 Sonoma_pm
 SouthFlorida_pm
 SpringfieldMO_pm
@@ -287,7 +273,6 @@ Sri_Lanka_pm
 StLouis_pm
 StPaul_pm
 Stockholm_pm
-StonyBrook_pm
 Stuttgart_pm
 Sydney_pm
 Taichung_pm
@@ -304,8 +289,6 @@ Tokyo_pm
 Toronto_pm
 Toulouse_pm
 Tucson_pm
-Tulsa_pm
-Tyneside_pm
 Ulm_pm
 Valladolid_pm
 ValleKas_pm
@@ -318,13 +301,11 @@ Vitoria_pm
 Vlaanderen_pm
 WYPUG_pm
 Wellington_pm
-WestTexas_pm
 WhiteMountain_pm
 Winnipeg_pm
 Yerevan_pm
 Yuma_pm
 ZA_pm
-Zurich_pm
 aalborg_pm
 ankara_pm
 arnhem_pm
@@ -342,9 +323,7 @@ kampala_pm
 kraljevo_pm
 kw_pm
 may_pm
-mississippi_pm
 mytutorial_pm
-nova_pm
 ooubafsan_pm
 ph_pm
 plovdiv_pm
