@@ -4,7 +4,7 @@ use Acme::MetaSyntactic;
 plan tests => 1;
 
 my $count = $Acme::MetaSyntactic::VERSION;
-$count =~ s/^0\.//;
+$count =~ y/.//d;
 $count += 5; # 5 as from version 0.55
              # 6 as from version 0.38
              # 7 as from version 0.25
