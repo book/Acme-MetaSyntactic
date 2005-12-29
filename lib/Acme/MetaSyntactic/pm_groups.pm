@@ -10,6 +10,7 @@ our %Remote = (
         return
             map { Acme::MetaSyntactic::RemoteList::tr_nonword($_) }
             map { s/#/Pound_/g; $_ }
+            map { s/&([aeiouy])(?:acute|grave|circ|uml);/$1/g; $_ }
             $_[0] =~ m!<group id="\d+" status="active">\s*<name>\s*([^<]+)\s*</nam!g;
     },
 );
