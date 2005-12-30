@@ -219,12 +219,12 @@ When writing code examples, it's always easy at the beginning:
 But one gets quickly stuck with the same old boring examples.
 Does it have to be this way? I say "No".
 
-Here is Acme::MetaSyntactic, designed to fulfill your metasyntactic needs.
+Here is C<Acme::MetaSyntactic>, designed to fulfill your metasyntactic needs.
 Never again will you scratch your head in search of a good variable name!
 
 =head1 METHODS (& FUNCTIONS)
 
-Acme::MetaSyntactic has an object-oriented interface, but can also
+C<Acme::MetaSyntactic> has an object-oriented interface, but can also
 export a few functions (see L<EXPORTS>).
 
 =head2 Methods
@@ -236,7 +236,7 @@ available:
 
 =item new( $theme )
 
-Create a new instance of Acme::MetaSyntactic with the theme C<$theme>.
+Create a new instance of C<Acme::MetaSyntactic> with the theme C<$theme>.
 If C<$theme> is omitted, the default theme is C<foo>.
 
 =item name( [ $theme, ] $count )
@@ -270,12 +270,12 @@ This class method adds a new theme to the list. It also creates and
 exports all the convenience functions (C<metaI<theme>()>) needed.
 
 Note that this method can only create themes that implement the
-Acme::MetaSyntactic::List behaviour.
+C<Acme::MetaSyntactic::List> behaviour.
 
 =item load_data( $class )
 
 This method is used by the "behaviour" classes (such as
-Acme::MetaSyntactic::List) to read the content of the C<DATA>
+C<Acme::MetaSyntactic::List>) to read the content of the C<DATA>
 filehandle and fetch the theme data.
 
 The format is very simple. If the C<DATA> filehandle contains the
@@ -302,19 +302,19 @@ is trimmed, newlines and duplicate whitespace characters are squashed):
         empty => ""
     }
 
-For example, Acme::MetaSyntactic::List uses the single parameter C<names>
+For example, C<Acme::MetaSyntactic::List> uses the single parameter C<names>
 to fetch the lists of names for creating its subclasses.
 
 =back
 
 Convenience methods also exists for all the themes. The methods are named
 after the theme. They are exported only when the theme is actually used
-or where it appear in the Acme::MetaSyntactic import list.  The first
+or where it appear in the C<Acme::MetaSyntactic> import list.  The first
 imported theme is the default, used by the C<metaname()> function.
 
 =head1 EXPORTS
 
-Depending on how Acme::MetaSyntactic is used, several functions can
+Depending on how C<Acme::MetaSyntactic> is used, several functions can
 be exported. All of them behave like the following:
 
 =over 4
@@ -362,29 +362,29 @@ The list of available themes can be obtained with the following one-liner:
 
     $ perl -MAcme::MetaSyntactic -le 'print for Acme::MetaSyntactic->themes'
 
-The themes are all the Acme::MetaSyntactic::I<theme> classes, with
+The themes are all the C<Acme::MetaSyntactic::I<theme>> classes, with
 I<theme> starting with a lowercase letter.
 
 =head2 Theme behaviours
 
-Acme::MetaSyntactic provides theme authors with the capability of creating
+C<Acme::MetaSyntactic> provides theme authors with the capability of creating
 theme "behaviours". Behaviours are implemented as classes from which the
 individual themes inherit.
 
-The themes are all the Acme::MetaSyntactic::I<theme> classes, with
+The themes are all the C<Acme::MetaSyntactic::I<theme>> classes, with
 I<theme> starting with an uppercase letter.
 
 Here are the available behaviours:
 
 =over 4
 
-=item Acme::MetaSyntactic::List
+=item C<Acme::MetaSyntactic::List>
 
 The theme is a simple collection of names. An object instance will
 return names at random from the list, and not repeat any until the list
 is exhausted.
 
-=item Acme::MetaSyntactic::Locale
+=item C<Acme::MetaSyntactic::Locale>
 
 The theme is made of several collections of names, each associated with
 a "language". The language is either passed as a constructor parameter,
@@ -407,8 +407,8 @@ be notified of progress on your bug as I make changes.
 
 If you think this modules lacks a particular set of metasyntactic
 variables, please send me a list, as well as a generation algorithm
-(either one of the built-ins (AMS::List, AMS::Locale), or a new one of your
-invention)
+(either one of the built-ins (C<Acme::MetaSyntactic::List>,
+C<Acme::MetaSyntactic::Locale>), or a new one of your invention).
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -429,8 +429,8 @@ and the announce L<http://use.perl.org/~BooK/journal/22732>.
 =item The Batman serial from the 60s (it was shown in France in the 80s).
 
 my wife loves it, I name most of my machines after the bat fight sound
-effects (C<zowie>, C<klonk>, C<zlonk>), I even own a CD of the serial's
-theme music and the DVD of the movie.
+effects (C<zowie>, C<klonk>, C<zlonk>), and I even own a CD of the serial's
+theme music and the DVD of the movie (featuring the batboat and the batcopter!).
 
 =item Rafael Garcia-Suarez,
 
@@ -445,7 +445,7 @@ Don Martin's comic-books) and provided a link to a comprehensive list.
 =item Sébastien Aperghis-Tramoni,
 
 who actually uses it, to do what he thinks is the only logical thing
-to do with Acme::MetaSyntactic: an IRC bot! See L<Bot::MetaSyntactic>.
+to do with C<Acme::MetaSyntactic>: an IRC bot! See L<Bot::MetaSyntactic>.
 
     #perlfr Sat Mar  5 01:15 CET 2005
     <Maddingue> BooK: bon, l'API de AMS, tu l'as changé alors ?
@@ -461,14 +461,14 @@ to do with Acme::MetaSyntactic: an IRC bot! See L<Bot::MetaSyntactic>.
 =item Jérôme Fenal,
 
 who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
-Acme::MetaSyntactic fulfill its role: rename your boring variables
+C<Acme::MetaSyntactic> fulfill its role: rename your boring variables
 with silly names.
 
 =back
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2006 Philippe 'BooK' Bruhat, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
