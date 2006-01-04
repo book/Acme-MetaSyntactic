@@ -41,8 +41,8 @@ SKIP: {
     SKIP: {
             no warnings 'utf8';
             skip "$theme ignored upon request", 2 if !$test{$theme};
-            my $current = [ sort map {lc} $theme->name(0) ];
-            my $online  = [ sort map {lc} $theme->remote_list() ];
+            my $current = [ sort $theme->name(0) ];
+            my $online  = [ sort $theme->remote_list() ];
 
         SKIP: {
                 skip "Fetching remote items for $theme probably failed", 2
