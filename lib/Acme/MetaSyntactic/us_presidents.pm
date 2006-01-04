@@ -10,7 +10,7 @@ our %Remote = (
         return
             map { y'- .'_'; s/_+/_/g; s/\b(.)/uc $1/eg; $_ }
             grep { !/^(?:BEGIN|END)$/ }
-            $_[0] =~ m{<!-- (.*) -->}gm;
+            $_[0] =~ /"Portrait of ([^"]+)"/g;
     }
 );
 
@@ -32,6 +32,9 @@ L<http://www.whitehouse.gov/history/presidents/index.html>.
 Abigail
 
 Introduced in version 0.52, published on December 12, 2005.
+
+Updated (correction of a typo) by Abigail again
+in version 0.57, published on January 16, 2006.
 
 =head1 SEE ALSO
 
@@ -67,7 +70,7 @@ John_Adams
 John_Kennedy
 John_Quincy_Adams
 John_Tyler
-Lyndon_JOhnson
+Lyndon_Johnson
 Martin_Van_Buren
 Millard_Fillmore
 Richard_Nixon
