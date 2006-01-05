@@ -420,29 +420,39 @@ However, this module could not have been possible without:
 
 =over 4
 
-=item Some sillyness
+=item *
+
+Some sillyness
 
 See L<http://use.perl.org/~BooK/journal/22301>,
 the follow-up L<http://use.perl.org/~BooK/journal/22710>,
 and the announce L<http://use.perl.org/~BooK/journal/22732>.
 
-=item The Batman serial from the 60s (it was shown in France in the 80s).
+=item *
+
+The Batman serial from the 60s (it was shown in France in the 80s).
 
 my wife loves it, I name most of my machines after the bat fight sound
 effects (C<zowie>, C<klonk>, C<zlonk>), and I even own a CD of the serial's
 theme music and the DVD of the movie (featuring the batboat and the batcopter!).
 
-=item Rafael Garcia-Suarez,
+=item *
+
+Rafael Garcia-Suarez,
 
 who apparently plans to use it. Especially now that it's usable in
 one-liners.
 
-=item Vahe Sarkissian,
+=item *
+
+Vahe Sarkissian,
 
 who was the first to suggest an additional list (the sound effects from
 Don Martin's comic-books) and provided a link to a comprehensive list.
 
-=item Sébastien Aperghis-Tramoni,
+=item *
+
+Sébastien Aperghis-Tramoni,
 
 who actually uses it, to do what he thinks is the only logical thing
 to do with C<Acme::MetaSyntactic>: an IRC bot! See L<Bot::MetaSyntactic>.
@@ -458,7 +468,9 @@ to do with C<Acme::MetaSyntactic>: an IRC bot! See L<Bot::MetaSyntactic>.
                 logique de faire avec ton module
     <BooK> un robot irc
 
-=item Jérôme Fenal,
+=item *
+
+Jérôme Fenal,
 
 who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
 C<Acme::MetaSyntactic> fulfill its role: rename your boring variables
