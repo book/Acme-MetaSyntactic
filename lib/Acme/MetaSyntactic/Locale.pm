@@ -79,7 +79,8 @@ sub new {
         }
     }
     $self->{lang} = ${"$class\::Default"} unless $self->{lang};
-    ($self->{lang}) = $self->{lang} =~ /^([-a-z]+)/;
+    ( $self->{lang} ) = $self->{lang} =~ /^([-A-Za-z]+)/;
+    $self->{lang} = lc( $self->{lang} || '' );
 
     # fall back to last resort
     $self->{lang} = ${"$class\::Default"}
