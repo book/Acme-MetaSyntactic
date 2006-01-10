@@ -12,10 +12,12 @@ Available options:
   --version         : print version information and exit
   --themes          : print the list of themes and exit
   --remote          : fetch the remote list (if available) and print it
+  --check           : fetch the remote list and print differences with current
 EOT
 
 my %conf = ( whitespace => 0 );
-GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "remote" )
+GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "remote",
+                    "check" )
   or die $usage;
 
 # informative options
@@ -37,17 +39,32 @@ die "Theme '$theme' does not exist!\n"
 
 my $meta = Acme::MetaSyntactic->new( $theme );
 
-if ( $conf{remote} ) {
+my (@remote, @local);
+
+if ( $conf{remote} || $conf{check} ) {
     my $module = "Acme::MetaSyntactic::$theme";
     eval "require $module;";
     die "Theme '$theme' is not updatable!\n"
         unless $module->has_remotelist();
-    print join $sep, sort $module->remote_list();
+    @remote = $module->remote_list();
 }
-else {
+if (!$conf{remote}) {
     my $count = shift;
     $count = 1 unless defined $count;
-    print join $sep, $meta->name($count);
+    $count = 0 if $conf{check};
+    @local = $meta->name($count);
+}
+if ($conf{check}) {
+    my %seen;
+    $seen{$_} ++ for @remote;
+    $seen{$_} -- for @local;
+    foreach my $key (sort keys %seen) {
+        next unless $seen{$key};
+        print $seen{$key} > 0 ? "+ $key" : "- $key";
+    }
+}
+else {
+    print join $sep, @local, @remote;
 }
 
 __END__
@@ -94,6 +111,13 @@ Print all items on a single line, separated by space.
 =item I<--remote>
 
 Fetch the remote list (if available) and print it.
+
+=item I<--check>
+
+Fetch the remote list (if available) and print only the differences betwen
+the current list and the remote list (items are prefixed by C<+> and C<->).
+
+Option added by Abigail.
 
 =item I<--themes>
 
@@ -148,9 +172,11 @@ string argument:
 
 Philippe "BooK" Bruhat, C<< <book@cpan.org> >>.
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT
 
-Copyright 2005 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2006 Philippe 'BooK' Bruhat, All Rights Reserved.
+
+=head1 LICENSE
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
