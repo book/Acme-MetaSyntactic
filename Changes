@@ -1,5 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
+0.57 Sun Jan 15 16:10:10 CET 2006
+        [NEW WEEKLY THEME 2006/01/16]
+        - barbarella (Abigail)
+        [ENHANCEMENTS]
+        - meta now has a --check method that fetches the remote list and
+          shows which items were added or removed (thanks to Abigail).
+        [THEME UPDATE]
+        - dilbert
+        - pokemon
+        - us_presidents (Abigail spotted a typo and provided a code patch)
+
 0.56 Thu Dec 29 11:00:31 CET 2005
         [NEW WEEKLY THEME 2006/01/09]
         - pokemon (Abigail)
