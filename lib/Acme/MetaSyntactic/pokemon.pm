@@ -35,6 +35,8 @@ Abigail
 
 Introduced in version 0.56, published on January 9, 2006.
 
+Updated in version 0.57, published on January 16, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>,
@@ -88,4 +90,4 @@ Armaldo Feebas Milotic Castform Kecleon Shuppet Banette Duskull Dusclops
 Tropius Chimecho Absol Wynaut Snorunt Glalie Spheal Sealeo Walrein
 Clamperl Huntail Gorebyss Relicanth Luvdisc Bagon Shelgon Salamence
 Beldum Metang Metagross Regirock Regice Registeel Latias Latios Kyogre
-Groudon Rayquaza Jirachi Deoxys
+Groudon Rayquaza Jirachi Deoxys Munchlax
