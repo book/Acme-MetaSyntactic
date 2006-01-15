@@ -46,6 +46,10 @@ Later updates:
 
 =item * version 0.51, published on December 5, 2005
 
+=item * version 0.52, published on December 12, 2005
+
+=item * version 0.53, published on December 19, 2005
+
 =item * version 0.57, published on January 16, 2006
 
 =back
