@@ -8,8 +8,9 @@ our %Remote = (
     source  => 'http://www.triviaasylum.com/dilbert/diltriv.html',
     extract => sub {
         return
-            grep { $_ ne '_' }
-            map { y!- '/!___ !; s/\.//g; split ' ', lc }
+            grep { $_ ne '' }
+            map { s/_+/_/g; s/^_//; $_ }
+            map { y!- '"/!____ !; s/\.//g; split ' ', lc }
             $_[0] =~ m!<b>([^<]+)</b>!gm;
     },
 );
@@ -43,7 +44,9 @@ Later updates:
 
 =over 4
 
-=item version 0.51, published on December 5, 2005
+=item * version 0.51, published on December 5, 2005
+
+=item * version 0.57, published on January 16, 2006
 
 =back
 
@@ -83,4 +86,4 @@ traylor uncle_albert uncle_max uncle_ned upholsterygeist virginia
 waldo wally walter wendel wendy will willy wilson wilt_gandhi winston
 world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
 tex flashy petricia tim_zumph earl lefty sourpuss wendel_j_stone_iv
-vijay
+vijay exactly_man
