@@ -62,6 +62,7 @@ lib/Acme/MetaSyntactic/simpsons.pm
 lib/Acme/MetaSyntactic/stars.pm
 lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
+lib/Acme/MetaSyntactic/tmnt.pm
 lib/Acme/MetaSyntactic/toto.pm
 lib/Acme/MetaSyntactic/unicode.pm
 lib/Acme/MetaSyntactic/us_presidents.pm
