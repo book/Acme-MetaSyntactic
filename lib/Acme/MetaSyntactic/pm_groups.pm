@@ -35,6 +35,8 @@ Introduced in version 0.49, published on November 21, 2005.
 Updated in version 0.56 (28 groups disappeared and 4 groups were created),
 published on January 9, 2006.
 
+Updated in version 0.58, published on January 23, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -108,6 +110,7 @@ Charlotte_pm
 Chemnitz_pm
 Chicago_pm
 China_pm
+Chupei_pm
 ClassicCity_pm
 Clemson_pm
 Cola_pm
