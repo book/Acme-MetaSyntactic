@@ -66,6 +66,8 @@ Updated by Abigail in version 0.47, published on November 7, 2005.
 
 Updated in version 0.49, published on November 21, 2005.
 
+Updated in version 0.59, published on January 30, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
