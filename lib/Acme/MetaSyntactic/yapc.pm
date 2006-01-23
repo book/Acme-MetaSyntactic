@@ -32,7 +32,7 @@ Belfast (2004), Braga (2005), Birmingham (2006).
 
 =item YAPC::Israel
 
-Haifa (2003),  Herzliya (2004, 2005).
+Haifa (2003),  Herzliya (2004, 2005), Netanya (2006).
 
 =item YAPC::Canada
 
@@ -49,6 +49,10 @@ Taipei (2004, 2005).
 =item YAPC::Brazil
 
 Porto Alegre (2005).
+
+=item YAPC::Asia
+
+Tokyo (2006).
 
 =back
 
@@ -72,9 +76,10 @@ __DATA__
 # names
 Pittsburgh Montreal Saint_Louis Boca_Raton Buffalo Toronto Chicago
 London Amsterdam Munich Paris Belfast Braga Birmingham
-Haifa Herzliya
+Haifa Herzliya Netanya
 Ottawa
 Merlbourne
 Tai_Pei
 Porto_Alegre
+Tokyo
 
