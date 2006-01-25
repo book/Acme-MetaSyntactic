@@ -10,7 +10,7 @@ our %Remote = (
     extract => sub {
         return    # support for Unicode female/male symbols
             map { tr/-'. /_/s; s/\xe2\x99\x80/female/; s/\xe2\x99\x82/male/; $_ }
-            $_[0] =~ m!<td>\d+</td>\s*<td><a href="/wiki/[^"]+" title="[^"]+">([^<]+)</a></td>!gm;
+            $_[0] =~ m!<td>(?:\d+|&#160;\?\?\?)</td>\s*<td><a href="/wiki/[^"]+" title="[^"]+">([^<]+)</a></td>!gm;
     },
 );
 
@@ -36,6 +36,8 @@ Abigail
 Introduced in version 0.56, published on January 9, 2006.
 
 Updated in version 0.57, published on January 16, 2006.
+
+Updated in version 0.59, published on January 30, 2006.
 
 =head1 SEE ALSO
 
@@ -90,4 +92,4 @@ Armaldo Feebas Milotic Castform Kecleon Shuppet Banette Duskull Dusclops
 Tropius Chimecho Absol Wynaut Snorunt Glalie Spheal Sealeo Walrein
 Clamperl Huntail Gorebyss Relicanth Luvdisc Bagon Shelgon Salamence
 Beldum Metang Metagross Regirock Regice Registeel Latias Latios Kyogre
-Groudon Rayquaza Jirachi Deoxys Munchlax
+Groudon Rayquaza Jirachi Deoxys Munchlax Bonsly Lucario
