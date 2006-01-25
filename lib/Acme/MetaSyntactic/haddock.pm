@@ -25,14 +25,14 @@ L<http://www.xs4all.nl/~janhee/haddock.html> by Jan Pieter Cornet.
 
 Tintin was translated in many languages, please send my your lists.
 
-=head1 CONTRIBUTOR
+=head1 CONTRIBUTORS
 
-Jérôme Fenal.
+Jérôme Fenal provided the original idea and the French and English lists.
+Jan Pieter Cornet provided the Dutch list.
 
 Introduced in version 0.16, published on April 4, 2005.
 
-Updated with the Dutch version by Jan Pieter Cornet
-in version 0.59, published on January 30, 2006. 
+Updated with the Dutch list in version 0.59, published on January 30, 2006. 
 
 =head1 SEE ALSO
 
