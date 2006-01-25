@@ -23,8 +23,7 @@ Acme::MetaSyntactic::pokemon - The Pokémon theme
 =head1 DESCRIPTION
 
 List of all Pokémon characters that are officially known to exist in the
-franchise, by national Pokédex number. The English names are used in this
-module.
+franchise The English names are used in this module.
 
 This list is based on the following wikipedia article:
 L<http://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number>.
@@ -41,7 +40,7 @@ Updated in version 0.59, published on January 30, 2006.
 
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>,
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 =cut
 
