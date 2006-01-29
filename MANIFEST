@@ -14,6 +14,7 @@ lib/Acme/MetaSyntactic/batman.pm
 lib/Acme/MetaSyntactic/booze.pm
 lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
+lib/Acme/MetaSyntactic/chess.pm
 lib/Acme/MetaSyntactic/constellations.pm
 lib/Acme/MetaSyntactic/counting_rhyme.pm
 lib/Acme/MetaSyntactic/crypto.pm
@@ -92,6 +93,7 @@ t/18import.t
 t/20theme.t
 t/21format.t
 t/22uniq.t
+t/23length.t
 t/30list.t
 t/31any.t
 t/33locale.t
