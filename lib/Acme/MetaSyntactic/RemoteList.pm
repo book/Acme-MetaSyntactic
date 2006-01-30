@@ -25,7 +25,9 @@ sub extract {
 sub source {
     my $class = ref $_[0] || $_[0];
     no strict 'refs';
-    return ${"$class\::Remote"}{source};
+    return ref ${"$class\::Remote"}{source} && wantarray
+           ? @{${"$class\::Remote"}{source}}
+           :   ${"$class\::Remote"}{source};
 }
 
 sub has_remotelist { return defined $_[0]->source(); }
@@ -43,16 +45,19 @@ sub remote_list {
     }
 
     # fetch the content
-    my $src = $class->source();
-    my $ua  = LWP::UserAgent->new( env_proxy => 1 );
-    my $res = $ua->request( HTTP::Request->new( GET => $src ) );
-    if ( ! $res->is_success() ) {
-        carp "Failed to get content at $src (" . $res->status_line() . ")";
-        return;
-    }
+    my @items;
+    my @srcs = $class->source();                                               
+    my $ua   = LWP::UserAgent->new( env_proxy => 1 );
+    foreach my $src (@srcs) {
+        my $res  = $ua->request( HTTP::Request->new( GET => $src ) );
+        if ( ! $res->is_success() ) {
+            carp "Failed to get content at $src (" . $res->status_line();
+            return;
+        }
 
-    # extract, cleanup and return the data
-    my @items = $class->extract( $res->content() );
+        # extract, cleanup and return the data
+        push @items => $class->extract( $res->content() );
+    }
 
     return @items;
 }
@@ -123,6 +128,8 @@ The keys are:
 =item C<source>
 
 The URL where the data is available.
+This can also be an array reference containing several URLs, whose
+content will be passed to the C<extract> subroutine.
 
 =item C<extract>
 
