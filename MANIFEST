@@ -30,6 +30,7 @@ lib/Acme/MetaSyntactic/facecards.pm
 lib/Acme/MetaSyntactic/flintstones.pm
 lib/Acme/MetaSyntactic/foo.pm
 lib/Acme/MetaSyntactic/garbage.pm
+lib/Acme/MetaSyntactic/gems.pm
 lib/Acme/MetaSyntactic/groo.pm
 lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
