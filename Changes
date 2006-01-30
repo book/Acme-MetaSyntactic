@@ -1,5 +1,22 @@
 Revision history for Acme-MetaSyntactic
 
+0.59 Mon Jan 30 01:02:45 CET 2006
+        [NEW WEEKLY THEME 2006/01/30]
+        - chess (Abigail)
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::RemoteList now supports having several sources
+          (but will parse them all in the same manner), thanks to Abigail
+        [TESTS]
+        - t/23length.t checks that items are not longer than 251 characters,
+          and are therefore valid Perl identifiers
+        [THEME UPDATES]
+        - donmartin (Flavio Poletti noted that the list was incomplete.
+          I put up a more accurate list instead of adding the missing item.)
+        - haddock (Jan Pieter Cornet provided a Dutch version of the list)
+        - pokemon (added two pokemons that the parsing code didn't catch)
+        - tmnt (the lists sources are on the web)
+        - yapc (some more YAPC were announced for 2006)
+
 0.58 Sun Jan 22 17:03:03 CET 2006
         [NEW WEEKLY THEME 2006/01/23]
         - tmnt (Abigail)
@@ -12,7 +29,7 @@ Revision history for Acme-MetaSyntactic
         [ENHANCEMENTS]
         - meta now has a --check method that fetches the remote list and
           shows which items were added or removed (thanks to Abigail).
-        [THEME UPDATE]
+        [THEME UPDATES]
         - dilbert
         - pokemon
         - us_presidents (Abigail spotted a typo and provided a code patch)
