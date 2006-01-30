@@ -3,6 +3,18 @@ use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
+
+our %Remote = (
+    source  => ['http://www.ninjaturtles.com/html/profiles.htm',
+                'http://www.ninjaturtles.com/html/profil02.htm'],
+    extract => sub {
+        return
+            map { s/\W+/_/g; $_ }
+            map { split /\s+&amp;\s+/ }
+            $_ [0] =~ m{<a href="/html/profile?\d+.htm">([^<]+)</a>}g
+    }
+);
+
 1;
 
 =head1 NAME
@@ -23,6 +35,8 @@ the TMNT, see L<http://www.ninjaturtles.com/>.
 Abigail
 
 Introduced in version 0.58, published on January 23, 2006.
+
+Made updatable in version 0.59, published on January 30, 2006.
 
 =head1 SEE ALSO
 
