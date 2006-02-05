@@ -40,7 +40,7 @@ Updated with a brand new list in version 0.29, published on July 4, 2005.
 
 Remote list added and theme updated in version 0.49, published on November 21, 2005.
 
-Later updates:
+Later updates (from the source web site):
 
 =over 4
 
@@ -51,6 +51,8 @@ Later updates:
 =item * version 0.53, published on December 19, 2005
 
 =item * version 0.57, published on January 16, 2006
+
+=item * version 0.60, published on February 6, 2006
 
 =back
 
@@ -90,4 +92,4 @@ traylor uncle_albert uncle_max uncle_ned upholsterygeist virginia
 waldo wally walter wendel wendy will willy wilson wilt_gandhi winston
 world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
 tex flashy petricia tim_zumph earl lefty sourpuss wendel_j_stone_iv
-vijay exactly_man
+vijay exactly_man alan
