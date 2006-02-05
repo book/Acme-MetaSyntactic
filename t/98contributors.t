@@ -23,5 +23,5 @@ while (<$fh>) {
 close $fh;
 
 # make sure the doc doesn't contradict the CONTRIBUTORS file
-is( $contributors, $total, "CONTIRBUTORS and the doc agree" );
+is( $contributors, $total, "CONTRIBUTORS and the doc agree" );
 
