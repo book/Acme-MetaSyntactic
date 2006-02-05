@@ -37,6 +37,8 @@ published on January 9, 2006.
 
 Updated in version 0.58, published on January 23, 2006.
 
+Updated in version 0.60, published on February 6, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -135,15 +137,16 @@ Dublin_pm
 Edinburgh_pm
 Eindhoven_pm
 Erlangen_pm
+Firenze_pm
 Fortaleza_pm
 Frankfurt_pm
 Gainesville_pm
 Galicia_pm
 Geneva_pm
 German_pm
-Glasgow_pm
 Gombe_pm
 GrandRapids_pm
+Groningen_pm
 Guadalajara_pm
 Guatemala_pm
 Guimaraes_pm
@@ -152,6 +155,7 @@ HamptonRoads_pm
 Harrisburg_pm
 Hartford_pm
 Helsingborg_pm
+Hollywood_pm
 HongKong_pm
 Houston_pm
 HudsonValley_pm
@@ -284,7 +288,9 @@ Tallahassee_pm
 TampaBay_pm
 Taubate_pm
 Tempe_East_Valley_Perlmongers_pm
+Tempe_pm
 Terere_pm
+Thailand_pm
 Thane_pm
 ThousandOaks_pm
 Tijuana_pm
@@ -317,7 +323,6 @@ bali_pm
 brazosvalley_pm
 cypriots_pm
 dahut_pm
-groningen_pm
 hanoi_pm
 innsbruck_pm
 iran_pm
