@@ -7,7 +7,7 @@ use File::Basename;
 use File::Spec;
 use File::Glob;
 
-our $VERSION = '0.60';
+our $VERSION = '0.61';
 
 # some class data
 our $Theme = 'foo'; # default theme
