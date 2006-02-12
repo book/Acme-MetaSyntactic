@@ -39,6 +39,8 @@ Updated in version 0.58, published on January 23, 2006.
 
 Updated in version 0.60, published on February 6, 2006.
 
+Updated in version 0.61, published on February 13, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -155,7 +157,6 @@ HamptonRoads_pm
 Harrisburg_pm
 Hartford_pm
 Helsingborg_pm
-Hollywood_pm
 HongKong_pm
 Houston_pm
 HudsonValley_pm
@@ -208,7 +209,6 @@ Montreal_pm
 Morris_County_pm
 Moscow_pm
 Munich_pm
-NCSU_pm
 NEPenn_pm
 NE_Oklahoma_Perl_Users_Group_pm
 NH_pm
