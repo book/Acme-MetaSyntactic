@@ -49,6 +49,7 @@ lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/peanuts.pm
 lib/Acme/MetaSyntactic/phonetic.pm
+lib/Acme/MetaSyntactic/planets.pm
 lib/Acme/MetaSyntactic/pm_groups.pm
 lib/Acme/MetaSyntactic/pokemon.pm
 lib/Acme/MetaSyntactic/pooh.pm
