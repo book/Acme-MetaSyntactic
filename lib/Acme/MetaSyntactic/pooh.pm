@@ -31,6 +31,8 @@ with a few additions.
 
 Introduced in version 0.61, published on February 13, 2006.
 
+Updated in version 0.64, published on March 6, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -43,3 +45,4 @@ Winnie_the_Pooh Christopher_Robin Piglet
 Eeyore Owl Rabbit Kanga Roo Tigger
 Small Heffalump Woozle
 Wizzle Alexander_Beetle Hunny_Bee Jagular
+Backson Henry_Pootel Henry_Rush Smallest_of_all Uncle_Robert
