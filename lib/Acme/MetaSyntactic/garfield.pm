@@ -7,7 +7,7 @@ __PACKAGE__->init();
 
 =head1 NAME
 
-Acme::MetaSyntactic::garfield - Characters from I<Garfield>.
+Acme::MetaSyntactic::garfield - The Garfield theme
 
 =head1 DESCRIPTION
 
