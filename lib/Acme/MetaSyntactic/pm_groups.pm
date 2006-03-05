@@ -35,11 +35,19 @@ Introduced in version 0.49, published on November 21, 2005.
 Updated in version 0.56 (28 groups disappeared and 4 groups were created),
 published on January 9, 2006.
 
-Updated in version 0.58, published on January 23, 2006.
+Later updates (from the source web site):
 
-Updated in version 0.60, published on February 6, 2006.
+=over 4
 
-Updated in version 0.61, published on February 13, 2006.
+=item * version 0.58, published on January 23, 2006.
+
+=item * version 0.60, published on February 6, 2006.
+
+=item * version 0.61, published on February 13, 2006.
+
+=item * version 0.64, published on March 6, 2006.
+
+=back
 
 =head1 SEE ALSO
 
@@ -56,6 +64,7 @@ Aarau_pm
 Aarhus_pm
 Aberdeen_pm
 Africa_pm
+Akasaka_pm
 Albany_pm
 Albuquerque_pm
 Algarve_pm
@@ -126,6 +135,7 @@ CostaRica_pm
 Csy_pm
 DC_pm
 DFW_pm
+Darmstadt_pm
 Dayton_pm
 Delhi_pm
 Depok_pm
@@ -256,6 +266,7 @@ Rockford_pm
 Roederbergweg_pm
 Roma_pm
 Rousse_pm
+Ruhr_pm
 SWOK_pm
 Saarland_pm
 Salvador_pm
