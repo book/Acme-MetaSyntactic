@@ -65,6 +65,7 @@ lib/Acme/MetaSyntactic/roman.pm
 lib/Acme/MetaSyntactic/services.pm
 lib/Acme/MetaSyntactic/shadok.pm
 lib/Acme/MetaSyntactic/simpsons.pm
+lib/Acme/MetaSyntactic/smtp.pm
 lib/Acme/MetaSyntactic/stars.pm
 lib/Acme/MetaSyntactic/teletubbies.pm
 lib/Acme/MetaSyntactic/tld.pm
