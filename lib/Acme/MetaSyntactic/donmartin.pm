@@ -50,7 +50,7 @@ Introduced in version 0.03, published on January 14, 2005.
 
 Duplicates removed in version 0.15, published on March 28, 2005.
 
-List entierely updated in version 0.59, published on January 30, 2006.
+List entirely updated in version 0.59, published on January 30, 2006.
 
 (Flavio Poletti told me that a few onomatopoeias were missing. I didn't
 add them, but made the list updatable from the original list URL.
