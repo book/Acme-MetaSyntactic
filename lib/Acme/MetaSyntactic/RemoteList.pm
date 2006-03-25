@@ -59,7 +59,9 @@ sub remote_list {
         push @items => $class->extract( $res->content() );
     }
 
-    return @items;
+    # return unique items
+    my %seen;
+    return grep { !$seen{$_}++ } @items;
 }
 
 #
