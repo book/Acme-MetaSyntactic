@@ -44,6 +44,7 @@ lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
 lib/Acme/MetaSyntactic/monty_spam.pm
+lib/Acme/MetaSyntactic/MultiList.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/opcodes.pm
 lib/Acme/MetaSyntactic/oulipo.pm
@@ -105,10 +106,12 @@ t/22uniq.t
 t/23length.t
 t/30list.t
 t/31any.t
+t/32multi.t
 t/33locale.t
 t/33locale_fail.t
 t/33locale_win32.t
 t/35remote.t
+t/35remote2.t
 t/40inc.t
 t/41count.t
 t/50usecase.t
@@ -137,3 +140,5 @@ t/NoLang.pm
 t/pod-coverage.t
 t/pod.t
 t/remote
+t/remote1
+t/remote2
