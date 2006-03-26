@@ -17,7 +17,7 @@ the Galaxy" book series.
 The list is very incomplete (it should contain at least 42 items).
 
 After glancing at
-L<http://wikisource.org/wiki/The_Ultra-Complete_Index_to_the_Hitch_Hiker%27s_Guide_to_the_Galaxy>,
+L<http://en.wikisource.org/wiki/The_Ultra-Complete_Index_to_the_Hitch_Hiker%27s_Guide_to_the_Galaxy>,
 I wonder if I should include all the entries...
 
 =head1 CONTRIBUTOR
@@ -31,7 +31,8 @@ Updated by Philippe "BooK" Bruhat in version 0.14, published on March 21, 2005.
 Link to I<The Ultra-Complete Index to the Hitch Hiker's Guide to the Galaxy>
 (written and entirely copyrighted 1992-94 by Mathias Maul)
 entry on wikipedia provided by Jean Forget in time for version 0.28,
-published on June 27, 2005.
+published on June 27, 2005. Link updated for version 0.69, published
+on April 10, 2005.
 
 =head1 SEE ALSO
 
