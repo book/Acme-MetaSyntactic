@@ -80,6 +80,22 @@ sub tr_accent {
     return $str;
 }
 
+my %utf2asc = (
+    "\x89" => 'E',
+    "\xa0" => 'a',
+    "\xa1" => 'a',
+    "\xa9" => 'e',
+    "\xaf" => 'i',
+    "\xb8" => 'o',
+);
+my $utf_re = '[' . join( ',', keys %utf2asc ) . ']';
+
+sub tr_utf8_basic {
+    my $str = shift;
+    $str =~ s/(\xc3$utf_re)/$utf2asc{$1}/go;
+    return $str;
+}
+
 1;
 
 __END__
@@ -192,6 +208,12 @@ underscores (C<_>).
 Return a copy of C<$str> will all iso-8859-1 accented characters turned
 into basic ASCII characters.
 
+=item tr_utf8_basic( $str )
+
+Return a copy of C<$str> with some of the utf-8 accented characters turned
+into basic ASCII characters. This is very crude, but I didn't to bother
+and depend on the proper module to do that.
+
 =back
 
 =head1 AUTHOR
@@ -216,7 +238,7 @@ L<Acme::MetaSyntactic::Locale>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2006 Philippe 'BooK' Bruhat, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
