@@ -14,6 +14,11 @@ for my $theme (@themes) {
             push @ams, [ $a, sprintf "%s (%s)", $a->theme, $a->lang ];
         }
     }
+    elsif ( $ams->isa('Acme::MetaSyntactic::MultiList') ) {
+        # check everything at once
+        my $a = "Acme::MetaSyntactic::$theme"->new( category => ':all' );
+        push @ams, [ $a, sprintf "%s (%s)", $a->theme, $a->category ];
+    }
     else {
         push @ams, [ $ams, $ams->theme ];
     }
