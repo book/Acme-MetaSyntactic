@@ -15,7 +15,7 @@ for my $theme (@themes) {
         }
     }
     elsif ( $ams->isa('Acme::MetaSyntactic::MultiList') ) {
-        for my $cat ( $ams->categories ) {
+        for my $cat ( $ams->categories, ':all' ) {
             my $a = "Acme::MetaSyntactic::$theme"->new( category => $cat );
             push @ams, [ $a, sprintf "%s (%s)", $a->theme, $a->category ];
         }
