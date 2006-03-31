@@ -20,9 +20,9 @@ sub init {
                 map { [ $h->{$_}, ( $k ? "$k/$_" : $_ ) ] } keys %$h;
         }
         else {    # leaf
-            my $items = [ split /\s+/, $h ];
+            my @items = split /\s+/, $h;
             while ($k) {
-                push @{ ${"$class\::MultiList"}{$k} }, $items;
+                push @{ ${"$class\::MultiList"}{$k} }, @items;
                 $k =~ s!/?[^/]*$!!;
             }
         }
@@ -83,7 +83,7 @@ sub new {
     # compute the base list for this category
     my %seen;
     $self->{base} = [
-        grep { !$seen{$_}++ } map {@$_}
+        grep { !$seen{$_}++ }
             map { @{ ${"$class\::MultiList"}{$_} } }
             $self->{category} eq ':all'
         ? ( keys %{"$class\::MultiList"} )
