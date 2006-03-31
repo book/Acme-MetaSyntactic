@@ -3,7 +3,7 @@ use File::Find;
 use strict;
 
 @ARGV = ();
-find( sub { push @ARGV, $File::Find::name if /\.p(m|od)$/ }, 'blib' );
+find( sub { push @ARGV, $File::Find::name if /^[a-z].*\.p(m|od)$/ }, 'blib' );
 
 plan tests => scalar @ARGV;
 
