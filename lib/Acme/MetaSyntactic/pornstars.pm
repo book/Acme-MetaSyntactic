@@ -349,6 +349,7 @@ Julia_Ann
 Julia_Bond
 Juli_Ashton
 Julie_Night
+Julia_Channel
 Julia_Parton
 Julie_Meadows
 Julie_Strain
@@ -375,6 +376,7 @@ Kaylani_Lei
 Kaylynn
 Kelle_Marie
 Kelly_Kline
+Kelly_Kroft
 Kelly_Nichols
 Kelly_O_Dell
 Kelly_Stafford
@@ -424,6 +426,7 @@ Linda_Wong
 Linsey_Dawn_McKenzie
 Lisa_De_Leeuw
 Lisa_Ann
+Lisa_Loring
 Lisa_Sparxxx
 Liza_Harper
 Logan_LaBrent
@@ -539,8 +542,10 @@ Sandee_Westgate
 Sandra_Romain
 Sandra_Shine
 Sandy
+Saphire_Rae
 Sara_Jay
 Sarah_Louise_Young
+Sativa_Rose
 Savanna_Samson
 Savannah
 Seka
@@ -550,6 +555,7 @@ Serena
 Serenity
 Shakina_Shergold
 Shanna_McCullough
+Sharka_Blue
 Sharon_Kane
 Sharon_Mitchell
 Shasta
@@ -564,12 +570,15 @@ Silvie_Thomas
 Simone
 Simony_Diamond
 Sindee_Coxx
+Sin_Eye
 Sky_Lopez
 Sophia_Ferrari
+Sophia_Rossi
 Sophie_Evans
 Spring_Thomas
 Stacey_Donovan
 Stacy_Burke
+Stacy_Silver
 Stacy_Valentine
 Stephanie_Bellars
 Stephanie_Swift
