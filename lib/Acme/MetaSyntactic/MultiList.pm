@@ -75,7 +75,7 @@ sub new {
     # compute some defaults
     $self->{category} ||= ${"$class\::Default"};
 
-    # fall back to last resort
+    # fall back to last resort (FIXME should we carp()?)
     $self->{category} = ${"$class\::Default"}
         if $self->{category} ne ':all'
         && !exists ${"$class\::MultiList"}{ $self->{category} };
