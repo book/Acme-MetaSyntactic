@@ -13,11 +13,12 @@ Available options:
   --themes          : print the list of themes and exit
   --remote          : fetch the remote list (if available) and print it
   --check           : fetch the remote list and print differences with current
+  --category <name> : category
 EOT
 
-my %conf = ( whitespace => 0 );
+my %conf = ( whitespace => 0, category => '' );
 GetOptions( \%conf, "whitespace|ws!", "version", "themes", "help", "remote",
-                    "check" )
+                    "check", "category=s" )
   or die $usage;
 
 # informative options
@@ -37,7 +38,7 @@ die "Theme '$theme' does not exist!\n"
   . "Available themes: @{[ Acme::MetaSyntactic->themes ]}\n"
   unless Acme::MetaSyntactic->has_theme( $theme );
 
-my $meta = Acme::MetaSyntactic->new( $theme );
+my $meta = Acme::MetaSyntactic->new( $theme, category => $conf{category} );
 
 my (@remote, @local);
 
@@ -46,7 +47,7 @@ if ( $conf{remote} || $conf{check} ) {
     eval "require $module;";
     die "Theme '$theme' is not updatable!\n"
         unless $module->has_remotelist();
-    @remote = $module->remote_list();
+    @remote = $module->remote_list( $conf{category} );
 }
 if (!$conf{remote}) {
     my $count = shift;
@@ -118,6 +119,13 @@ Fetch the remote list (if available) and print only the differences betwen
 the current list and the remote list (items are prefixed by C<+> and C<->).
 
 Option added by Abigail.
+
+=item I<--category> category
+
+Only select items in the given category (for C<Acme::MetaSyntactic::MultiList>
+subclasses). If not given, use the default category.
+
+Silently fallbacks to the default if the category doesn't exist.
 
 =item I<--themes>
 
