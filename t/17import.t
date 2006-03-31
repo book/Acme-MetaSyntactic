@@ -20,6 +20,16 @@ for my $name ( @themes ) {
           @{ ${"Acme::MetaSyntactic::$name\::Locale"}
               { ${"Acme::MetaSyntactic::$name\::Default"} } };
     }
+    elsif ( exists $isa{'Acme::MetaSyntactic::MultiList'} ) {
+        %seen =
+            map { $_ => 1 }
+            map { @$_ }
+            values %{"Acme::MetaSyntactic::$name\::MultiList"};
+    }
+    else {
+       ok(0, "Don't know how to test $name (@{[keys %isa]})" );
+       next;
+    }
     ok( exists $seen{ $names[0] }, "meta$name -> $names[0]" );
 }
 
