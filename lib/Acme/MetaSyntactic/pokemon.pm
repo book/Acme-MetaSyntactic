@@ -9,7 +9,8 @@ our %Remote = (
         'http://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number',
     extract => sub {
         return    # support for Unicode female/male symbols
-            map { tr/-'. /_/s; s/\xe2\x99\x80/female/; s/\xe2\x99\x82/male/; $_ }
+            map { tr/-'. /_/s; $_}
+            map { Acme::MetaSyntactic::RemoteList::tr_utf8_basic($_) }
             $_[0] =~ m!<td>(?:\d+|&#160;\?\?\?)</td>\s*<td><a href="/wiki/[^"]+" title="[^"]+">([^<]+)</a></td>!gm;
     },
 );

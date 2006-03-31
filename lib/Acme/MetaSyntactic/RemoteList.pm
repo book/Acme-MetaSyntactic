@@ -95,18 +95,21 @@ sub tr_accent {
 }
 
 my %utf2asc = (
-    "\x89" => 'E',
-    "\xa0" => 'a',
-    "\xa1" => 'a',
-    "\xa9" => 'e',
-    "\xaf" => 'i',
-    "\xb8" => 'o',
+    "\xc3\x89" => 'E',
+    "\xc3\xa0" => 'a',
+    "\xc3\xa1" => 'a',
+    "\xc3\xa9" => 'e',
+    "\xc3\xaf" => 'i',
+    "\xc3\xb8" => 'o',
+    # for pokemons
+    "\xe2\x99\x80" => 'female',
+    "\xe2\x99\x82" => 'male',
 );
-my $utf_re = '[' . join( ',', keys %utf2asc ) . ']';
+my $utf_re = qr/(@{[join( '|', sort keys %utf2asc )]})/; 
 
 sub tr_utf8_basic {
     my $str = shift;
-    $str =~ s/(\xc3$utf_re)/$utf2asc{$1}/go;
+    $str =~ s/$utf_re/$utf2asc{$1}/go;
     return $str;
 }
 
