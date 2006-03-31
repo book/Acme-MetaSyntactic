@@ -17,6 +17,13 @@ for my $theme (@themes) {
                   ", $lang locale" ];
         }
     }
+    elsif( exists $isa{'Acme::MetaSyntactic::MultiList'} ) {
+        for my $cat ( "Acme::MetaSyntactic::$theme"->categories(), ':all' ) {
+            push @metas,
+                [ "Acme::MetaSyntactic::$theme"->new( category => $cat ),
+                  ", $cat category" ];
+        }
+    }
     else {
         push @metas, [ "Acme::MetaSyntactic::$theme"->new(), '' ];
     }
