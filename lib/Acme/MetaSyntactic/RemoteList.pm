@@ -25,9 +25,23 @@ sub extract {
 sub source {
     my $class = ref $_[0] || $_[0];
     no strict 'refs';
-    return ref ${"$class\::Remote"}{source} && wantarray
-           ? @{${"$class\::Remote"}{source}}
-           :   ${"$class\::Remote"}{source};
+
+    return ${"$class\::Remote"}{source};
+}
+
+sub sources {
+    my $class = ref $_[0] || $_[0];
+    no strict 'refs';
+
+    my $src = ${"$class\::Remote"}{source};
+    if ( ref $src eq 'ARRAY' ) {
+        return @$src;
+    }
+    elsif ( ref $src eq 'HASH' ) {
+        return
+            map { ref $_ ? @$_ : $_ } $_[1] ? $src->{ $_[1] } : values %$src;
+    }
+    return $src;
 }
 
 sub has_remotelist { return defined $_[0]->source(); }
@@ -46,7 +60,7 @@ sub remote_list {
 
     # fetch the content
     my @items;
-    my @srcs = $class->source();                                               
+    my @srcs = $class->sources($_[1]);
     my $ua   = LWP::UserAgent->new( env_proxy => 1 );
     foreach my $src (@srcs) {
         my $res  = $ua->request( HTTP::Request->new( GET => $src ) );
@@ -182,7 +196,17 @@ if the theme actually has a remote list).
 
 =item source()
 
-Return the source URL.
+Return the data structure containing the source URLs. This can be quite
+different depending on the class: a single scalar (URL), an array
+reference (list of URLs) or a hash reference (each value being either
+a scalar or an array reference) for themes that are subclasses of
+C<Acme::MetaSyntactic::MultiList>.
+
+=item sources( [ $category ] )
+
+Return the list of source URL. The C<$category> parameter can be used
+to select the sources for a sub-category of the theme (in the case of
+C<Acme::MetaSyntactic::MultiList>).
 
 =item extract( $content )
 
