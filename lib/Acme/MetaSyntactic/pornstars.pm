@@ -28,6 +28,8 @@ Acme::MetaSyntactic::pornstars - The porn stars theme
 
 This is a list of so-called "Porn stars", taken from the Wikipedia.
 
+This theme is divided in two sub-categories: C<female> & C<male>.
+
 See L<http://en.wikipedia.org/wiki/MultiList_of_female_porn_stars>
 and L<http://en.wikipedia.org/wiki/MultiList_of_male_porn_stars>
 for details.
