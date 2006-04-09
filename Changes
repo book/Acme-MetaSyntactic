@@ -1,5 +1,27 @@
 Revision history for Acme-MetaSyntactic
 
+0.69 Sun Apr  9 23:14:09 CEST 2006
+        [NEW WEEKLY THEME 2006/04/10]
+        - pornstars (Sébastien Aperghis-Tramoni)
+        [ENHANCEMENTS]
+        - New behaviour Acme::MetaSyntactic::MultiList allows themes
+          to be organised in categories and sub-categories. Usage is
+          similar to Acme::MetaSyntactic::Locale (except that the
+          constructor parameter is named 'category')
+        - the first theme to use this feature is... pornstars
+        - Acme::MetaSyntactic::RemoteList has a new method sources()
+          that can report the source URLs for subcategories (for
+          Acme::MetaSyntactic::RemoteList)
+        - the meta script accepts a new --category option, to select
+          a category within an Acme::MetaSyntactic::MultiList theme
+        [TESTS]
+        - Since 0.59, Acme::MetaSyntactic::RemoteList could accept
+          serveral sources. This functionality is now fully tested.
+        - tests for Acme::MetaSyntactic::MultiList
+        - skip a few more tests if LWP::UserAgent is not installed
+        [THEME UPDATE]
+        - hhgg (updated a reference link)
+
 0.68 Fri Mar 24 11:36:53 CET 2006
         [NEW WEEKLY THEME 2006/04/03]
         - pop2
