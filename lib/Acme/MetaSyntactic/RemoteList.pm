@@ -100,7 +100,10 @@ my %utf2asc = (
     "\xc3\xa1" => 'a',
     "\xc3\xa9" => 'e',
     "\xc3\xaf" => 'i',
+    "\xc3\xad" => 'i',
+    "\xc3\xb6" => 'o',
     "\xc3\xb8" => 'o',
+    "\xc5\xa0" => 'S',
     # for pokemons
     "\xe2\x99\x80" => 'female',
     "\xe2\x99\x82" => 'male',
