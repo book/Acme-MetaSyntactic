@@ -13,7 +13,7 @@ our %Remote = (
         return map { Acme::MetaSyntactic::RemoteList::tr_utf8_basic($_) }
             map { s/[-\s']/_/g; s/[."]//g; $_ }
             $_[0]
-            =~ m{^<li><a href[^>]*>((?!List of)[^<]*?)(?:(?:,| \()[^<].*)?</a></li>}mig;
+            =~ m{^<li><(?:a href|i)[^>]*>((?!List of)[^<]*?)(?:(?:,| \()[^<].*)?</[ai]>.*?</li>}mig
     },
     ,
 );
@@ -71,6 +71,7 @@ Alicia_Monet
 Alicia_Rhodes
 Alicia_Rio
 Alisha_Klass
+Alison_Angel
 Aliyah_Likit
 Allie_Sin
 Allison_Whyte
@@ -85,6 +86,7 @@ Anastasia_Christ
 Andi_Pink
 Andrea_Butjko
 Andrea_True
+Aneta_Smrhova
 Angel_Dark
 Angel_Long
 Angel_Kelly
@@ -121,6 +123,7 @@ Aurora_Snow
 Austin_O_Riley
 Ava_Devine
 Ava_Nova
+Ava_Ramone
 Ava_Vincent
 Avena_Lee
 Avy_Scott
@@ -178,6 +181,7 @@ Candy_Samples
 Cara_Lott
 Careena_Collins
 Caressa_Savage
+Carmella_Bing
 Carmen_Hayes
 Carmen_Luvana
 Carol_Connors
@@ -197,6 +201,7 @@ Chelsea_Charms
 Cherie
 Cherry_Poppens
 Cherry_Potter
+Cherry_Rain
 Chessie_Moore
 Cheyenne_Silver
 Chloe
@@ -234,12 +239,14 @@ Dani_Woodward
 Danni_Ashe
 Daphne_Rosen
 Darla_Crane
+Dasani_Lezian
 Dasha
 Debi_Diamond
 Deborah_Wells
 Deidre_Holland
 Desirae
 Desiree_Cousteau
+Desiree_West
 Destiny_Summers
 Deven_Davis
 Devin_DeRay
@@ -309,10 +316,12 @@ JR_Carrington
 Jackie_Ashe
 Jackie_Hincapie
 Jackie_Moore
+Jacqueline_Lorians
 Jada_Fire
 Jade_East
 Jade_Hsu
 Jade_Marcela
+Jaimee_Foxworth
 Jamie_Brooks
 Jamie_Summers
 Jana_Cova
@@ -323,6 +332,7 @@ Janey_Robbins
 Janine_Lindemulder
 Jasmin_St_Claire
 Jasmine_Byrne
+Jasmine_Kerry
 Jasmine_Lynn
 Jassie_James
 Jayna_Oso
@@ -355,6 +365,8 @@ Julia_Channel
 Julia_Parton
 Julie_Meadows
 Julie_Strain
+Juliet_Anderson
+Justine_Joli
 Kacey
 Kate_Frost
 Karen_Lancaume
@@ -430,6 +442,7 @@ Lisa_De_Leeuw
 Lisa_Ann
 Lisa_Loring
 Lisa_Sparxxx
+Little_Oral_Annie
 Liza_Harper
 Logan_LaBrent
 Lois_Ayres
@@ -442,6 +455,7 @@ Luna_Lane
 Lyla_Lei
 Mai_Lin
 Maia_Ginger
+Madison_Stone
 Mandy_Bright
 Mariah_Kekkonen
 Marilyn_Chambers
@@ -458,7 +472,11 @@ Melissa_Lauren
 Melissa_Milano
 Melissa_Walker
 Melody_Love
+Melody_Max
+Mercedez
 Mia_Smiles
+Michaela_Schaffrath
+Michele_Evette_Watley
 Michelle_Monaghan
 Michelle_Thorne
 Michelle_Wild
@@ -470,6 +488,7 @@ Mindy_Vega
 Minka
 Miriam_Gonzalez
 Miss_Arroyo
+Missy
 Missy_Monroe
 Misty_Rain
 Moana_Pozzi
@@ -479,6 +498,7 @@ Monica_Cameron
 Monica_Mayhem
 Monica_Sweet
 Monica_Sweetheart
+Monique_Alexander
 Monique_DeMoan
 Nadia_Nyce
 Naomi
@@ -495,6 +515,7 @@ Nikki_Carlisle
 Nikki_Charm
 Nikki_Dial
 Nikki_Fritz
+Nikki_Hunter
 Nikki_Knights
 Nikki_Nova
 Nikki_Park
@@ -507,6 +528,7 @@ Obsession
 Olinka_Ferova
 Olivia_Del_Rio
 Olivia_O_Lovely
+Olivia_Saint
 Ona_Zee
 Ovidie
 Pamela_Anderson
@@ -517,7 +539,6 @@ Penny_Flame
 Penny_Porsche
 Persia
 Pixie
-Pixie_Walnut
 PJ_Sparxx
 Poppy_Morgan
 Porsche_Lynn
@@ -526,6 +547,7 @@ Rachel_Rotten
 Rachel_Ryan
 Racquel_Darrian
 Rakel_Liekki
+Randi_Wright
 Raven_Riley
 Raylene
 Rayveness
@@ -536,6 +558,8 @@ Renee_Pornero
 Rita_Faltoyano
 Rocki_Roads
 Roxanne_Hall
+Roxy_Jezel
+Roxy_Rush
 Sabrina_Johnson
 Sabrine_Maui
 Sakura_Sena
@@ -578,6 +602,7 @@ Sky_Lopez
 Sophia_Ferrari
 Sophia_Rossi
 Sophie_Evans
+Sophie_Moone
 Spring_Thomas
 Stacey_Donovan
 Stacy_Burke
@@ -607,7 +632,11 @@ Tanya_Hansen
 Tawnee_Stone
 Tawny_Roberts
 Taylor_Hayes
+Taylor_Hill
+Taylor_Lynn
 Taylor_Rain
+Taylor_St_Clair
+Taylor_Wane
 Teagan_Presley
 Teanna_Kai
 Temptress
@@ -617,13 +646,18 @@ Teresa_May
 Teri_Diver
 Teri_Weigel
 Terri_Summers
+Texas_Presley
 Tia_Bella
 Tianna_Lynn
 Tiffany_Holiday
 Tiffany_Hopkins
+Tiffany_May
+Tiffany_Million
 Tiffany_Mynx
 Tiffany_Teen
 Tiffany_Towers
+Tiffany_Walker
+Timea_Vagvolgyi
 Tove_Jensen
 Tori_DeLuca
 Tori_Welles
@@ -632,6 +666,8 @@ Tracey_Adams
 Traci_Lords
 Tricia_Devereaux
 Trinity_Loren
+Trixie_Teen
+Tyla_Wynn
 Tyler_Faith
 Uschi_Digard
 Vanessa_Blue
@@ -641,8 +677,11 @@ Velicity_Von
 Velvet_Rose
 Venus
 Veronica_Hart
+Veronica_Stark
+Veronika_Raquel
 Veronika_Zemanova
 Vicky_Vette
+Victoria_Givens
 Victoria_Knight
 Victoria_Zdrok
 Victoria_Sweet
@@ -664,6 +703,7 @@ Al_Borda
 Alain_Deloin
 Alberto_Rey
 Alec_Metro
+Ales_Hanak
 Alex_Fawkes
 Alex_Rox
 Alexander_Devoe
@@ -727,6 +767,7 @@ Don_Fernando
 Don_Hollywood
 Ed_Powers
 Elone_Disere
+Eric_Manchester
 Eric_Masterson
 Eric_Price
 Erik_Everhard
@@ -742,6 +783,7 @@ Frank_Shaft
 Frank_Towers
 Frankie_Versace
 Gene_Ross
+George_Payne
 George_Uhl
 Gigantua
 Gino_Greco
@@ -760,7 +802,9 @@ Jack_Bravo
 Jack_Hammer
 Jack_Napier
 Jack_Surf
+Jack_Wrangler
 Jacques_Insermini
+Jake_Ryan
 Jake_Steed
 James_Bonn
 James_Brossman
@@ -774,12 +818,15 @@ Jean_Claude_Batiste
 Jean_Pierre_Armand
 Jean_Louis
 Jean_Yves_LeCastel
+Jeff_Stryker
 Jeremy_Tucker
 Jerry_Butler
+Joachim_Kessef
 Joel_Lawrence
 Joey_Ray
 Joey_Silvera
 John_Dough
+John_Holmes
 Johnny_Nineteen
 John_Slovak
 John_Stagliano
@@ -789,6 +836,8 @@ Jonathan_Morgan
 Jonathan_Stern
 Jon_Dough
 Johnny_Depth
+Jolth_Walton
+Julian
 Juliano_Ferraz
 Julian_St_Jox
 Justin_Berry
@@ -803,9 +852,11 @@ Leslie_Taylor
 Lex_Baldwin
 Lexington_Steele
 Luc_Wylder
+Mr_18_inch
 Mandingo
 Manuel_Ferrara
 Marc_Cummings
+Marc_Stevens
 Marc_Wallice
 Marco_Duato
 Mario_Rossi
@@ -825,6 +876,7 @@ Mickey_G
 Miles_Malone
 Mr_Marcus
 Mr_Pete
+Maxo_bono
 Nacho_Vidal
 Nat_Turnher
 Nick_East
@@ -836,10 +888,13 @@ Matt_Bixel
 Neeo
 Pascal_Saint_James
 Pat_Myne
+Fabian
+Paul_Barresi
 Paul_Cox
 Paul_Thomas
 Peter_Foster
 Peter_Ho
+Peter_North
 Peter_Shaft
 Phatzane
 Philippe_Dean
@@ -860,9 +915,11 @@ Roberto_Malone
 Rod_Danger
 Rodney_Moore
 Ronnie_Coxx
+Rocco_Rizzoli
 Rocco_Siffredi
 Rod_Fontana
 Ron_Jeremy
+Ryan_Idol
 Samson_Biceps
 Sam_Strong
 Scott_Lyons
@@ -873,11 +930,14 @@ Sergio_Suarez
 Shane_Diesel
 Slim_Dawg
 Silvio_Evangelista
+Simon_Rex
 Skunk_Riley
 Sledge_Hammer
 Stephen_Wolfe
+Sparky_O_Toole
 Steve_Holmes
 Steve_Hooper
+Steve_York
 Steve_Powers
 Steven_St_Croix
 T_J_Cummings
@@ -897,6 +957,7 @@ Tyler_Knight
 Ty_Lattimore
 Valentino_Rey
 Van_Damage
+Van_Darkholme
 Vince_Vouyer
 Voodoo
 Wesley_Pipes
