@@ -1,6 +1,9 @@
 use Test::More tests => 19;
 use strict;
 
+{ eval "require LWP::UserAgent;"; }
+my $has_lwp = !$@;
+
 # test the helper subs
 is( Acme::MetaSyntactic::RemoteList::tr_accent('a é ö ì À + ='),
     'a e o i A + =', 'tr_accent' );
@@ -18,7 +21,10 @@ ok( ! $shadok->has_remotelist(), 'No remote list for shadok object' );
 is( $shadok->source(), undef, 'shadok object source() empty' );
 
 # try to get the list anyway
-is( $shadok->remote_list(), undef, 'No remote list for shadok object' );
+SKIP: {
+    skip "LWP::UserAgent required to test remote_list()", 1 if !$has_lwp;
+    is( $shadok->remote_list(), undef, 'No remote list for shadok object' );
+}
 
 # default version of extract
 is( $shadok->extract( 'zlonk aieee' ), 'zlonk aieee', "Default extract()" );
@@ -59,21 +65,26 @@ EOC
     is_deeply( [ $dummy->extract($content) ],
         [qw( meu zo bu ga )], 'extract() object method' );
 
-    is_deeply(
-        [ sort $dummy->name(0) ],
-        [ sort $dummy->remote_list() ],
-        'Same "remote" list'
-    );
+    SKIP: {
+        skip "LWP::UserAgent required to test remote_list()", 3 if !$has_lwp;
+        is_deeply(
+            [ sort $dummy->name(0) ],
+            [ sort $dummy->remote_list() ],
+            'Same "remote" list'
+        );
 
-    is_deeply(
-        [ sort $dummy->name(0) ],
-        [ sort Acme::MetaSyntactic::dummy->remote_list() ],
-        'Same "remote" list'
-    );
+        is_deeply(
+            [ sort $dummy->name(0) ],
+            [ sort Acme::MetaSyntactic::dummy->remote_list() ],
+            'Same "remote" list'
+        );
 
-    # test failing network
-    $Acme::MetaSyntactic::dummy::Remote{source} = 'fail';
-    is_deeply( [ $dummy->remote_list() ], [], 'Empty list when network fails' ); 
+        # test failing network
+        $Acme::MetaSyntactic::dummy::Remote{source} = 'fail';
+        is_deeply( [ $dummy->remote_list() ],
+            [], 'Empty list when network fails' );
+    }
+
 }
 
 # a test package

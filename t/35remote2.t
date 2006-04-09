@@ -2,6 +2,9 @@ use Test::More tests => 7;
 use strict;
 use Cwd;
 
+{eval "require LWP::UserAgent;";}
+my $has_lwp = !$@;
+
 # these tests must be run after the test module has been loaded
 END {
     # test for multiple remote lists
@@ -24,23 +27,26 @@ EOC
     is_deeply( [ $dummy->extract($content) ],
         [qw( meu zo bu ga )], 'extract() object method' );
 
-    is_deeply(
-        [ sort $dummy->name(0) ],
-        [ sort $dummy->remote_list() ],
-        'Same "remote" list'
-    );
+    SKIP: {
+        skip "LWP::UserAgent required to test remote_list()", 3 if !$has_lwp;
+        is_deeply(
+            [ sort $dummy->name(0) ],
+            [ sort $dummy->remote_list() ],
+            'Same "remote" list'
+        );
 
-    is_deeply(
-        [ sort $dummy->name(0) ],
-        [ sort Acme::MetaSyntactic::dummy->remote_list() ],
-        'Same "remote" list'
-    );
+        is_deeply(
+            [ sort $dummy->name(0) ],
+            [ sort Acme::MetaSyntactic::dummy->remote_list() ],
+            'Same "remote" list'
+        );
 
-    # test failing network
-    $Acme::MetaSyntactic::dummy::Remote{source}
-        = [ 'fail', 'file://' . cwd() . '/t/remote2' ];
-    is_deeply( [ $dummy->remote_list() ],
-        [], 'Empty list when network fails' );
+        # test failing network
+        $Acme::MetaSyntactic::dummy::Remote{source}
+            = [ 'fail', 'file://' . cwd() . '/t/remote2' ];
+        is_deeply( [ $dummy->remote_list() ],
+            [], 'Empty list when network fails' );
+    }
 
 }
 
