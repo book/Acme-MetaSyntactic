@@ -309,7 +309,7 @@ to fetch the lists of names for creating its subclasses.
 
 Convenience methods also exists for all the themes. The methods are named
 after the theme. They are exported only when the theme is actually used
-or where it appear in the C<Acme::MetaSyntactic> import list.  The first
+or when it appear in the C<Acme::MetaSyntactic> import list. The first
 imported theme is the default, used by the C<metaname()> function.
 
 =head1 EXPORTS
