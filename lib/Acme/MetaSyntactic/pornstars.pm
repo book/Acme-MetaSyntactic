@@ -44,7 +44,7 @@ Updates from Wikipedia:
 
 =over 4
 
-=item version 0.70, published on April 17, 2006.
+=item version 0.70, published on April 17, 2006
 
 =back
 
