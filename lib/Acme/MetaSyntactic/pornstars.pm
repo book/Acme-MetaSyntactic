@@ -244,6 +244,7 @@ Dasha
 Debi_Diamond
 Deborah_Wells
 Deidre_Holland
+Demi_Marx
 Desirae
 Desiree_Cousteau
 Desiree_West
@@ -270,6 +271,7 @@ Emma_Starr
 Erica_Boyer
 Erica_Campbell
 Estelle_Desanges
+Ethan_Massey
 Eva_Angelina
 Eva_Henger
 Eve_Angel
@@ -448,11 +450,13 @@ Logan_LaBrent
 Lois_Ayres
 Lolo_Ferrari
 Loni_Sanders
+Loretta_Loren
 Lori_Alexia
 Lucy_Lee
 Lucy_Thai
 Luna_Lane
 Lyla_Lei
+Mai_Lee
 Mai_Lin
 Maia_Ginger
 Madison_Stone
@@ -531,6 +535,7 @@ Olivia_O_Lovely
 Olivia_Saint
 Ona_Zee
 Ovidie
+Paizley_Adams
 Pamela_Anderson
 Pandora_Dreams
 Pandora_Peaks
