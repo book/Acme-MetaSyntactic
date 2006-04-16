@@ -279,7 +279,6 @@ Emma_Starr
 Erica_Boyer
 Erica_Campbell
 Estelle_Desanges
-Ethan_Massey
 Eva_Angelina
 Eva_Henger
 Eve_Angel
@@ -345,6 +344,7 @@ Jasmine_Byrne
 Jasmine_Kerry
 Jasmine_Lynn
 Jassie_James
+Jay_Star
 Jayna_Oso
 Jeanna_Fine
 Jelena_Jensen
@@ -361,7 +361,7 @@ Jewel_De_Nyle
 Jezebelle_Bond
 Jill_Kelly
 Joanne_Jo_Guest
-Johnnie_Black
+Johnni_Black
 Jordan_Capri
 Jordan_Lee
 Jody_Moore
