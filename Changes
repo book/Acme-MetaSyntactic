@@ -1,5 +1,23 @@
 Revision history for Acme-MetaSyntactic
 
+0.70 Sun Apr 16 22:57:16 CEST 2006
+        [NEW WEEKLY THEME 2006/04/17]
+        - jamesbond (Abigail)
+        [HEY, JAMESBOND IS NOT NEW! IT WAS ADDED IN VERSION 0.07!!]
+        - You know the story, now... (If not, see the change log for
+          versions 0.26, 0.38 and 0.55.) This time I turned a simple
+          list into one with categories.
+        [ENHANCEMENTS]
+        - The meta script can now be called with "meta theme/category"
+          instead of "meta --category category theme". (Abigail)
+        - meta now accepts a --sources switch, that lists the sources
+          used by a remote list. (Abigail)
+        [THEME UPDATES]
+        - browser (Rafaël Garcia-Suarez added a new item)
+        - pornstars
+        [TICKET CLOSED]
+        - #18700 on rt.cpan.org (update to the browser theme)
+
 0.69 Sun Apr  9 23:14:09 CEST 2006
         [NEW WEEKLY THEME 2006/04/10]
         - pornstars (Sébastien Aperghis-Tramoni)
