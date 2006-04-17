@@ -1,5 +1,5 @@
+#!perl -w
 use strict;
-use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
@@ -9,9 +9,7 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Acme/MetaSyntactic.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'perl'       => '5.006',
         'Test::More' => 0,
-        'File::Glob' => 0,
         'List::Util' => 0,
     },
     EXE_FILES           => [ 'script/meta' ],
