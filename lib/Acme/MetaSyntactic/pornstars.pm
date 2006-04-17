@@ -173,6 +173,7 @@ Brittany_Stryker
 Brittney_Skye
 Brooke
 Brooke_Ashley
+Brooke_Milano
 Brooke_West
 Bunko_Kanazawa
 Bunny_Luv
@@ -810,6 +811,7 @@ Herschel_Savage
 HPG
 Ian_Daniels
 Ian_Scott
+Iron_Lee
 Jack_Baker
 Jack_Bravo
 Jack_Hammer
