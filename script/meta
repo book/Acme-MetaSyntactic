@@ -1,6 +1,6 @@
 #!/usr/bin/perl 
 use strict;
-use warnings;
+$^W = 1;
 use Acme::MetaSyntactic;
 use Getopt::Long;
 
