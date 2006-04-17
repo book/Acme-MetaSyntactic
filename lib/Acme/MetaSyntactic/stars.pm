@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::stars;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 1;
 

@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::jamesbond;
 use strict;
 use Acme::MetaSyntactic::MultiList;
-our @ISA = qw( Acme::MetaSyntactic::MultiList );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::MultiList );
 __PACKAGE__->init();
 1;
 

@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::services;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://www.graffiti.com/services',
     extract => sub {
         return grep {/^\D/}

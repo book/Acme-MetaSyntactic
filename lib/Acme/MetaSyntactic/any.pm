@@ -3,7 +3,8 @@ use strict;
 use List::Util 'shuffle';
 use Acme::MetaSyntactic ();
 
-our $Theme = 'any';
+use vars qw( $Theme );
+$Theme = 'any';
 
 sub import {
     # export the metaany function

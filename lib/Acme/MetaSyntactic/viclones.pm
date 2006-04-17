@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::viclones;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://www.saki.com.au/mirror/vi/clones.php3',
     extract => sub {
         return

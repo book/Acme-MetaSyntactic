@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::dilbert;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://www.triviaasylum.com/dilbert/diltriv.html',
     extract => sub {
         return

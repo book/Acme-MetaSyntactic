@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::pornstars;
 use strict;
 use Acme::MetaSyntactic::MultiList;
-our @ISA = qw( Acme::MetaSyntactic::MultiList );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::MultiList );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source => {
         female => 'http://en.wikipedia.org/wiki/List_of_female_porn_stars',
         male   => 'http://en.wikipedia.org/wiki/List_of_male_porn_stars'

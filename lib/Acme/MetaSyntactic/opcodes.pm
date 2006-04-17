@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::opcodes;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::List );
 
 # get the list from the current perl
 use Opcode qw( opset_to_ops full_opset );

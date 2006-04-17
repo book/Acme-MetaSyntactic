@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::pokemon;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source =>
         'http://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number',
     extract => sub {

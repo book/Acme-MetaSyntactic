@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::unicode;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::List );
 
 {
     # a very basic list

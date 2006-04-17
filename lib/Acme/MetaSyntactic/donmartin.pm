@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::donmartin;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://www.collectmad.com/madcoversite/dmd-alphabetical.html',
     extract => sub {
         return map {

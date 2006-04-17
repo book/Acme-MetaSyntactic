@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::barbapapa;
 use strict;
 use Acme::MetaSyntactic::Locale;
-our @ISA = qw( Acme::MetaSyntactic::Locale );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
 1;
 

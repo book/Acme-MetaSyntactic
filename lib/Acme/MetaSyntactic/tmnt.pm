@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::tmnt;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => ['http://www.ninjaturtles.com/html/profiles.htm',
                 'http://www.ninjaturtles.com/html/profil02.htm'],
     extract => sub {

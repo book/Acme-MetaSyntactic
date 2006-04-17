@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::us_presidents;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://www.whitehouse.gov/history/presidents/index.html',
     extract => sub {
         return
