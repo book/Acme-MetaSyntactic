@@ -54,7 +54,7 @@ ZERO: {
     my $meta = Acme::MetaSyntactic->new( 'toto' );
     my @names = sort $meta->name( 0 );
 
-    no warnings;
+    local $^W;
     my @all   = sort @Acme::MetaSyntactic::toto::List;
 
     is_deeply( \@names, \@all, "name(0) returns the whole list" );
@@ -66,7 +66,7 @@ ZERO: {
 DEFAULT: {
     my $meta = Acme::MetaSyntactic->new();
 
-    no warnings;
+    local $^W;
     my @names = $meta->name;
     my %seen = map { $_ => 0 } @Acme::MetaSyntactic::foo::List;
     ok( exists $seen{$names[0]}, "From the default list" );

@@ -14,7 +14,7 @@ is( @fab, 1, "Single item" );
 is( @fab, 4, "Four items" );
 
 @fab = sort $fab4->name( 0 );
-no warnings;
+local $^W;
 my @all = sort @Acme::MetaSyntactic::beatles::List;
 is_deeply( \@fab, \@all, "All items" );
 
@@ -28,7 +28,6 @@ is( @null, 0, "Single item (none)" );
 is( @null, 0, "Four items (none)" );
 
 @null = sort $null->name( 0 );
-no warnings;
 @all = sort @Acme::MetaSyntactic::null::List;
 is_deeply( \@null, \@all, "All items (none)" );
 

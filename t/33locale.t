@@ -34,7 +34,7 @@ END {
         is( @digits, $four, "Four items ($four $lang)" );
 
         @digits = sort $meta->name(0);
-        no warnings;
+        local $^W;
         my @all = sort @{ $Acme::MetaSyntactic::digits::Locale{$lang} };
         is_deeply( \@digits, \@all, "All items ($lang)" );
     }
@@ -84,7 +84,8 @@ END {
 
 package Acme::MetaSyntactic::digits;
 use Acme::MetaSyntactic::Locale;
-our @ISA = ('Acme::MetaSyntactic::Locale');
+use vars qw( @ISA );
+@ISA = ('Acme::MetaSyntactic::Locale');
 __PACKAGE__->init();
 1;
 

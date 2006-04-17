@@ -5,7 +5,8 @@ use strict;
 plan tests => 1;
 
 use Acme::MetaSyntactic::Locale;
-our @ISA = ('Acme::MetaSyntactic::Locale');
+use vars qw( @ISA );
+@ISA = ('Acme::MetaSyntactic::Locale');
 eval { __PACKAGE__->init(); };
 like( $@, qr/^Acme::MetaSyntactic::digits defines no default language at /,
       "No default" );

@@ -39,7 +39,7 @@ SKIP: {
     for my $theme (@themes) {
 
     SKIP: {
-            no warnings 'utf8';
+            #no warnings 'utf8'; # FIXME
             skip "$theme ignored upon request", 2 if !$test{$theme};
             my $current = [ sort $theme->name(0) ];
             my $online  = [ sort $theme->remote_list() ];

@@ -5,7 +5,7 @@ use Acme::MetaSyntactic::batman;
 plan tests => 2;
 
 # the default list
-no warnings;
+local $^W;
 my @names = metabatman();
 my %seen = map { $_ => 1 } @Acme::MetaSyntactic::batman::List;
 ok( exists $seen{$names[0]}, "metabatman" );

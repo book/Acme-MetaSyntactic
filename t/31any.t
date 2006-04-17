@@ -4,7 +4,7 @@ use t::NoLang;
 
 # "alter" the shuffle method
 {
-    no warnings;
+    local $^W;
     my ( $i, $j ) = ( 0, 0 );
     *List::Util::shuffle = sub { sort @_ }; # item selection
     *Acme::MetaSyntactic::any::shuffle =    # theme selection

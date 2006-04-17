@@ -1,11 +1,19 @@
 use strict;
 use Test::More;
 use File::Spec::Functions;
-use File::Glob;
+use DirHandle;
 
-my @batmancases    = File::Glob::bsd_glob catfile(qw(t batcase*));
-my @haddockcasesfr = File::Glob::bsd_glob catfile(qw(t haddockcase_fr*));
-my @haddockcasesen = File::Glob::bsd_glob catfile(qw(t haddockcase_en*));
+my @files;
+{
+    my $dh = DirHandle->new();
+    opendir $dh, 't';
+    @files = readdir $dh;
+    close $dh;
+}
+my @batmancases    = map { catfile( 't', $_ ) } grep {/^batcase/} @files;
+my @haddockcasesfr = map { catfile( 't', $_ ) } grep {/^haddockcase_fr/} @files;
+my @haddockcasesen = map { catfile( 't', $_ ) } grep {/^haddockcase_en/} @files;
+
 plan tests => 2 * ( @batmancases + @haddockcasesfr + @haddockcasesen );
 
 BATMAN: {

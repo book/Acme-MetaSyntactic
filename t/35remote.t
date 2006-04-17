@@ -92,11 +92,12 @@ package Acme::MetaSyntactic::dummy;
 use strict;
 
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 use Cwd;
 
 # data regarding the updates
-our %Remote = (
+%Remote = (
     source  => 'file://' . cwd() . '/t/remote',
     extract => sub {
         my $content = shift;

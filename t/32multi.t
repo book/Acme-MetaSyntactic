@@ -65,7 +65,8 @@ END {
 
 package Acme::MetaSyntactic::mongers;
 use Acme::MetaSyntactic::MultiList;
-our @ISA = ('Acme::MetaSyntactic::MultiList');
+use vars qw( @ISA );
+@ISA = ('Acme::MetaSyntactic::MultiList');
 __PACKAGE__->init();
 1;
 

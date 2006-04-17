@@ -5,7 +5,7 @@ use Acme::MetaSyntactic;
 plan tests => 2;
 
 # the default list
-no warnings;
+local $^W;
 my @names = metaname();
 my %seen = map { $_ => 1 } @Acme::MetaSyntactic::foo::List;
 ok( exists $seen{$names[0]}, "metaname" );
