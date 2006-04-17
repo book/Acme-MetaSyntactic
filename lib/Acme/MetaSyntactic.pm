@@ -1,26 +1,29 @@
 package Acme::MetaSyntactic;
 
 use strict;
-use warnings;
+$^W = 1;
 use Carp;
 use File::Basename;
 use File::Spec;
-use File::Glob;
+use DirHandle;
 
-our $VERSION = '0.70';
+use vars qw( $VERSION $Theme %META );
+$VERSION = '0.70';
 
 # some class data
-our $Theme = 'foo'; # default theme
-our %META;
+$Theme = 'foo'; # default theme
 
 # fetch the list of standard themes
 {
     my @themes;
     for my $dir (@INC) {
+        my $dh = DirHandle->new();
+        opendir $dh,  File::Spec->catfile( $dir, qw( Acme MetaSyntactic ));
         $META{$_} = 0 for grep !/^[A-Z]/,    # remove the non-theme subclasses
           map { ( fileparse( $_, qr/\.pm$/ ) )[0] }
-          File::Glob::bsd_glob(
-            File::Spec->catfile( $dir, qw( Acme MetaSyntactic *.pm ) ) );
+          grep { !/^\./ }
+          readdir $dh;
+        closedir $dh;
     }
 }
 
@@ -79,8 +82,9 @@ sub add_theme {
 package Acme::MetaSyntactic::$theme;
 use strict;
 use Acme::MetaSyntactic::List;
-our \@ISA = qw( Acme::MetaSyntactic::List );
-our \@List = qw( @{$themes{$theme}} );
+use vars qw( \@ISA \@List );
+\@ISA = qw( Acme::MetaSyntactic::List );
+\@List = qw( @{$themes{$theme}} );
 1;
 EOC
         eval $code;

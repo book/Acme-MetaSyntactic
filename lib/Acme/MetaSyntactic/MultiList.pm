@@ -5,7 +5,8 @@ use Acme::MetaSyntactic::RemoteList;
 use List::Util qw( shuffle );
 use Carp;
 
-our @ISA = qw( Acme::MetaSyntactic::RemoteList );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::RemoteList );
 
 sub init {
     my $class = caller(0);

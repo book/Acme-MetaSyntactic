@@ -5,7 +5,8 @@ use Acme::MetaSyntactic::RemoteList;
 use List::Util qw( shuffle );
 use Carp;
 
-our @ISA = qw( Acme::MetaSyntactic::RemoteList );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::RemoteList );
 
 sub init {
     my ($self, $data) = @_;
@@ -16,7 +17,7 @@ sub init {
       if ref $data ne 'HASH';
 
     no strict 'refs';
-    no warnings;
+    local $^W;
     for my $lang ( keys %{ $data->{names} } ) {
         @{${"$class\::Locale"}{$lang}} = split /\s+/, $data->{names}{$lang};
     }

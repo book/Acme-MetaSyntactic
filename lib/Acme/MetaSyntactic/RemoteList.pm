@@ -1,6 +1,6 @@
 package Acme::MetaSyntactic::RemoteList;
 use strict;
-use warnings;
+$^W = 1;
 use Carp;
 
 # method that extracts the items from the remote content and returns them
