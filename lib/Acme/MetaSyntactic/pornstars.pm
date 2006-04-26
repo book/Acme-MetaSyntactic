@@ -46,6 +46,10 @@ Updates from Wikipedia:
 
 =item version 0.70, published on April 17, 2006
 
+=item version 0.71, published on April 24, 2006
+
+=item version 0.72, published on May 1, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -82,7 +86,7 @@ Alisha_Klass
 Alison_Angel
 Aliyah_Likit
 Allie_Sin
-Allison_Whyte
+Allison_Wyte
 Ally_Mac_Tyana
 Allysin_Chaynes
 Amber_Lynn
@@ -345,7 +349,7 @@ Jasmine_Byrne
 Jasmine_Kerry
 Jasmine_Lynn
 Jassie_James
-Jay_Star
+Jaye_Starr
 Jayna_Oso
 Jeanna_Fine
 Jelena_Jensen
@@ -365,7 +369,7 @@ Joanne_Jo_Guest
 Johnni_Black
 Jordan_Capri
 Jordan_Lee
-Jody_Moore
+Jodie_Moore
 Jordan_Haze
 Judy_Star
 Julia_Ann
@@ -379,26 +383,27 @@ Julie_Strain
 Juliet_Anderson
 Justine_Joli
 Kacey
-Kate_Frost
+Kaitlyn_Ashley
+Karen_Dior
 Karen_Lancaume
 Karin_Schubert
 Karina_Kay
-Katie_Fey
-Keiko_Nakazawa
-Kaitlyn_Ashley
-Karen_Dior
 Kascha_Papillon
 Katalyn_Cica
+Kate_Frost
 Kathy_Willets
+Katie_Fey
 Katie_Gold
 Katie_Morgan
 Katja_Kean
 Katja_Kassin
+Katja_Love
 Katsumi
 Kawashima_Azumi
 Kay_Parker
 Kaylani_Lei
 Kaylynn
+Keiko_Nakazawa
 Kelle_Marie
 Kelly_Kline
 Kelly_Kroft
@@ -417,6 +422,7 @@ Kim_Angeli
 Kim_Chambers
 Kinky_Celine
 Kinzie_Kenner
+Kitten_Natividad
 Kitty_Marie
 Kitty_Yung
 Kobe_Tai
@@ -470,8 +476,10 @@ Mai_Lin
 Maia_Ginger
 Madison_Stone
 Mandy_Bright
+Maria_Tortuga
 Mariah_Kekkonen
 Marilyn_Chambers
+Mary_Anne
 Mary_Carey
 Mary_Millington
 Marylin_Star
@@ -490,6 +498,7 @@ Mercedez
 Mia_Smiles
 Michaela_Schaffrath
 Michele_Evette_Watley
+Michelle_Barrett
 Michelle_Monaghan
 Michelle_Thorne
 Michelle_Wild
@@ -569,6 +578,7 @@ Rebecca_Cummings
 Rebecca_Lord
 Reika
 Renee_Pornero
+Riley_Mason
 Rita_Faltoyano
 Rocki_Roads
 Roxanne_Hall
@@ -647,7 +657,7 @@ Tawnee_Stone
 Tawny_Roberts
 Taylor_Hayes
 Taylor_Hill
-Taylor_Lynn
+Taylor_Lyn
 Taylor_Rain
 Taylor_St_Clair
 Taylor_Wane
@@ -722,6 +732,8 @@ Alex_Fawkes
 Alex_Rox
 Alexander_Devoe
 Alexandre_Frota
+Andre_Chazel
+Andrea_Nobili
 Barry_Wood
 Ben_Dover
 Ben_English
@@ -746,16 +758,16 @@ Bruno_Sx
 Brutus_Black
 Buck_Adams
 Byron_Long
-Brian_Michael_Kuczynski
 Cal_Jammer
 Captain_Bob
 Carlos_Krystal
+Carmelo_Petix
 Chance_Ryder
 Cheyne_Collins
 Chris_Cannon
 Chris_Charming
 Chris_Evans
-Christoph_Clark
+Christophe_Clark
 Claudio_Meloni
 Colt_Steele
 Dale_DaBone
@@ -785,12 +797,14 @@ Eric_Manchester
 Eric_Masterson
 Eric_Price
 Erik_Everhard
+Etienne_Jaumillot
 Evan_Stone
 Falcon_X
 Ficky_Martin
 FM_Bradley
 Francesco_Malcom
 Franco_Roccaforte
+Franco_Trentalance
 Francois_Papillon
 Frank_Major
 Frank_Shaft
@@ -799,11 +813,15 @@ Frankie_Versace
 Gene_Ross
 George_Payne
 George_Uhl
+Gerard_Luig
 Gigantua
+Gilbert_Servien
 Gino_Greco
 Greg_Rome
 Greg_Centauro
+Guy_Bonnafoux
 Guy_DaSilva
+Guage
 Hank_Rose
 Harry_Reems
 Henry_Pachard
@@ -832,6 +850,7 @@ Jay_Crew
 Jean_Claude_Batiste
 Jean_Pierre_Armand
 Jean_Louis
+Jean_Roche
 Jean_Yves_LeCastel
 Jeff_Stryker
 Jeremy_Tucker
@@ -889,16 +908,15 @@ Mike_Horner
 Mike_Ranger
 Mickey_G
 Miles_Malone
+MrLothar
 Mr_Marcus
 Mr_Pete
-Maxo_bono
 Nacho_Vidal
 Nat_Turnher
 Nick_East
 Nick_Lang
 Nick_Manning
 Nikko_Knight
-Martinucci_Dario
 Matt_Bixel
 Neeo
 Pascal_Saint_James
@@ -920,11 +938,14 @@ Preston_Parker
 Randy_Spears
 Randy_West
 Ray_Victory
+Remigio_Zampa
 Ricardo_Bell
 Richard_Langin
 Rich_Handsome
 Rick_Masters
+Rob_Rotten
 Robbie_James
+Robert_Darcy
 Robert_Rosenberg
 Roberto_Malone
 Rod_Danger
@@ -958,6 +979,7 @@ Steven_St_Croix
 T_J_Cummings
 TT_Boy
 Tom_Byron
+Tom_Cruiso
 Tony_DeSergio
 Tony_Everready
 Tony_Martino
@@ -975,10 +997,15 @@ Van_Damage
 Van_Darkholme
 Vince_Vouyer
 Voodoo
+Walter_Midolo
 Wesley_Pipes
 Will_Ravage
+Willi_Montana
+Willy_Braque
 Wilde_Oscar
 Woody_Long
 Yoshiya_Minami
+Yves_Baillat
+Yves_Callas
 Zake_Thomas
 Zensa_Raggi
