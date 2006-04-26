@@ -47,6 +47,8 @@ Later updates (from the source web site):
 
 =item * version 0.64, published on March 6, 2006.
 
+=item * version 0.72, published on May 1, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -187,6 +189,7 @@ KernCounty_pm
 Kiel_pm
 Kolkata_pm
 Korean_Perl_User_Group_pm
+Krakow_pm
 LA_Belle_pm
 Lafayette_pm
 LagunaNiguel_pm
@@ -253,6 +256,7 @@ Pittsburgh_pm
 PortoAlegre_pm
 Porto_pm
 Pound_Perl_pm
+Poznan_pm
 Princeton_pm
 Pune_pm
 Purdue_pm
@@ -299,7 +303,6 @@ Tallahassee_pm
 TampaBay_pm
 Taubate_pm
 Tempe_East_Valley_Perlmongers_pm
-Tempe_pm
 Terere_pm
 Thailand_pm
 Thane_pm
@@ -329,7 +332,6 @@ ZA_pm
 aalborg_pm
 ankara_pm
 arnhem_pm
-austria_marchfeld_pm
 bali_pm
 brazosvalley_pm
 cypriots_pm
