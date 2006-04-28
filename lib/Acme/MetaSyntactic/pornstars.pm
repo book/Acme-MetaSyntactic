@@ -279,6 +279,7 @@ Draghixa
 Dru_Berrymore
 Dyanna_Lauren
 Ebony_Ayes
+Elizabeth_Del_Mar
 Emma_Nixon
 Emma_Starr
 Erica_Boyer
@@ -287,7 +288,7 @@ Estelle_Desanges
 Eva_Angelina
 Eva_Henger
 Eve_Angel
-Eve_Lawrence
+Eve_Laurence
 Fallon
 Felecia
 Felecia_Fox
@@ -810,6 +811,7 @@ Frank_Major
 Frank_Shaft
 Frank_Towers
 Frankie_Versace
+Gauge
 Gene_Ross
 George_Payne
 George_Uhl
@@ -821,7 +823,6 @@ Greg_Rome
 Greg_Centauro
 Guy_Bonnafoux
 Guy_DaSilva
-Guage
 Hank_Rose
 Harry_Reems
 Henry_Pachard
