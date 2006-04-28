@@ -5,8 +5,8 @@ our @ISA = qw( Acme::MetaSyntactic::List );
 
 {
     # a very basic list
-    my $data = join ' ',
-        map { ( "LATIN_CAPITAL_LETTER_$_", "LATIN_SMALL_LETTER_$_" ) }
+    my $data = join "\n",
+        map { ( "\t\tLATIN CAPITAL LETTER $_", "\t\tLATIN SMALL LETTER $_" ) }
         'A' .. 'Z';
 
     # try to find better
