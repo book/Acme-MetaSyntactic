@@ -29,6 +29,8 @@ our @ISA = qw( Acme::MetaSyntactic::List );
 
 1;
 
+__END__
+
 =head1 NAME
 
 Acme::MetaSyntactic::unicode - The unicode theme
