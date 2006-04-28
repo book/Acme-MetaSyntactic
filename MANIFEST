@@ -48,6 +48,7 @@ lib/Acme/MetaSyntactic/MultiList.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/opcodes.pm
 lib/Acme/MetaSyntactic/oulipo.pm
+lib/Acme/MetaSyntactic/pantagruel.pm
 lib/Acme/MetaSyntactic/pasta.pm
 lib/Acme/MetaSyntactic/peanuts.pm
 lib/Acme/MetaSyntactic/phonetic.pm
