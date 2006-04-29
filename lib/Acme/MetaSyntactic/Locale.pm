@@ -6,12 +6,12 @@ use List::Util qw( shuffle );
 use Carp;
 
 our @ISA = qw( Acme::MetaSyntactic::MultiList );
-our $Separator = '_';
 
 sub init {
     # alias the older package variable %Locale to %MultiList
     no strict 'refs';
-    *{"$_[0]::Locale"} = \%{"$_[0]::MultiList"};
+    *{"$_[0]::Locale"}    = \%{"$_[0]::MultiList"};
+    ${"$_[0]::Separator"} = '_';
 
     # call the parent class init code
     goto &Acme::MetaSyntactic::MultiList::init;
@@ -34,17 +34,20 @@ sub new {
             $self->{category} = Win32::Locale::get_language() unless $@;
         }
     }
-    $self->{category} = ${"$class\::Default"} unless $self->{category};
 
-    # FIXME add support for dialects (en_gb, en_uk with en as fallback)
-    ( $self->{category} ) = $self->{category} =~ /^([-A-Za-z]+)/;
-    $self->{category} = lc( $self->{category} || '' );
+    my $cat = $self->{category};
+
+    # support for territories
+    if ( $cat && $cat ne ':all' ) {
+        ($cat) = $cat =~ /^([-A-Za-z_]+)/;
+        $cat = lc( $cat || '' );
+        1 while $cat
+            && !exists ${"$class\::MultiList"}{$cat}
+            && $cat =~ s/_?[^_]*$//;
+    }
 
     # fall back to last resort
-    $self->{category} = ${"$class\::Default"}
-        if $self->{category} ne ':all'
-        && !exists ${"$class\::MultiList"}{ $self->{category} };
-
+    $self->{category} = $cat || ${"$class\::Default"};
     $self->_compute_base();
     return $self;
 }
@@ -131,16 +134,16 @@ are easy to write (see full example in L<SYNOPSIS>):
 The constructor of a single instance. An instance will not repeat items
 until the list is exhausted.
 
-If no C<lang> or C<category> parameter is given (both are synonymous),
+The C<lang> or C<category> parameter(both are synonymous) should be
+expressed as a locale category. If none of those parameters is given
 Acme::MetaSyntactic::Locale will try to find the user locale (with the
-help of environment variables C<LANGUAGE>, C<LANG> and Win32::Locale).
+help of environment variables C<LANGUAGE>, C<LANG> and the module
+C<Win32::Locale>).
 
-C<$lang> is a two-letter (or three (or more)) language code (taken from
-the official lists of RFC 3066 and ISO 369 standards). If the list is
-not available in the requested language, the default is used.
-
-C<Acme::MetaSyntactic::Locale> will try to find the closed possible
-avaible theme for the current locale.
+POSIX locales are defined as C<language[_territory][.codeset][@modifier]>.
+If the specific territory is not supported, C<Acme::MetaSyntactic::Locale>
+will use the language, and if the language isn't supported either,
+the default is used.
 
 =item init()
 
@@ -177,6 +180,9 @@ Return the theme name.
 
 I<Codes for the Representation of Names of Languages>, at
 L<http://www.loc.gov/standards/iso639-2/langcodes.html>.
+
+RFC 3066, I<Tags for the Identification of Languages>, at
+L<http://www.ietf.org/rfc/rfc3066.txt>.
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::MultiList>.
 
