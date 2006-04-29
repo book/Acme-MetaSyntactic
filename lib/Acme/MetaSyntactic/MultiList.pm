@@ -12,18 +12,21 @@ sub init {
     my $data  = Acme::MetaSyntactic->load_data($class);
     no strict 'refs';
 
+    my $sep = ${"$class\::Separator"} ||= '/';
+    my $tail = qr/$sep?[^$sep]*$/;
+
     # compute all categories
     my @categories = ( [ $data->{names}, '' ] );
     while ( my ( $h, $k ) = @{ shift @categories or []} ) {
         if ( ref $h eq 'HASH' ) {
             push @categories,
-                map { [ $h->{$_}, ( $k ? "$k/$_" : $_ ) ] } keys %$h;
+                map { [ $h->{$_}, ( $k ? "$k$sep$_" : $_ ) ] } keys %$h;
         }
         else {    # leaf
             my @items = split /\s+/, $h;
             while ($k) {
                 push @{ ${"$class\::MultiList"}{$k} }, @items;
-                $k =~ s!/?[^/]*$!!;
+                $k =~ s!$tail!!;
             }
         }
     }
