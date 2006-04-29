@@ -111,7 +111,6 @@ t/30list.t
 t/31any.t
 t/32multi.t
 t/33locale.t
-t/33locale_fail.t
 t/33locale_win32.t
 t/35remote.t
 t/35remote2.t
