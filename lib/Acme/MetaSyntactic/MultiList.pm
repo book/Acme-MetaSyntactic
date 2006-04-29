@@ -83,7 +83,16 @@ sub new {
         if $self->{category} ne ':all'
         && !exists ${"$class\::MultiList"}{ $self->{category} };
 
+    $self->_compute_base();
+    return $self;
+}
+
+sub _compute_base {
+    my ($self) = @_;
+    my $class = ref $self;
+
     # compute the base list for this category
+    no strict 'refs';
     my %seen;
     $self->{base} = [
         grep { !$seen{$_}++ }
@@ -92,8 +101,7 @@ sub new {
         ? ( keys %{"$class\::MultiList"} )
         : ( $self->{category} )
     ];
-
-    return $self;
+    return;
 }
 
 sub category { $_[0]->{category} }
