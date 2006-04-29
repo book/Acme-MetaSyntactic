@@ -1,5 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
+0.73
+        [NEW WEEKLY THEME 2006/05/01]
+        - planets
+        [GUESS WHAT? PLANETS IS NOT NEW!]
+        - planets was made multilingual (see the change log for
+          0.26, 0.38, 0.55 and 0.70 for the whole list of cheap
+          justifications)
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::Locale is now a subclass of
+          Acme::MetaSyntactic::MultiList, and supports territories.
+
 0.72 Sat Apr 29 01:12:16 CEST 2006
         [NEW WEEKLY THEME 2006/05/01]
         - pantagruel (Rafaël Garcia-Suarez)
