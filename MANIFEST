@@ -80,6 +80,7 @@ lib/Acme/MetaSyntactic/toto.pm
 lib/Acme/MetaSyntactic/trigan.pm
 lib/Acme/MetaSyntactic/unicode.pm
 lib/Acme/MetaSyntactic/us_presidents.pm
+lib/Acme/MetaSyntactic/userfriendly.pm
 lib/Acme/MetaSyntactic/viclones.pm
 lib/Acme/MetaSyntactic/weekdays.pm
 lib/Acme/MetaSyntactic/yapc.pm
