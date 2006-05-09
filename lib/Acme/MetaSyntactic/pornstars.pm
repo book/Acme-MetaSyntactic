@@ -50,6 +50,8 @@ Updates from Wikipedia:
 
 =item version 0.72, published on May 1, 2006
 
+=item version 0.74, published on May 15, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -133,6 +135,7 @@ Aspen_Stevens
 Audrey_Hollander
 Aurora_Snow
 Austin_O_Riley
+Autum_Jade
 Ava_Devine
 Ava_Nova
 Ava_Ramone
@@ -297,6 +300,7 @@ Felix_Vicious
 Flame
 Flick_Shagwell
 Flower_Tucci
+Friday
 Fujiko_Kano
 Gauge
 Genevieve_Elise_Silva
@@ -313,6 +317,7 @@ Gina_Ryder
 Ginger_Lynn
 Gloria_Guida
 Gloria_Leonard
+Gwen_Summers
 Hannah_Harper
 Haven
 Heather_Hunter
@@ -329,7 +334,6 @@ India
 Isis_Nile
 JR_Carrington
 Jackie_Ashe
-Jackie_Hincapie
 Jackie_Moore
 Jacqueline_Lorians
 Jada_Fire
@@ -356,6 +360,7 @@ Jeanna_Fine
 Jelena_Jensen
 Jenna_Haze
 Jenna_Jameson
+Jennifer_Andersson
 Jennifer_Noxt
 Jenteal
 Jesse_Jane
@@ -402,6 +407,7 @@ Katja_Love
 Katsumi
 Kawashima_Azumi
 Kay_Parker
+Kayla_Marie
 Kaylani_Lei
 Kaylynn
 Keiko_Nakazawa
@@ -450,6 +456,7 @@ Leena
 Lene_Hefner
 Leslie_Bovee
 Lily_Thai
+Lilian_Lee
 Lillian_Tiger
 Linda_Lovelace
 Linda_Lust
@@ -461,6 +468,7 @@ Lisa_Ann
 Lisa_Loring
 Lisa_Sparxxx
 Little_Oral_Annie
+Liz_Harvey
 Liza_Harper
 Logan_LaBrent
 Lois_Ayres
@@ -505,6 +513,7 @@ Michelle_Thorne
 Michelle_Wild
 Micka_French
 Mika_Tan
+Mike_Mulhall
 Miko_Lee
 Mimi_Miyagi
 Mindy_Vega
@@ -566,6 +575,7 @@ Pixie
 PJ_Sparxx
 Poppy_Morgan
 Porsche_Lynn
+Priya_Rai
 Rachel_Aziani
 Rachel_Rotten
 Rachel_Ryan
@@ -624,6 +634,7 @@ Simony_Diamond
 Sindee_Coxx
 Sin_Eye
 Sky_Lopez
+Sonia_Jensen
 Sophia_Ferrari
 Sophia_Rossi
 Sophie_Evans
@@ -679,10 +690,12 @@ Tiffany_Hopkins
 Tiffany_May
 Tiffany_Million
 Tiffany_Mynx
+Tiffany_Rayne
 Tiffany_Teen
 Tiffany_Towers
 Tiffany_Walker
 Timea_Vagvolgyi
+Tina_Fine
 Tove_Jensen
 Tori_DeLuca
 Tori_Welles
@@ -909,7 +922,7 @@ Mike_Horner
 Mike_Ranger
 Mickey_G
 Miles_Malone
-MrLothar
+Mr_Lothar
 Mr_Marcus
 Mr_Pete
 Nacho_Vidal
