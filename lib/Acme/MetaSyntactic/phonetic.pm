@@ -29,6 +29,9 @@ Introduced in version 0.08, published on February 7, 2005.
 Updated to handle multilingual phonetics in version 0.38,
 published on September 5, 2005.
 
+Updated (German fix by Gisbert W. Selke) in version 0.74, published on
+May 15, 2005.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::Locale>.
@@ -55,9 +58,9 @@ Anatole Berthe Celestin Desire  Eugene  Emile  Francois Gaston Henri Irma
 Joseph  Kleber Louis    Marcel  Nicolas Oscar  Pierre  Quintal Raoul Suzanne
 Therese Ursule Victor   William Xavier  Yvonne Zoe
 # names de
-Anton     Bertha Caesar  Dora   Emil    Friedrich Gustav   Heinrich Ida
-Jakob     Konrad Ludwig  Martha Nordpol Otto      Paula    Quelle   Richard
-Siegfried Schule Theodor Ulrich Viktor  Wilhelm   Xantippe Ypsilon  Zeppelin
+Anton     Bertha Caesar  Dora   Emil    Friedrich Gustav    Heinrich Ida
+Jakob     Konrad Ludwig  Martha Nordpol Otto      Paula     Quelle   Richard
+Siegfried Schule Theodor Ulrich Viktor  Wilhelm   Xanthippe Ypsilon  Zeppelin
 # names it
 Ancona Bologna Como    Domodossola Empoli Firenze  Genova Hacca        Imola
 Jolly  Kappa   Livorno Milano      Napoli Otranto  Pisa   Quartomiglio Roma
