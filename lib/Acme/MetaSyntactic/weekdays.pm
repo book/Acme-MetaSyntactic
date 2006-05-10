@@ -24,7 +24,7 @@ Abigail (English).
 Philippe "BooK" Bruhat (all the others languages, many thanks to Estelle
 Souche for her help with the Yiddish names).
 
-Gisbert W. Selke (Egyptian Arabic, Bulgarian, Czech, Modern, Greek,
+Gisbert W. Selke (Egyptian Arabic, Bulgarian, Czech, Modern Greek,
 Esperanto, Gaelic, Japanese, Norwegian, Russian and Tagalog).
 
 Introduced in version 0.51, published on December 5, 2005.
