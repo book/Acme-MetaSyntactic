@@ -197,6 +197,14 @@ I<C<Acme::MetaSyntactic> gave names for regression tests in the Perl core>
 
 See L<http://public.activestate.com/cgi-bin/perlbrowse?patch=26370>.
 
+=item *
+
+I<Your module has been a wonderful timesaver for me. How much time I used to
+spend on thinking about good and meaningful variable names, and now I have
+them at the snap of a finger!>
+
+-- Gisbert W. Selke
+
 =back
 
 =head1 EXAMPLES OF USE
