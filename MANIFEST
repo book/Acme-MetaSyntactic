@@ -45,6 +45,7 @@ lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
 lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/MultiList.pm
+lib/Acme/MetaSyntactic/norse_mythology.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/opcodes.pm
 lib/Acme/MetaSyntactic/oulipo.pm
