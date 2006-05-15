@@ -8,7 +8,6 @@ my $builder = Module::Build->new(
     dist_author         => 'Philippe "BooK" Bruhat <book@cpan.org>',
     dist_version_from   => 'lib/Acme/MetaSyntactic.pm',
     requires => {
-        'perl'       => '5.006',
         'Test::More' => 0,
         'File::Glob' => 0,
         'List::Util' => 0,
