@@ -332,6 +332,7 @@ Haley_Paige
 Honey_Wilder
 Houston
 Hyapatia_Lee
+Ice_La_Fox
 Inari_Vachs
 India
 Isis_Nile
@@ -398,6 +399,7 @@ Karen_Lancaume
 Karin_Schubert
 Karina_Kay
 Kascha_Papillon
+Katrina_Kraven
 Katalyn_Cica
 Kate_Frost
 Kathy_Willets
@@ -583,6 +585,7 @@ Penelope_Black_Diamond
 Penny_Flame
 Penny_Porsche
 Persia
+Phoenix_Ray
 Pixie
 PJ_Sparxx
 Poppy_Morgan
@@ -989,6 +992,7 @@ Rocco_Siffredi
 Rod_Fontana
 Ron_Jeremy
 Ryan_Idol
+Richard_Pacheco
 Samson_Biceps
 Sam_Strong
 Scott_Lyons
