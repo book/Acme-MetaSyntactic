@@ -52,6 +52,8 @@ Updates from Wikipedia:
 
 =item version 0.74, published on May 15, 2006
 
+=item version 0.75, published on May 22, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -65,6 +67,7 @@ __DATA__
 Adara_Michaels
 Adele_Stevens
 Adriana_Sage
+Adrienne_Bellaire
 Africa_Sexx
 Ai_Iijima
 Aimee_Sweet
@@ -109,6 +112,7 @@ Angela_Devi
 Angelica_Bella
 Angelica_Costello
 Angelica_Sin
+Angelina_Crow
 Anika_Fox
 Anita_Blond
 Anja_Juliette_Laval
@@ -178,6 +182,7 @@ Brianna_Rai
 Bridget_the_Midget_Powerz
 Bridgette_Kerkove
 Brigitte_Lahaie
+Brittany_Andrews
 Brittany_Blue
 Brittany_Stryker
 Brittney_Skye
@@ -185,6 +190,7 @@ Brooke
 Brooke_Ashley
 Brooke_Milano
 Brooke_West
+Buffy_Davis
 Bunko_Kanazawa
 Bunny_Luv
 Bunny_Bleu
@@ -230,6 +236,7 @@ Chloe_Vevrier
 Chocolate
 Chris_Cassidy
 Christi_Lake
+Christina_Noir
 Christine_Young
 Christy_Canyon
 Cicciolina
@@ -238,6 +245,7 @@ Cindy_Crawford
 Clara_Morgane
 Claudia_Ferrari
 Claudia_Jamsson
+Claudia_Rossi
 Claudine_Beccarie
 Constance_Money
 Corina_Taylor
@@ -246,10 +254,12 @@ Crissy_Cums
 Crissy_Moran
 Cristina_Bella
 Crystal_Breeze
+Crystal_Holland
 Crystal_Klein
 Crystal_Knight
 Crystal_Ray
 Crystal_Steal
+Cyndee_Summers
 Cytherea
 Dana_Dylan
 Dana_Lynn
@@ -275,6 +285,7 @@ Devon
 Devon_Michaels
 Diana_Devoe
 Dina_Jewel
+Diva
 Dolly_Buster
 Dominique_Dewitt
 Dominique_Simone
@@ -305,6 +316,7 @@ Flick_Shagwell
 Flower_Tucci
 Friday
 Fujiko_Kano
+Gail_Lawrence
 Gauge
 Genevieve_Elise_Silva
 Georgette_Neale
@@ -335,6 +347,7 @@ Hyapatia_Lee
 Ice_La_Fox
 Inari_Vachs
 India
+Isabella_Camille
 Isis_Nile
 JR_Carrington
 Jackie_Ashe
@@ -433,6 +446,7 @@ Kikki_Daire
 Kiko_Wu
 Kim_Angeli
 Kim_Chambers
+Kim_Holland
 Kinky_Celine
 Kinzie_Kenner
 Kira_Kener
@@ -478,6 +492,7 @@ Lisa_Loring
 Lisa_Sparxxx
 Little_Oral_Annie
 Liz_Harvey
+Liz_Honey
 Liza_Harper
 Logan_LaBrent
 Lois_Ayres
@@ -576,10 +591,12 @@ Olivia_O_Lovely
 Olivia_Saint
 Ona_Zee
 Ovidie
+Patti_Petite
 Paizley_Adams
 Pamela_Anderson
 Pandora_Dreams
 Pandora_Peaks
+Pason
 Paris_Hilton
 Penelope_Black_Diamond
 Penny_Flame
@@ -603,6 +620,8 @@ Rayveness
 Rebecca_Cummings
 Rebecca_Lord
 Reika
+Rene_Tiffany
+Renee_LaRue
 Renee_Pornero
 Rikki_Anderson
 Riley_Mason
@@ -756,6 +775,7 @@ Yulia_Nova
 Zara_Whites
 Zarina
 Zdenka
+Zina_Dean
 Zsanett_Egerhazi
 # names male
 Adam_Wilde
