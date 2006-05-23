@@ -15,6 +15,7 @@ lib/Acme/MetaSyntactic/booze.pm
 lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
 lib/Acme/MetaSyntactic/chess.pm
+lib/Acme/MetaSyntactic/colours.pm
 lib/Acme/MetaSyntactic/constellations.pm
 lib/Acme/MetaSyntactic/contrade.pm
 lib/Acme/MetaSyntactic/counting_rhyme.pm
