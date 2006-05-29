@@ -3,6 +3,7 @@ Changes
 CONTRIBUTORS
 DATES
 lib/Acme/MetaSyntactic.pm
+lib/Acme/MetaSyntactic/Alias.pm
 lib/Acme/MetaSyntactic/alphabet.pm
 lib/Acme/MetaSyntactic/amber.pm
 lib/Acme/MetaSyntactic/antlers.pm
@@ -15,6 +16,7 @@ lib/Acme/MetaSyntactic/booze.pm
 lib/Acme/MetaSyntactic/browser.pm
 lib/Acme/MetaSyntactic/buffy.pm
 lib/Acme/MetaSyntactic/chess.pm
+lib/Acme/MetaSyntactic/colors.pm
 lib/Acme/MetaSyntactic/colours.pm
 lib/Acme/MetaSyntactic/constellations.pm
 lib/Acme/MetaSyntactic/contrade.pm
