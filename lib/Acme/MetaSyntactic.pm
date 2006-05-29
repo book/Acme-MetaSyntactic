@@ -7,7 +7,7 @@ use File::Basename;
 use File::Spec;
 use File::Glob;
 
-our $VERSION = '0.76';
+our $VERSION = '0.77';
 
 # some class data
 our $Theme = 'foo'; # default theme
@@ -398,6 +398,11 @@ a "category". Categories can include sub-categories, etc, I<ad infinitum>
 The category is either passed as a constructor parameter or the default
 value is selected.
 
+=item C<Acme::MetaSyntactic::Alias>
+
+The theme is simply an alias of another theme. All items are identical,
+as the original behaviour. The only difference is the theme name.
+
 =back
 
 Over time, new theme "behaviours" will be added. 
@@ -483,6 +488,11 @@ Jérôme Fenal,
 who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
 C<Acme::MetaSyntactic> fulfill its role: rename your boring variables
 with silly names.
+
+=item Abigail,
+
+who provided by himself more than 35 themes (I stopped counting after that).
+I probably won't be able to include them all before version 1.00. 
 
 =back
 
