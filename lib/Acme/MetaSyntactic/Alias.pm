@@ -4,28 +4,26 @@ use warnings;
 use Carp;
 
 sub init {
-    my ($self, $alias) = @_;
+    my ( $self, $alias ) = @_;
     my $class = caller(0);
 
     eval "require Acme::MetaSyntactic::$alias;";
     croak "Aliased theme Acme::MetaSyntactic::$alias failed to load: $@"
-      if $@;
+        if $@;
 
     no strict 'refs';
     no warnings;
 
-    # copy everything over from the original
-    eval "*$class\:: = \\*Acme::MetaSyntactic::$alias\::";
+    # copy almost everything over from the original
+    for my $k ( grep { ! /^(?:Theme|meta)$/ }
+        keys %{"Acme::MetaSyntactic::$alias\::"} )
+    {
+        *{"$class\::$k"} = *{"Acme::MetaSyntactic::$alias\::$k"};
+    }
 
     # local things
     ${"$class\::Theme"} = ( split /::/, $class )[-1];
-    *{"$class\::import"} = sub {
-        my $callpkg = caller(0);
-        my $theme   = ${"$class\::Theme"};
-        my $meta    = $class->new();
-        *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
-      };
-    ${"$class\::meta"} = $class->new();
+    ${"$class\::meta"}  = $class->new();
 }
 
 1;
