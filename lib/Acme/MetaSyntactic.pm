@@ -489,7 +489,9 @@ who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
 C<Acme::MetaSyntactic> fulfill its role: rename your boring variables
 with silly names.
 
-=item Abigail,
+=item *
+
+Abigail,
 
 who provided by himself more than 35 themes (I stopped counting after that).
 I probably won't be able to include them all before version 1.00. 
