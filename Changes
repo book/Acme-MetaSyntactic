@@ -1,6 +1,6 @@
 Revision history for Acme-MetaSyntactic
 
-0.77 Mon Jun  5 16:39:33 CEST 2006
+0.77 Mon Jun  5 17:04:02 CEST 2006
         [NEW WEEKLY THEME 2006/06/05]
         - colors
         [ENHANCEMENTS]
@@ -9,6 +9,7 @@ Revision history for Acme-MetaSyntactic
           (the colors theme is an alias of the colours theme)
         [THEME UPDATE]
         - colours (Abigail provided many English color names)
+        - pm_groups
 
 0.76 Thu May 25 14:52:30 CEST 2006
         [NEW WEEKLY THEME 2006/05/22]
