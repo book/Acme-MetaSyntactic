@@ -49,6 +49,8 @@ Later updates (from the source web site):
 
 =item * version 0.72, published on May 1, 2006.
 
+=item * version 0.77, published on June 5, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -125,6 +127,7 @@ Charlotte_pm
 Chemnitz_pm
 Chicago_pm
 China_pm
+Chisinau_pm
 Chupei_pm
 ClassicCity_pm
 Clemson_pm
@@ -182,6 +185,7 @@ Jakarta_pm
 Jalisco_pm
 Jerusalem_pm
 Jogja_pm
+Kaiserslautern_pm
 Kansai_pm
 KansasCity_pm
 Kaohsiung_pm
