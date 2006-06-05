@@ -15,7 +15,7 @@ sub init {
     no warnings;
 
     # copy almost everything over from the original
-    for my $k ( grep { ! /^(?:Theme|meta)$/ }
+    for my $k ( grep { ! /^(?:Theme|meta|import)$/ }
         keys %{"Acme::MetaSyntactic::$alias\::"} )
     {
         *{"$class\::$k"} = *{"Acme::MetaSyntactic::$alias\::$k"};
@@ -24,6 +24,12 @@ sub init {
     # local things
     ${"$class\::Theme"} = ( split /::/, $class )[-1];
     ${"$class\::meta"}  = $class->new();
+    *{"$class\::import"} = sub {
+        my $callpkg = caller(0);
+        my $theme   = ${"$class\::Theme"};
+        my $meta    = $class->new();
+        *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
+      };
 }
 
 1;
