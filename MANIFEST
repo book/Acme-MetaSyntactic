@@ -71,6 +71,7 @@ lib/Acme/MetaSyntactic/quantum.pm
 lib/Acme/MetaSyntactic/RemoteList.pm
 lib/Acme/MetaSyntactic/robin.pm
 lib/Acme/MetaSyntactic/roman.pm
+lib/Acme/MetaSyntactic/scooby_doo.pm
 lib/Acme/MetaSyntactic/services.pm
 lib/Acme/MetaSyntactic/shadok.pm
 lib/Acme/MetaSyntactic/simpsons.pm
@@ -135,6 +136,9 @@ t/batcase5
 t/batcase6
 t/batcase7
 t/batcase8
+t/colcase1
+t/colcase2
+t/colcase3
 t/haddockcase_en3
 t/haddockcase_en4
 t/haddockcase_en5

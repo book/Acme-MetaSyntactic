@@ -1,5 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
+0.78
+        [NEW WEEKLY THEME 2006/06/12]
+        - scooby_doo (Michel Rodriguez)
+        [TESTS FIX]
+        - the alias use cases were not included in the MANIFEST file
+          and therefore not in the distribution. They are now.
+
 0.77 Mon Jun  5 17:04:02 CEST 2006
         [NEW WEEKLY THEME 2006/06/05]
         - colors
