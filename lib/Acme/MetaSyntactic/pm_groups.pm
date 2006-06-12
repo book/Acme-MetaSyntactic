@@ -51,6 +51,8 @@ Later updates (from the source web site):
 
 =item * version 0.77, published on June 5, 2006.
 
+=item * version 0.79, published on June 19, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -71,7 +73,6 @@ Africa_pm
 Akasaka_pm
 Albany_pm
 Albuquerque_pm
-Algarve_pm
 Alphen_pm
 Amiga_pm
 Amsterdam_pm
@@ -162,6 +163,7 @@ Galicia_pm
 Geneva_pm
 German_pm
 Gombe_pm
+Goteborg_pm
 GrandRapids_pm
 Groningen_pm
 Guadalajara_pm
