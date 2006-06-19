@@ -1,11 +1,20 @@
 Revision history for Acme-MetaSyntactic
 
+0.79 Mon Jun 19 11:11:15 CEST 2006
+        [NEW WEEKLY THEME 2006/06/19]
+        - lotr (Jean Forget)
+        [THEME UPDATES]
+        - pm_groups
+        - pornstars
+
 0.78 Thu Jun  8 18:51:43 CEST 2006
         [NEW WEEKLY THEME 2006/06/12]
         - scooby_doo (Michel Rodriguez)
         [TESTS FIX]
         - the alias use cases were not included in the MANIFEST file
           and therefore not in the distribution. They are now.
+        [THEME UPDATE]
+        - dilbert
 
 0.77 Mon Jun  5 17:04:02 CEST 2006
         [NEW WEEKLY THEME 2006/06/05]
