@@ -14,7 +14,7 @@ Acme::MetaSyntactic::lotr - The Lord of the Rings theme
 Many characters of J. R. R. Tolkien's I<Lord of the Rings> bear several
 names. This theme collects some of the main characters names.
 
-Sauron's names come from Robert Foster's I<Complete Guide to Middle-Earth>.
+The names of Sauron, Gandalf and Aragorn come from Robert Foster's I<Complete Guide to Middle-Earth>.
 Turin's names were found in I<The Silmarillion>.
 
 =head1 CONTRIBUTOR
