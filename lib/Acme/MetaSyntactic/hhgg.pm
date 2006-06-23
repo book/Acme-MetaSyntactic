@@ -32,7 +32,7 @@ Link to I<The Ultra-Complete Index to the Hitch Hiker's Guide to the Galaxy>
 (written and entirely copyrighted 1992-94 by Mathias Maul)
 entry on wikipedia provided by Jean Forget in time for version 0.28,
 published on June 27, 2005. Link updated for version 0.69, published
-on April 10, 2005.
+on April 10, 2006.
 
 =head1 SEE ALSO
 
