@@ -89,7 +89,7 @@ meta - A simple front-end to Acme::MetaSyntactic
 
 =head1 SYNOPSIS
 
-B<meta> [ I<--whitespace|ws> ] [ I<--remote> ] [ I<--help> ] [ I<--version> ] [ I<--remote> ] [ I<--check> ] [ I<--sources> ] [ I<--category category> ]  I<theme>[I</category>] [ I<count> ]
+B<meta> [ I<--whitespace|ws> ] [ I<--help> ] [ I<--version> ] [ I<--remote> ] [ I<--check> ] [ I<--sources> ] [ I<--category category> ]  I<theme>[I</category>] [ I<count> ]
 
 =head1 DESCRIPTION
 
