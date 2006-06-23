@@ -58,6 +58,8 @@ Later updates (from the source web site):
 
 =item * version 0.78, published on June 12, 2006
 
+=item * version 0.80, published on June 26, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -98,3 +100,4 @@ world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
 tex flashy petricia tim_zumph earl lefty sourpuss wendel_j_stone_iv
 vijay exactly_man alan andy
 lou mister_serdecisions sandeep
+patty smokin_jim 
