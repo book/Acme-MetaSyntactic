@@ -53,6 +53,8 @@ Later updates (from the source web site):
 
 =item * version 0.79, published on June 19, 2006.
 
+=item * version 0.82, published on July 10, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -209,6 +211,7 @@ London_pm
 Los_Angeles_pm
 Lund_pm
 Lyon_pm
+Madison_pm
 Madras_pm
 Madrid_pm
 Maine_pm
@@ -315,6 +318,7 @@ Thane_pm
 ThousandOaks_pm
 Tijuana_pm
 Tokyo_pm
+Torino_pm
 Toronto_pm
 Toulouse_pm
 Tucson_pm
@@ -332,6 +336,7 @@ WYPUG_pm
 Wellington_pm
 WhiteMountain_pm
 Winnipeg_pm
+Women_pm
 Yerevan_pm
 Yuma_pm
 ZA_pm
