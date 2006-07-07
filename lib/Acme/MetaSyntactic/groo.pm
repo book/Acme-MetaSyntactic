@@ -24,6 +24,8 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.27, published on June 21, 2005.
 
+Corrected a typo in version 0.82, published on July 10, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -33,5 +35,5 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 __DATA__
 # names
 Groo Rufferto Sage Chakaal Minstrel Grooella Arba Dakarba Arcadio
-Taranto Pal Drumm Mulch Scribe Weaver Grativo Granny_Groo Pipil_Khan
+Taranto Pal Drumm Mulch Scribe Weaver Gravito Granny_Groo Pipil_Khan
 The_Witch_of_Kaan Captain_Ahax
