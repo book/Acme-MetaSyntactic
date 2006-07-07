@@ -51,6 +51,7 @@ lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/MultiList.pm
 lib/Acme/MetaSyntactic/norse_mythology.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
+lib/Acme/MetaSyntactic/olympics.pm
 lib/Acme/MetaSyntactic/opcodes.pm
 lib/Acme/MetaSyntactic/oulipo.pm
 lib/Acme/MetaSyntactic/pantagruel.pm
