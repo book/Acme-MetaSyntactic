@@ -45,6 +45,9 @@ L<http://www.insecure.org/nmap/data/nmap-services>.
 A huge list of services can also be found at
 L<http://www.graffiti.com/services>.
 
+The reference list is given by the IANA, and available at
+L<http://www.iana.org/assignments/port-numbers>.
+
 The latest is now used for C<Acme::MetaSyntactic::services>,
 which increased the theme size by a factor of 14.
 
@@ -56,6 +59,9 @@ Introduced in version 0.33, published on August 1, 2005.
 
 Updated and made automatically updatable with the I<graffiti.com> list
 in version 0.68, published on April 3, 2006.
+
+Updated with a link to the IANA list in version 0.84, published
+on July 24, 2006.
 
 =head1 SEE ALSO
 
