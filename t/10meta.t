@@ -1,6 +1,7 @@
 use strict;
 use Test::More;
 use Acme::MetaSyntactic;
+use t::NoLang;
 
 plan tests => 10;
 
@@ -51,11 +52,11 @@ MORE: {
 }
 
 ZERO: {
-    my $meta = Acme::MetaSyntactic->new( 'toto' );
+    my $meta = Acme::MetaSyntactic->new( 'debian' );
     my @names = sort $meta->name( 0 );
 
     no warnings;
-    my @all   = sort @Acme::MetaSyntactic::toto::List;
+    my @all   = sort @Acme::MetaSyntactic::debian::List;
 
     is_deeply( \@names, \@all, "name(0) returns the whole list" );
 
@@ -68,7 +69,7 @@ DEFAULT: {
 
     no warnings;
     my @names = $meta->name;
-    my %seen = map { $_ => 0 } @Acme::MetaSyntactic::foo::List;
+    my %seen = map { $_ => 0 } @{$Acme::MetaSyntactic::foo::MultiList{en}};
     ok( exists $seen{$names[0]}, "From the default list" );
 
     %seen = map { $_ => 1 } $meta->name( shadok => 4 );

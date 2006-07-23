@@ -1,5 +1,6 @@
 use Test::More;
 use strict;
+use t::NoLang;
 use Acme::MetaSyntactic;
 
 plan tests => 2;
@@ -7,7 +8,7 @@ plan tests => 2;
 # the default list
 no warnings;
 my @names = metaname();
-my %seen = map { $_ => 1 } @Acme::MetaSyntactic::foo::List;
+my %seen = map { $_ => 1 } @{$Acme::MetaSyntactic::foo::MultiList{en}};
 ok( exists $seen{$names[0]}, "metaname" );
 
 is_deeply(
