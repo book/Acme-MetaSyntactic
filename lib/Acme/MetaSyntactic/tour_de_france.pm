@@ -28,7 +28,7 @@ The winners from 1903 onwards are:
 
 =pod
 
-    2006   FIXME                 XXX
+    2006   Floyd Landis          USA
     2005   Lance Armstrong       USA
     2004   Lance Armstrong       USA
     2003   Lance Armstrong       USA
