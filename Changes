@@ -1,5 +1,18 @@
 Revision history for Acme-MetaSyntactic
 
+0.85 Wed Aug  2 22:28:15 CEST 2006
+        [NEW WEEKLY THEME 2006/07/24]
+        - foo
+        [GUESS WHAT? FOO IS NOT NEW!]
+        - foo was made multilingual (see the change log for 0.26, 0.38,
+          0.55, 0.70 and 0.73 for the whole list of cheap justifications)
+        - only one more of those, and we'll have the version number correspond
+          to the total number of themes
+        [THEME UPDATES]
+        - toto (removed and merged into foo)
+        [OOPS]
+        - Due to holidays and bad connection, this list was two days late.
+
 0.84 Sun Jul 23 22:05:06 CEST 2006
         [NEW WEEKLY THEME 2006/07/24]
         - tour_de_france (Abigail)
