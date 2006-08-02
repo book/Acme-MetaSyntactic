@@ -15,7 +15,6 @@ my @tests = (
     [qw(a b c)],                     # alphabet
     [qw(Amber)],                     # amber
     [qw(alces_alces antler caribou)],# antlers
-    [qw(America Antares Aquarius)],  # apollo
     [qw(Barbabelle Barbalala)],      # barbapapa
     [qw(Barbarella Captain_Moon)],   # barbarella
     [qw(aieee aiieee awk awkkkkkk)], # batman
