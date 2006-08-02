@@ -57,7 +57,7 @@ The winners from 1903 onwards are:
     1980   Joop Zoetemelk        NED
     1979   Bernard Hinault       FRA
     1978   Bernard Hinault       FRA
-    1977   Bernard Thevenet      FRA
+    1977   Bernard Thévenet      FRA
     1976   Lucien Van Impe       BEL
     1975   Bernard Thévenet      FRA
     1974   Eddy Merckx           BEL
