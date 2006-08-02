@@ -19,7 +19,7 @@ A list of English pies.
 
 Nicholas Clark
 
-Introduced in version FIXME, published on FIXME YYYY/MM/AA.
+Introduced in version 0.86, published on August 7, 2006.
 
 =head1 SEE ALSO
 
