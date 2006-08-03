@@ -128,7 +128,6 @@ t/33locale_win32.t
 t/35remote.t
 t/35remote2.t
 t/40inc.t
-t/41count.t
 t/50usecase.t
 t/51useall.t
 t/90up2date.t
