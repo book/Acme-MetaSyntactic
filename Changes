@@ -1,5 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+0.87 Wed Aug  9 01:15:08 CEST 2006
+        [NEW WEEKLY THEME 2006/08/14]
+        - sins (Abigail)
+        [THEME UPDATES]
+        - pm_groups
+        [OOPS]
+        - space_missions was not listed in the MANIFEST file for the
+          previous version, and was therefore not included...
+
 0.86 Sat Aug  5 00:48:11 CEST 2006
         [NEW WEEKLY THEME 2006/08/07]
         - pie (Nicholas Clark)
@@ -9,7 +18,7 @@ Revision history for Acme-MetaSyntactic
           (that's because some themes have been renamed or removed)
         [THEME UPDATES]
         - apollo (augmented and renamed space_missions)
-        - space_missions
+        - space_missions (Jean Forget)
 
 0.85 Wed Aug  2 22:28:15 CEST 2006
         [NEW WEEKLY THEME 2006/07/31]
