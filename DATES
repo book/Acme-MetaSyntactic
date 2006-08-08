@@ -88,4 +88,7 @@
 0.85	31 Jul 2006	foo [merged with toto (removed), made multilingual]
 0.86	07 Aug 2006	pie, space_missions [renamed apollo, made multilist]
 0.87	14 Aug 2006	sins
+0.88	21 Aug 2006	metro [added many other cities subways]
+0.89	28 Aug 2006	pause_id
+0.90	04 Sep 2006	state_flowers
 
