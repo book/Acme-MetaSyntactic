@@ -55,6 +55,8 @@ Later updates (from the source web site):
 
 =item * version 0.82, published on July 10, 2006.
 
+=item * version 0.87, published on August 14, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -76,6 +78,7 @@ Akasaka_pm
 Albany_pm
 Albuquerque_pm
 Alphen_pm
+Altoona_pm
 Amiga_pm
 Amsterdam_pm
 Anchorage_pm
@@ -88,6 +91,7 @@ Auckland_pm
 Austin_pm
 BH_pm
 Baltimore_pm
+Bandung_pm
 Bangalore_pm
 Bangkok_pm
 Bangsar_pm
@@ -127,6 +131,7 @@ Cedar_Valley_Perl_Mongers_pm
 Champaign_Urbana_pm
 Charleston_pm
 Charlotte_pm
+Charlottesville_pm
 Chemnitz_pm
 Chicago_pm
 China_pm
@@ -134,6 +139,7 @@ Chisinau_pm
 Chupei_pm
 ClassicCity_pm
 Clemson_pm
+Coimbatore_pm
 Cola_pm
 Cologne_pm
 Colombo_pm
@@ -269,6 +275,7 @@ Poznan_pm
 Princeton_pm
 Pune_pm
 Purdue_pm
+Qatar_pm
 Raleigh_pm
 Recife_pm
 RenoTahoe_pm
