@@ -13,11 +13,45 @@ Acme::MetaSyntactic::metro - The metro theme
 
 This theme lists all the active stations of several subway lines.
 
+=head2 List of cities included
+
+All themes are divided into lines, according to the local nomenclature,
+e.g. C<fr/paris/ligne_5>.
+
+This theme currently includes the stations for the following cities:
+
+=over 4
+
+=item *
+
+C<fr/paris>: Paris, France, 16 lines.
+
+=item *
+
+C<fr/lyon>: Lyon, France, 4 lines.
+
+=item *
+
+C<fr/marseille>: Marseille, France, 2 lines.
+
+=item *
+
+C<fr/rennes>: Rennes, France, 1 line.
+
+=item *
+
+C<fr/lille>: Lille, France, 2 lines.
+
+=back
+
 =head1 CONTRIBUTOR
 
 Philippe 'BooK' Bruhat
 
 Introduced in version 0.83, published on July 17, 2006.
+
+Updated with station names for Lyon, Marseille, Lille, Rennes (with
+stations grouped by line) in version 0.88, published on August 21, 2006.
 
 =head1 DEDICATION
 
@@ -426,3 +460,157 @@ Gare_de_Lyon
 Bercy
 Cour_Saint_Emilion
 Bibliotheque_Francois_Mitterrand
+# names fr/lyon/ligne_A
+Perrache
+Ampere_Victor_Hugo
+Bellecour
+Cordelier
+Hotel_de_Ville
+Foch
+Massena
+Charpennes
+Republique
+Gratte_Ciel
+Flachet
+Cusset
+Laurent_Bonevay
+# names fr/lyon/ligne_B
+Stade_de_Gerland
+Debourg
+Place_Jean_Jaures
+Jean_Mace
+Saxe_Gambetta
+Place_Guichard
+Part_Dieu
+Brotteaux
+Charpennes
+# names fr/lyon/ligne_C
+Hotel_de_Ville
+Croix_Paquet
+Croix_Rousse
+Henon
+Cuire
+# names fr/lyon/ligne_D
+Gare_de_Venissieux
+Parilly
+Mermoz_Pinel
+Laennec
+Grange_Blanche
+Monplaisir_Lumiere
+Sans_Souci
+Garibaldi
+Saxe_Gambetta
+Guillotiere
+Bellecour
+Vieux_Lyon
+Gorge_de_Loup
+Valmy
+Gare_de_Vaise
+# fr/marseille/ligne_1
+La_Timone
+Baille
+Castellane
+Estrangin_Prefecture
+Vieux_Port_Hotel_de_ville
+Colbert_Hotel_de_région
+St_Charles
+Reformes_Canebiere
+Cinq_avenues_Longchamp
+Chartreux
+St_Just_Hotel_de_departement
+Malpasse
+Frais_Vallon
+La_Rose
+# fr/marseille/ligne_2
+Bougainville
+National
+Desiree Clary
+Joliette
+Jules_Guesde
+St_Charles
+Noailles
+Notre_Dame_du_Mont_Cours_Julien
+Castellane
+Perier
+Rond_point_du_Prado
+Sainte_Marguerite_Dromel
+# fr/rennes
+J_F_Kennedy
+Villejean_Universite
+Pontchaillou
+Anatole_France
+Ste_Anne
+Republique
+Charles_de_Gaulle
+Gares
+Jacques_Cartier
+Clemenceau
+Henri_Fréville
+Italie
+Triangle
+Blosne
+La_Poterie
+# fr/lille/ligne_1
+Quatre_Cantons
+Cite_Scientifique
+Triolo
+Villeneuve_d_Ascq_Hotel_de_Ville
+Pont_de_Bois
+Lezennes
+Hellemmes
+Marbrerie
+Fives
+Caulier
+Gare_Lille_Flandres
+Rihour
+Republique_Beaux_Arts
+Gambetta
+Wazemmes
+Porte_des_Postes
+CHR_Oscar_Lambret
+CHR_B_Calmette
+# fr/lille/ligne_2
+St_Philibert
+Bourg
+Maison_des_Enfants
+Mitterie
+Pont_Superieur
+Lomme_Lambersart
+Canteleu
+Bois_Blancs
+Port_de_Lille
+Cormontaigne
+Montebello
+Porte_des_Postes
+Porte_d_Arras
+Porte_de_Douai
+Porte_de_Valenciennes
+Lille_Grand_Palais
+Mairie_de_Lille
+Gare_Lille_Flandres
+Gare_Lille_Europe
+Saint_Maurice_Pellevoisin
+Mons_Sarts
+Mairie_de_Mons
+Fort_de_Mons
+Les_Pres
+Jean_Jaures
+Wasquehal_Pave_de_Lille
+Wasquehal_Hotel_de_Ville
+Croix_Centre
+Croix_Marie
+Epeule_Montesquieu
+Roubaix_Charles_de_Gaulle
+Euroteleport
+Roubaix_Grand_Place
+Gare_Jean_Lebas
+Alsace
+Mercure
+Carliers
+Tourcoing_Sebastopol
+Tourcoing_Centre
+Colbert
+Phalempins
+Pont_de_Neuville
+Bourgogne
+CH_Dron
