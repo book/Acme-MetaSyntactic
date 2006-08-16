@@ -12,5 +12,8 @@ $count += 1; # 1 as of version 0.85
              # 6 as of version 0.38
              # 7 as of version 0.25
 
-is( scalar Acme::MetaSyntactic->themes, $count, "$count themes" );
+@ARGV = 'MANIFEST';
+my @themes = grep { m!^lib/Acme/MetaSyntactic/[a-z]! } <>;
+
+is( scalar @themes, $count, "$count themes" );
 
