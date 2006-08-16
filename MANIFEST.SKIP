@@ -21,5 +21,4 @@ CVS/.*
 ^.cvsignore$
 ^cover_db/
 ^_build/
-t/41count.t
 ^Acme-MetaSyntactic
