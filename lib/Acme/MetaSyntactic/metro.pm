@@ -42,6 +42,10 @@ C<fr/rennes>: Rennes, France, 1 line.
 
 C<fr/lille>: Lille, France, 2 lines.
 
+=item *
+
+C<nl/amsterdam>: Amsterdam, Netherlands, 5 lines.
+
 =back
 
 =head1 CONTRIBUTOR
@@ -614,3 +618,93 @@ Phalempins
 Pont_de_Neuville
 Bourgogne
 CH_Dron
+# nl/amsterdam/metrolijn_50
+Isolatorweg
+Sloterdijk_NS
+De_Vlugtlaan
+Jan_van_Galenstraat
+Postjesweg
+Lelylaan_NS
+Heemstedestraat
+Henk_Sneevlietweg
+Amstelveenseweg
+Zuid_WTC_NS
+RAI_NS
+Overamstel
+Van_der_Madeweg
+Duivendrecht_NS
+Standvliet_Arena
+Bijlmer_NS
+Bullewijk
+Holendrecht
+Reigersbos
+Gein
+# nl_amsterdam_metrolijn_51
+Centraal_Station
+Nieuwmarkt
+Waterlooplein
+Weesperplein
+Wibautstraat
+Amstel_NS
+Spaklerweg
+Overamstel
+RAI_NS
+Zuid_WTC_NS
+Boelelaan_VU
+A_J_Ernststraat
+Van_Boshuizenstraat
+Uilenstede
+Kronenburg
+Zonnestein
+Onderuit
+Oranjebaan
+Amstelveen_Centrum
+Ouderkerkerlaan
+Sportlaan
+Marne
+Gondel
+Meent
+Brink
+Poortwachter
+Spinnerij
+Sacharovlaan
+Westwijk
+# nl_amsterdam_metrolijn_52
+Van_Hasseltweg
+Centraal_Station
+Rokin
+Vijzelgracht
+Ceintuurbaan
+Europaplein
+Zuid_WTC
+# nl_amsterdam_metrolijn_53
+Centraal_Station
+Nieuwmarkt
+Waterlooplein
+Weesperplein
+Wibautstraat
+Amstel_NS
+Spaklerweg
+Van_der_Madeweg
+Venserpolder
+Diemen_Zuid_NS
+Verrijn_Stuartweg
+Ganzenhoef
+Kraaiennest
+Gaasperplas
+# nl_amsterdam_metrolijn_54
+Centraal_Station
+Nieuwmarkt
+Waterlooplein
+Weesperplein
+Wibautstraat
+Amstel_NS
+Spaklerweg
+Van_der_Madeweg
+Duivendrecht_NS
+Standvliet_Arena
+Bijlmer_NS
+Bullewijk
+Holendrecht
+Reigersbos
+Gein
