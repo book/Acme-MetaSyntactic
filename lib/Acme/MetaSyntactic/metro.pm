@@ -639,7 +639,7 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
-# nl_amsterdam_metrolijn_51
+# nl/amsterdam/metrolijn_51
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -669,7 +669,7 @@ Poortwachter
 Spinnerij
 Sacharovlaan
 Westwijk
-# nl_amsterdam_metrolijn_52
+# nl/amsterdam/metrolijn_52
 Van_Hasseltweg
 Centraal_Station
 Rokin
@@ -677,7 +677,7 @@ Vijzelgracht
 Ceintuurbaan
 Europaplein
 Zuid_WTC
-# nl_amsterdam_metrolijn_53
+# nl/amsterdam/metrolijn_53
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -692,7 +692,7 @@ Verrijn_Stuartweg
 Ganzenhoef
 Kraaiennest
 Gaasperplas
-# nl_amsterdam_metrolijn_54
+# nl/amsterdam/metrolijn_54
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
