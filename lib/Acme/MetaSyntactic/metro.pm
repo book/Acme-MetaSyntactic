@@ -46,6 +46,10 @@ C<fr/lille>: Lille, France, 2 lines.
 
 C<nl/amsterdam>: Amsterdam, Netherlands, 5 lines.
 
+=item *
+
+C<au/vienna>: Vienna, Austria, 5 lines.
+
 =back
 
 =head1 CONTRIBUTOR
@@ -708,3 +712,93 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
+# au/vienna/u1
+Kagran
+Alte_Donau
+Kaisermuhlen_Vienna_International_Centre
+Donauinsel
+Vorgartenstrasse
+Praterstern
+Nestroyplatz
+Schwedenplatz
+Stephansplatz_City
+Karlsplatz
+Taubstummengasse
+Sudtiroler_Platz
+Keplerplatz
+Reumannplatz
+# au/vienna/u2
+Schottenring
+Schottentor_Universitat
+Rathaus
+Volkstheater
+Museumsquartier
+Karlsplatz
+# au/vienna/u3
+Ottakring
+Kendlerstrasse
+Hutteldorfer Strasse
+Johnstrasse
+Schweglerstrasse
+Westbahnhof
+Zieglergasse
+Neubaugasse
+Volkstheater
+Herrengasse
+Stephansplatz_City
+Stubentor
+Landstrasse
+Rochusgasse
+Kardinal_Nagl_Platz
+Schlachthausgasse
+Erdberg
+Gasometer
+Zippererstrasse
+Enkplatz
+Simmering
+# au/vienna/u4
+Hutteldorf
+Ober_St_Veit
+Unter_St_Veit
+Braunschweiggasse
+Hietzing
+Schonbrunn
+Meidling Hauptstrasse
+Langenfeldgasse
+Margaretengurtel
+Pilgramgasse
+Kettenbruckengasse
+Karlsplatz
+Stadtpark
+Landstrasse
+Schwedenplatz
+Schottenring
+Rossauer_Lande
+Friedensbrucke
+Spittelau
+Heiligenstadt
+# au/vienna/u6
+Floridsdorf
+Neue_Donau
+Handelskai
+Dresdner_Strasse
+Jagerstrasse
+Spittelau
+Nussdorfer_Strasse
+Währinger_Strasse_Volksoper
+Michelbeuern_Allgemeines_Krankenhaus
+Alser_Strasse
+Josefstadter_Strasse
+Thaliastrasse
+Burggasse_Stadthalle
+Westbahnhof
+Gumpendorfer_Strasse
+Langenfeldgasse
+Niederhofstrasse
+Philadelphiabrucke_Meidling
+Tscherttegasse
+Am_Schopfwerk
+Alterlaa
+Erlaaer_Strasse
+Perfektastrasse
+Siebenhirten
