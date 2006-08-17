@@ -1,9 +1,28 @@
 Revision history for Acme-MetaSyntactic
 
+0.88 Thu Aug 17 12:05:33 CEST 2006
+        [NEW WEEKLY THEME 2006/08/21]
+        - metro
+        [AND FOR THE LAST TIME, METRO IS NOT NEW!]
+        - ... but is has changed so much, that is just like it was.
+        - From now on, Acme::MetaSyntactic has exactly 100 * $VERSION
+          themes. Version 0.99 (the last beta) will ship with 99 themes.
+        - No more cheap tricks to reduce the headcount, yay!
+        [TESTS]
+        - t/31any.t has been updated to work correctly if other themes
+          are installed
+        - t/41count.t is back (and works correctly if other themes are
+          installed)
+        [TICKET CLOSED]
+        - #21028 on rt.cpan.org (David Adler noticed that t/31any.t failed)
+        [THEME UPDATE]
+        - space_missions (new categories: manned_spacecraft, launch_vehicles
+          and victims)
+
 0.87 Wed Aug  9 01:15:08 CEST 2006
         [NEW WEEKLY THEME 2006/08/14]
         - sins (Abigail)
-        [THEME UPDATES]
+        [THEME UPDATE]
         - pm_groups
         [OOPS]
         - space_missions was not listed in the MANIFEST file for the
