@@ -5,15 +5,13 @@ plan tests => 1;
 
 my $count = $Acme::MetaSyntactic::VERSION;
 $count =~ y/.//d;
-
-# the difference in count is
-# 0 as of version 0.88
-# 1 as of version 0.85
-# 3 as of version 0.73
-# 4 as of version 0.70
-# 5 as of version 0.55
-# 6 as of version 0.38
-# 7 as of version 0.25
+$count += 0; # 0 as of version 0.88
+             # 1 as of version 0.85
+             # 3 as of version 0.73
+             # 4 as of version 0.70
+             # 5 as of version 0.55
+             # 6 as of version 0.38
+             # 7 as of version 0.25
 
 @ARGV = 'MANIFEST';
 my @themes = grep {m!^lib/Acme/MetaSyntactic/[a-z]!} <>;
