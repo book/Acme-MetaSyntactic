@@ -64,6 +64,8 @@ Later updates (from the source web site):
 
 =item * version 0.82, published on July 10, 2006
 
+=item * version 0.89, published on August 28, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -106,3 +108,4 @@ vijay exactly_man alan andy
 lou mister_serdecisions sandeep
 patty smokin_jim betty_the_bulldozer
 amber_dextrous stinky_pete 
+phil_o_dendron
