@@ -1,3 +1,4 @@
+use strict;
 use Test::More;
 use Acme::MetaSyntactic ();
 
@@ -9,9 +10,22 @@ my $tests = 2 * @themes;
 plan tests => $tests;
 
 # allow testing only a few themes
-my %test = map { $_ => 1 } @ARGV
-         ? map {"Acme::MetaSyntactic::$_"} @ARGV
-         : @themes;
+# "dilbert viclones" will test ONLY those themes
+# "not dilbert tmnt" will test ALL BUT those themes
+my %test;
+if (@ARGV) {
+    if ( $ARGV[0] eq 'not' ) {
+        shift;
+        %test = map { $_ => 1 } @themes;
+        diag "@ARGV";
+        $test{"Acme::MetaSyntactic::$_"} = 0 for @ARGV;
+    }
+    else {
+        %test = map { $_ => 1 } @ARGV
+            ? map {"Acme::MetaSyntactic::$_"} @ARGV
+            : @themes;
+    }
+}
 
 SKIP: {
 
