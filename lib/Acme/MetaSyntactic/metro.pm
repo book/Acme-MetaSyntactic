@@ -50,7 +50,15 @@ C<nl/amsterdam>: Amsterdam, Netherlands, 5 lines.
 
 C<au/vienna>: Vienna, Austria, 5 lines.
 
+=item * 
+
+C<pt/porto>: Port, Portugal, 4 lines.
+
 =back
+
+Note: the London underground is not included (mostly due to lack of time
+for research), but I certainly expect someone to send me a patch for it.
+C<;-)>
 
 =head1 CONTRIBUTOR
 
@@ -514,13 +522,13 @@ Vieux_Lyon
 Gorge_de_Loup
 Valmy
 Gare_de_Vaise
-# fr/marseille/ligne_1
+# names fr/marseille/ligne_1
 La_Timone
 Baille
 Castellane
 Estrangin_Prefecture
 Vieux_Port_Hotel_de_ville
-Colbert_Hotel_de_région
+Colbert_Hotel_de_region
 St_Charles
 Reformes_Canebiere
 Cinq_avenues_Longchamp
@@ -529,7 +537,7 @@ St_Just_Hotel_de_departement
 Malpasse
 Frais_Vallon
 La_Rose
-# fr/marseille/ligne_2
+# names fr/marseille/ligne_2
 Bougainville
 National
 Desiree Clary
@@ -542,7 +550,7 @@ Castellane
 Perier
 Rond_point_du_Prado
 Sainte_Marguerite_Dromel
-# fr/rennes
+# names fr/rennes
 J_F_Kennedy
 Villejean_Universite
 Pontchaillou
@@ -553,12 +561,12 @@ Charles_de_Gaulle
 Gares
 Jacques_Cartier
 Clemenceau
-Henri_Fréville
+Henri_Freville
 Italie
 Triangle
 Blosne
 La_Poterie
-# fr/lille/ligne_1
+# names fr/lille/ligne_1
 Quatre_Cantons
 Cite_Scientifique
 Triolo
@@ -577,7 +585,7 @@ Wazemmes
 Porte_des_Postes
 CHR_Oscar_Lambret
 CHR_B_Calmette
-# fr/lille/ligne_2
+# names fr/lille/ligne_2
 St_Philibert
 Bourg
 Maison_des_Enfants
@@ -622,7 +630,7 @@ Phalempins
 Pont_de_Neuville
 Bourgogne
 CH_Dron
-# nl/amsterdam/metrolijn_50
+# names nl/amsterdam/metrolijn_50
 Isolatorweg
 Sloterdijk_NS
 De_Vlugtlaan
@@ -643,7 +651,7 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
-# nl/amsterdam/metrolijn_51
+# names nl/amsterdam/metrolijn_51
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -673,7 +681,7 @@ Poortwachter
 Spinnerij
 Sacharovlaan
 Westwijk
-# nl/amsterdam/metrolijn_52
+# names nl/amsterdam/metrolijn_52
 Van_Hasseltweg
 Centraal_Station
 Rokin
@@ -681,7 +689,7 @@ Vijzelgracht
 Ceintuurbaan
 Europaplein
 Zuid_WTC
-# nl/amsterdam/metrolijn_53
+# names nl/amsterdam/metrolijn_53
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -696,7 +704,7 @@ Verrijn_Stuartweg
 Ganzenhoef
 Kraaiennest
 Gaasperplas
-# nl/amsterdam/metrolijn_54
+# names nl/amsterdam/metrolijn_54
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -712,7 +720,7 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
-# au/vienna/u1
+# names au/vienna/u1
 Kagran
 Alte_Donau
 Kaisermuhlen_Vienna_International_Centre
@@ -727,14 +735,14 @@ Taubstummengasse
 Sudtiroler_Platz
 Keplerplatz
 Reumannplatz
-# au/vienna/u2
+# names au/vienna/u2
 Schottenring
 Schottentor_Universitat
 Rathaus
 Volkstheater
 Museumsquartier
 Karlsplatz
-# au/vienna/u3
+# names au/vienna/u3
 Ottakring
 Kendlerstrasse
 Hutteldorfer Strasse
@@ -756,7 +764,7 @@ Gasometer
 Zippererstrasse
 Enkplatz
 Simmering
-# au/vienna/u4
+# names au/vienna/u4
 Hutteldorf
 Ober_St_Veit
 Unter_St_Veit
@@ -777,7 +785,7 @@ Rossauer_Lande
 Friedensbrucke
 Spittelau
 Heiligenstadt
-# au/vienna/u6
+# names au/vienna/u6
 Floridsdorf
 Neue_Donau
 Handelskai
@@ -785,7 +793,7 @@ Dresdner_Strasse
 Jagerstrasse
 Spittelau
 Nussdorfer_Strasse
-Währinger_Strasse_Volksoper
+Wahringer_Strasse_Volksoper
 Michelbeuern_Allgemeines_Krankenhaus
 Alser_Strasse
 Josefstadter_Strasse
@@ -802,3 +810,92 @@ Alterlaa
 Erlaaer_Strasse
 Perfektastrasse
 Siebenhirten
+# names pt/porto/linha_A
+Senhor_de_Matosinhos
+Mercado
+Brito_Capelo
+Matosinhos_Sul
+Camara_Matosinhos
+Parque_de_Real
+Pedro_Hispano
+Estadio_do_Mar
+Vasco_da_Gama
+Senhora_da_Hora
+Sete_Bicas
+Viso
+Ramalde
+Francos
+Casa_da_Musica
+Carolina_Michaelis
+Lapa
+Trindade
+Bolhao
+Campo_24_de_Agosto
+Heroismo
+Campanha
+Estadio_do_Dragao
+# names pt/porto/linha_B
+Pedras_Rubras
+Crestins
+Esposade
+Custoias
+Fonte_do_Cuco
+Senhora_da_Hora
+Sete_Bicas
+Viso
+Ramalde
+Francos
+Casa_da_Musica
+Carolina_Michaelis
+Lapa
+Trindade
+Bolhao
+Campo_24_de_Agosto
+Heroismo
+Campanha
+Estadio_do_Dragao
+# names pt/porto/linha_C
+Trofa
+Senhora_das_Dores
+Pateiras
+Bougado
+Serra
+Muro
+Ribela
+ISMAI
+Castelo_da_Maia
+Mandim
+Zona_Industrial
+Forum
+Parque_da_Maia
+Custio
+Araujo
+Pias
+Candido_dos_Reis
+Fonte_do_Cuco
+Senhora_da_Hora
+Sete_Bicas
+Viso
+Ramalde
+Francos
+Casa_da_Musica
+Carolina_Michaelis
+Lapa
+Trindade
+Bolhao
+Campo_24_de_Agosto
+Heroismo
+Campanha
+Estadio_do_Dragao
+# names pt/porto/linha_D
+Camara_Gaia
+General_Torres
+Jardim_do_Morro
+S_Bento
+Aliados
+Trindade
+Faria_Guimaraes
+Marques
+Combatentes
+Salgueiros
+Polo_Universitario
