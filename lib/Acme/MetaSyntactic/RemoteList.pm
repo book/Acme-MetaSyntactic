@@ -52,7 +52,11 @@ sub remote_list {
     return unless $class->has_remotelist();
 
     # check that we can access the network
-    eval { require LWP::UserAgent; };
+    eval {
+        require LWP::UserAgent;
+        die "version 5.802 required ($LWP::VERSION installed)\n"
+            if $LWP::VERSION < 5.802;
+    };
     if ($@) {
         carp "LWP::UserAgent not available: $@";
         return;
@@ -70,7 +74,7 @@ sub remote_list {
         }
 
         # extract, cleanup and return the data
-        push @items => $class->extract( $res->content() );
+        push @items => $class->extract( $res->decoded_content() );
     }
 
     # return unique items
