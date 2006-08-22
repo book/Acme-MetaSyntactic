@@ -86,7 +86,7 @@ Mercurius Venus Terra Mars Iuppiter Saturnus Uranus Neptunus Pluto
 Merkur Venus Aerd Mars Jupiter Saturn Uranus Neptun Pluto
 # names lt
 Merkurijus Venera Zeme Marsas Jupiteris Saturnas Uranas Neptunas Plutonas
-# name ms
+# names ms
 Utarid Zuhrah Bumi Marikh Musytari Zuhal Uranus Neptun Pluto
 # names mt
 Merkurju Venere Dinja Marte Gove Saturnu Uranju Nettunu Plutone
