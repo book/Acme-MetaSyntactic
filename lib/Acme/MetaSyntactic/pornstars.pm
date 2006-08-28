@@ -71,7 +71,6 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::MultiList>.
 
 __DATA__
 # names female
-Wide character in print at script/meta line 81.
 Abigail_Clayton
 Adara_Michaels
 Addison_Rose
