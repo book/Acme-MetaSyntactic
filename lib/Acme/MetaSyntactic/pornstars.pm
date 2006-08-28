@@ -71,6 +71,7 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::MultiList>.
 
 __DATA__
 # names female
+Wide character in print at script/meta line 81.
 Abigail_Clayton
 Adara_Michaels
 Addison_Rose
@@ -202,6 +203,7 @@ Brandi_Lyons
 Brandi_Wine
 Brandy_Alexandre
 Brandy_Bosworth
+Brandy_Starz
 Brandy_Talore
 Breanne
 Briana_Banks
@@ -347,6 +349,7 @@ Dyanna_Lauren
 Ebony_Ayes
 Eden_Alaura
 Elizabeth_Del_Mar
+Elizabeth_Lawrence
 Emma_Nixon
 Emma_Starr
 Erica_Bella
@@ -440,6 +443,7 @@ Jayna_Oso
 Jazmin
 Jeanna_Fine
 Jelena_Jensen
+Jenaveve_Jolie
 Jenna_Haze
 Jenna_Jameson
 Jennifer_Andersson
@@ -587,6 +591,7 @@ Luna_Lane
 Lyla_Lei
 Lynda_Leigh
 Madison_Stone
+Makayla_Coxxx
 Mai_Lee
 Mai_Lin
 Maia_Ginger
@@ -699,6 +704,7 @@ Penelope_Black_Diamond
 Penny_Flame
 Penny_Porsche
 Persia
+Phyllisha_Anne
 Phoenix_Ray
 Pixie
 Poppy_Morgan
@@ -792,6 +798,7 @@ Sunrise_Adams
 Sunset_Thomas
 Sunshine_Nee
 Susan_Nero
+Suzie_Carina
 Sydney_Moon
 T_J_Hart
 Tabatha_Cash
@@ -804,6 +811,7 @@ Tanya_Hansen
 Tanya_James
 Tawnee_Stone
 Tawny_Roberts
+Tawny_Pearl
 Taylor_Hayes
 Taylor_Hill
 Taylor_Lyn
@@ -866,6 +874,7 @@ Veronica_Carso
 Veronica_Hart
 Veronica_Moser
 Veronika_Raquel
+Veronika_Simon
 Veronika_Zemanova
 Vicky_Vette
 Victoria_Givens
@@ -876,6 +885,7 @@ Victoria_Zdrok
 Vida_Garman
 Violet_Blue
 Watase_Akira
+Wendy_Jaymes
 Wendy_Whoppers
 Wifey
 Yana_Cova
@@ -926,12 +936,14 @@ Buck_Adams
 Byron_Long
 Cal_Jammer
 Captain_Bob
+Carlos_Krystal
 Carmelo_Petix
 Chance_Ryder
 Cheyne_Collins
 Chris_Cannon
 Chris_Charming
 Chris_Evans
+Chris_small_package_Marshman
 Christoph_Clark
 Claudio_Meloni
 Colt_Steele
@@ -960,6 +972,7 @@ Don_Fernando
 Don_Hollywood
 Donny_Long
 Ed_Powers
+Ed_Luistro
 Eduardo_Yanez
 Elone_Disere
 Eric_Manchester
@@ -992,6 +1005,7 @@ Greg_Rome
 Greg_Centauro
 Guy_Bonnafoux
 Guy_DaSilva
+Guy_Masse
 Hank_Rose
 Harry_Reems
 Henry_Pachard
@@ -1105,7 +1119,6 @@ Peter_Foster
 Peter_Ho
 Peter_North
 Peter_Shaft
-Phatzane
 Philippe_Dean
 Philippe_Soine
 Pier_Evergreen
@@ -1190,3 +1203,4 @@ Yves_Baillat
 Yves_Callas
 Zake_Thomas
 Zensa_Raggi
+Zare_Prejaki
