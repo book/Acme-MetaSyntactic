@@ -111,6 +111,8 @@ my %utf2asc = (
     # for pokemons
     "\xe2\x99\x80" => 'female',
     "\xe2\x99\x82" => 'male',
+    "\x{2640}"     => 'female',
+    "\x{2642}"     => 'male',
 );
 my $utf_re = qr/(@{[join( '|', sort keys %utf2asc )]})/; 
 
