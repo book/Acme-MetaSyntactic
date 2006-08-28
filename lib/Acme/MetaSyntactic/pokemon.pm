@@ -82,7 +82,7 @@ Scizor Shuckle Heracross Sneasel Teddiursa Ursaring Slugma Magcargo
 Swinub Piloswine Corsola Remoraid Octillery Delibird Mantine Skarmory
 Houndour Houndoom Kingdra Phanpy Donphan Porygon2 Stantler Smeargle
 Tyrogue Hitmontop Smoochum Elekid Magby Miltank Blissey Raikou Entei
-Suicune Larvitar Pupitar Tyranitar Lugia Ho_Oh Celebi Treecko Grovyle
+Suicune Larvitar Pupitar Tyranitar Lugia Ho_oh Celebi Treecko Grovyle
 Sceptile Torchic Combusken Blaziken Mudkip Marshtomp Swampert Poochyena
 Mightyena Zigzagoon Linoone Wurmple Silcoon Beautifly Cascoon Dustox
 Lotad Lombre Ludicolo Seedot Nuzleaf Shiftry Taillow Swellow Wingull
