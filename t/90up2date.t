@@ -13,7 +13,6 @@ plan tests => $tests;
 # "dilbert viclones" will test ONLY those themes
 # "not dilbert tmnt" will test ALL BUT those themes
 my %test;
-if (@ARGV) {
     if ( $ARGV[0] eq 'not' ) {
         shift;
         %test = map { $_ => 1 } @themes;
@@ -25,7 +24,6 @@ if (@ARGV) {
             ? map {"Acme::MetaSyntactic::$_"} @ARGV
             : @themes;
     }
-}
 
 SKIP: {
 
