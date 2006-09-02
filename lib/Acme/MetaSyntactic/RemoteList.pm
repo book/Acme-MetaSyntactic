@@ -74,7 +74,10 @@ sub remote_list {
         }
 
         # extract, cleanup and return the data
-        push @items => $class->extract( $res->decoded_content() );
+        # if decoding the content fails, we just deal with the raw content
+        push @items =>
+            $class->extract( $res->decoded_content() || $res->content() );
+
     }
 
     # return unique items
