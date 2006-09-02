@@ -83,7 +83,7 @@ Pittsburgh Montreal Saint_Louis Boca_Raton Buffalo Toronto Chicago Houston
 London Amsterdam Munich Paris Belfast Braga Birmingham Vienna
 Haifa Herzliya Netanya
 Ottawa
-Merlbourne
+Melbourne
 Tai_Pei
 Porto_Alegre
 Tokyo
