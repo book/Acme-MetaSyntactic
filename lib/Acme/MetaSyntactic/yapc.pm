@@ -23,12 +23,13 @@ The various YAPC are:
 =item YAPC::America::North
 
 Pittsburgh (1999, 2000), Montreal (2001), Saint-Louis (2002),
-Boca Raton (2003), Buffalo (2004), Toronto (2005), Chicago (2006).
+Boca Raton (2003), Buffalo (2004), Toronto (2005), Chicago (2006),
+Houston (2007).
 
 =item YAPC::Europe
 
 London (2000),  Amsterdam (2001), Munich (2002), Paris (2003),
-Belfast (2004), Braga (2005), Birmingham (2006).
+Belfast (2004), Braga (2005), Birmingham (2006), Vienna (2007).
 
 =item YAPC::Israel
 
@@ -68,6 +69,8 @@ Updated in version 0.49, published on November 21, 2005.
 
 Updated in version 0.59, published on January 30, 2006.
 
+Updated with the YAPC for 2007 in version 0.90, published on September 4, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
@@ -76,8 +79,8 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 __DATA__
 # names
-Pittsburgh Montreal Saint_Louis Boca_Raton Buffalo Toronto Chicago
-London Amsterdam Munich Paris Belfast Braga Birmingham
+Pittsburgh Montreal Saint_Louis Boca_Raton Buffalo Toronto Chicago Houston
+London Amsterdam Munich Paris Belfast Braga Birmingham Vienna
 Haifa Herzliya Netanya
 Ottawa
 Merlbourne
