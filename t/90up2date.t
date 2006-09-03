@@ -16,7 +16,6 @@ my %test;
 if ( @ARGV && $ARGV[0] eq 'not' ) {
     shift;
     %test = map { $_ => 1 } @themes;
-    diag "@ARGV";
     $test{"Acme::MetaSyntactic::$_"} = 0 for @ARGV;
 }
 else {
