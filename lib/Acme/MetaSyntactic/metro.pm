@@ -83,7 +83,7 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::MultiList>.
 __DATA__
 # default
 fr/paris
-# names fr/paris/ligne_1
+# names fr paris ligne_1
 La_Defense_Grande_Arche
 Esplanade_de_la_Defense
 Pont_de_Neuilly
@@ -109,7 +109,7 @@ Porte_de_Vincennes
 Saint_Mande
 Berault
 Chateau_de_Vincennes
-# names fr/paris/ligne_2
+# names fr paris ligne_2
 Porte_Dauphine
 Victor_Hugo
 Charles_de_Gaulle_Etoile
@@ -135,7 +135,7 @@ Philippe_Auguste
 Alexandre_Dumas
 Avron
 Nation
-# names fr/paris/ligne_3
+# names fr paris ligne_3
 Pont_de_Levallois_Becon
 Anatole_France
 Louise_Michel
@@ -161,12 +161,12 @@ Pere_Lachaise
 Gambetta
 Porte_de_Bagnolet
 Gallieni
-# names fr/paris/ligne_3bis
+# names fr paris ligne_3bis
 Porte_des_Lilas
 Saint_Fargeau
 Pelleport
 Gambetta
-# names fr/paris/ligne_4
+# names fr paris ligne_4
 Porte_de_Clignancourt
 Simplon
 Marcadet_Poissonniers
@@ -193,7 +193,7 @@ Denfert_Rochereau
 Mouton_Duvernet
 Alesia
 Porte_d_Orleans
-# names fr/paris/ligne_5
+# names fr paris ligne_5
 Bobigny_Pablo_Picasso
 Bobigny_Pantin_Raymond_Queneau
 Eglise_de_Pantin
@@ -216,7 +216,7 @@ Gare_d_Austerlitz
 Saint_Marcel
 Campo_Formio
 Place_d_Italie
-# names fr/paris/ligne_6
+# names fr paris ligne_6
 Charles_de_Gaulle_Etoile
 Kleber
 Boissiere
@@ -245,7 +245,7 @@ Daumesnil
 Bel_Air
 Picpus
 Nation
-# names fr/paris/ligne_7
+# names fr paris ligne_7
 La_Courneuve_8_Mai_1945
 Fort_d_Aubervilliers
 Aubervilliers_Pantin_Quatre_Chemins
@@ -284,7 +284,7 @@ Le_Kremlin_Bicetre
 Villejuif_Leo_Lagrange
 Villejuif_Paul_Vaillant_Couturier
 Villejuif_Louis_Aragon
-# names fr/paris/ligne_7bis
+# names fr paris ligne_7bis
 Louis_Blanc
 Jaures
 Bolivar
@@ -292,7 +292,7 @@ Buttes_Chaumont
 Botzaris
 Place_des_Fetes
 Pre_Saint_Gervais
-# names fr/paris/ligne_8
+# names fr paris ligne_8
 Balard
 Lourmel
 Boucicaut
@@ -330,7 +330,7 @@ Maisons_Alfort_Les_Juilliottes
 Creteil_l_Echat
 Creteil_Universite
 Creteil_Prefecture
-# names fr/paris/ligne_9
+# names fr paris ligne_9
 Pont_de_Sevres
 Billancourt
 Marcel_Sembat
@@ -368,7 +368,7 @@ Porte_de_Montreuil
 Robespierre
 Croix_de_Chavaux
 Mairie_de_Montreuil
-# names fr/paris/ligne_10
+# names fr paris ligne_10
 Porte_d_Auteuil
 Michel_Ange_Auteuil
 Eglise_d_Auteuil
@@ -392,7 +392,7 @@ Maubert_Mutualite
 Cardinal_Lemoine
 Jussieu
 Gare_d_Austerlitz
-# names fr/paris/ligne_11
+# names fr paris ligne_11
 Mairie_des_Lilas
 Porte_des_Lilas
 Telegraphe
@@ -406,7 +406,7 @@ Arts_et_Metiers
 Rambuteau
 Hotel_de_Ville
 Chatelet
-# names fr/paris/ligne_12
+# names fr paris ligne_12
 Porte_de_la_Chapelle
 Marx_Dormoy
 Marcadet_Poissonniers
@@ -435,7 +435,7 @@ Convention
 Porte_de_Versailles
 Corentin_Celton
 Mairie_d_Issy
-# names fr/paris/ligne_13
+# names fr paris ligne_13
 Mairie_de_Saint_Ouen
 Garibaldi
 Porte_de_Saint_Ouen
@@ -467,7 +467,7 @@ Porte_de_Vanves
 Malakoff_Plateau_de_Vanves
 Malakoff_Rue_Etienne_Dolet
 Chatillon_Montrouge
-# names fr/paris/ligne_14
+# names fr paris ligne_14
 Saint_Lazare
 Madeleine
 Pyramides
@@ -476,7 +476,7 @@ Gare_de_Lyon
 Bercy
 Cour_Saint_Emilion
 Bibliotheque_Francois_Mitterrand
-# names fr/lyon/ligne_A
+# names fr lyon ligne_A
 Perrache
 Ampere_Victor_Hugo
 Bellecour
@@ -490,7 +490,7 @@ Gratte_Ciel
 Flachet
 Cusset
 Laurent_Bonevay
-# names fr/lyon/ligne_B
+# names fr lyon ligne_B
 Stade_de_Gerland
 Debourg
 Place_Jean_Jaures
@@ -500,13 +500,13 @@ Place_Guichard
 Part_Dieu
 Brotteaux
 Charpennes
-# names fr/lyon/ligne_C
+# names fr lyon ligne_C
 Hotel_de_Ville
 Croix_Paquet
 Croix_Rousse
 Henon
 Cuire
-# names fr/lyon/ligne_D
+# names fr lyon ligne_D
 Gare_de_Venissieux
 Parilly
 Mermoz_Pinel
@@ -522,7 +522,7 @@ Vieux_Lyon
 Gorge_de_Loup
 Valmy
 Gare_de_Vaise
-# names fr/marseille/ligne_1
+# names fr marseille ligne_1
 La_Timone
 Baille
 Castellane
@@ -537,7 +537,7 @@ St_Just_Hotel_de_departement
 Malpasse
 Frais_Vallon
 La_Rose
-# names fr/marseille/ligne_2
+# names fr marseille ligne_2
 Bougainville
 National
 Desiree Clary
@@ -550,7 +550,7 @@ Castellane
 Perier
 Rond_point_du_Prado
 Sainte_Marguerite_Dromel
-# names fr/rennes
+# names fr rennes
 J_F_Kennedy
 Villejean_Universite
 Pontchaillou
@@ -566,7 +566,7 @@ Italie
 Triangle
 Blosne
 La_Poterie
-# names fr/lille/ligne_1
+# names fr lille ligne_1
 Quatre_Cantons
 Cite_Scientifique
 Triolo
@@ -585,7 +585,7 @@ Wazemmes
 Porte_des_Postes
 CHR_Oscar_Lambret
 CHR_B_Calmette
-# names fr/lille/ligne_2
+# names fr lille ligne_2
 St_Philibert
 Bourg
 Maison_des_Enfants
@@ -630,7 +630,7 @@ Phalempins
 Pont_de_Neuville
 Bourgogne
 CH_Dron
-# names nl/amsterdam/metrolijn_50
+# names nl amsterdam metrolijn_50
 Isolatorweg
 Sloterdijk_NS
 De_Vlugtlaan
@@ -651,7 +651,7 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
-# names nl/amsterdam/metrolijn_51
+# names nl amsterdam metrolijn_51
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -681,7 +681,7 @@ Poortwachter
 Spinnerij
 Sacharovlaan
 Westwijk
-# names nl/amsterdam/metrolijn_52
+# names nl amsterdam metrolijn_52
 Van_Hasseltweg
 Centraal_Station
 Rokin
@@ -689,7 +689,7 @@ Vijzelgracht
 Ceintuurbaan
 Europaplein
 Zuid_WTC
-# names nl/amsterdam/metrolijn_53
+# names nl amsterdam metrolijn_53
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -704,7 +704,7 @@ Verrijn_Stuartweg
 Ganzenhoef
 Kraaiennest
 Gaasperplas
-# names nl/amsterdam/metrolijn_54
+# names nl amsterdam metrolijn_54
 Centraal_Station
 Nieuwmarkt
 Waterlooplein
@@ -720,7 +720,7 @@ Bullewijk
 Holendrecht
 Reigersbos
 Gein
-# names au/vienna/u1
+# names au vienna u1
 Kagran
 Alte_Donau
 Kaisermuhlen_Vienna_International_Centre
@@ -735,14 +735,14 @@ Taubstummengasse
 Sudtiroler_Platz
 Keplerplatz
 Reumannplatz
-# names au/vienna/u2
+# names au vienna u2
 Schottenring
 Schottentor_Universitat
 Rathaus
 Volkstheater
 Museumsquartier
 Karlsplatz
-# names au/vienna/u3
+# names au vienna u3
 Ottakring
 Kendlerstrasse
 Hutteldorfer Strasse
@@ -764,7 +764,7 @@ Gasometer
 Zippererstrasse
 Enkplatz
 Simmering
-# names au/vienna/u4
+# names au vienna u4
 Hutteldorf
 Ober_St_Veit
 Unter_St_Veit
@@ -785,7 +785,7 @@ Rossauer_Lande
 Friedensbrucke
 Spittelau
 Heiligenstadt
-# names au/vienna/u6
+# names au vienna u6
 Floridsdorf
 Neue_Donau
 Handelskai
@@ -810,7 +810,7 @@ Alterlaa
 Erlaaer_Strasse
 Perfektastrasse
 Siebenhirten
-# names pt/porto/linha_A
+# names pt porto linha_A
 Senhor_de_Matosinhos
 Mercado
 Brito_Capelo
@@ -834,7 +834,7 @@ Campo_24_de_Agosto
 Heroismo
 Campanha
 Estadio_do_Dragao
-# names pt/porto/linha_B
+# names pt porto linha_B
 Pedras_Rubras
 Crestins
 Esposade
@@ -854,7 +854,7 @@ Campo_24_de_Agosto
 Heroismo
 Campanha
 Estadio_do_Dragao
-# names pt/porto/linha_C
+# names pt porto linha_C
 Trofa
 Senhora_das_Dores
 Pateiras
@@ -887,7 +887,7 @@ Campo_24_de_Agosto
 Heroismo
 Campanha
 Estadio_do_Dragao
-# names pt/porto/linha_D
+# names pt porto linha_D
 Camara_Gaia
 General_Torres
 Jardim_do_Morro
