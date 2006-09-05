@@ -112,7 +112,7 @@ Lockheed_JetStar Bell_Rocket_Belt Avro_Vulcan Little_Nellie Kawasaki_KV107
 Car_Plane Handley_Page_Jetstream Space_Shuttle Acrostar_Jet
 Beechcraft_Twin_Beech Blimp British_Aerospace_Harrier_T10 Lockheed_Hercules
 Mikoyan_MiG29 Eurocopter_Tiger Aero_L39_Albatros Switchblades Antonov_An124
-# names vehicles/ships
+# names vehicles ships
 Wet_Nellie Wetbike Alligator_Boat Q_Boat Gondola Qs_Hydrofoil_Boat Iceberg
 Disco_Volante
 # names vehicles other
