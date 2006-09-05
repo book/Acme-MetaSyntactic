@@ -54,6 +54,10 @@ C<au/vienna>: Vienna, Austria, 5 lines.
 
 C<pt/porto>: Port, Portugal, 4 lines.
 
+=item * 
+
+C<us/chicago>: Chicago, United States, 8 lines.
+
 =back
 
 Note: the London underground is not included (mostly due to lack of time
@@ -68,6 +72,9 @@ Introduced in version 0.83, published on July 17, 2006.
 
 Updated with station names for Lyon, Marseille, Lille, Rennes (with
 stations grouped by line) in version 0.88, published on August 21, 2006.
+
+Updated by Elliot Shank with the Chicago metro in version 0.91,
+published on September 11, 2006.
 
 =head1 DEDICATION
 
@@ -899,3 +906,212 @@ Marques
 Combatentes
 Salgueiros
 Polo_Universitario
+# names us chicago red
+Ninety_Fifth
+Eighty_Seventh
+Seventy_Ninth
+Sixty_Ninth
+Sixty_Third
+Garfield
+Forty_Seventh
+Sox_Thirty_Fifth
+Cermak_Chinatown
+Roosevelt
+Harrison
+Jackson
+Monroe
+Washington
+Grand
+Chicago
+Clark_and_Division
+North_and_Clybourn
+Fullerton
+Belmont
+Addison
+Sheridan
+Wilson
+Lawrence
+Argyle
+Berwyn
+Bryn_Mawr
+Thorndale
+Granville
+Loyola
+Morse
+Jarvis
+Howard
+# names us chicago blue
+O_Hare
+Rosemont
+Cumberland
+Harlem
+Jefferson_Park
+Montrose
+Irving_Park
+Addison
+Belmont
+Logan_Square
+California
+Western
+Damen
+Division
+Chicago
+Grand
+Clark_and_Lake
+Washington
+Monroe
+Jackson
+LaSalle
+Clinton
+UIC_Halsted
+Racine
+Medical_Center
+Western
+Kedzie_Homan
+Pulaski
+Cicero
+Austin
+Oak_Park
+Harlem
+Forest_Park
+Polk
+Eighteenth
+Damen
+Western
+California
+Kedzie
+Central_Park
+Pulaski
+Kildare
+Cicero
+Fifty_Fourth_and_Cermak
+# names us chicago purple
+Linden
+Central
+Noyes
+Foster
+Davis
+Dempster
+Main
+South_Boulevard
+Howard
+Belmont
+Wellington
+Diversey
+Fullerton
+Armitage
+Sedgwick
+Chicago
+Merchandise_Mart
+Clark_and_Lake
+State_and_Lake
+Randolph
+Madison
+Adams
+Library
+LaSalle_and_Van_Buren
+Quincy
+Washington_and_Wells
+# names us chicago yellow
+Dempster
+Howard
+# names us chicago brown
+Kimball
+Kedzie
+Francisco
+Rockwell
+Western
+Damen
+Montrose
+Irving_Park
+Addison
+Paulina
+Southport
+Belmont
+Wellington
+Diversey
+Fullerton
+Armitage
+Sedgwick
+Chicago
+Merchandise_Mart
+Washington_and_Wells
+Quincy
+LaSalle_and_Van_Buren
+Library
+Adams
+Madison
+Randolph
+State_and_Lake
+Clark_and_Lake
+# names us chicago orange
+Midway
+Pulaski
+Kedzie
+Western
+Thirty_Fifth_and_Archer
+Ashland
+Halsted
+Roosevelt
+Library
+LaSalle_and_Van_Buren
+Quincy
+Washington_and_Wells
+Clark_and_Lake
+State_and_Lake
+Randolph
+Madison
+Adams
+# names us chicago green
+Harlem_and_Lake
+Oak_Park
+Ridgeland
+Austin
+Central
+Laramie
+Cicero
+Pulaski
+Conservatory_Central_Park_Drive
+Kedzie
+California
+Ashland
+Clinton
+Clark_and_Lake
+State_and_Lake
+Randolph
+Madison
+Adams
+Roosevelt
+Thirty_Fifth_Bronzeville_IIT
+Indiana
+Forty_Third
+Forty_Seventh
+Fifty_First
+Garfield
+King_Drive
+East_Sixty_Third_and_Cottage_Grove
+Halsted
+Ashland_and_Sixty_Third
+# names us chicago pink
+Fifty_Fourth_and_Cermak
+Cicero
+Kildare
+Pulaski
+Central_Park
+Kedzie
+California
+Western
+Damen
+Eighteenth
+Polk
+Ashland
+Clinton
+Clark_and_Lake
+State_and_Lake
+Randolph
+Madison
+Adams
+Library
+LaSalle_and_Van_Buren
+Quincy
+Washington_and_Wells
