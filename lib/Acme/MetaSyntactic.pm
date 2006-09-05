@@ -427,7 +427,7 @@ C<Acme::MetaSyntactic::Locale>), or a new one of your invention).
 
 Individual contributors are listed in the individual theme files.
 Look at the included F<CONTRIBUTORS> file for the list of all
-contributors (40 in this version).
+contributors (41 in this version).
 
 However, this module could not have been possible without:
 
