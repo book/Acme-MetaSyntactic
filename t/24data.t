@@ -19,7 +19,8 @@ SKIP: {
         while (<$fh>) {
             $in_data++ if /^__DATA__$/;
             next       if !$in_data;
-            $fail++, push @lines, $.    if /^#/ && !/^# ?(names|default)/;
+            $fail++, push @lines, $.
+                if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
         }
         is( $fail, 0, "__DATA__ section for $file" );
         diag "Failed lines: @lines" if @lines;
