@@ -496,7 +496,7 @@ Republique
 Gratte_Ciel
 Flachet
 Cusset
-Laurent_Bonevay
+Laurent_Bonnevay
 # names fr lyon ligne_B
 Stade_de_Gerland
 Debourg
