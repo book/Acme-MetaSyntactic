@@ -57,6 +57,8 @@ Later updates (from the source web site):
 
 =item * version 0.87, published on August 14, 2006.
 
+=item * version 0.91, published on September 11, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -95,6 +97,7 @@ Bandung_pm
 Bangalore_pm
 Bangkok_pm
 Bangsar_pm
+Banking_pm
 Barcelona_pm
 Basel_pm
 Bath_pm
@@ -152,7 +155,6 @@ DFW_pm
 Darmstadt_pm
 Dayton_pm
 Delhi_pm
-Depok_pm
 DesMoines_pm
 Destin_pm
 Detroit_pm
@@ -190,11 +192,8 @@ Israel_pm
 Istanbul_pm
 JERL_pm
 JPL_pm
-Jacksonville_pm
-Jakarta_pm
 Jalisco_pm
 Jerusalem_pm
-Jogja_pm
 Kaiserslautern_pm
 Kansai_pm
 KansasCity_pm
@@ -350,7 +349,6 @@ ZA_pm
 aalborg_pm
 ankara_pm
 arnhem_pm
-bali_pm
 brazosvalley_pm
 cypriots_pm
 dahut_pm
@@ -368,7 +366,6 @@ ph_pm
 plovdiv_pm
 rubbercity_pm
 salerno_pm
-stttelkom_pm
 torino_pm
 turkperl_pm
 tutorial_pm_org_pm
