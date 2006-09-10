@@ -113,7 +113,7 @@ sub load_data {
                 push @items, $item;
                 $item = $data;
                 my $last;
-                my @keys = split /\s+/, $1;
+                my @keys = split m!\s+|\s*/\s*!, $1;
                 $last = $item, $item = $item->{$_} ||= {} for @keys;
                 $item = \( $last->{ $keys[-1] } = "" );
                 next;
