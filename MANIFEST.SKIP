@@ -22,3 +22,4 @@ CVS/.*
 ^cover_db/
 ^_build/
 ^Acme-MetaSyntactic
+^templates
