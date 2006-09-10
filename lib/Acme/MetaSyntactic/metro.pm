@@ -58,11 +58,15 @@ C<pt/porto>: Port, Portugal, 4 lines.
 
 C<us/chicago>: Chicago, United States, 8 lines.
 
+=item *
+
+C<uk/london>: London, United Kingdom, 12 lines.
+
 =back
 
-Note: the London underground is not included (mostly due to lack of time
-for research), but I certainly expect someone to send me a patch for it.
-C<;-)>
+According to Abigail, the addition of the London Tube stations to
+C<Acme::MetaSyntactic> makes for another milestone: we can now use B<meta>
+to play I<Mornington Crescent>.
 
 =head1 CONTRIBUTOR
 
@@ -73,8 +77,8 @@ Introduced in version 0.83, published on July 17, 2006.
 Updated with station names for Lyon, Marseille, Lille, Rennes (with
 stations grouped by line) in version 0.88, published on August 21, 2006.
 
-Updated by Elliot Shank with the Chicago metro in version 0.91,
-published on September 11, 2006.
+Updated by Elliot Shank with the Chicago metro and by Abigail with
+the London Tube in version 0.91, published on September 11, 2006.
 
 =head1 DEDICATION
 
@@ -1115,3 +1119,87 @@ Library
 LaSalle_and_Van_Buren
 Quincy
 Washington_and_Wells
+# names uk london bakerloo_line
+Harrow_and_Wealdstone Kenton South_Kenton North_Wembley Wembley_Central
+Stonebridge_Park Harlesden Willesden_Junction Kensal_Green Queen_s_Park
+Kilburn_Park Maida_Vale Warwick_Avenue Paddington Edgware_Road Marylebone
+Baker_Street Regent_s_Park Oxford_Circus Piccadilly_Circus Charing_Cross
+Embankment Waterloo Lambert_North Elephant_and_Castle
+# names uk london central_line
+West_Ruislip Ruislip_Gardens South_Ruislip Northolt Greenford Perivale
+Hanger_Lane Ealing_Broadway West_Acton North_Acton East_Acton White_City
+Wood_Lane Shepard_s_Bush Holland_Park Notting_Hill_Gate Queensway
+Lancaster_Gate Marble_Arch Bond_Street Oxford_Circus Tottenham_Court_Road
+Holborn Chancery_Lane St_Paul_s Bank Liverpool_Street Bethnal_Green
+Mile_End Stratford Leyton Leytonstone Wanstead Redbridge Gants_Hill
+Newbury_Park Barkingside Fairlop Hainault Grange_Hill Chigwell Roding_Valley
+Snaresbrook South_Woodford Woodford Buckhurst_Hill Loughton Debden
+Theydon_Bois Epping
+# names uk london circle_line
+Paddington Edgware_Road Baker_Street Great_Portland_Street Euston_Square
+King_s_Cross_St_Pancras Farringdon Barbican Moorgate Liverpool_Street
+Aldgate Tower_Hill Monument Cannon_Street Mansion_House Blackfriars
+Temple Embankment Westminster St_James_s_Park Victoria Sloane_Square
+South_Kensington Gloucester_Road High_Street_Kensington Notting_Hill_Gate
+Bayswater
+# names uk london district_line
+Richmond Kew_Gardens Gunnersbury Ealing_Broadway Ealing_Common Acton_Town
+Chiswick_Park Turnham_Green Stamford_Brook Ravenscourt_Park Hammersmith
+Barons_Court West_Kensington Wimbledon Wimbledon_Park Southfields
+East_Putney Putney_Bridge Parsons_Green Fulham_Broadway West_Brompton
+Kensington_Olympia Earl_s_Court Gloucester_Road South_Kensington
+Sloane_Square Victoria St_James_s_Park Westminster Embankment Temple
+Blackfriars Mansion_House Cannon_Street Monument Tower_Hill Aldgate_East
+Whitechapel Stepney_Green Mile_End Bow_Road Bromley_by_Bow West_Ham
+Plaistow Upton Park East Ham Barking Upney Becontree Dagenham_Heathway
+Dagenham_East Elm_Park Hornchurch Upminster_Bridge Upminster
+High_Street_Kensington Notting_Hill_Gate Bayswater Paddington Edgware_Road
+# names uk london east_london_line
+Shoreditch Whitechapel Shadwell Wapping Rotherhithe Canada_Water
+Surrey_Quays New_Cross_Gate New_Cross
+# names uk london hammersmith_and_city_line
+Hammersmith Goldhawk_Road Shepherd_s_Bush Latimer_Road Ladbroke_Grove
+Westbourne_Park Royal_Oak Paddington Edgware_Road Baker_Street
+Great_Portland_Street Euston_Square King_s_Cross_St_Pancras Farringdon
+Barbican Moorgate Liverpool_Street Aldgate_East Whitechapel Stepney_Green
+Mile_End Bow_Road Bromley_by_Bow West_Ham Plaistow Upton_Park East_Ham Barking
+# names uk london jubilee_line
+Stanmore Canons_Park Queensbury Kingsbury Wembley_Park Neasden Dollis_Hill
+Willesden_Green Kilburn West_Hampstead Finchley_Road Swiss_Cottage
+St_John_s_Wood Baker_Street Bond_Street Green_Park Westminster Waterloo
+Southwark London_Bridge Bermondsey Canada_Water Canary_Wharf North_Greenwich
+Canning_Town West_Ham Stratford
+# names uk london metropolitan_line
+Aldgate Liverpool_Street Moorgate Barbican Farringdon King_s_Cross_St_Pancras
+Euston_Square Great_Portland_Street Baker_Street Finchley_Road Wembley_Park
+Preston_Road Northwick_Park Harrow_on_the_Hill West_Harrow Rayners_Lane
+Eastcote Ruislip_Manor Ruislip Ickenham Hillingdon Uxbridge North_Harrow
+Pinner Northwood_Hills Northwood Moor_Park Croxley Watford Rickmansworth
+Chorleywood Chalfont_Latimer Chesham Amersham
+# names uk london northern_line
+High_Barnet Totteridge_and_Whetstone Woodside_Park West_Finchley
+Mill_Hill_East Finchley_Central East_Finchley Highgate Archway
+Tufnell_Park Kentish_Town Edgware Burnt_Oak Colindale Hendon_Central
+Brent_Cross Golders_Green Hampstead Belsize_Park Chalk_Farm Camden_Town
+Mornington_Crescent Euston Warren_Street Goodge_Street Tottenham_Court_Road
+Leicester_Square Charing_Cross Embankment Waterloo Euston
+King_s_Cross_St_Pancras Angel Old_Street Moorgate Bank London_Bridge Borough
+Elephant_and_Castle Kennington Oval Stockwell Clapham_North Clapham_Common
+Clapham_South Balham Tooting_Bec Tooting_Broadway Colliers_Wood
+South_Wimbledon Morden
+# names uk london piccadilly_line
+Cockfosters Oakwood Southgate Arnos_Grove Bounds_Green Wood_Green
+Turnpike_Lane Manor_House Finsbury_Park Arsenal Holloway_Road Caledonian_Road
+King_s_Cross Russell_Square Holborn Covent_Garden Leicester_Square
+Piccadilly_Circus Green_Park Hyde_Park_Corner Knightsbridge South_Kensington
+Gloucester_Road Earl_s_Court Barons_Court Hammersmith Turnham_Green
+Acton_Town South_Ealing Northfields Boston_Manor Osterley Hounslow_East
+Hounslow_Central Hounslow_West Hatton_Cross Heathrow_Terminal_4
+Heathrow_Terminals_1_2_3
+# names uk london victoria_line
+Walthamstow_Central Blackhorse_Road Tottenham_Hale Seven_Sisters
+Finsbury_Park Highbury_Islington King_s_Cross_St_Pancras Euston
+Warren_Street Oxford_Circus Green_Park Victoria Pimlico Vauxhall
+Stockwell Brixton
+# names uk london waterloo_and_city_line
+Bank Waterloo
