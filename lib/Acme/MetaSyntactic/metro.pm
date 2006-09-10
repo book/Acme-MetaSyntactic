@@ -62,6 +62,14 @@ C<us/chicago>: Chicago, United States, 8 lines.
 
 C<uk/london>: London, United Kingdom, 12 lines.
 
+=item *
+
+C<nl/rotterdam>: Rottedam, Netherlands, 2 lines.
+
+=item *
+
+C<ca/toronto>: Toronto, Canada, 4 lines.
+
 =back
 
 According to Abigail, the addition of the London Tube stations to
@@ -78,7 +86,8 @@ Updated with station names for Lyon, Marseille, Lille, Rennes (with
 stations grouped by line) in version 0.88, published on August 21, 2006.
 
 Updated by Elliot Shank with the Chicago metro and by Abigail with
-the London Tube in version 0.91, published on September 11, 2006.
+the London Tube, Rotterdam and Toronto metro lines in version 0.91,
+published on September 11, 2006.
 
 =head1 DEDICATION
 
@@ -1203,3 +1212,32 @@ Warren_Street Oxford_Circus Green_Park Victoria Pimlico Vauxhall
 Stockwell Brixton
 # names uk london waterloo_and_city_line
 Bank Waterloo
+# names nl rotterdam erasmus_line
+De_Akkers Heemraadlaan Spijkenisse_Centrum Zalmplaat Hoogvliet Tussenwater
+Poortugaal Rhoon Slinge Zuidplein Maashaven Rijnhaven Wilhelminaplein
+Leuvehaven Beurs Stadhuis Centraal_Station
+# names nl rotterdam caland_line
+De_Akkers Heemraadlaan Spijkenisse_Centrum Zalmplaat Hoogvliet Tussenwater
+Pernis Vijfsluizen Troelstralaan Parkweg Schiedam_Centrum Marconiplein
+Delfshaven Coolhaven Dijkzigt Eendrachtsplein Beurs Blaak Oostplein
+Gerdesiaweg Voorschotenlaan Kralingen_Zoom Capelsebrug Slotlaan
+Capelle_Centrum De_Terp Schenkel Prinsenlaan Oosterflank Alexander
+Graskruid Romeynshof Binnenhof Hesseplaats Nieuw_Verlaat Ambachtsland
+De_Tochten Nesselande
+# names ca toronto yonge_university_spadina
+Finch North_York_Centre Sheppard_Yonge York_Mills Lawrence Eglinton
+Davisville St_Clair Summerhill Rosedale Bloor_Yonge Wellesley College
+Dundas Queen King Union St_Andrew Osgoode St_Patrick Queen_s_Park
+Museum St_George Spadina Dupont St_Clair_West Eglinton_West Glencairn
+Lawrence_West Yorkdale Wilson Downsview
+# names ca toronto bloor_danforth
+Kipling Islington Royal_York Old_Mill Jane Runnymede High_Park Keele
+Dundas_West Lansdowne Dufferin Ossington Christie Bathurst Spadina
+St_George Bay Bloor_Yonge Sherbourne Castle_Frank Broadview Chester
+Pape Donlands Greenwood Coxwell Woodbine Main_Street Victoria_Park
+Warden Kennedy
+# names ca toronto scarborough_rt
+Kennedy Lawrence_East Ellesmere Midland Scarborough_Centre McCowan
+# names ca toronto sheppard
+Sheppard_Yonge Willowdale Bayview Bessarion Leslie Don_Mills
+
