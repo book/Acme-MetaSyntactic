@@ -17,6 +17,12 @@ is_deeply(
         },
         long =>
             { chain => { empty => '', not => { empty => 'zlonk powie' } } },
+        now => {
+            test => {
+                the =>
+                    { slash => { too => 'zamm crr_aaack whamm clank boff' } }
+            }
+        },
     },
     "read DATA correctly"
 );
@@ -35,4 +41,6 @@ zlonk powie
 # names fr
    et en
 français
+# now test/the/slash too
+zamm crr_aaack whamm clank boff
 
