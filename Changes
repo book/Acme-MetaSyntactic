@@ -1,5 +1,21 @@
 Revision history for Acme-MetaSyntactic
 
+0.91 Mon Sep 11 01:47:47 CEST 2006
+        [NEW WEEKLY THEME 2006/09/11]
+        - vcs (Éric Cholet)
+        [ON TO VERSION 1.00]
+        - the DATES file now lists all planned themes until version 1.00
+        [TICKET CLOSED]
+        - #21325 on rt.cpan.org (update metro with Chicago lines)
+        [THEME UPDATES]
+        - dilbert
+        - metro (Chicago by Elliot Shank, London, Rotterdam, Toronto by Abigail)
+        - pause_id
+        - phonetic (Dutch list by Abigail)
+        - pm_groups
+        - punctuation (update from wikipedia by Abigail)
+        - yapc (new YAPC by Abigail)
+
 0.90 Sun Sep  3 03:02:31 CEST 2006
         [NEW WEEKLY THEME 2006/09/04]
         - state_flowers (Abigail)
