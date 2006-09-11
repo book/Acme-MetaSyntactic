@@ -42,7 +42,7 @@ corner_brackets
 comma
 dash emdash endash
 ellipsis suspension_points
-exclamation_mark inverter_exclamation_mark
+exclamation_mark inverted_exclamation_mark
 full_stop period
 hyphen
 interrobang
