@@ -19,6 +19,8 @@ This theme lists popular (and not so popular) Version Control systems.
 
 Introduced in version 0.91, published on September 11, 2006.
 
+Updated by Abigail in version 0.92, published on September 18, 2006.
+
 =head1 SEE ALSO
 
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
