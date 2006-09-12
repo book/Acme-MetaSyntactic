@@ -1,0 +1,115 @@
+---
+Arts:
+  - dancers
+  - magma
+Books:
+  - amber
+  - discworld
+  - good_omens
+  - hhgg
+  - lotr
+  - oulipo
+  - pantagruel
+  - pooh
+  - pynchon
+Comics:
+  - barbapapa
+  - batman
+  - dilbert
+  - donmartin
+  - flintstones
+  - garfield
+  - groo
+  - haddock
+  - jerkcity
+  - peanuts
+  - pokemon
+  - robin
+  - scooby_doo
+  - shadok
+  - simpsons
+  - tmnt
+  - trigan
+  - userfriendly
+Computers:
+  - browser
+  - crypto
+  - debian
+  - linux
+  - pgpfone
+  - pop2
+  - pop3
+  - python
+  - services
+  - smtp
+  - sql
+  - tld
+  - unicode
+  - vcs
+  - viclones
+Core:
+  - any
+  - foo
+  - contributors
+  - '[smylers]'
+Entertainment:
+  - booze
+  - chess
+  - facecards
+  - magic8ball
+  - olympics
+  - pasta
+  - pie
+  - pornstars
+  - tour_de_france
+Fantasy:
+  - jabberwocky
+  - norse_mythology
+  - sins
+  - swords
+Geography:
+  - contrade
+  - currency
+  - metro
+  - state_flowers
+History:
+  - invasions
+  - us_presidents
+Language:
+  - alphabet
+  - colors
+  - colours
+  - counting_rhyme
+  - garbage
+  - loremipsum
+  - octothorpe
+  - phonetic
+  - punctuation
+  - roman
+  - weekdays
+Perl:
+  - opcodes
+  - pause_id
+  - pm_groups
+  - pumpkings
+  - yapc
+Science:
+  - constellations
+  - elements
+  - gems
+  - planets
+  - quantum
+  - space_missions
+  - stars
+TV_Movies:
+  - barbarella
+  - buffy
+  - dwarves
+  - evangelion
+  - jamesbond
+  - magicroundabout
+  - monty_spam
+  - teletubbies
+  - thunderbirds
+Zoology:
+  - antlers
