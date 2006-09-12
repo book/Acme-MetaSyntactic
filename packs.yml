@@ -2,6 +2,8 @@
 Arts:
   - dancers
   - magma
+Biology:
+  - antlers
 Books:
   - amber
   - discworld
@@ -111,5 +113,3 @@ TV_Movies:
   - monty_spam
   - teletubbies
   - thunderbirds
-Zoology:
-  - antlers
