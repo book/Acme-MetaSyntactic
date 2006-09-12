@@ -75,6 +75,26 @@ Source: L<http://en.wikisource.org/wiki/Jabberwocky>.
 
 1;
 
+=head1 OTHER PERLISH VERSIONS
+
+Some perlmonks have tried their hand on this classic too:
+
+=over 4
+
+=item *
+
+L<http://perlmonks.org/?node_id=29907> by wombat,
+
+=item *
+
+L<http://perlmonks.org/?node_id=111157> by andreychek,
+
+=item *
+
+L<http://perlmonks.org/?node_id=195873> by RMGir.
+
+=back
+
 =head1 CONTRIBUTOR
 
 Abigail
