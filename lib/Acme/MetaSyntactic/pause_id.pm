@@ -38,6 +38,8 @@ Further updates:
 
 =item * version 0.91, published on September 11, 2006
 
+=item * version 0.92, published on September 18, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -2994,6 +2996,7 @@ LMASARA
 LMEYER
 LMJM
 LMOLNAR
+LOCAL
 LOCATION
 LOCHMATT
 LODIN
