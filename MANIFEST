@@ -38,6 +38,7 @@ lib/Acme/MetaSyntactic/gems.pm
 lib/Acme/MetaSyntactic/groo.pm
 lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
+lib/Acme/MetaSyntactic/invasions.pm
 lib/Acme/MetaSyntactic/jamesbond.pm
 lib/Acme/MetaSyntactic/jerkcity.pm
 lib/Acme/MetaSyntactic/List.pm
