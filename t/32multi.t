@@ -23,7 +23,7 @@ END {
         'mars'             => [],
     );
 
-    plan tests => ( 2 + keys %tests ) * 4 + 2;
+    plan tests => ( 2 + keys %tests ) * 4 + 8;
 
     my @categories = Acme::MetaSyntactic::mongers->categories();
     is_deeply(
@@ -61,6 +61,16 @@ END {
         );
     }
 
+    # test has_category (class)
+    ok( Acme::MetaSyntactic::mongers->has_category( 'fr' ), "class has 'fr'" );
+    ok( Acme::MetaSyntactic::mongers->has_category( 'fr/lyon' ), "class has 'fr/lyon'" );
+    ok( !Acme::MetaSyntactic::mongers->has_category( 'fr/rennes' ), "class hasn't 'fr/rennes'" );
+
+    # test has_category (instance)
+    my $meta = Acme::MetaSyntactic::mongers->new('uk');
+    ok( $meta->has_category('fr'), "instance has 'fr'" );
+    ok( $meta->has_category('fr/lyon'), "instance has 'fr/lyon'" );
+    ok( !$meta->has_category('fr/rennes'), "instance hasn't 'fr/rennes'" );
 }
 
 package Acme::MetaSyntactic::mongers;
