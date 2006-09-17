@@ -114,6 +114,14 @@ sub categories {
     return keys %{"$class\::MultiList"};
 }
 
+sub has_category {
+    my ($class, $category) = @_;
+    $class = ref $class if ref $class;
+
+    no strict 'refs';
+    return exists ${"$class\::MultiList"}{$category};
+}
+
 sub theme {
     my $class = ref $_[0] || $_[0];
     no strict 'refs';
@@ -225,6 +233,10 @@ Return the selected category for this instance.
 =item categories()
 
 Return the categories supported by the theme (except C<:all>).
+
+=item has_category( $category )
+
+Return a boolean value indicating if the theme contains the given category.
 
 =item theme()
 
