@@ -64,7 +64,7 @@ while(<>) {
         if ( $conf{'force-random'} ) { push @{ $to{$1} }, $repl = $to->name() }
         else { $repl = $to{$1} ||= shift @to; @to = $to->name(0) if !@to }
         $repl
-    /ge;
+    /gei;
 }
 continue { print }
 
