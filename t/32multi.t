@@ -67,7 +67,7 @@ END {
     ok( !Acme::MetaSyntactic::mongers->has_category( 'fr/rennes' ), "class hasn't 'fr/rennes'" );
 
     # test has_category (instance)
-    my $meta = Acme::MetaSyntactic::mongers->new('uk');
+    my $meta = Acme::MetaSyntactic::mongers->new( category => 'uk');
     ok( $meta->has_category('fr'), "instance has 'fr'" );
     ok( $meta->has_category('fr/lyon'), "instance has 'fr/lyon'" );
     ok( !$meta->has_category('fr/rennes'), "instance hasn't 'fr/rennes'" );
