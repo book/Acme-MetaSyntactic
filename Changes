@@ -1,12 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
-0.93
+0.93 Tue Sep 26 21:59:00 CEST 2006
         [NEW WEEKLY THEME 2006/09/25]
-	- jabberwocky (Abigail)
+        - jabberwocky (Abigail)
         [ENHANCEMENTS]
-	- Acme::MetaSyntactic::MultiList now has a has_category() method
-	  to test if a given theme contains a certain category
+        - Acme::MetaSyntactic::MultiList now has a has_category() method
+          to test if a given theme contains a certain category
         [THEME UPDATES]
+        - pause_id
+        - pm_groups
 
 0.92 Sat Sep 16 22:31:32 CEST 2006
         [NEW WEEKLY THEME 2006/09/18]
