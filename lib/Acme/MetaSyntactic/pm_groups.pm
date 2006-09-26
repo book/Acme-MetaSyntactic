@@ -59,6 +59,8 @@ Later updates (from the source web site):
 
 =item * version 0.91, published on September 11, 2006.
 
+=item * version 0.93, published on September 25, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -150,6 +152,7 @@ Columbia_pm
 Copenhagen_pm
 CostaRica_pm
 Csy_pm
+Cumbria_pm
 DC_pm
 DFW_pm
 Darmstadt_pm
@@ -224,6 +227,7 @@ Malaga_pm
 Malaysia_pm
 Malazgirt_pm
 Maracaibo_pm
+Maracay_pm
 Marseille_pm
 Melbourne_pm
 Mexico_pm
