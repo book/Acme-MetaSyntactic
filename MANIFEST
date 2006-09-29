@@ -51,6 +51,7 @@ lib/Acme/MetaSyntactic/magicroundabout.pm
 lib/Acme/MetaSyntactic/metro.pm
 lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/MultiList.pm
+lib/Acme/MetaSyntactic/nis.pm
 lib/Acme/MetaSyntactic/norse_mythology.pm
 lib/Acme/MetaSyntactic/octothorpe.pm
 lib/Acme/MetaSyntactic/olympics.pm
