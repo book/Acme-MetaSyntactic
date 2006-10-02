@@ -15,6 +15,7 @@ our %Remote = (
 );
 
 __PACKAGE__->init();
+
 1;
 
 =head1 NAME
@@ -40,11 +41,10 @@ Introduced in version 0.95, published on October 9, 2006.
 This module is dedicated to the Linux kernel for its fifteenth
 anniversary. Linux was first published on the C<comp.archives> newsgroup
 on October 5, 1991.
-
-L<http://groups.google.com/group/comp.archives/msg/13a145b453f89094>
+See L<http://groups.google.com/group/comp.archives/msg/13a145b453f89094>
 
 Linux was announced on C<comp.os.minix> on August 25, 1991.
-L<http://groups.google.com/group/comp.os.minix/msg/b813d52cbc5a044b>
+See L<http://groups.google.com/group/comp.os.minix/msg/b813d52cbc5a044b>
 
 =head1 SEE ALSO
 
@@ -98,7 +98,6 @@ BioBrew
 Bioknoppix
 blackPanther
 BLAG
-Blin
 Bluewall
 Buffalo
 BU_Linux
@@ -118,7 +117,7 @@ Condorux
 Coyote
 CRUX
 Damn_Small
-Danix
+DANIX
 DARKSTAR
 Debian
 Deep_Water
@@ -175,7 +174,6 @@ Gentoox
 GEOLivre
 Gibraltar
 GNIX
-Gnoppix
 GNUstep
 GoblinX
 GoboLinux
@@ -283,7 +281,7 @@ Nexenta
 Niigata
 Nitix
 Nonux
-Novell
+Novell_SLE
 NST
 nUbuntu
 NuxOne
@@ -297,7 +295,6 @@ OpenLX
 OpenNA
 Openwall
 Oralux
-Overclockix
 PAIPIX
 ParallelKnoppix
 Pardus
@@ -372,7 +369,7 @@ Tilix
 tinysofa
 Topologilinux
 Trinity
-Trixbox
+trixbox
 Trustix
 Truva
 TumiX
