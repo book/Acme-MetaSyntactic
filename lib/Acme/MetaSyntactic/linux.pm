@@ -7,7 +7,12 @@ our %Remote = (
     source  => 'http://distrowatch.com/stats.php',
     extract => sub {
         return
-            map { s/\@/_at_/g; s/\+/_plus_/g; s/^2/two_/; s/^_|_$//g; $_ }
+            map {
+                s/\@/_at_/g; s/\+/_plus_/g;
+                s/^2/Two_/;  s/^64/Sixty_four_/;
+                s/^_|_$//g;  s/_+/_/g;
+                $_
+                }
             map { Acme::MetaSyntactic::RemoteList::tr_nonword($_) }
             map { Acme::MetaSyntactic::RemoteList::tr_utf8_basic($_) }
             $_[0] =~ m!&bull; <a href="\w+">([^<]+)</a></td></tr>!g;
@@ -54,8 +59,8 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 
 __DATA__
 # names
-two_X
-64_Studio
+Two_X
+Sixty_four_Studio
 AbulEdu
 Adamantix
 ADIOS
@@ -99,6 +104,7 @@ Bioknoppix
 blackPanther
 BLAG
 Bluewall
+Bluewhite64
 Buffalo
 BU_Linux
 Burapha
@@ -193,6 +199,7 @@ Hiweed
 Holon
 Honeywall
 How_Tux
+Ichthux
 IDMS
 Ignalum
 Impi
@@ -214,7 +221,6 @@ knopILS
 Knoppel
 Knopperdisk
 KNOPPIX
-Knoppix_64
 KnoppiXMAME
 KnoppMyth
 KnoSciences
@@ -236,7 +242,7 @@ Linpus
 Linspire
 LinuxConsole
 Linux_EduCD
-Linux__Live
+Linux_Live
 LinuxTLE
 Linux_XP
 Litrix
@@ -338,6 +344,7 @@ SCI_Linux
 Scientific
 Securepoint
 Sentry_Firewall
+SharkOS
 Skolelinux
 Slackintosh
 Slackware
@@ -394,7 +401,6 @@ Wazobia
 White_Box
 WIENUX
 Wolvix
-WOMP
 Xandros
 Xarnoppix
 Xenoppix
