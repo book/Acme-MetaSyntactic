@@ -61,6 +61,8 @@ Later updates (from the source web site):
 
 =item * version 0.93, published on September 25, 2006.
 
+=item * version 0.95, published on October 9, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -342,7 +344,6 @@ Victoria_pm
 Vienna_pm
 Vitoria_pm
 Vlaanderen_pm
-WYPUG_pm
 Wellington_pm
 WhiteMountain_pm
 Winnipeg_pm
