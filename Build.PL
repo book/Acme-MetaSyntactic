@@ -11,6 +11,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'File::Glob' => 0,
         'List::Util' => 0,
+        'warnings'   => 0, # for perls before 5.6, use warnings-compat
     },
     recommends          => { 'LWP::UserAgent' => 2 },
     script_files        => [ 'script/meta' ],
