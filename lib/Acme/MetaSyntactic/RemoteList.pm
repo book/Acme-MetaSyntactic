@@ -52,7 +52,11 @@ sub remote_list {
     return unless $class->has_remotelist();
 
     # check that we can access the network
-    eval { require LWP::UserAgent; };
+    eval {
+        require LWP::UserAgent;
+        die "version 5.802 required ($LWP::VERSION installed)\n"
+            if $LWP::VERSION < 5.802;
+    };
     if ($@) {
         carp "LWP::UserAgent not available: $@";
         return;
@@ -70,7 +74,10 @@ sub remote_list {
         }
 
         # extract, cleanup and return the data
-        push @items => $class->extract( $res->content() );
+        # if decoding the content fails, we just deal with the raw content
+        push @items =>
+            $class->extract( $res->decoded_content() || $res->content() );
+
     }
 
     # return unique items
@@ -104,9 +111,12 @@ my %utf2asc = (
     "\xc3\xb6" => 'o',
     "\xc3\xb8" => 'o',
     "\xc5\xa0" => 'S',
+    "\x{0160}" => 'S',
     # for pokemons
     "\xe2\x99\x80" => 'female',
     "\xe2\x99\x82" => 'male',
+    "\x{2640}"     => 'female',
+    "\x{2642}"     => 'male',
 );
 my $utf_re = qr/(@{[join( '|', sort keys %utf2asc )]})/; 
 

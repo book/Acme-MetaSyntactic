@@ -48,6 +48,22 @@ Later updates (from the source web site):
 
 =item * version 0.64, published on March 6, 2006.
 
+=item * version 0.72, published on May 1, 2006.
+
+=item * version 0.77, published on June 5, 2006.
+
+=item * version 0.79, published on June 19, 2006.
+
+=item * version 0.82, published on July 10, 2006.
+
+=item * version 0.87, published on August 14, 2006.
+
+=item * version 0.91, published on September 11, 2006.
+
+=item * version 0.93, published on September 25, 2006.
+
+=item * version 0.95, published on October 9, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -68,8 +84,8 @@ Africa_pm
 Akasaka_pm
 Albany_pm
 Albuquerque_pm
-Algarve_pm
 Alphen_pm
+Altoona_pm
 Amiga_pm
 Amsterdam_pm
 Anchorage_pm
@@ -82,9 +98,11 @@ Auckland_pm
 Austin_pm
 BH_pm
 Baltimore_pm
+Bandung_pm
 Bangalore_pm
 Bangkok_pm
 Bangsar_pm
+Banking_pm
 Barcelona_pm
 Basel_pm
 Bath_pm
@@ -121,12 +139,15 @@ Cedar_Valley_Perl_Mongers_pm
 Champaign_Urbana_pm
 Charleston_pm
 Charlotte_pm
+Charlottesville_pm
 Chemnitz_pm
 Chicago_pm
 China_pm
+Chisinau_pm
 Chupei_pm
 ClassicCity_pm
 Clemson_pm
+Coimbatore_pm
 Cola_pm
 Cologne_pm
 Colombo_pm
@@ -134,12 +155,12 @@ Columbia_pm
 Copenhagen_pm
 CostaRica_pm
 Csy_pm
+Cumbria_pm
 DC_pm
 DFW_pm
 Darmstadt_pm
 Dayton_pm
 Delhi_pm
-Depok_pm
 DesMoines_pm
 Destin_pm
 Detroit_pm
@@ -158,6 +179,7 @@ Galicia_pm
 Geneva_pm
 German_pm
 Gombe_pm
+Goteborg_pm
 GrandRapids_pm
 Groningen_pm
 Guadalajara_pm
@@ -176,11 +198,9 @@ Israel_pm
 Istanbul_pm
 JERL_pm
 JPL_pm
-Jacksonville_pm
-Jakarta_pm
 Jalisco_pm
 Jerusalem_pm
-Jogja_pm
+Kaiserslautern_pm
 Kansai_pm
 KansasCity_pm
 Kaohsiung_pm
@@ -188,6 +208,7 @@ KernCounty_pm
 Kiel_pm
 Kolkata_pm
 Korean_Perl_User_Group_pm
+Krakow_pm
 LA_Belle_pm
 Lafayette_pm
 LagunaNiguel_pm
@@ -201,6 +222,7 @@ London_pm
 Los_Angeles_pm
 Lund_pm
 Lyon_pm
+Madison_pm
 Madras_pm
 Madrid_pm
 Maine_pm
@@ -208,6 +230,7 @@ Malaga_pm
 Malaysia_pm
 Malazgirt_pm
 Maracaibo_pm
+Maracay_pm
 Marseille_pm
 Melbourne_pm
 Mexico_pm
@@ -254,9 +277,11 @@ Pittsburgh_pm
 PortoAlegre_pm
 Porto_pm
 Pound_Perl_pm
+Poznan_pm
 Princeton_pm
 Pune_pm
 Purdue_pm
+Qatar_pm
 Raleigh_pm
 Recife_pm
 RenoTahoe_pm
@@ -300,13 +325,13 @@ Tallahassee_pm
 TampaBay_pm
 Taubate_pm
 Tempe_East_Valley_Perlmongers_pm
-Tempe_pm
 Terere_pm
 Thailand_pm
 Thane_pm
 ThousandOaks_pm
 Tijuana_pm
 Tokyo_pm
+Torino_pm
 Toronto_pm
 Toulouse_pm
 Tucson_pm
@@ -320,18 +345,16 @@ Victoria_pm
 Vienna_pm
 Vitoria_pm
 Vlaanderen_pm
-WYPUG_pm
 Wellington_pm
 WhiteMountain_pm
 Winnipeg_pm
+Women_pm
 Yerevan_pm
 Yuma_pm
 ZA_pm
 aalborg_pm
 ankara_pm
 arnhem_pm
-austria_marchfeld_pm
-bali_pm
 brazosvalley_pm
 cypriots_pm
 dahut_pm
@@ -349,7 +372,6 @@ ph_pm
 plovdiv_pm
 rubbercity_pm
 salerno_pm
-stttelkom_pm
 torino_pm
 turkperl_pm
 tutorial_pm_org_pm

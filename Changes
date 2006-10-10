@@ -1,5 +1,230 @@
 Revision history for Acme-MetaSyntactic
 
+0.95 Mon Oct  9 10:46:56 CEST 2006
+        [NEW WEEKLY THEME 2006/10/09]
+        - linux
+        [THEME UPDATES]
+        - pause_id
+        - pm_groups
+
+0.94 Mon Oct  2 17:32:40 CEST 2006
+        [NEW WEEKLY THEME 2006/10/02]
+        - nis (Abigail)
+        [THEME UPDATES]
+        - pause_id
+
+0.93 Tue Sep 26 21:59:00 CEST 2006
+        [NEW WEEKLY THEME 2006/09/25]
+        - jabberwocky (Abigail)
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::MultiList now has a has_category() method
+          to test if a given theme contains a certain category
+        [THEME UPDATES]
+        - pause_id
+        - pm_groups
+
+0.92 Sat Sep 16 22:31:32 CEST 2006
+        [NEW WEEKLY THEME 2006/09/18]
+        - invasions (Jean Forget)
+        [THEME UPDATES]
+        - dilbert
+        - pause_id
+        - vcs (Abigail)
+
+0.91 Mon Sep 11 01:47:47 CEST 2006
+        [NEW WEEKLY THEME 2006/09/11]
+        - vcs (Éric Cholet)
+        [ON TO VERSION 1.00]
+        - the DATES file now lists all planned themes until version 1.00
+        [TICKET CLOSED]
+        - #21325 on rt.cpan.org (update metro with Chicago lines)
+        [THEME UPDATES]
+        - dilbert
+        - metro (Chicago by Elliot Shank, London, Rotterdam, Toronto by Abigail)
+        - pause_id
+        - phonetic (Dutch list by Abigail)
+        - pm_groups
+        - punctuation (update from wikipedia by Abigail)
+        - yapc (new YAPC by Abigail)
+
+0.90 Sun Sep  3 03:02:31 CEST 2006
+        [NEW WEEKLY THEME 2006/09/04]
+        - state_flowers (Abigail)
+        [THEME UPDATES]
+        - pause_id
+        - yapc (Vienna and Houston were selected for 2007)
+
+0.89 Mon Aug 28 11:48:48 CEST 2006
+        [NEW WEEKLY THEME 2006/08/28]
+        - pause_id
+        [THEME UPDATES]
+        - dilbert
+        - planets (Pluto is not a planet anymore)
+        - pornstars
+
+0.88 Tue Aug 22 12:51:15 CEST 2006
+        [NEW WEEKLY THEME 2006/08/21]
+        - metro
+        [AND FOR THE LAST TIME, METRO IS NOT NEW!]
+        - ... but is has changed so much, that is just like it was.
+        - From now on, Acme::MetaSyntactic has exactly 100 * $VERSION
+          themes. Version 0.99 (the last beta) will ship with 99 themes.
+        - No more cheap tricks to reduce the headcount, yay!
+        [TESTS]
+        - t/31any.t has been updated to work correctly if other themes
+          are installed
+        - t/41count.t is back (and works correctly if other themes are
+          installed)
+        [TICKET CLOSED]
+        - #21028 on rt.cpan.org (David Adler noticed that t/31any.t failed)
+        [THEME UPDATE]
+        - space_missions (new categories: manned_spacecraft, launch_vehicles
+          and victims)
+
+0.87 Wed Aug  9 01:15:08 CEST 2006
+        [NEW WEEKLY THEME 2006/08/14]
+        - sins (Abigail)
+        [THEME UPDATE]
+        - pm_groups
+        [OOPS]
+        - space_missions was not listed in the MANIFEST file for the
+          previous version, and was therefore not included...
+
+0.86 Sat Aug  5 00:48:11 CEST 2006
+        [NEW WEEKLY THEME 2006/08/07]
+        - pie (Nicholas Clark)
+        [TESTS]
+        - removed t/41count.t from the public tests, as it may break
+          when older versions of Acme::MetaSyntactic are already installed
+          (that's because some themes have been renamed or removed)
+        [THEME UPDATES]
+        - apollo (augmented and renamed space_missions)
+        - space_missions (Jean Forget)
+
+0.85 Wed Aug  2 22:28:15 CEST 2006
+        [NEW WEEKLY THEME 2006/07/31]
+        - foo
+        [GUESS WHAT? FOO IS NOT NEW!]
+        - foo was made multilingual (see the change log for 0.26, 0.38,
+          0.55, 0.70 and 0.73 for the whole list of cheap justifications)
+        - only one more of those, and we'll have the version number correspond
+          to the total number of themes
+        [THEME UPDATES]
+        - toto (removed and merged into foo)
+        [OOPS]
+        - Due to holidays and bad connection, this list was two days late.
+
+0.84 Sun Jul 23 22:05:06 CEST 2006
+        [NEW WEEKLY THEME 2006/07/24]
+        - tour_de_france (Abigail)
+        [THEME UPDATES]
+        - donmartin
+        - services (added a link to the IANA list)
+        - simpsons (made updatable with a link provided by Matthew Musgrove)
+
+0.83 Tue Jul 11 17:13:15 CEST 2006
+        [NEW WEEKLY THEME 2006/07/17]
+        - metro
+
+0.82 Fri Jul  7 18:57:05 CEST 2006
+        [NEW WEEKLY THEME 2006/07/10]
+        - olympics (Abigail)
+        [THEME UPDATES]
+        - dilbert
+        - groo (fixed a typo)
+        - pm_groups
+        - pokemon
+
+0.81 Mon Jul  3 09:02:36 CEST 2006
+        [NEW WEEKLY THEME 2006/07/03]
+        - swords (Jean Forget)
+        [THEME UPDATE]
+        - dilbert
+
+0.80 Sun Jun 25 01:05:59 CEST 2006
+        [NEW WEEKLY THEME 2006/06/26]
+        - pgpfone (David Golden)
+        [THEME UPDATES]
+        - dilbert
+        - norse_mythology (Jean Forget added new categories names, places
+          humans, norns and events, and also added a few dwarves, gods,
+          giants and valkyries)
+
+0.79 Mon Jun 19 11:11:15 CEST 2006
+        [NEW WEEKLY THEME 2006/06/19]
+        - lotr (Jean Forget)
+        [THEME UPDATES]
+        - pm_groups
+        - pornstars
+
+0.78 Thu Jun  8 18:51:43 CEST 2006
+        [NEW WEEKLY THEME 2006/06/12]
+        - scooby_doo (Michel Rodriguez)
+        [TESTS FIX]
+        - the alias use cases were not included in the MANIFEST file
+          and therefore not in the distribution. They are now.
+        [THEME UPDATE]
+        - dilbert
+
+0.77 Mon Jun  5 17:04:02 CEST 2006
+        [NEW WEEKLY THEME 2006/06/05]
+        - colors
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::Alias improves lazyness by allowing a
+          theme to be the exact copy of another one, with no work
+          (the colors theme is an alias of the colours theme)
+        [THEME UPDATE]
+        - colours (Abigail provided many English color names)
+        - pm_groups
+
+0.76 Thu May 25 14:52:30 CEST 2006
+        [NEW WEEKLY THEME 2006/05/22]
+        - colours (José Castro)
+        [THEME UPDATE]
+        - jamesbond (Abigail added several categories)
+
+0.75 Mon May 22 12:21:22 CEST 2006
+        [NEW WEEKLY THEME 2006/05/22]
+        - norse_mythology (Abigail)
+        [THEME UPDATE]
+        - pornstars
+
+0.74 Mon May 15 08:36:02 CEST 2006
+        [NEW WEEKLY THEME 2006/05/15]
+        - userfriendly (Abigail)
+        [DOCUMENTATION]
+        - one more success story in the meta(1) documentation
+        [THEME UPDATES]
+        - dwarves (Abigail, 9 new languages)
+        - phonetic (Gisbert W. Selke, German typo)
+        - planets (Abigail, update to 42 languages)
+        - pornstars
+        - weekdays (Gisbert W. Selke, 10 new languages)
+
+0.73 Sun Apr 30 02:10:35 CEST 2006
+        [NEW WEEKLY THEME 2006/05/08]
+        - planets
+        [GUESS WHAT? PLANETS IS NOT NEW!]
+        - planets was made multilingual (see the change log for
+          0.26, 0.38, 0.55 and 0.70 for the whole list of cheap
+          justifications)
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::Locale is now a subclass of
+          Acme::MetaSyntactic::MultiList, and supports territories.
+
+0.72 Sat Apr 29 01:12:16 CEST 2006
+        [NEW WEEKLY THEME 2006/05/01]
+        - pantagruel (Rafaël Garcia-Suarez)
+        [THEME UPDATES]
+        - pm_groups
+        - pornstars
+
+0.71 Wed Apr 26 16:06:37 CEST 2006
+        [NEW WEEKLY THEME 2006/04/24]
+        - sql
+        [THEME UPDATE]
+        - pornstars
+
 0.70 Sun Apr 16 22:57:16 CEST 2006
         [NEW WEEKLY THEME 2006/04/17]
         - jamesbond (Abigail)

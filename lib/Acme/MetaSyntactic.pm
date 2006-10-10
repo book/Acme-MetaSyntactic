@@ -117,7 +117,7 @@ sub load_data {
                 push @items, $item;
                 $item = $data;
                 my $last;
-                my @keys = split /\s+/, $1;
+                my @keys = split m!\s+|\s*/\s*!, $1;
                 $last = $item, $item = $item->{$_} ||= {} for @keys;
                 $item = \( $last->{ $keys[-1] } = "" );
                 next;
@@ -402,6 +402,11 @@ a "category". Categories can include sub-categories, etc, I<ad infinitum>
 The category is either passed as a constructor parameter or the default
 value is selected.
 
+=item C<Acme::MetaSyntactic::Alias>
+
+The theme is simply an alias of another theme. All items are identical,
+as the original behaviour. The only difference is the theme name.
+
 =back
 
 Over time, new theme "behaviours" will be added. 
@@ -426,7 +431,7 @@ C<Acme::MetaSyntactic::Locale>), or a new one of your invention).
 
 Individual contributors are listed in the individual theme files.
 Look at the included F<CONTRIBUTORS> file for the list of all
-contributors (35 in this version).
+contributors (42 in this version).
 
 However, this module could not have been possible without:
 
@@ -487,6 +492,13 @@ Jérôme Fenal,
 who wrote L<Acme::MetaSyntactic::RefactorCode>, which helps
 C<Acme::MetaSyntactic> fulfill its role: rename your boring variables
 with silly names.
+
+=item *
+
+Abigail,
+
+who provided by himself more than 35 themes (I stopped counting after that).
+I probably won't be able to include them all before version 1.00. 
 
 =back
 

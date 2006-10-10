@@ -1,69 +1,22 @@
 package Acme::MetaSyntactic::Locale;
 use strict;
 use Acme::MetaSyntactic (); # do not export metaname and friends
-use Acme::MetaSyntactic::RemoteList;
+use Acme::MetaSyntactic::MultiList;
 use List::Util qw( shuffle );
 use Carp;
 
 use vars qw( @ISA );
-@ISA = qw( Acme::MetaSyntactic::RemoteList );
+@ISA = qw( Acme::MetaSyntactic::MultiList );
 
 sub init {
-    my ($self, $data) = @_;
-    my $class = caller(0);
-
-    $data ||= Acme::MetaSyntactic->load_data($class);
-    croak "The optional argument to init() must be a hash reference"
-      if ref $data ne 'HASH';
-
+    # alias the older package variable %Locale to %MultiList
     no strict 'refs';
-    local $^W;
-    for my $lang ( keys %{ $data->{names} } ) {
-        @{${"$class\::Locale"}{$lang}} = split /\s+/, $data->{names}{$lang};
-    }
-    croak "$class defines no default language" unless $data->{default};
-    ${"$class\::Default"} = $data->{default};
-    ${"$class\::Theme"}   = ( split /::/, $class )[-1];
+    *{"$_[0]::Locale"}    = \%{"$_[0]::MultiList"};
+    ${"$_[0]::Separator"} = '_';
 
-    *{"$class\::import"} = sub {
-        my $callpkg = caller(0);
-        my $theme   = ${"$class\::Theme"};
-        my $meta    = $class->new();
-        *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
-      };
-
-    ${"$class\::meta"} = $class->new();
+    # call the parent class init code
+    goto &Acme::MetaSyntactic::MultiList::init;
 }
-
-sub name {
-    my ( $self, $count ) = @_;
-    my $class = ref $self;
-
-    if( ! $class ) { # called as a class method!
-        $class = $self;
-        no strict 'refs';
-        $self = ${"$class\::meta"};
-    }
-
-    if ( defined $count && $count == 0 ) {
-        no strict 'refs';
-        return wantarray
-          ? shuffle @{ ${"$class\::Locale"}{ $self->{lang} } }
-          : scalar @{ ${"$class\::Locale"}{ $self->{lang} } };
-    }
-
-    $count ||= 1;
-    my $list = $self->{cache};
-    {
-        no strict 'refs';
-        if( @{ ${"$class\::Locale"}{ $self->{lang} } } ) {
-            push @$list, shuffle @{ ${"$class\::Locale"}{ $self->{lang} } }
-              while @$list < $count;
-        }
-    }
-    splice( @$list, 0, $count );
-}
-
 
 sub new {
     my $class = shift;
@@ -72,39 +25,36 @@ sub new {
     my $self = bless { @_, cache => [] }, $class;
 
     # compute some defaults
-    if( ! exists $self->{lang} ) {
-        $self->{lang} = $ENV{LANGUAGE} || $ENV{LANG} || '';
-        if( !$self->{lang} && $^O eq 'MSWin32' ) {
+    if( ! exists $self->{category} ) {
+        $self->{category} =
+            exists $self->{lang}
+            ? $self->{lang}
+            : $ENV{LANGUAGE} || $ENV{LANG} || '';
+        if( !$self->{category} && $^O eq 'MSWin32' ) {
             eval { require Win32::Locale; };
-            $self->{lang} = Win32::Locale::get_language() unless $@;
+            $self->{category} = Win32::Locale::get_language() unless $@;
         }
     }
-    $self->{lang} = ${"$class\::Default"} unless $self->{lang};
-    ( $self->{lang} ) = $self->{lang} =~ /^([-A-Za-z]+)/;
-    $self->{lang} = lc( $self->{lang} || '' );
+
+    my $cat = $self->{category};
+
+    # support for territories
+    if ( $cat && $cat ne ':all' ) {
+        ($cat) = $cat =~ /^([-A-Za-z_]+)/;
+        $cat = lc( $cat || '' );
+        1 while $cat
+            && !exists ${"$class\::MultiList"}{$cat}
+            && $cat =~ s/_?[^_]*$//;
+    }
 
     # fall back to last resort
-    $self->{lang} = ${"$class\::Default"}
-      if !exists ${"$class\::Locale"}{ $self->{lang} };
-
+    $self->{category} = $cat || ${"$class\::Default"};
+    $self->_compute_base();
     return $self;
 }
 
-sub lang { $_[0]->{lang} }
-
-sub languages {
-    my $class = shift;
-    $class = ref $class if ref $class;
-
-    no strict 'refs';
-    return keys %{"$class\::Locale"};
-}
-
-sub theme {
-    my $class = ref $_[0] || $_[0];
-    no strict 'refs';
-    return ${"$class\::Theme"};
-}
+*lang      = \&Acme::MetaSyntactic::MultiList::category;
+*languages = \&Acme::MetaSyntactic::MultiList::categories;
 
 1;
 
@@ -156,7 +106,7 @@ The language is selected at construction time from:
 
 =item 1.
 
-the given C<lang> parameter,
+the given C<lang> or C<category> parameter,
 
 =item 2.
 
@@ -180,16 +130,21 @@ are easy to write (see full example in L<SYNOPSIS>):
 
 =item new( lang => $lang )
 
+=item new( category => $lang )
+
 The constructor of a single instance. An instance will not repeat items
 until the list is exhausted.
 
-If no C<lang> parameter is given, Acme::MetaSyntactic::Locale will try
-to find the user locale (with the help of environment variables
-C<LANGUAGE>, C<LANG> and Win32::Locale).
+The C<lang> or C<category> parameter(both are synonymous) should be
+expressed as a locale category. If none of those parameters is given
+Acme::MetaSyntactic::Locale will try to find the user locale (with the
+help of environment variables C<LANGUAGE>, C<LANG> and the module
+C<Win32::Locale>).
 
-C<$lang> is a two-letter (or three (or more)) language code (taken from
-the official lists of RFC 3066 and ISO 369 standards). If the list is
-not available in the requested language, the default is used.
+POSIX locales are defined as C<language[_territory][.codeset][@modifier]>.
+If the specific territory is not supported, C<Acme::MetaSyntactic::Locale>
+will use the language, and if the language isn't supported either,
+the default is used.
 
 =item init()
 
@@ -206,9 +161,13 @@ constructor).
 
 =item lang()
 
+=item category()
+
 Return the selected language for this instance.
 
 =item languages()
+
+=item categories()
 
 Return the languages supported by the theme.
 
@@ -223,13 +182,18 @@ Return the theme name.
 I<Codes for the Representation of Names of Languages>, at
 L<http://www.loc.gov/standards/iso639-2/langcodes.html>.
 
+RFC 3066, I<Tags for the Identification of Languages>, at
+L<http://www.ietf.org/rfc/rfc3066.txt>.
+
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::MultiList>.
+
 =head1 AUTHOR
 
 Philippe 'BooK' Bruhat, C<< <book@cpan.org> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2006 Philippe 'BooK' Bruhat, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

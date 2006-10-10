@@ -30,6 +30,8 @@ franchise The English names are used in this module.
 This list is based on the following wikipedia article:
 L<http://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number>.
 
+Only the Pokémon with a number are listed.
+
 =head1 CONTRIBUTOR
 
 Abigail
@@ -41,6 +43,8 @@ Updated in version 0.57, published on January 16, 2006.
 Updated in version 0.59, published on January 30, 2006.
 
 Updated in version 0.64, published on March 6, 2006.
+
+Updated in version 0.82, published on July 10, 2006.
 
 =head1 SEE ALSO
 
@@ -79,7 +83,7 @@ Scizor Shuckle Heracross Sneasel Teddiursa Ursaring Slugma Magcargo
 Swinub Piloswine Corsola Remoraid Octillery Delibird Mantine Skarmory
 Houndour Houndoom Kingdra Phanpy Donphan Porygon2 Stantler Smeargle
 Tyrogue Hitmontop Smoochum Elekid Magby Miltank Blissey Raikou Entei
-Suicune Larvitar Pupitar Tyranitar Lugia Ho_Oh Celebi Treecko Grovyle
+Suicune Larvitar Pupitar Tyranitar Lugia Ho_oh Celebi Treecko Grovyle
 Sceptile Torchic Combusken Blaziken Mudkip Marshtomp Swampert Poochyena
 Mightyena Zigzagoon Linoone Wurmple Silcoon Beautifly Cascoon Dustox
 Lotad Lombre Ludicolo Seedot Nuzleaf Shiftry Taillow Swellow Wingull
@@ -95,4 +99,4 @@ Armaldo Feebas Milotic Castform Kecleon Shuppet Banette Duskull Dusclops
 Tropius Chimecho Absol Wynaut Snorunt Glalie Spheal Sealeo Walrein
 Clamperl Huntail Gorebyss Relicanth Luvdisc Bagon Shelgon Salamence
 Beldum Metang Metagross Regirock Regice Registeel Latias Latios Kyogre
-Groudon Rayquaza Jirachi Deoxys Munchlax Bonsly Lucario
+Groudon Rayquaza Jirachi Deoxys

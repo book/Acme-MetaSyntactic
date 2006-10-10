@@ -30,6 +30,8 @@ use vars qw( @ISA );
 
 1;
 
+__END__
+
 =head1 NAME
 
 Acme::MetaSyntactic::unicode - The unicode theme

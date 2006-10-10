@@ -57,6 +57,20 @@ Later updates (from the source web site):
 
 =item * version 0.68, published on April 3, 2006
 
+=item * version 0.78, published on June 12, 2006
+
+=item * version 0.80, published on June 26, 2006
+
+=item * version 0.81, published on July 3, 2006
+
+=item * version 0.82, published on July 10, 2006
+
+=item * version 0.89, published on August 28, 2006
+
+=item * version 0.91, published on September 11, 2006
+
+=item * version 0.92, published on September 18, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -96,3 +110,9 @@ waldo wally walter wendel wendy will willy wilson wilt_gandhi winston
 world_s_smartest_garbage_man yergi yorgi yugi yvonne zenox zimbu zoltar
 tex flashy petricia tim_zumph earl lefty sourpuss wendel_j_stone_iv
 vijay exactly_man alan andy
+lou mister_serdecisions sandeep
+patty smokin_jim betty_the_bulldozer
+amber_dextrous stinky_pete 
+phil_o_dendron
+steve
+lyin_john

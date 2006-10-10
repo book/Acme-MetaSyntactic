@@ -14,7 +14,9 @@ my @batmancases    = map { catfile( 't', $_ ) } grep {/^batcase/} @files;
 my @haddockcasesfr = map { catfile( 't', $_ ) } grep {/^haddockcase_fr/} @files;
 my @haddockcasesen = map { catfile( 't', $_ ) } grep {/^haddockcase_en/} @files;
 
-plan tests => 2 * ( @batmancases + @haddockcasesfr + @haddockcasesen );
+my @colourscases   = File::Glob::bsd_glob catfile(qw(t colcase*));
+plan tests => 2
+    * ( @batmancases + @haddockcasesfr + @haddockcasesen + @colourscases );
 
 BATMAN: {
     use Acme::MetaSyntactic::batman;
@@ -48,3 +50,14 @@ HADDOCK: {
     }
 }
 
+COLOURS: {
+    use Acme::MetaSyntactic::colours;
+    my %items = map { $_ => 1 } Acme::MetaSyntactic::colours->new( category => ':all' )->name( 0 );
+
+    for (@colourscases) {
+        my $result = `$^X "-Mblib" "-Mstrict" -w $_`;
+        is( $? >> 8, 0, "$_ ran successfully" );
+        ok( exists $items{$result},
+            "'$result' is an item from the colo(u)rs theme" );
+    }
+}

@@ -1,8 +1,8 @@
 package Acme::MetaSyntactic::foo;
 use strict;
-use Acme::MetaSyntactic::List;
+use Acme::MetaSyntactic::Locale;
 use vars qw( @ISA );
-@ISA = qw( Acme::MetaSyntactic::List );
+our @ISA = qw( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
 1;
 
@@ -14,11 +14,21 @@ Acme::MetaSyntactic::foo - The foo theme
 
 The classic. This is the default theme.
 
-=head1 CONTRIBUTOR
+As from version 0.85, this theme is multilingual.
+
+=head1 CONTRIBUTORS
 
 Philippe "BooK" Bruhat.
 
+Jérôme Fenal and Sébastien Aperghis-Tramoni contributed to the French theme.
+
+Dutch theme contributed by Abigail.
+
 Introduced in version 0.01, published on January 14, 2005.
+
+Merged in the French C<toto> theme (which was therefore removed from
+C<Acme::MetaSyntactic>), and added the Dutch theme in version 0.85,
+published on July 31, 2006.
 
 =head2 References
 
@@ -26,15 +36,31 @@ Introduced in version 0.01, published on January 14, 2005.
 
 =item RFC 3092 - I<Etymology of "Foo">
 
+=item Leesplankje - Dutch Reading Board
+
+The words on the I<reading boards> of the I<Hoogeveen method>, in use in
+Dutch schools from 1905 till the 1950s. The words on the board are often
+used by Dutch programmers to fill the roles of I<foo>, I<bar>, and I<baz>.
+
 =back
 
 =head1 SEE ALSO
 
-L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
+L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::Locale>.
 
 =cut
 
 __DATA__
-# names
+# default
+en
+# names en
 foo    bar   baz  foobar fubar qux  quux corge grault
 garply waldo fred plugh  xyzzy thud
+# names fr
+toto titi tata tutu pipo
+bidon test1 test2 test3
+truc chose machin chouette bidule
+# names nl
+aap noot mies wim zus jet
+teun vuur gijs lam kees bok
+weide does hok duif schapen
