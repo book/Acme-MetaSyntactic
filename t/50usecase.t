@@ -13,8 +13,8 @@ my @files;
 my @batmancases    = map { catfile( 't', $_ ) } grep {/^batcase/} @files;
 my @haddockcasesfr = map { catfile( 't', $_ ) } grep {/^haddockcase_fr/} @files;
 my @haddockcasesen = map { catfile( 't', $_ ) } grep {/^haddockcase_en/} @files;
+my @colourscases   = map { catfile( 't', $_ ) } grep {/^colcase/} @files;
 
-my @colourscases   = File::Glob::bsd_glob catfile(qw(t colcase*));
 plan tests => 2
     * ( @batmancases + @haddockcasesfr + @haddockcasesen + @colourscases );
 
