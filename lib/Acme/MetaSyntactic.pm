@@ -8,7 +8,7 @@ use File::Spec;
 use DirHandle;
 
 use vars qw( $VERSION $Theme %META );
-$VERSION = '0.70';
+$VERSION = '0.95';
 
 # some class data
 $Theme = 'foo'; # default theme
