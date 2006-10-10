@@ -29,7 +29,8 @@ END {
 
 package Acme::MetaSyntactic::digits;
 use Acme::MetaSyntactic::Locale;
-our @ISA = ('Acme::MetaSyntactic::Locale');
+use vars qw( @ISA );
+@ISA = ('Acme::MetaSyntactic::Locale');
 __PACKAGE__->init();
 1;
 
