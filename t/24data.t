@@ -1,6 +1,7 @@
 use strict;
 use Test::More;
 use File::Find;
+use FileHandle;
 
 my @files;
 find( sub { push @files, $File::Find::name if /^[a-z].*\.pm$/ }, 'blib' );
@@ -10,7 +11,8 @@ plan tests => scalar @files;
 for my $file (@files) {
 
 SKIP: {
-        open my $fh, $file or do {
+        my $fh = FileHandle->new();
+        open $fh, $file or do {
             skip "Can't open $file: $!", 1;
         };
         my ($fail, $in_data) = (0, 0);
