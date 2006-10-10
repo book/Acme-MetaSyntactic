@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::olympics;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 
 =head1 NAME
 
@@ -18,7 +19,7 @@ The following cities have held, or will hold, the Olympic games.
 
 =cut
 
-our %Remote = (
+%Remote = (
     source  =>  'http://www.olympic.org/uk/games/index_uk.asp',
     extract =>  sub {
         local $_ = shift;

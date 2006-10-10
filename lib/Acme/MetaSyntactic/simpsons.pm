@@ -1,11 +1,11 @@
 package Acme::MetaSyntactic::simpsons;
 use strict;
 use Acme::MetaSyntactic::List;
-use vars qw( @ISA );
+use vars qw( @ISA %Remote );
 @ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source => [
         'http://tim.rawle.org/simpsons/cha_ah.htm',
         'http://tim.rawle.org/simpsons/cha_iq.htm',

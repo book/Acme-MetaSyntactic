@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::space_missions;
 use strict;
 use Acme::MetaSyntactic::MultiList;
-our @ISA = qw( Acme::MetaSyntactic::MultiList );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::MultiList );
 __PACKAGE__->init();
 
 # And the magic true value to end the module

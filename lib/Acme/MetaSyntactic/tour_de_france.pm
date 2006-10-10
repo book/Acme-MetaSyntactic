@@ -1,7 +1,8 @@
 package Acme::MetaSyntactic::tour_de_france;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::List );
 
 =head1 NAME
 

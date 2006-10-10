@@ -1,6 +1,7 @@
 package Acme::MetaSyntactic::colors;
 use Acme::MetaSyntactic::Alias;
-our @ISA = qw( Acme::MetaSyntactic::Alias );
+use vars qw( @ISA );
+@ISA = qw( Acme::MetaSyntactic::Alias );
 __PACKAGE__->init('colours');
 1;
 

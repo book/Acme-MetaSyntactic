@@ -2,7 +2,7 @@ package Acme::MetaSyntactic::foo;
 use strict;
 use Acme::MetaSyntactic::Locale;
 use vars qw( @ISA );
-our @ISA = qw( Acme::MetaSyntactic::Locale );
+@ISA = qw( Acme::MetaSyntactic::Locale );
 __PACKAGE__->init();
 1;
 

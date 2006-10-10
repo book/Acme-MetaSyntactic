@@ -1,10 +1,11 @@
 package Acme::MetaSyntactic::pause_id;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
+@ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
-our %Remote = (
+%Remote = (
     source  => 'http://pause.perl.org/pause/query?ACTION=who_is',
     extract => sub {
         return map { y/-/_/; $_ } $_[0] =~ m! -- (?:<[^>]+>)?([-\w\d]+)<!g;

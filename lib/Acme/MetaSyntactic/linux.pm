@@ -1,9 +1,11 @@
 package Acme::MetaSyntactic::linux;
 use strict;
 use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use vars qw( @ISA %Remote );
 
-our %Remote = (
+@ISA = qw( Acme::MetaSyntactic::List );
+
+%Remote = (
     source  => 'http://distrowatch.com/stats.php',
     extract => sub {
         return
