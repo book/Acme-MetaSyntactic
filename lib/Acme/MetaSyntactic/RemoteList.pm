@@ -101,6 +101,7 @@ sub tr_accent {
     return $str;
 }
 
+no warnings;    # perl 5.005_04 doesn't like those UTF-8 characters
 my %utf2asc = (
     "\xc3\x89" => 'E',
     "\xc3\xa0" => 'a',
@@ -118,7 +119,8 @@ my %utf2asc = (
     "\x{2640}"     => 'female',
     "\x{2642}"     => 'male',
 );
-my $utf_re = qr/(@{[join( '|', sort keys %utf2asc )]})/; 
+my $utf_re = qr/(@{[join( '|', sort keys %utf2asc )]})/;
+use warnings;
 
 sub tr_utf8_basic {
     my $str = shift;
