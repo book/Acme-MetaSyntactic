@@ -19,11 +19,13 @@ may be in the future).
 
 =head1 CONTRIBUTORS
 
-Philippe "BooK" Bruhat, Sébastien Aperghis-Tramoni.
+Philippe "BooK" Bruhat, Sébastien Aperghis-Tramoni, Rafaël Garcia-Suarez.
 
 Introduced in version 0.05, published on January 16, 2005.
 
 Updated in version 0.70, published on April 17, 2006.
+
+Updated in version 0.96, published on October 16, 2006.
 
 =head1 SEE ALSO
 
@@ -34,4 +36,4 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 __DATA__
 # names
 mozilla netscape msie mosaic links lynx w3m opera galeon konqueror safari
-camino dillo amaya arachne omniweb planetweb voyager seamonkey
+camino dillo amaya arachne omniweb planetweb voyager seamonkey iceweasel
