@@ -92,6 +92,7 @@ lib/Acme/MetaSyntactic/stars.pm
 lib/Acme/MetaSyntactic/state_flowers.pm
 lib/Acme/MetaSyntactic/swords.pm
 lib/Acme/MetaSyntactic/teletubbies.pm
+lib/Acme/MetaSyntactic/thunderbirds.pm
 lib/Acme/MetaSyntactic/tld.pm
 lib/Acme/MetaSyntactic/tmnt.pm
 lib/Acme/MetaSyntactic/tour_de_france.pm
