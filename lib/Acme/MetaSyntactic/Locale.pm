@@ -1,5 +1,6 @@
 package Acme::MetaSyntactic::Locale;
 use strict;
+use warnings;
 use Acme::MetaSyntactic (); # do not export metaname and friends
 use Acme::MetaSyntactic::MultiList;
 use List::Util qw( shuffle );
