@@ -57,8 +57,8 @@ The_Cham_Cham Security_Hazard Atlantic_Inferno Path_of_Destruction
 Alias_Mr_Hackenbacker Lord_Parkers_Oliday Ricochet Give_or_Take_a_Million
 # names movies
 Thunderbirds_Are_GO Thunderbird_6
-# names novels/Thunderbirds
+# names novels Thunderbirds
 Thunderbirds Calling_Thunderbirds Ring_of_Fire Thunderbirds_Are_Go
 Operation_Asteroids Lost_World
-# names novels/Lady_Penelope
+# names novels Lady_Penelope
 A_Gallery_of_Thieves Cool_for_Danger The_Albanian_Affair
