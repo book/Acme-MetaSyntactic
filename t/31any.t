@@ -8,7 +8,7 @@ use t::NoLang;
     my ( $i, $j ) = ( 0, 0 );
     *List::Util::shuffle = sub { sort @_ };    # item selection
     *Acme::MetaSyntactic::any::shuffle =       # theme selection
-        sub { my @t = sort @_; push @t, shift @t for 1 .. $j; $j++; @t };
+        sub (@) { my @t = sort @_; push @t, shift @t for 1 .. $j; $j++; @t };
 }
 
 # compute the first 6 installed themes
