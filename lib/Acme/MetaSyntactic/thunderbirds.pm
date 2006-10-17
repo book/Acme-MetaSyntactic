@@ -7,7 +7,7 @@ __PACKAGE__->init();
 
 =head1 NAME
 
-Acme::MetaSyntactic::thunderbirds - The Thunderbirds theme
+Acme::MetaSyntactic::thunderbirds - Thunderbirds are GO!
 
 =head1 DESCRIPTION
 
@@ -43,7 +43,7 @@ characters
 # names characters
 Jeff_Tracey Scott_Tracy John_Tracy Virgil_Tracy Gordon_Tracy Alan_Tracy
 Tin_Tin Brains Lady_Penelope Parker Grandma Kyrano The_Hood
-# names actors
+# names crafts
 Thunderbird_1 Thunderbird_2 Thunderbird_3 Thunderbird_4 Thunderbird_5
 FAB1 FAB2 The_Mole The_Domo Firefly Thunderiser Booster_Mortar Excadigger
 # names episodes
