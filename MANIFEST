@@ -35,6 +35,7 @@ lib/Acme/MetaSyntactic/foo.pm
 lib/Acme/MetaSyntactic/garbage.pm
 lib/Acme/MetaSyntactic/garfield.pm
 lib/Acme/MetaSyntactic/gems.pm
+lib/Acme/MetaSyntactic/good_omens.pm
 lib/Acme/MetaSyntactic/groo.pm
 lib/Acme/MetaSyntactic/haddock.pm
 lib/Acme/MetaSyntactic/hhgg.pm
