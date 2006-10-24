@@ -70,7 +70,6 @@ aLinux
 AliXe
 ALT
 amaroK_Live
-Amber
 Annvix
 AnNyung
 Anonym_OS
@@ -153,12 +152,10 @@ Euronode
 Evinux
 EzPlanet_One
 FAMELIX
-Feather
 Featherweight
 Fedora
 Fermi
 Finnix
-Flash
 Foresight
 FoX_Desktop
 FreeBSD
@@ -325,6 +322,7 @@ PUD
 Puppy
 QiLinux
 Quantian
+Rails_Live
 Red_Flag
 Red_Hat
 redWall
@@ -337,7 +335,6 @@ ROSLIMS
 rPath
 Sabayon
 SAM
-Santa_Fe
 SaxenOS
 SchilliX
 SCI_Linux
@@ -345,6 +342,7 @@ Scientific
 Securepoint
 Sentry_Firewall
 SharkOS
+Shift
 Skolelinux
 Slackintosh
 Slackware
