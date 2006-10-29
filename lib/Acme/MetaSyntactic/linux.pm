@@ -41,6 +41,16 @@ Philippe "BooK" Bruhat.
 
 Introduced in version 0.95, published on October 9, 2006.
 
+Later updates (from the source web site):
+
+=over 4
+
+=item * version 0.97, published on October 23, 2006.
+
+=item * version 0.98, published on October 30, 2006.
+
+=back
+
 =head1 DEDICATION
 
 This module is dedicated to the Linux kernel for its fifteenth
@@ -152,6 +162,7 @@ Euronode
 Evinux
 EzPlanet_One
 FAMELIX
+Feather
 Featherweight
 Fedora
 Fermi
@@ -297,6 +308,7 @@ OpenLab
 OpenLX
 OpenNA
 Openwall
+Oracle
 Oralux
 PAIPIX
 ParallelKnoppix
