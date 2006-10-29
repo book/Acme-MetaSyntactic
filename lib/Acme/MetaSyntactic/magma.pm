@@ -38,7 +38,7 @@ L<http://en.wikipedia.org/wiki/Magma_(band)>
 
 Philippe "BooK" Bruhat.
 
-Introduced in version FIXME, published on FIXME YYYY/MM/AA.
+Introduced in version 0.98, published on October 30, 2006.
 
 =head1 SEE ALSO
 

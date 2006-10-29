@@ -50,6 +50,7 @@ lib/Acme/MetaSyntactic/loremipsum.pm
 lib/Acme/MetaSyntactic/lotr.pm
 lib/Acme/MetaSyntactic/magic8ball.pm
 lib/Acme/MetaSyntactic/magicroundabout.pm
+lib/Acme/MetaSyntactic/magma.pm
 lib/Acme/MetaSyntactic/metro.pm
 lib/Acme/MetaSyntactic/monty_spam.pm
 lib/Acme/MetaSyntactic/MultiList.pm
