@@ -72,6 +72,8 @@ Later updates (from the source web site):
 
 =item * version 0.97, published on October 23, 2006
 
+=item * version 0.98, published on October 30, 2006
+
 =back
 
 =head1 SEE ALSO
@@ -118,3 +120,4 @@ phil_o_dendron
 steve
 lyin_john
 mindy
+robbie_the_frightening_hobo
