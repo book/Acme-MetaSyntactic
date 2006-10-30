@@ -1,7 +1,7 @@
 package Acme::MetaSyntactic::magma;
 use strict;
-use Acme::MetaSyntactic::List;
-our @ISA = qw( Acme::MetaSyntactic::List );
+use Acme::MetaSyntactic::MultiList;
+our @ISA = qw( Acme::MetaSyntactic::MultiList );
 __PACKAGE__->init();
 1;
 
@@ -47,7 +47,7 @@ L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>.
 =cut
 
 __DATA__
-# names default
+# default
 :all
 # names magma
 Kobaia
