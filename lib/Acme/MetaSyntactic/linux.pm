@@ -49,6 +49,8 @@ Later updates (from the source web site):
 
 =item * version 0.98, published on October 30, 2006.
 
+=item * version 0.99, published on November 6, 2006.
+
 =back
 
 =head1 DEDICATION
@@ -187,6 +189,7 @@ GentooTH
 Gentoox
 GEOLivre
 Gibraltar
+gNewSense
 GNIX
 GNUstep
 GoblinX
@@ -387,6 +390,7 @@ tinysofa
 Topologilinux
 Trinity
 trixbox
+TrueBSD
 Trustix
 Truva
 TumiX
