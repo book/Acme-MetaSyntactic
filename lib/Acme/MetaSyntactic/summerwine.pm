@@ -18,7 +18,7 @@ make better identifiers.
 
 =head1 CONTRIBUTOR
 
-Smylers, who paid E<pound>42 for the privilege at the YAPC Europe 2006 auction
+Smylers, who paid £42 for the privilege at the YAPC Europe 2006 auction
 in Birmingham.
 
 This theme was chosen because I<Last of the Summer Wine> is set in Smylers's
