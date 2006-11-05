@@ -24,14 +24,14 @@ GetOptions( \%conf, 'version', 'themes', 'help', 'verbose|v', 'force-random',
   or die $usage;
 
 # find out the themes name
-die "No theme given\n" unless @ARGV;
+die "No theme given\n\n$usage" unless @ARGV;
 ($conf{from}, $conf{to}) = split /:/, shift, 2;
 $conf{to} = $conf{from} unless $conf{to};
 
 # find the themes/categories
 for my $t (qw( from to )) {
     my ($theme, $category) = split '/', $conf{$t}, 2;
-    die "Theme '$theme' does not exist!\n"
+    die "Theme '$theme' does not exist!\n\n"
       . "Available themes: @{[ Acme::MetaSyntactic->themes() ]}\n"
       unless Acme::MetaSyntactic->has_theme($theme);
 
