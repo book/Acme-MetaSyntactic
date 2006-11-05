@@ -112,6 +112,7 @@ MANIFEST			This list of files
 META.yml
 README
 script/meta
+script/metafy
 t/00load.t
 t/01load.t
 t/02fixme.t
