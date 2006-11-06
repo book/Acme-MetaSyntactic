@@ -1,5 +1,16 @@
 Revision history for Acme-MetaSyntactic
 
+0.99 Mon Nov  6 02:25:16 CET 2006
+        [NEW WEEKLY THEME 2006/11/06]
+        - summerwine (Smylers)
+        [TOOLS]
+        - metafy is a new script that can search metasyntactic terms and
+          replace them by others
+        [THEME UPDATES]
+        - pause_id
+        - pokemon
+        - pm_groups
+
 0.98 Mon Oct 30 04:21:44 CET 2006
         [NEW WEEKLY THEME 2006/10/30]
         - magma
