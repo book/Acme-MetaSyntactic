@@ -63,6 +63,8 @@ Later updates (from the source web site):
 
 =item * version 0.95, published on October 9, 2006.
 
+=item * version 0.99, published on November 6, 2006.
+
 =back
 
 =head1 SEE ALSO
@@ -90,6 +92,7 @@ Amsterdam_pm
 Anchorage_pm
 Angola_pm
 Argentina_pm
+Arnhem_pm
 Asheville_pm
 Athens_pm
 Atlanta_pm
@@ -174,7 +177,6 @@ Firenze_pm
 Fortaleza_pm
 Frankfurt_pm
 Gainesville_pm
-Galicia_pm
 Geneva_pm
 German_pm
 Gombe_pm
@@ -195,6 +197,7 @@ HudsonValley_pm
 Iassy_pm
 Israel_pm
 Istanbul_pm
+Italia_pm
 JERL_pm
 JPL_pm
 Jalisco_pm
@@ -256,6 +259,7 @@ Nottingham_pm
 Oakland_pm
 Oegstgeest_pm
 Oeiras_pm
+Offutt_pm
 OklahomaCity_pm
 Omaha_pm
 OrangeCounty_pm
@@ -351,16 +355,15 @@ Women_pm
 Yerevan_pm
 Yuma_pm
 ZA_pm
+Zurich_pm
 aalborg_pm
 ankara_pm
-arnhem_pm
 brazosvalley_pm
 cypriots_pm
 dahut_pm
 hanoi_pm
 innsbruck_pm
 iran_pm
-italia_pm
 kampala_pm
 kraljevo_pm
 kw_pm
