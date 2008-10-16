@@ -1,0 +1,257 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Getopt::Long;
+use Pod::Usage;
+use FindBin qw( $Bin );
+use File::Spec;
+use File::Glob qw( bsd_glob );
+use Pod::POM;
+use Pod::POM::View::Text;
+use Template;
+use YAML qw( LoadFile );
+use File::Copy;
+use List::Util qw( max );
+use Acme::MetaSyntactic;
+use File::Find::Rule;
+use POSIX qw( strftime );
+use File::Path;
+use File::Basename;
+
+# process command line parameters
+GetOptions( \my %option, 'last', 'force', 'help', 'manual' )
+    or pod2usage( -verbose => 0 );
+pod2usage( -verbose => 1 ) if ( $option{help} );
+pod2usage( -verbose => 2 ) if ( $option{manual} );
+
+# source directories
+my $tmpl_dir = File::Spec->catfile( $Bin, 'templates', 'Pack' );
+my $pack_dir = File::Spec->catfile( $Bin, 'Packs' );
+
+# packnames
+my @packs;
+if (@ARGV) {
+    my %seen;
+    @packs = grep {
+        -d File::Spec->catfile( $pack_dir, $_ )
+            ? 1
+            : do { warn "ignoring unknown pack $_\n"; 0 }
+    } grep { !$seen{$_}++ } @ARGV;
+}
+else {
+    @packs = map { ( File::Spec->splitdir($_) )[-1] }
+        grep {-d} bsd_glob( File::Spec->catfile( $pack_dir, '*' ) );
+}
+
+# create the main objects
+my $podparser = Pod::POM->new();
+my $template = Template->new( { ABSOLUTE => 1 } );
+
+# process all packs
+for my $name (@packs) {
+
+    # the working directory
+    my $work_dir = File::Spec->catfile( $Bin, 'work', $name );
+
+    # read history file
+    my $history
+        = LoadFile( File::Spec->catfile( $pack_dir, $name, "$name.yml" ) );
+    my $version = max keys %{ $history->{versions} };
+    my $pack    = $history->{versions}{$version};
+
+    # compute version of the new pack
+    $version += 0.001 if !$option{last};
+    $pack->{version} = $version;
+    $pack->{name}    = $name;
+    $pack->{themes}  = [];
+
+    # some information
+    print "building working directory for pack $name version $version\n";
+
+    # find and copy the theme files
+    for my $file (
+        sort
+        grep { !/\*/ }
+        bsd_glob( File::Spec->catfile( $pack_dir, $name, '*.pm' ) )
+        )
+    {
+
+        # relative name of the target
+        my $rel_dest = File::Spec->catfile( 'lib', 'Acme', 'MetaSyntactic',
+            scalar fileparse($file) );
+
+        # get version information from the code
+        open my $fh, $file or die "Can't open $file: $!";
+        my ($version) = grep /\$VERSION/, <$fh>;
+        close $fh;
+        die "  no version information in $rel_dest\n" if !$version;
+        ($version) = $version =~ /([0-9.]+)/;
+        my %info = ( version => $version );
+
+        # get the name and description from the pod
+        my $pom = $podparser->parse_file($file) || die $podparser->error();
+        my $NAME
+            = $pom->head1()->[0]->content->present('Pod::POM::View::Text');
+        $NAME =~ s/\s*$//;
+
+        # update the pack information
+        @info{qw( name description )} = split /\s*-\s*/, $NAME, 2;
+        push @{ $pack->{themes} }, \%info;
+
+        # copy the file to the target directory
+        my $dest = File::Spec->catfile( $work_dir, $rel_dest );
+        if ( -e $dest && !$option{force} ) {
+            warn "  skipping existing file $rel_dest\n";
+        }
+        else {
+            mkpath dirname $dest if !-d dirname $dest;
+            copy( $file, $dest ) or die "Copy $file to $dest failed: $!";
+        }
+    }
+
+    # template variables
+    my $vars = {
+        pack => $pack,
+        ams  => {
+            version => ( $Acme::MetaSyntactic::VERSION >= 1
+                ? $Acme::MetaSyntactic::VERSION
+                : '1.000' ),
+        },
+        year => strftime( '%Y', localtime ),
+    };
+
+    # find all template files
+    # (ignoring .svn directories)
+    my $rule = File::Find::Rule->new;
+    $rule->or( $rule->new->directory->name('.svn')->prune->discard,
+        $rule->new );
+
+    # and process them in the target directory
+    $rule->start($tmpl_dir);
+    while ( my $input = $rule->match ) {
+        my $rel_input = File::Spec->abs2rel( $input,    $tmpl_dir );
+        my $output    = File::Spec->catfile( $work_dir, $rel_input );
+
+        # creation of the directory or file
+        if ( -d $input ) {
+            mkpath $output;
+        }
+        else {
+            if ( -e $output && !$option{force} ) {
+                warn "  skipping existing file $rel_input\n";
+            }
+            $template->process( $input, $vars, $output )
+                || die $template->error();
+        }
+    }
+}
+
+__END__
+
+=head1 NAME
+
+build_pack - Build a theme pack working directory from the templates
+
+=head1 SYNOPSIS
+
+  build_pack [ --last ] [ name ... ]
+
+=head1 DESCRIPTION
+
+The B<build_pack> utility creates the working directory where an
+Acme::MetaSyntactic theme pack maintainer will work on the next
+release of a pack.
+
+B<build_pack> will create the working directory undef F<work/>,
+for all pack names passed on the command line. If no pack name
+is given, all packs found are processed.
+
+B<build_pack> will stop processing on any template or Pod error, if one
+of the pack's themes doesn't have version information or if the history
+file is not found.
+
+=head1 COMMAND-LINE OPTIONS
+
+B<build_pack> accepts the followin options:
+
+=over 4
+
+=item I<--last>
+
+Use the maximum version found in the history file, instead of
+incrementing that number.
+
+=item I<--force>
+
+Clobber existing files (instead of skipping them) when the target
+directory already exists.
+
+=back
+
+=head1 TEMPLATES
+
+=head2 Template directory
+
+The working directory is build from the information stored in
+the F<templates/> directory, which is laid out as follows:
+
+    templates/
+      Alias.pm         - example of an AMS::Alias-based theme
+      List.pm          - example of an AMS::List-based theme
+      Locale.pm        - example of an AMS::Locale-based theme
+      MultiList.pm     - example of an AMS::MultiList-based theme
+      Pack/            - directory of file templates for the working dir
+        ...            - template files for the distribution
+
+=head2 Template variables
+
+The templates files are processed with Template-Toolkit.
+
+The available variables are (show as a YAML structure):
+
+    ams:
+      version: 1.000
+    pack:
+      maintainer:
+        email: book@cpan.org
+        name: Philippe Bruhat (BooK)
+      name: Arts
+      themes:
+        - description: The dancers theme
+          name: Acme::MetaSyntactic::dancers
+          version: 1.000
+        - description: The Magma theme
+          name: Acme::MetaSyntactic::magma
+          version: 1.000
+      version: 1.000
+    year: 2008
+
+=head2 Themes and pack repository
+
+The pack information and theme files are stored in the F<Packs/>
+directory:
+
+    Packs/
+      Arts/
+        Arts.yml      - history of the distribution, per version
+        dancers.pm    - theme files
+        magma.pm
+
+The F<.yml> file contains the whole file history. This file is updated
+by the B<record_pack> script.
+
+=head1 AUTHOR
+
+Philippe Bruhat (BooK)
+
+=head1 COPYRIGHT
+
+Copyright 2008, Philippe Bruhat (BooK).
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
+
