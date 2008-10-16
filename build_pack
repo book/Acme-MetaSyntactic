@@ -26,21 +26,21 @@ pod2usage( -verbose => 2 ) if ( $option{manual} );
 
 # source directories
 my $tmpl_dir = File::Spec->catfile( $Bin, 'templates', 'Pack' );
-my $pack_dir = File::Spec->catfile( $Bin, 'Packs' );
+my $packs_dir = File::Spec->catfile( $Bin, 'Packs' );
 
 # packnames
 my @packs;
 if (@ARGV) {
     my %seen;
     @packs = grep {
-        -d File::Spec->catfile( $pack_dir, $_ )
+        -d File::Spec->catfile( $packs_dir, $_ )
             ? 1
             : do { warn "ignoring unknown pack $_\n"; 0 }
     } grep { !$seen{$_}++ } @ARGV;
 }
 else {
     @packs = map { ( File::Spec->splitdir($_) )[-1] }
-        grep {-d} bsd_glob( File::Spec->catfile( $pack_dir, '*' ) );
+        grep {-d} bsd_glob( File::Spec->catfile( $packs_dir, '*' ) );
 }
 
 # create the main objects
@@ -51,11 +51,11 @@ my $template = Template->new( { ABSOLUTE => 1 } );
 for my $name (@packs) {
 
     # the working directory
-    my $work_dir = File::Spec->catfile( $Bin, 'work', $name );
+    my $work_dir = File::Spec->catdir( $Bin, 'work', $name );
+    my $pack_dir = File::Spec->catdir( $packs_dir, $name );
 
     # read history file
-    my $history
-        = LoadFile( File::Spec->catfile( $pack_dir, $name, "$name.yml" ) );
+    my $history = LoadFile( File::Spec->catfile( $pack_dir, "$name.yml" ) );
     my $version = max keys %{ $history->{versions} };
     my $pack    = $history->{versions}{$version};
 
@@ -69,43 +69,59 @@ for my $name (@packs) {
     print "building working directory for pack $name version $version\n";
 
     # find and copy the theme files
-    for my $file (
-        sort
-        grep { !/\*/ }
-        bsd_glob( File::Spec->catfile( $pack_dir, $name, '*.pm' ) )
-        )
-    {
+    # (ignoring .svn directories)
+    my $theme_rule = File::Find::Rule->new;
+    $theme_rule->or(
+        $theme_rule->new->directory->name('.svn')->prune->discard,
+        $theme_rule->new );
+    $theme_rule->start($pack_dir);
 
-        # relative name of the target
-        my $rel_dest = File::Spec->catfile( 'lib', 'Acme', 'MetaSyntactic',
-            scalar fileparse($file) );
+    while ( my $file = $theme_rule->match ) {
 
-        # get version information from the code
-        open my $fh, $file or die "Can't open $file: $!";
-        my ($version) = grep /\$VERSION/, <$fh>;
-        close $fh;
-        die "  no version information in $rel_dest\n" if !$version;
-        ($version) = $version =~ /([0-9.]+)/;
-        my %info = ( version => $version );
+        # relative name of the file
+        my $rel_file = File::Spec->abs2rel( $file, $pack_dir );
 
-        # get the name and description from the pod
-        my $pom = $podparser->parse_file($file) || die $podparser->error();
-        my $NAME
-            = $pom->head1()->[0]->content->present('Pod::POM::View::Text');
-        $NAME =~ s/\s*$//;
+        next if !$rel_file;
+        next if $rel_file eq "$name.yml";    # ignore the history file
 
-        # update the pack information
-        @info{qw( name description )} = split /\s*-\s*/, $NAME, 2;
-        push @{ $pack->{themes} }, \%info;
+        # theme files
+        if (join( "\0", File::Spec->splitdir( dirname $rel_file ) ) eq
+            "lib\0Acme\0MetaSyntactic" )
+        {
+
+            # get version information from the code
+            open my $fh, $file or die "Can't open $file: $!";
+            my ($version) = grep /\$VERSION/, <$fh>;
+            close $fh;
+            die "  no version information in $file\n" if !$version;
+            ($version) = $version =~ /([0-9.]+)/;
+            my %info = ( version => $version );
+
+            # get the name and description from the pod
+            my $pom = $podparser->parse_file($file)
+                || die $podparser->error();
+            my $NAME = $pom->head1()->[0]
+                ->content->present('Pod::POM::View::Text');
+            $NAME =~ s/\s*$//;
+
+            # update the pack information
+            @info{qw( name description )} = split /\s*-\s*/, $NAME, 2;
+            push @{ $pack->{themes} }, \%info;
+        }
 
         # copy the file to the target directory
-        my $dest = File::Spec->catfile( $work_dir, $rel_dest );
-        if ( -e $dest && !$option{force} ) {
-            warn "  skipping existing file $rel_dest\n";
+        my $dest = File::Spec->catfile( $work_dir, $rel_file );
+        if ( -d $file ) {
+            mkpath $dest;
         }
         else {
-            mkpath dirname $dest if !-d dirname $dest;
-            copy( $file, $dest ) or die "Copy $file to $dest failed: $!";
+            if ( -e $dest && !$option{force} ) {
+                warn "  skipping existing file $rel_file\n";
+            }
+            else {
+                mkpath dirname $dest if !-d dirname $dest;
+                copy( $file, $dest ) or die "Copy $file to $dest failed: $!";
+            }
         }
     }
 
@@ -122,13 +138,13 @@ for my $name (@packs) {
 
     # find all template files
     # (ignoring .svn directories)
-    my $rule = File::Find::Rule->new;
-    $rule->or( $rule->new->directory->name('.svn')->prune->discard,
-        $rule->new );
+    my $tmpl_rule = File::Find::Rule->new;
+    $tmpl_rule->or( $tmpl_rule->new->directory->name('.svn')->prune->discard,
+        $tmpl_rule->new );
 
     # and process them in the target directory
-    $rule->start($tmpl_dir);
-    while ( my $input = $rule->match ) {
+    $tmpl_rule->start($tmpl_dir);
+    while ( my $input = $tmpl_rule->match ) {
         my $rel_input = File::Spec->abs2rel( $input,    $tmpl_dir );
         my $output    = File::Spec->catfile( $work_dir, $rel_input );
 
