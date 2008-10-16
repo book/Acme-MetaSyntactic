@@ -1,0 +1,7 @@
+Revision history for Acme-MetaSyntactic-ThemePack-[% pack.name %]
+
+1.000 
+        [INITIAL THEMES]
+[% FOREACH theme = pack.themes %]       - [% theme.name.remove('.*::') %]
+[% END %]
+
