@@ -1,11 +1,13 @@
-
-Acme-MetaSyntactic-ThemePack-%%% - Acme::MetaSyntactic themes
+Acme-MetaSyntactic-ThemePack-[% pack.name %] - The [% pack.name %] theme pack
 
 DESCRIPTION
 
-This theme pack contains additional themes for Acme::MetaSyntactic.
+This theme pack contains the following additional themes for
+Acme::MetaSyntactic:
 
-INSTALL
+[% FOREACH theme = pack.themes %]  [% theme.name %] [% theme.version %] - [% theme.description %]
+
+[% END %]INSTALL
 
 To install this module, run the following commands:
 
@@ -14,8 +16,8 @@ To install this module, run the following commands:
     ./Build test
     ./Build install
 
-
-Alternatively, to install with ExtUtils::MakeMaker, you can use the following commands:
+Alternatively, to install with ExtUtils::MakeMaker, you can use the
+following commands:
 
     perl Makefile.PL
     make
@@ -26,9 +28,13 @@ SUCCESS STORIES
 
 See the documentation for meta(1).
 
-COPYRIGHT AND LICENCE
+COPYRIGHT
 
-Copyright (C) 2005-2008 Philippe 'BooK' Bruhat
+Acme::MetaSyntactic is copyright (C) 2005-[% year %] Philippe 'BooK' Bruhat.
+
+Copyright of the individual theme authors are listed in the theme files.
+
+LICENCE
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
