@@ -124,6 +124,9 @@ for my $name (@packs) {
             }
         }
     }
+ 
+    # make sure the themes are sorted
+    $pack->{themes} = [ sort @{ $pack->{themes} } ];
 
     # template variables
     my $vars = {
