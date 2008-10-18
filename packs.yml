@@ -9,6 +9,7 @@ Books:
   - discworld
   - good_omens
   - hhgg
+  - jabberwocky
   - lotr
   - oulipo
   - pantagruel
@@ -53,20 +54,15 @@ Core:
   - contributors
   - summerwine
 Entertainment:
-  - booze
   - chess
   - facecards
   - magic8ball
-  - olympics
+  - pornstars
+  - sins
+Food:
+  - booze
   - pasta
   - pie
-  - pornstars
-  - tour_de_france
-Fantasy:
-  - jabberwocky
-  - norse_mythology
-  - sins
-  - swords
 Geography:
   - contrade
   - currency
@@ -75,6 +71,8 @@ Geography:
 History:
   - invasions
   - us_presidents
+  - norse_mythology
+  - swords
 Language:
   - alphabet
   - colors
@@ -102,6 +100,9 @@ Science:
   - quantum
   - space_missions
   - stars
+Sports:
+  - olympics
+  - tour_de_france
 TV_Movies:
   - barbarella
   - batman
