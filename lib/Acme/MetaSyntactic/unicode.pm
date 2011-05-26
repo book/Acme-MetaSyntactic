@@ -21,7 +21,7 @@ our @ISA = qw( Acme::MetaSyntactic::List );
     $data = join ' ',
         map  { s/ \(.*\)//; y/- /_/; $_ }
         grep { $_ ne '<control>' }    # what's this for a character name?
-        map  { my @F = split /\t/; $F[1] ? () : $F[2] }   # remove blocks
+        map  { my @F = split /\t+/; @F > 2 ? () : $F[1] }   # remove blocks
         split /\n/, $data;
 
     __PACKAGE__->init( { names => $data } );
