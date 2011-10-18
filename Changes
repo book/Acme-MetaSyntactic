@@ -1,5 +1,10 @@
 Revision history for Acme-MetaSyntactic
 
+0.99_01 Wed Oct 19 01:03:03 CEST 2011
+        [TESTS]
+        - fix tests that used to break with Perl >= 5.10
+          (thanks to Florian Ragwitz and Randy Stauner for patches)
+
 0.99 Mon Nov  6 02:25:16 CET 2006
         [NEW WEEKLY THEME 2006/11/06]
         - summerwine (Smylers)
