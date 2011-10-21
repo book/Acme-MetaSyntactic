@@ -15,6 +15,11 @@ our @ISA = qw( Acme::MetaSyntactic::List );
     }
     elsif ( $] >= 5.007003 ) {
         eval { $data = require 'unicore/Name.pl'; };
+
+        # since v5.11.3, unicore/Name.pl creates subroutines
+        # they end up in our namespace, so get rid of them
+        undef *code_point_to_name_special;
+        undef *name_to_code_point_special;
     }
 
     # clean up the list
