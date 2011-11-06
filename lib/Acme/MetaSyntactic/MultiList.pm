@@ -12,7 +12,9 @@ sub init {
     my $data  = Acme::MetaSyntactic->load_data($class);
     no strict 'refs';
 
-    my $sep = ${"$class\::Separator"} ||= '/';
+    # note: variables mentioned twice to avoid a warning
+
+    my $sep = ${"$class\::Separator"} = ${"$class\::Separator"} ||= '/';
     my $tail = qr/$sep?[^$sep]*$/;
 
     # compute all categories
@@ -31,8 +33,8 @@ sub init {
         }
     }
 
-    ${"$class\::Default"} = $data->{default} || ':all';
-    ${"$class\::Theme"} = ( split /::/, $class )[-1];
+    ${"$class\::Default"} = ${"$class\::Default"} = $data->{default} || ':all';
+    ${"$class\::Theme"} = ${"$class\::Theme"} = ( split /::/, $class )[-1];
 
     *{"$class\::import"} = sub {
         my $callpkg = caller(0);
@@ -41,7 +43,7 @@ sub init {
         *{"$callpkg\::meta$theme"} = sub { $meta->name(@_) };
     };
 
-    ${"$class\::meta"} = $class->new();
+    ${"$class\::meta"} = ${"$class\::meta"} = $class->new();
 }
 
 sub name {
