@@ -23,7 +23,7 @@ BATMAN: {
 }
 
 HADDOCK: {
-    use Acme::MetaSyntactic::haddock;
+    use Acme::MetaSyntactic 'haddock';
     my %items_en = map { $_ => 1 } @{$Acme::MetaSyntactic::haddock::Locale{en}};
     my %items_fr = map { $_ => 1 } @{$Acme::MetaSyntactic::haddock::Locale{fr}};
 
