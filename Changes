@@ -1,5 +1,10 @@
 Revision history for Acme-MetaSyntactic
 
+0.99_02 Fri Nov 11 00:06:24 CET 2011
+        [TESTS]
+        - clean up some "Name used only once" warnings
+        - fix pod coverage tests for unicode theme
+
 0.99_01 Wed Oct 19 01:03:03 CEST 2011
         [TESTS]
         - fix tests that used to break with Perl >= 5.10

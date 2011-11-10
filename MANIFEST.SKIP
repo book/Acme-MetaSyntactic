@@ -25,3 +25,4 @@ CVS/.*
 ^templates
 ^incoming
 packs.yml
+^MYMETA.*

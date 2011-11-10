@@ -174,3 +174,4 @@ t/pod.t
 t/remote
 t/remote1
 t/remote2
+META.json
