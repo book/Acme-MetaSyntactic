@@ -23,7 +23,9 @@ our @ISA = qw( Acme::MetaSyntactic::List );
     }
 
     # clean up the list
+    my %seen;
     $data = join ' ',
+        grep !$seen{$_}++,            # we might have aliases/duplicates
         map  { s/ \(.*\)//; y/- /_/; $_ }
         grep { $_ ne '<control>' }    # what's this for a character name?
         map  { my @F = split /\t+/; @F > 2 ? () : $F[1] }   # remove blocks
