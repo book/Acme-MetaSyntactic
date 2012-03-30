@@ -29,6 +29,7 @@ sub theme_ok {
     my $tb = __PACKAGE__->builder;
 
     # all subtests
+    $tb->subtest( "format $theme", sub { subtest_format($theme); } );
     $tb->subtest( "uniq $theme",   sub { subtest_uniq($theme); } );
     $tb->subtest( "length $theme", sub { subtest_length($theme); } );
     $tb->done_testing;
@@ -77,6 +78,25 @@ sub _theme_sublists {
 #
 # individual subtest functions
 #
+
+# t/21format.t
+sub subtest_format {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+
+    my @metas = _theme_sublists( $theme );
+    $tb->plan( tests => scalar @metas );
+
+    for my $test (@metas) {
+        my ($ams, $theme) = @$test;
+        my @items = $ams->name( 0 );
+        my @failed;
+        my $ok = 0;
+        ( /^[A-Za-z_]\w*$/ && ++$ok ) || push @failed, $_ for @items;
+        $tb->is_eq( $ok, scalar @items, "All names correct for $theme" );
+        $tb->diag( "Bad names: @failed" ) if @failed;
+    }
+}
 
 # t/22uniq.t
 sub subtest_uniq {
