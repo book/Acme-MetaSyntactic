@@ -30,7 +30,8 @@ sub theme_ok {
     my ($theme) = @_;
     my $tb = $CLASS->builder;
 
-    # all subtest
+    # all subtests
+    $tb->subtest( "uniq $theme", sub { subtest_uniq($theme); } );
     $tb->done_testing;
 }
 
@@ -75,6 +76,35 @@ sub _theme_sublists {
 #
 # individual subtest functions
 #
+
+# t/22uniq.t
+sub subtest_uniq {
+    my ($theme) = @_;
+    my $tb = $CLASS->builder;
+
+    no strict 'refs';
+    eval "require Acme::MetaSyntactic::$theme;";
+    diag "$theme $@" if $@;
+
+    my @metas = _theme_sublists( $theme );
+    $tb->plan( tests => scalar @metas );
+
+    for my $test (@metas) {
+        my ($meta, $name) = @$test;
+        my %items;
+        my @items = $meta->name(0);
+        $items{$_}++ for @items;
+
+        $tb->is_num(
+            scalar keys %items,
+            scalar @items,
+            "No duplicates for $name, ${\scalar @items} items"
+        );
+        my $dupes = join " ", grep { $items{$_} > 1 } keys %items;
+        diag "Duplicates: $dupes" if $dupes;
+    }
+
+}
 
 1;
 
