@@ -5,8 +5,6 @@ use Acme::MetaSyntactic ();
 
 use base 'Test::Builder::Module';
 
-my $CLASS = __PACKAGE__;
-
 our @EXPORT = qw( all_themes_ok all_themes theme_ok );
 
 #
@@ -15,7 +13,7 @@ our @EXPORT = qw( all_themes_ok all_themes theme_ok );
 
 sub all_themes_ok {
     my @themes = all_themes( @_ );
-    my $tb = $CLASS->builder;
+    my $tb = __PACKAGE__->builder;
     $tb->plan( tests => scalar @themes );
     $tb->subtest( $_, sub { theme_ok( $_ ) } ) for @themes;
 }
@@ -28,7 +26,7 @@ sub all_themes {
 
 sub theme_ok {
     my ($theme) = @_;
-    my $tb = $CLASS->builder;
+    my $tb = __PACKAGE__->builder;
 
     # all subtests
     $tb->subtest( "uniq $theme", sub { subtest_uniq($theme); } );
@@ -80,7 +78,7 @@ sub _theme_sublists {
 # t/22uniq.t
 sub subtest_uniq {
     my ($theme) = @_;
-    my $tb = $CLASS->builder;
+    my $tb = __PACKAGE__->builder;
 
     no strict 'refs';
     eval "require Acme::MetaSyntactic::$theme;";
