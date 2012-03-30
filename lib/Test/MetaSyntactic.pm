@@ -29,7 +29,8 @@ sub theme_ok {
     my $tb = __PACKAGE__->builder;
 
     # all subtests
-    $tb->subtest( "uniq $theme", sub { subtest_uniq($theme); } );
+    $tb->subtest( "uniq $theme",   sub { subtest_uniq($theme); } );
+    $tb->subtest( "length $theme", sub { subtest_length($theme); } );
     $tb->done_testing;
 }
 
@@ -102,6 +103,25 @@ sub subtest_uniq {
         diag "Duplicates: $dupes" if $dupes;
     }
 
+}
+
+# t/23length.t
+sub subtest_length  {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+
+    my @lists = _theme_sublists( $theme );
+    $tb->plan( tests => scalar @lists );
+
+    for my $t (@lists) {
+        my ($ams, $theme) = @$t;
+        my @items = $ams->name( 0 );
+        my @failed;
+        my $ok = 0;
+        ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
+        is( $ok, @items, "All names correct for $theme" );
+        diag "Names too long: @failed" if @failed;
+    }
 }
 
 1;
