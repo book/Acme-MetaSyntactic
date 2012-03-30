@@ -47,6 +47,8 @@ sub _starting_points {
 # return a list of [ AMS object, details ]
 sub _theme_sublists {
     my ($theme) = @_;
+    eval "require Acme::MetaSyntactic::$theme;"
+        or __PACKAGE__->builder->diag("$theme $@");
 
     my @metas;
     no strict 'refs';
@@ -81,10 +83,6 @@ sub subtest_uniq {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
 
-    no strict 'refs';
-    eval "require Acme::MetaSyntactic::$theme;";
-    diag "$theme $@" if $@;
-
     my @metas = _theme_sublists( $theme );
     $tb->plan( tests => scalar @metas );
 
@@ -100,7 +98,7 @@ sub subtest_uniq {
             "No duplicates for $name, ${\scalar @items} items"
         );
         my $dupes = join " ", grep { $items{$_} > 1 } keys %items;
-        diag "Duplicates: $dupes" if $dupes;
+        $tb->diag( "Duplicates: $dupes" ) if $dupes;
     }
 
 }
@@ -110,17 +108,17 @@ sub subtest_length  {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
 
-    my @lists = _theme_sublists( $theme );
-    $tb->plan( tests => scalar @lists );
+    my @metas = _theme_sublists( $theme );
+    $tb->plan( tests => scalar @metas );
 
-    for my $t (@lists) {
+    for my $t (@metas) {
         my ($ams, $theme) = @$t;
         my @items = $ams->name( 0 );
         my @failed;
         my $ok = 0;
         ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
-        is( $ok, @items, "All names correct for $theme" );
-        diag "Names too long: @failed" if @failed;
+        $tb->is_eq( $ok, scalar @items, "All names correct for $theme" );
+        $tb->diag( "Names too long: @failed" ) if @failed;
     }
 }
 
