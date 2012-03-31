@@ -36,6 +36,7 @@ sub theme_ok {
             $tb->subtest( "length $theme", sub { subtest_length(@args); } );
             $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
             $tb->subtest( "import $theme", sub { subtest_import(@args); } );
+            $tb->subtest( "theme $theme",  sub { subtest_theme(@args); } );
             $tb->done_testing;
         }
     );
@@ -111,6 +112,22 @@ sub subtest_load {
     $tb->plan( tests => 1 );
     `$^X -Mblib -MAcme::MetaSyntactic::$theme -e1`;
     $tb->is_num( $?, 0, $theme );
+}
+
+# t/08theme.t
+sub subtest_theme {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 2 );
+
+    eval "require Acme::MetaSyntactic::$theme;"
+        or __PACKAGE__->builder->diag("Failed loading $theme $@");
+
+    $tb->is_eq( eval { "Acme::MetaSyntactic::$theme"->theme },
+        $theme, "theme() for Acme::MetaSyntactic::$theme" );
+
+    $tb->is_eq( eval { "Acme::MetaSyntactic::$theme"->new->theme },
+        $theme, "theme() for Acme::MetaSyntactic::$theme" );
 }
 
 # t/17import.t
@@ -286,9 +303,13 @@ Checks that each name in the theme has valid length.
 Checks that the C<__DATA__> section (if any) of the theme source is
 properly formatted.
 
-=head2 subtest_import( $theme, $source )
+=head2 subtest_import( $theme )
 
 Checks that the exported C<meta$theme> function returns an item from C<$theme>.
+
+=head2 subtest_theme( $theme )
+
+Checks that the C<theme()> function returns the theme name.
 
 =head1 AUTHOR
 
