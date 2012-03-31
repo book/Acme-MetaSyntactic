@@ -187,3 +187,76 @@ SKIP: {
 
 __END__
 
+=head1 NAME
+
+Test::MetaSyntactic - Common tests for Acme::MetaSyntactic themes
+
+=head1 SYNOPSIS
+
+   # add this as t/meta.t
+   use Test::MetaSyntatic;
+   all_themes_ok();
+
+=head1 DESCRIPTION
+
+This module provides the minimum set of tests that any Acme::MetaSyntactic theme
+should pass.
+
+The goal is to make is easier for theme creators build a distribution and ensure
+your theme will work correctly when installed.
+
+=head1 EXPORTED FUNCTIONS
+
+=head2 all_theme_ok( @lib )
+
+Will find all themes under the directories listed in C<@lib>, and run C<theme_ok()>
+on them.
+
+C<@lib> is optional (it will try to find themes in F<blib/lib> or F<lib> if not provided).
+
+=head2 theme_ok( $theme, $source )
+
+Will run all tests on the given C<$theme>. Some tests require access to the source, but
+thaye will be skipped if C<$source> is not provided.
+
+=head1 SUBTESTS
+
+The individual tests are run as subtests. They are:
+
+=head2 subtest_load( $theme )
+
+Tres to load the theme module.
+
+=head2 subtest_format( $theme )
+
+Checks that each metasyntactic name in the theme is a valid Perl
+variable name.
+
+=head2 subtest_uniq( $theme )
+
+Checks that each name appears once in the theme.
+
+=head2 subtest_length( $theme )
+
+Checks that each name in the theme has valid length.
+
+=head2 subtest_data( $theme, $source )
+
+Checks that the C<__DATA__> section (if any) of the theme source is
+properly formatted.
+
+=head1 AUTHOR
+
+Philippe Bruhat (BooK), C<< <book@cpan.org> >>
+
+=head1 COPYRIGHT
+
+ Copyright 2012 Philippe Bruhat (BooK), All Rights Reserved.
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
+
