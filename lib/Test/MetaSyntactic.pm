@@ -243,7 +243,7 @@ your theme will work correctly when installed.
 
 =head1 EXPORTED FUNCTIONS
 
-=head2 all_theme_ok( @lib )
+=head2 all_themes_ok( @lib )
 
 Will find all themes under the directories listed in C<@lib>, and run C<theme_ok()>
 on them.
@@ -280,6 +280,10 @@ Checks that each name in the theme has valid length.
 
 Checks that the C<__DATA__> section (if any) of the theme source is
 properly formatted.
+
+=head2 subtest_import( $theme, $source )
+
+Checks that the exported C<meta$theme> function returns an item from C<$theme>.
 
 =head1 AUTHOR
 
