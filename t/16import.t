@@ -1,11 +1,11 @@
 use Test::More;
 use strict;
-use Acme::MetaSyntactic 'batman';
+use Acme::MetaSyntactic 'summerwine';
 
 plan tests => 4;
 
 my @names = metaname();
-my %seen = map { $_ => 1 } @Acme::MetaSyntactic::batman::List;
+my %seen = map { $_ => 1 } @Acme::MetaSyntactic::summerwine::List;
 ok( exists $seen{$names[0]}, "metaname" );
 
 my @bots = qw( purl url sarko bender );
