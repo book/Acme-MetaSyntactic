@@ -30,6 +30,7 @@ sub theme_ok {
     $tb->subtest( "format $theme", sub { subtest_format(@args); } );
     $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
     $tb->subtest( "length $theme", sub { subtest_length(@args); } );
+    $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
     $tb->done_testing;
 }
 
@@ -137,6 +138,36 @@ sub subtest_length  {
         ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
         $tb->is_eq( $ok, scalar @items, "All names correct for $theme" );
         $tb->diag( "Names too long: @failed" ) if @failed;
+    }
+}
+
+# t/24data.t
+sub subtest_data {
+    my ( $theme, $file ) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+
+SKIP: {
+        if ( !$file ) {
+            $tb->skip( "This test needs the source file for $theme", 1 );
+            last SKIP;
+        }
+        open my $fh, $file or do {
+            $tb->skip( "Can't open $file: $!", 1 );
+            last SKIP;
+        };
+
+        my ( $fail, $in_data ) = ( 0, 0 );
+        my @lines;
+        while (<$fh>) {
+            $in_data++ if /^__DATA__$/;
+            next if !$in_data;
+            $fail++, push @lines, $.
+                if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
+        }
+        $tb->is_eq( $fail, 0, "__DATA__ section for $file" );
+        $tb->diag("Failed lines: @lines") if @lines;
+        close $fh;
     }
 }
 
