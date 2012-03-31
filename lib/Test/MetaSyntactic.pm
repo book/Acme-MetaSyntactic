@@ -104,7 +104,7 @@ sub subtest_format {
         my @failed;
         my $ok = 0;
         ( /^[A-Za-z_]\w*$/ && ++$ok ) || push @failed, $_ for @items;
-        $tb->is_eq( $ok, scalar @items, "All names correct for $theme" );
+        $tb->is_num( $ok, scalar @items, "All names correct for $theme" );
         $tb->diag( "Bad names: @failed" ) if @failed;
     }
 }
@@ -148,7 +148,7 @@ sub subtest_length  {
         my @failed;
         my $ok = 0;
         ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
-        $tb->is_eq( $ok, scalar @items, "All names correct for $theme" );
+        $tb->is_num( $ok, scalar @items, "All names correct for $theme" );
         $tb->diag( "Names too long: @failed" ) if @failed;
     }
 }
@@ -177,7 +177,7 @@ SKIP: {
             $fail++, push @lines, $.
                 if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
         }
-        $tb->is_eq( $fail, 0, "__DATA__ section for $file" );
+        $tb->is_num( $fail, 0, "__DATA__ section for $file" );
         $tb->diag("Failed lines: @lines") if @lines;
         close $fh;
     }
