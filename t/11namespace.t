@@ -1,5 +1,5 @@
 use Test::More tests => 1;
-use Acme::MetaSyntactic::donmartin;
+use Acme::MetaSyntactic::summerwine;
 
 # check that metaname is not exported into Acme::MetaSyntactic::List
 ok(
