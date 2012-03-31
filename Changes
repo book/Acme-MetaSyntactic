@@ -1,5 +1,9 @@
 Revision history for Acme-MetaSyntactic
 
+0.99_03 Sat Mar 31 19:41:22 CEST 2012
+        [TESTS]
+        - moved all tests common to all themes in the Test::MetaSyntactic module
+
 0.99_02 Fri Nov 11 00:06:24 CET 2011
         [TESTS]
         - clean up some "Name used only once" warnings
