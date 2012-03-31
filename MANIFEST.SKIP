@@ -1,5 +1,6 @@
 CVS/.*
-\.svn/.*
+\.git/.*
+\.gitignore
 \.bak$
 \.sw[a-z]$
 \.tar$
