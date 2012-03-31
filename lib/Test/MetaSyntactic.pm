@@ -18,7 +18,7 @@ sub all_themes_ok {
 
     my $tb = __PACKAGE__->builder;
     $tb->plan( tests => scalar keys %source );
-    $tb->subtest( $_, sub { theme_ok( $_, $source{$_}) } ) for sort keys %source;
+    theme_ok( $_, $source{$_} ) for sort keys %source;
 }
 
 sub theme_ok {
@@ -27,13 +27,18 @@ sub theme_ok {
 
     # all subtests
     my $theme = $args[0];
-    $tb->subtest( "load $theme",   sub { subtest_load(@args); } );
-    $tb->subtest( "format $theme", sub { subtest_format(@args); } );
-    $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
-    $tb->subtest( "length $theme", sub { subtest_length(@args); } );
-    $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
-    $tb->subtest( "import $theme", sub { subtest_import(@args); } );
-    $tb->done_testing;
+    $tb->subtest(
+        $theme,
+        sub {
+            $tb->subtest( "load $theme",   sub { subtest_load(@args); } );
+            $tb->subtest( "format $theme", sub { subtest_format(@args); } );
+            $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
+            $tb->subtest( "length $theme", sub { subtest_length(@args); } );
+            $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
+            $tb->subtest( "import $theme", sub { subtest_import(@args); } );
+            $tb->done_testing;
+        }
+    );
 }
 
 #
