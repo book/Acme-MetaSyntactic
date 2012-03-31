@@ -18,17 +18,18 @@ sub all_themes_ok {
 
     my $tb = __PACKAGE__->builder;
     $tb->plan( tests => scalar keys %source );
-    $tb->subtest( $_, sub { theme_ok( $_ ) } ) for sort keys %source;
+    $tb->subtest( $_, sub { theme_ok( $_, $source{$_}) } ) for sort keys %source;
 }
 
 sub theme_ok {
-    my ($theme) = @_;
-    my $tb = __PACKAGE__->builder;
+    my @args = @_;
+    my $tb   = __PACKAGE__->builder;
 
     # all subtests
-    $tb->subtest( "format $theme", sub { subtest_format($theme); } );
-    $tb->subtest( "uniq $theme",   sub { subtest_uniq($theme); } );
-    $tb->subtest( "length $theme", sub { subtest_length($theme); } );
+    my $theme = $args[0];
+    $tb->subtest( "format $theme", sub { subtest_format(@args); } );
+    $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
+    $tb->subtest( "length $theme", sub { subtest_length(@args); } );
     $tb->done_testing;
 }
 
