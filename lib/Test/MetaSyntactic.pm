@@ -5,23 +5,20 @@ use Acme::MetaSyntactic ();
 
 use base 'Test::Builder::Module';
 
-our @EXPORT = qw( all_themes_ok all_themes theme_ok );
+our @EXPORT = qw( all_themes_ok theme_ok );
 
 #
 # exported functions
 #
 
 sub all_themes_ok {
-    my @themes = all_themes( @_ );
-    my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => scalar @themes );
-    $tb->subtest( $_, sub { theme_ok( $_ ) } ) for @themes;
-}
-
-sub all_themes {
     my (@lib) = @_;
     @lib = _starting_points() if !@lib;
-    return Acme::MetaSyntactic->_find_themes( @lib );
+    my %source = Acme::MetaSyntactic->_find_themes( @lib );
+
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => scalar keys %source );
+    $tb->subtest( $_, sub { theme_ok( $_ ) } ) for sort keys %source;
 }
 
 sub theme_ok {

@@ -17,13 +17,14 @@ our %META;
 sub _find_themes {
     my ( $class, @dirs ) = @_;
     return
-        grep !/^[A-Z]/,    # remove the non-theme subclasses
-        map { ( fileparse( $_, qr/\.pm$/ ) )[0] }
-        map { File::Glob::bsd_glob( File::Spec->catfile( $_, qw( Acme MetaSyntactic *.pm ) ) ) } @dirs;
+        map  @$_,
+        grep { $_->[0] !~ /^[A-Z]/ }    # remove the non-theme subclasses
+        map  { [ ( fileparse( $_, qr/\.pm$/ ) )[0] => $_ ] }
+        map  { File::Glob::bsd_glob( File::Spec->catfile( $_, qw( Acme MetaSyntactic *.pm ) ) ) } @dirs;
 }
 
 # fetch the list of standard themes
-$META{$_} = 0 for __PACKAGE__->_find_themes(@INC);
+$META{$_} = 0 for keys %{ { __PACKAGE__->_find_themes(@INC) } };
 
 # the functions actually hide an instance
 my $meta = Acme::MetaSyntactic->new( $Theme );
