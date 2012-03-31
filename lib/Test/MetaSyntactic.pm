@@ -134,13 +134,20 @@ sub subtest_theme {
 sub subtest_import {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => 1 );
+    $tb->plan( tests => 2 );
 
     if( $theme =~ /^(?:any|random)$/) {
-        $tb->skip( "Not testing import for theme $theme", 1 );
+        $tb->skip( "Not testing import for theme $theme" );
+        $tb->skip( "Not testing import for theme $theme" );
     }
     else {
         my %seen = map { $_ => 1 } _theme_items( $theme );
+
+        no strict 'refs';
+        $tb->ok( exists ${"Test::MetaSyntactic::SCRATCH\::"}{"meta$theme"},
+            "meta$theme exported"
+        );
+
         package Test::MetaSyntactic::SCRATCH;
         no strict 'refs';
         my @names = "meta$theme"->();
