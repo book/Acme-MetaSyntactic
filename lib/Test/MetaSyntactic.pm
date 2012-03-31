@@ -27,6 +27,7 @@ sub theme_ok {
 
     # all subtests
     my $theme = $args[0];
+    $tb->subtest( "load $theme",   sub { subtest_load(@args); } );
     $tb->subtest( "format $theme", sub { subtest_format(@args); } );
     $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
     $tb->subtest( "length $theme", sub { subtest_length(@args); } );
@@ -77,6 +78,17 @@ sub _theme_sublists {
 #
 # individual subtest functions
 #
+
+# t/01load.t
+# t/51useall.t
+sub subtest_load {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+
+    $tb->plan( tests => 1 );
+    `$^X -Mblib -MAcme::MetaSyntactic::$theme -e1`;
+    $tb->is_num( $?, 0, $theme );
+}
 
 # t/21format.t
 sub subtest_format {
