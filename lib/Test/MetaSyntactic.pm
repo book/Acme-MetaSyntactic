@@ -30,13 +30,14 @@ sub theme_ok {
     $tb->subtest(
         $theme,
         sub {
-            $tb->subtest( "load $theme",   sub { subtest_load(@args); } );
-            $tb->subtest( "format $theme", sub { subtest_format(@args); } );
-            $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
-            $tb->subtest( "length $theme", sub { subtest_length(@args); } );
-            $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
-            $tb->subtest( "import $theme", sub { subtest_import(@args); } );
-            $tb->subtest( "theme $theme",  sub { subtest_theme(@args); } );
+            $tb->subtest( "load $theme",     sub { subtest_load(@args); } );
+            $tb->subtest( "format $theme",   sub { subtest_format(@args); } );
+            $tb->subtest( "uniq $theme",     sub { subtest_uniq(@args); } );
+            $tb->subtest( "length $theme",   sub { subtest_length(@args); } );
+            $tb->subtest( "data $theme",     sub { subtest_data(@args); } );
+            $tb->subtest( "import $theme",   sub { subtest_import(@args); } );
+            $tb->subtest( "noimport $theme", sub { subtest_noimport(@args); } );
+            $tb->subtest( "theme $theme",    sub { subtest_theme(@args); } );
             $tb->done_testing;
         }
     );
@@ -153,6 +154,20 @@ sub subtest_import {
         my @names = "meta$theme"->();
         $tb->ok( exists $seen{ $names[0] }, "meta$theme -> $names[0]" );
     }
+}
+
+# t/18import.t
+sub subtest_noimport {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+
+    eval "package Test::MetaSyntactic::EMPTY; use Acme::MetaSyntactic::$theme (); 1;"
+        or __PACKAGE__->builder->diag("$theme $@");
+
+    # meta$theme should not exist
+    eval "package Test::MetaSyntatic::EMPTY; meta$theme(1);";
+    $tb->ok( $@ =~ /^Undefined subroutine &Test::MetaSyntatic::EMPTY::meta$theme called/, "meta$theme function not exported" );
 }
 
 # t/21format.t
@@ -312,7 +327,13 @@ properly formatted.
 
 =head2 subtest_import( $theme )
 
-Checks that the exported C<meta$theme> function returns an item from C<$theme>.
+Checks that the exported C<meta$theme> function returns an item from
+C<$theme>.
+
+=head2 subtest_noimport( $theme )
+
+Checks that C<use Acme::MetaSyntactic::I<$theme> ()> does not export
+the C<meta$theme> function.
 
 =head2 subtest_theme( $theme )
 
