@@ -32,6 +32,7 @@ sub theme_ok {
     $tb->subtest( "uniq $theme",   sub { subtest_uniq(@args); } );
     $tb->subtest( "length $theme", sub { subtest_length(@args); } );
     $tb->subtest( "data $theme",   sub { subtest_data(@args); } );
+    $tb->subtest( "import $theme", sub { subtest_import(@args); } );
     $tb->done_testing;
 }
 
@@ -49,7 +50,7 @@ sub _starting_points {
 sub _theme_sublists {
     my ($theme) = @_;
     eval "require Acme::MetaSyntactic::$theme;"
-        or __PACKAGE__->builder->diag("$theme $@");
+        or __PACKAGE__->builder->diag("Failed loading $theme $@");
 
     my @metas;
     no strict 'refs';
@@ -75,6 +76,23 @@ sub _theme_sublists {
     return @metas;
 }
 
+# return the list of all theme items
+sub _theme_items {
+    my ($theme) = @_;
+    eval "package Test::MetaSyntactic::SCRATCH; use Acme::MetaSyntactic::$theme; 1;"
+        or __PACKAGE__->builder->diag("$theme $@");
+
+    no strict 'refs';
+    my $class = "Acme::MetaSyntactic::$theme";
+    my @items
+        = $class->isa('Acme::MetaSyntactic::List')
+        ? @{"$class\::List"}
+        : $class->isa('Acme::MetaSyntactic::MultiList')
+        ? map @$_, values %{"$class\::MultiList"}
+        : ();
+    return @items;
+}
+
 #
 # individual subtest functions
 #
@@ -88,6 +106,24 @@ sub subtest_load {
     $tb->plan( tests => 1 );
     `$^X -Mblib -MAcme::MetaSyntactic::$theme -e1`;
     $tb->is_num( $?, 0, $theme );
+}
+
+# t/17import.t
+sub subtest_import {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+
+    if( $theme =~ /^(?:any|random)$/) {
+        $tb->skip( "Not testing import for theme $theme", 1 );
+    }
+    else {
+        my %seen = map { $_ => 1 } _theme_items( $theme );
+        package Test::MetaSyntactic::SCRATCH;
+        no strict 'refs';
+        my @names = "meta$theme"->();
+        $tb->ok( exists $seen{ $names[0] }, "meta$theme -> $names[0]" );
+    }
 }
 
 # t/21format.t
