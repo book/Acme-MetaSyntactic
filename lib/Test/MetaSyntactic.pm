@@ -75,10 +75,9 @@ sub _starting_points {
 # return a list of [ AMS object, details ]
 sub _theme_sublists {
     my ($theme) = @_;
-    eval "require Acme::MetaSyntactic::$theme;"
-        or __PACKAGE__->builder->diag("Failed loading $theme $@");
-
     my @metas;
+
+    # assume the module has already been loaded
     no strict 'refs';
     my %isa = map { $_ => 1 } @{"Acme::MetaSyntactic::$theme\::ISA"};
     if( exists $isa{'Acme::MetaSyntactic::Locale'} ) {
@@ -105,9 +104,8 @@ sub _theme_sublists {
 # return the list of all theme items
 sub _theme_items {
     my ($theme) = @_;
-    eval "package Test::MetaSyntactic::SCRATCH; use Acme::MetaSyntactic::$theme; 1;"
-        or __PACKAGE__->builder->diag("$theme $@");
 
+    # assume the module has already been loaded
     no strict 'refs';
     my $class = "Acme::MetaSyntactic::$theme";
     my @items
@@ -140,12 +138,8 @@ sub subtest_theme {
     my $tb = __PACKAGE__->builder;
     $tb->plan( tests => 2 );
 
-    eval "require Acme::MetaSyntactic::$theme;"
-        or __PACKAGE__->builder->diag("Failed loading $theme $@");
-
     $tb->is_eq( eval { "Acme::MetaSyntactic::$theme"->theme },
         $theme, "theme() for Acme::MetaSyntactic::$theme" );
-
     $tb->is_eq( eval { "Acme::MetaSyntactic::$theme"->new->theme },
         $theme, "theme() for Acme::MetaSyntactic::$theme" );
 }
@@ -321,7 +315,8 @@ thaye will be skipped if C<$source> is not provided.
 
 =head1 SUBTESTS
 
-The individual tests are run as subtests. They are:
+The individual tests are run as subtests. All substests but C<subtest_load()>
+assume that the module can be successfully loaded.
 
 =head2 subtest_load( $theme )
 
