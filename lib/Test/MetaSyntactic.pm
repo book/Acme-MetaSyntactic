@@ -126,8 +126,9 @@ sub subtest_load {
     my $tb = __PACKAGE__->builder;
 
     $tb->plan( tests => 1 );
-    `$^X -Mblib -MAcme::MetaSyntactic::$theme -e1`;
-    $tb->is_num( $?, 0, $theme );
+    my ( $pkg, $error ) = _load( $theme, 1 );
+    $tb->ok( !$error, "use Acme::MetaSyntactic::$theme;" );
+    $tb->diag($error) if $error;
 }
 
 # t/08theme.t
