@@ -295,7 +295,7 @@ This module provides the minimum set of tests that any Acme::MetaSyntactic theme
 should pass.
 
 The goal is to make is easier for theme creators build a distribution and ensure
-your theme will work correctly when installed.
+theirs themes will work as expected when installed.
 
 =head1 EXPORTED FUNCTIONS
 
@@ -309,7 +309,9 @@ C<@lib> is optional (it will try to find themes in F<blib/lib> or F<lib> if not 
 =head2 theme_ok( $theme, $source )
 
 Will run all tests on the given C<$theme>. Some tests require access to the source, but
-thaye will be skipped if C<$source> is not provided.
+they will be skipped if C<$source> is not provided.
+
+If the C<subtest_load()> test fails, no further test will be run.
 
 =head1 SUBTESTS
 
@@ -318,7 +320,7 @@ assume that the module can be successfully loaded.
 
 =head2 subtest_load( $theme )
 
-Tres to load the theme module.
+Tries to load the theme module.
 
 =head2 subtest_format( $theme )
 
