@@ -188,17 +188,17 @@ sub subtest_format {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
 
-    my @metas = _theme_sublists( $theme );
+    my @metas = _theme_sublists($theme);
     $tb->plan( tests => scalar @metas );
 
     for my $test (@metas) {
-        my ($ams, $theme) = @$test;
-        my @items = $ams->name( 0 );
+        my ( $ams, $theme ) = @$test;
+        my @items = $ams->name(0);
         my @failed;
         my $ok = 0;
         ( /^[A-Za-z_]\w*$/ && ++$ok ) || push @failed, $_ for @items;
         $tb->is_num( $ok, scalar @items, "All names correct for $theme" );
-        $tb->diag( "Bad names: @failed" ) if @failed;
+        $tb->diag("Bad names: @failed") if @failed;
     }
 }
 
@@ -207,11 +207,11 @@ sub subtest_uniq {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
 
-    my @metas = _theme_sublists( $theme );
+    my @metas = _theme_sublists($theme);
     $tb->plan( tests => scalar @metas );
 
     for my $test (@metas) {
-        my ($meta, $name) = @$test;
+        my ( $meta, $name ) = @$test;
         my %items;
         my @items = $meta->name(0);
         $items{$_}++ for @items;
@@ -222,27 +222,26 @@ sub subtest_uniq {
             "No duplicates for $name, ${\scalar @items} items"
         );
         my $dupes = join " ", grep { $items{$_} > 1 } keys %items;
-        $tb->diag( "Duplicates: $dupes" ) if $dupes;
+        $tb->diag("Duplicates: $dupes") if $dupes;
     }
-
 }
 
 # t/23length.t
-sub subtest_length  {
+sub subtest_length {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
 
-    my @metas = _theme_sublists( $theme );
+    my @metas = _theme_sublists($theme);
     $tb->plan( tests => scalar @metas );
 
     for my $t (@metas) {
-        my ($ams, $theme) = @$t;
-        my @items = $ams->name( 0 );
+        my ( $ams, $theme ) = @$t;
+        my @items = $ams->name(0);
         my @failed;
         my $ok = 0;
         ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
         $tb->is_num( $ok, scalar @items, "All names correct for $theme" );
-        $tb->diag( "Names too long: @failed" ) if @failed;
+        $tb->diag("Names too long: @failed") if @failed;
     }
 }
 
