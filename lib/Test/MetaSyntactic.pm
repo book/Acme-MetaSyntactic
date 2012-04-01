@@ -65,10 +65,7 @@ sub _starting_points {
             ? "package $pkg; use $module; 1;"
             : "package $pkg; use $module (); 1;";
         my $ok     = eval $code;
-        my $error;
-        $error = "Failed loading $module: $@" if !$ok;
-
-        return ( $pkg, $error );
+        return ( $pkg, !$ok && $@ );
     }
 }
 
