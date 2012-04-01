@@ -30,14 +30,15 @@ sub theme_ok {
     $tb->subtest(
         $theme,
         sub {
-            $tb->subtest( "load $theme",     sub { subtest_load(@args); } );
-            $tb->subtest( "format $theme",   sub { subtest_format(@args); } );
-            $tb->subtest( "uniq $theme",     sub { subtest_uniq(@args); } );
-            $tb->subtest( "length $theme",   sub { subtest_length(@args); } );
-            $tb->subtest( "data $theme",     sub { subtest_data(@args); } );
-            $tb->subtest( "import $theme",   sub { subtest_import(@args); } );
-            $tb->subtest( "noimport $theme", sub { subtest_noimport(@args); } );
-            $tb->subtest( "theme $theme",    sub { subtest_theme(@args); } );
+            $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
+                or return;
+            $tb->subtest( "$theme format",   sub { subtest_format(@args); } );
+            $tb->subtest( "$theme uniq",     sub { subtest_uniq(@args); } );
+            $tb->subtest( "$theme length",   sub { subtest_length(@args); } );
+            $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
+            $tb->subtest( "$theme import",   sub { subtest_import(@args); } );
+            $tb->subtest( "$theme noimport", sub { subtest_noimport(@args); } );
+            $tb->subtest( "$theme theme",    sub { subtest_theme(@args); } );
             $tb->done_testing;
         }
     );
