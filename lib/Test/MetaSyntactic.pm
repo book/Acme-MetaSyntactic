@@ -76,15 +76,16 @@ sub _theme_sublists {
 
     # assume the module has already been loaded
     no strict 'refs';
-    my %isa = map { $_ => 1 } @{"Acme::MetaSyntactic::$theme\::ISA"};
-    if( exists $isa{'Acme::MetaSyntactic::Locale'} ) {
+    my $class = "Acme::MetaSyntactic::$theme";
+
+    if( $class->isa('Acme::MetaSyntactic::Locale') ) {
         for my $lang ( "Acme::MetaSyntactic::$theme"->languages() ) {
             push @metas,
                 [ "Acme::MetaSyntactic::$theme"->new( lang => $lang ),
                   "$theme, $lang locale" ];
         }
     }
-    elsif( exists $isa{'Acme::MetaSyntactic::MultiList'} ) {
+    elsif( $class->isa('Acme::MetaSyntactic::MultiList') ) {
         for my $cat ( "Acme::MetaSyntactic::$theme"->categories(), ':all' ) {
             push @metas,
                 [ "Acme::MetaSyntactic::$theme"->new( category => $cat ),
