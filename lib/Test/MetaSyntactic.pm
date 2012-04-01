@@ -53,6 +53,25 @@ sub _starting_points {
     return 'lib';
 }
 
+# load the theme in a random namespace
+{
+    my $num = 0;
+
+    sub _load {
+        my ( $theme, $do_import ) = @_;
+        my $module = "Acme::MetaSyntactic::$theme";
+        my $pkg    = sprintf "Acme::MetaSyntactic::SCRATCH_%04d", $num++;
+        my $code   = $do_import
+            ? "package $pkg; use $module; 1;"
+            : "package $pkg; use $module (); 1;";
+        my $ok     = eval $code;
+        my $error;
+        $error = "Failed loading $module: $@" if !$ok;
+
+        return ( $pkg, $error );
+    }
+}
+
 # return a list of [ AMS object, details ]
 sub _theme_sublists {
     my ($theme) = @_;
@@ -135,24 +154,25 @@ sub subtest_theme {
 sub subtest_import {
     my ($theme) = @_;
     my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => 2 );
+    $tb->plan( tests => my $tests = 2 );
 
-    if( $theme =~ /^(?:any|random)$/) {
-        $tb->skip( "Not testing import for theme $theme" );
-        $tb->skip( "Not testing import for theme $theme" );
-    }
-    else {
-        my %seen = map { $_ => 1 } _theme_items( $theme );
+SKIP: {
+        if ( $theme =~ /^(?:any|random)$/ ) {
+            $tb->skip("Not testing import for theme $theme") for 1 .. $tests;
+            last SKIP;
+        }
+        else {
+            my ($pkg) = _load( $theme, 1 );
+            my %seen = map { $_ => 1 } _theme_items($theme);
 
-        no strict 'refs';
-        $tb->ok( exists ${"Test::MetaSyntactic::SCRATCH\::"}{"meta$theme"},
-            "meta$theme exported"
-        );
+            no strict 'refs';
+            $tb->ok( exists ${"$pkg\::"}{"meta$theme"},
+                "meta$theme exported" );
 
-        package Test::MetaSyntactic::SCRATCH;
-        no strict 'refs';
-        my @names = "meta$theme"->();
-        $tb->ok( exists $seen{ $names[0] }, "meta$theme -> $names[0]" );
+            my @names
+                = eval qq{package $pkg; no strict 'refs'; "meta$theme"->();};
+            $tb->ok( exists $seen{ $names[0] }, "meta$theme -> $names[0]" );
+        }
     }
 }
 
@@ -162,12 +182,12 @@ sub subtest_noimport {
     my $tb = __PACKAGE__->builder;
     $tb->plan( tests => 1 );
 
-    eval "package Test::MetaSyntactic::EMPTY; use Acme::MetaSyntactic::$theme (); 1;"
-        or __PACKAGE__->builder->diag("$theme $@");
+    my ($pkg) = _load($theme);
 
     # meta$theme should not exist
-    eval "package Test::MetaSyntatic::EMPTY; meta$theme(1);";
-    $tb->ok( $@ =~ /^Undefined subroutine &Test::MetaSyntatic::EMPTY::meta$theme called/, "meta$theme function not exported" );
+    eval "package $pkg; meta$theme(1);";
+    $tb->ok( $@ =~ /^Undefined subroutine &$pkg\::meta$theme called/,
+        "meta$theme function not exported" );
 }
 
 # t/21format.t
