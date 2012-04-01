@@ -17,6 +17,7 @@ sub all_themes_ok {
     my %source = Acme::MetaSyntactic->_find_themes( @lib );
 
     my $tb = __PACKAGE__->builder;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     $tb->plan( tests => scalar keys %source );
     theme_ok( $_, $source{$_} ) for sort keys %source;
 }
@@ -24,6 +25,7 @@ sub all_themes_ok {
 sub theme_ok {
     my @args = @_;
     my $tb   = __PACKAGE__->builder;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
 
     # all subtests
     my $theme = $args[0];
