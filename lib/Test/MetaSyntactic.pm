@@ -302,7 +302,7 @@ sub subtest_data {
                 push @lines, $line
                     if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
             }
-
+            return @lines;
         }
     );
 }
