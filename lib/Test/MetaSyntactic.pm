@@ -34,10 +34,10 @@ sub theme_ok {
         sub {
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
+            $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
             $tb->subtest( "$theme format",   sub { subtest_format(@args); } );
             $tb->subtest( "$theme uniq",     sub { subtest_uniq(@args); } );
             $tb->subtest( "$theme length",   sub { subtest_length(@args); } );
-            $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
             $tb->subtest( "$theme import",   sub { subtest_import(@args); } );
             $tb->subtest( "$theme noimport", sub { subtest_noimport(@args); } );
             $tb->subtest( "$theme theme",    sub { subtest_theme(@args); } );
@@ -277,31 +277,22 @@ sub subtest_length {
 # t/24data.t
 sub subtest_data {
     my ( $theme, $file ) = @_;
-    my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => 1 );
+    $file = '' if !defined $file;
+    _check_file_lines(
+        $theme, $file,
+        "__DATA__ section for $file",
+        sub {
+            my @lines;
+            my $in_data;
+            for my $line (@_) {
+                $in_data++ if $line =~ /^__DATA__$/;
+                next if !$in_data;
+                push @lines, $line
+                    if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
+            }
 
-SKIP: {
-        if ( !$file ) {
-            $tb->skip( "This test needs the source file for $theme", 1 );
-            last SKIP;
         }
-        open my $fh, $file or do {
-            $tb->skip( "Can't open $file: $!", 1 );
-            last SKIP;
-        };
-
-        my ( $fail, $in_data ) = ( 0, 0 );
-        my @lines;
-        while (<$fh>) {
-            $in_data++ if /^__DATA__$/;
-            next if !$in_data;
-            $fail++, push @lines, $.
-                if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
-        }
-        $tb->is_num( $fail, 0, "__DATA__ section for $file" );
-        $tb->diag("Failed lines: @lines") if @lines;
-        close $fh;
-    }
+    );
 }
 
 1;
