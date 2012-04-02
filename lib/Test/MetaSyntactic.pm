@@ -118,6 +118,32 @@ sub _theme_items {
     return @items;
 }
 
+sub _check_file_lines {
+    my ($theme, $file, $mesg, $cb ) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+SKIP: {
+        my ($fh, $skip);
+        if ( $file ) {
+            open $fh, $file or do { $skip="Can't open $file: $!"; };
+        }
+        else {
+            $skip = "This test needs the source file for $theme";
+        }
+        if( $skip ) {
+            $tb->skip($skip);
+            last SKIP;
+        }
+
+        my @lines = $cb->( <$fh> );
+        $tb->is_num( scalar @lines, 0, $mesg );
+        $tb->diag("Failed lines: @lines") if @lines;
+        close $fh;
+    }
+}
+
 #
 # individual subtest functions
 #
