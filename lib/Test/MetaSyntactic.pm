@@ -32,6 +32,7 @@ sub theme_ok {
     $tb->subtest(
         $theme,
         sub {
+            $tb->subtest( "$theme fixme",    sub { subtest_fixme(@args); } );
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
             $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
@@ -158,6 +159,17 @@ sub subtest_load {
     my ( $pkg, $error ) = _load( $theme, 1 );
     $tb->ok( !$error, "use Acme::MetaSyntactic::$theme;" );
     $tb->diag($error) if $error;
+}
+
+# t/02fixme.t
+sub subtest_fixme {
+    my ( $theme, $file ) = @_;
+    $file = '' if !defined $file;
+    _check_file_lines(
+        $theme, $file,
+        "No FIXME found in $file",
+        sub { grep /\bFIXME\b/, @_ }
+    );
 }
 
 # t/08theme.t
