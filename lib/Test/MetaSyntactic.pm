@@ -140,7 +140,7 @@ SKIP: {
 
         my @lines = $cb->( <$fh> );
         $tb->is_num( scalar @lines, 0, $mesg );
-        $tb->diag("Failed lines: @lines") if @lines;
+        $tb->diag( "Failed lines:\n", map "  $_\n", @lines ) if @lines;
         close $fh;
     }
 }
