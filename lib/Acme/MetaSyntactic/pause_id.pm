@@ -5,9 +5,9 @@ our @ISA = qw( Acme::MetaSyntactic::List );
 __PACKAGE__->init();
 
 our %Remote = (
-    source  => 'http://pause.perl.org/pause/query?ACTION=who_is',
+    source  => 'http://www.cpan.org/authors/00whois.xml',
     extract => sub {
-        return map { y/-/_/; $_ } $_[0] =~ m! -- (?:<[^>]+>)?([-\w\d]+)<!g;
+        return map { y/-/_/; $_ } $_[0] =~ m!<id>([-\w\d]+)</id>!g;
     }
 );
 
