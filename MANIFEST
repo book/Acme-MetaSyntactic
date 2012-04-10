@@ -116,7 +116,6 @@ README
 script/meta
 script/metafy
 t/00load.t
-t/02fixme.t
 t/05class.t
 t/07data.t
 t/10meta.t
