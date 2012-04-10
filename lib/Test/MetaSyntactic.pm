@@ -350,6 +350,10 @@ If the C<subtest_load()> test fails, no further test will be run.
 The individual tests are run as subtests. All substests but C<subtest_load()>
 assume that the module can be successfully loaded.
 
+=head2 subtest_fixme( $theme, $source )
+
+Checks that the theme source file does not contain the word "FIXME".
+
 =head2 subtest_load( $theme )
 
 Tries to load the theme module.
