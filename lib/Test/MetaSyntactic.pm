@@ -34,6 +34,7 @@ sub theme_ok {
         sub {
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
+            $tb->subtest( "$theme version",  sub { subtest_version(@args); } );
             $tb->subtest( "$theme format",   sub { subtest_format(@args); } );
             $tb->subtest( "$theme uniq",     sub { subtest_uniq(@args); } );
             $tb->subtest( "$theme length",   sub { subtest_length(@args); } );
@@ -278,6 +279,15 @@ SKIP: {
     }
 }
 
+sub subtest_version {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+    no strict 'refs';
+    my $version = "Acme::MetaSyntactic::$theme"->VERSION;
+    $tb->ok( $version, "$theme version $version" );
+}
+
 1;
 
 __END__
@@ -324,6 +334,10 @@ assume that the module can be successfully loaded.
 =head2 subtest_load( $theme )
 
 Tries to load the theme module.
+
+=head2 subtest_version( $theme )
+
+Checks that the theme has a C<$VERSION>.
 
 =head2 subtest_format( $theme )
 
