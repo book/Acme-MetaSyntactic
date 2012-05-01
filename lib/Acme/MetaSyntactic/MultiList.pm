@@ -8,8 +8,10 @@ use Carp;
 our @ISA = qw( Acme::MetaSyntactic::RemoteList );
 
 sub init {
+    my ($self, $data) = @_;
     my $class = caller(0);
-    my $data  = Acme::MetaSyntactic->load_data($class);
+
+    $data ||= Acme::MetaSyntactic->load_data($class);
     no strict 'refs';
 
     # note: variables mentioned twice to avoid a warning
