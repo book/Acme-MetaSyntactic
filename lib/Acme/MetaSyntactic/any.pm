@@ -2,6 +2,7 @@ package Acme::MetaSyntactic::any;
 use strict;
 use List::Util 'shuffle';
 use Acme::MetaSyntactic ();
+our $VERSION = '1.000';
 
 our $Theme = 'any';
 
@@ -32,6 +33,8 @@ sub theme { $Theme };
 sub has_remotelist { };
 
 1;
+
+=encoding iso-8859-1
 
 =head1 NAME
 
@@ -76,11 +79,14 @@ Always return false.
 
 Philippe Bruhat, upon request of Sébastien Aperghis-Tramoni.
 
-Introduced in version 0.12, published on March 7, 2005.
+Introduced in Acme-MetaSyntactic version 0.12, published on March 7, 2005.
 
 Updated to conform with interface changes required by
 C<Acme::MetaSyntactic::Updatable> in version 0.49, published
 on November 21, 2005.
+
+Received its own version number for Acme-MetaSyntactic version 1.000,
+published on May 7, 2012.
 
 =head1 SEE ALSO
 

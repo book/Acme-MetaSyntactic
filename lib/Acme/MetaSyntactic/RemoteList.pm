@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use Carp;
 
+our $VERSION = '1.000';
+
 # method that extracts the items from the remote content and returns them
 sub extract {
     my $class = ref $_[0] || $_[0];

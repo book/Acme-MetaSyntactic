@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use Carp;
 
+our $VERSION = '1.000';
+
 sub init {
     my ( $self, $alias ) = @_;
     my $class = caller(0);
