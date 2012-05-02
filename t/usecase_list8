@@ -1,2 +1,2 @@
 use Acme::MetaSyntactic ':all';
-print metabatman();
+print metatest_ams_list();
