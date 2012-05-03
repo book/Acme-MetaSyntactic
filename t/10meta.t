@@ -2,11 +2,15 @@ use strict;
 use Test::More;
 use Acme::MetaSyntactic;
 use t::NoLang;
+use File::Spec::Functions;
+my $dir;
+BEGIN { $dir = catdir qw( t lib ); }
+use lib $dir;
 
 plan tests => 10;
 
-SHADOK: {
-    my $meta = Acme::MetaSyntactic->new('shadok');
+LIST: {
+    my $meta = Acme::MetaSyntactic->new('test_ams_list');
     my %seen;
 
     my @names = $meta->name;
@@ -18,28 +22,28 @@ SHADOK: {
     $seen{$_}++ for @names;
     is_deeply(
         \%seen,
-        { ga => 1, bu => 1, zo => 1, meu => 1 },
+        { John => 1, Paul => 1, George => 1, Ringo => 1 },
         "Got the whole list"
     );
 }
 
 NOTEXIST: {
-    my $meta = Acme::MetaSyntactic->new('nonexistent');
+    my $meta = Acme::MetaSyntactic->new('test_ams_nonexistent');
 
     my @names = eval { $meta->name };
     like(
         $@,
-        qr/Metasyntactic list nonexistent does not exist!/,
+        qr/Metasyntactic list test_ams_nonexistent does not exist!/,
         "Non-existent theme"
     );
 }
 
 MORE: {
-    my $meta = Acme::MetaSyntactic->new('shadok');
+    my $meta = Acme::MetaSyntactic->new('test_ams_list');
     my %seen;
 
     my %test;
-    @test{ qw( ga bu zo meu ) } = (1) x 4;
+    @test{ qw( John Paul George Ringo ) } = (1) x 4;
 
     my @names;
     push @names, $meta->name( 5 );
@@ -52,11 +56,11 @@ MORE: {
 }
 
 ZERO: {
-    my $meta = Acme::MetaSyntactic->new( 'debian' );
+    my $meta = Acme::MetaSyntactic->new( 'test_ams_list' );
     my @names = sort $meta->name( 0 );
 
     no warnings;
-    my @all   = sort @Acme::MetaSyntactic::debian::List;
+    my @all   = sort @Acme::MetaSyntactic::test_ams_list::List;
 
     is_deeply( \@names, \@all, "name(0) returns the whole list" );
 
@@ -72,10 +76,10 @@ DEFAULT: {
     my %seen = map { $_ => 0 } @{$Acme::MetaSyntactic::foo::MultiList{en}};
     ok( exists $seen{$names[0]}, "From the default list" );
 
-    %seen = map { $_ => 1 } $meta->name( shadok => 4 );
+    %seen = map { $_ => 1 } $meta->name( test_ams_list => 4 );
     is_deeply(
         \%seen,
-        { ga => 1, bu => 1, zo => 1, meu => 1 },
+        { John => 1, Paul => 1, George => 1, Ringo => 1 },
         "Got the whole list"
     );
 }
