@@ -12,13 +12,15 @@ use t::NoLang;
 }
 
 # compute the first 6 installed themes
-my $meta   = Acme::MetaSyntactic->new();
-my @themes = ( grep { ! /^any$/ } sort $meta->themes() )[ 0 .. 5 ];
+my $meta  = Acme::MetaSyntactic->new();
+my $count = my @themes = grep { ! /^any$/ } sort $meta->themes();
+my $max = $count >= 6 ? 5 : $count - 1;
+@themes = @themes[ 0 .. $max ];
 
 # the test list is computed now because of cache issues
 my @tests
     = map { [ ( sort $meta->name( $themes[$_] => 0 ) )[ 0 .. $_ + 1 ] ] }
-    0 .. 5;
+    0 .. $max;
 
 plan tests => scalar @tests;
 
