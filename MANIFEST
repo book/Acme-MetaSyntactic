@@ -142,6 +142,7 @@ t/98contributors.t
 t/lib/Acme/MetaSyntactic/test_ams_alias.pm
 t/lib/Acme/MetaSyntactic/test_ams_list.pm
 t/lib/Acme/MetaSyntactic/test_ams_locale.pm
+t/lib/Acme/MetaSyntactic/test_ams_remote.pm
 t/NoLang.pm
 t/pod-coverage.t
 t/pod.t

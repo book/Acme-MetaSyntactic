@@ -1,6 +1,11 @@
 use Test::More tests => 19;
 use strict;
 
+use File::Spec::Functions;
+my $dir;
+BEGIN { $dir = catdir qw( t lib ); }
+use lib $dir;
+
 { eval "require LWP::UserAgent;"; }
 my $has_lwp = !$@;
 
@@ -11,38 +16,38 @@ is( Acme::MetaSyntactic::RemoteList::tr_nonword('a;Aö"1À +='),
     'a_A__1____', 'tr_nonword' );
 
 # theme without a remote list
-use Acme::MetaSyntactic::shadok ();
-ok( ! Acme::MetaSyntactic::shadok->has_remotelist(),
-    "No remote list for shadok" );
-is( Acme::MetaSyntactic::shadok->source(), undef, 'shadok source() empty' );
+use Acme::MetaSyntactic::test_ams_list();
+ok( ! Acme::MetaSyntactic::test_ams_list->has_remotelist(),
+    "No remote list for tets_ams_list" );
+is( Acme::MetaSyntactic::test_ams_list->source(), undef, 'test_ams_list source() empty' );
 
-my $shadok = Acme::MetaSyntactic::shadok->new();
-ok( ! $shadok->has_remotelist(), 'No remote list for shadok object' );
-is( $shadok->source(), undef, 'shadok object source() empty' );
+my $list = Acme::MetaSyntactic::test_ams_list->new();
+ok( ! $list->has_remotelist(), 'No remote list for test_ams_list object' );
+is( $list->source(), undef, 'test_ams_list object source() empty' );
 
 # try to get the list anyway
 SKIP: {
     skip "LWP::UserAgent required to test remote_list()", 1 if !$has_lwp;
-    is( $shadok->remote_list(), undef, 'No remote list for shadok object' );
+    is( $list->remote_list(), undef, 'No remote list for test_ams_list object' );
 }
 
 # default version of extract
-is( $shadok->extract( 'zlonk aieee' ), 'zlonk aieee', "Default extract()" );
+is( $list->extract( 'zlonk aieee' ), 'zlonk aieee', "Default extract()" );
 
 
 # theme with a remote list
-use Acme::MetaSyntactic::dilbert ();
-ok( Acme::MetaSyntactic::dilbert->has_remotelist(),
-    'dilbert has a remote list' );
-is( Acme::MetaSyntactic::dilbert->source(),
-    'http://www.triviaasylum.com/dilbert/diltriv.html',
-    'dilbert source()'
+use Acme::MetaSyntactic::test_ams_remote();
+ok( Acme::MetaSyntactic::test_ams_remote->has_remotelist(),
+    'test_ams_remote has a remote list' );
+is( Acme::MetaSyntactic::test_ams_remote->source(),
+    'http://www.perdu.com/',
+    'test_ams_remote source()'
 );
 
-my $dilbert = Acme::MetaSyntactic::dilbert->new();
-ok( $dilbert->has_remotelist(), 'dilbert object has a remote list' );
-is( $dilbert->source(), 'http://www.triviaasylum.com/dilbert/diltriv.html',
-    'dilbert source()' );
+my $remote = Acme::MetaSyntactic::test_ams_remote->new();
+ok( $remote->has_remotelist(), 'test_ams_remote object has a remote list' );
+is( $remote->source(), 'http://www.perdu.com/',
+    'test_ams_remote source()' );
 
 # these tests must be run after the test module has been loaded
 END {
