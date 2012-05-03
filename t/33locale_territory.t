@@ -21,13 +21,13 @@ plan tests => scalar keys %tests;
 END {
     for my $t ( sort keys %tests ) {
         $ENV{LANG} = $t;
-        my $meta = Acme::MetaSyntactic::digits->new();
+        my $meta = Acme::MetaSyntactic::test_ams_digits->new();
         is_deeply( [ sort $meta->name(0) ],
             $tests{$t}, "$t => @{[$meta->lang]}" );
     }
 }
 
-package Acme::MetaSyntactic::digits;
+package Acme::MetaSyntactic::test_ams_digits;
 use Acme::MetaSyntactic::Locale;
 our @ISA = ('Acme::MetaSyntactic::Locale');
 __PACKAGE__->init();

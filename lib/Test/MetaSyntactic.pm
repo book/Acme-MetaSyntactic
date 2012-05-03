@@ -33,13 +33,14 @@ sub theme_ok {
     $tb->subtest(
         $theme,
         sub {
+            $tb->subtest( "$theme fixme",    sub { subtest_fixme(@args); } );
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
             $tb->subtest( "$theme version",  sub { subtest_version(@args); } );
+            $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
             $tb->subtest( "$theme format",   sub { subtest_format(@args); } );
             $tb->subtest( "$theme uniq",     sub { subtest_uniq(@args); } );
             $tb->subtest( "$theme length",   sub { subtest_length(@args); } );
-            $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
             $tb->subtest( "$theme import",   sub { subtest_import(@args); } );
             $tb->subtest( "$theme noimport", sub { subtest_noimport(@args); } );
             $tb->subtest( "$theme theme",    sub { subtest_theme(@args); } );
@@ -120,6 +121,32 @@ sub _theme_items {
     return @items;
 }
 
+sub _check_file_lines {
+    my ($theme, $file, $mesg, $cb ) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+SKIP: {
+        my ($fh, $skip);
+        if ( $file ) {
+            open $fh, $file or do { $skip="Can't open $file: $!"; };
+        }
+        else {
+            $skip = "This test needs the source file for $theme";
+        }
+        if( $skip ) {
+            $tb->skip($skip);
+            last SKIP;
+        }
+
+        my @lines = $cb->( <$fh> );
+        $tb->is_num( scalar @lines, 0, $mesg );
+        $tb->diag( "Failed lines:\n", map "  $_\n", @lines ) if @lines;
+        close $fh;
+    }
+}
+
 #
 # individual subtest functions
 #
@@ -134,6 +161,17 @@ sub subtest_load {
     my ( $pkg, $error ) = _load( $theme, 1 );
     $tb->ok( !$error, "use Acme::MetaSyntactic::$theme;" );
     $tb->diag($error) if $error;
+}
+
+# t/02fixme.t
+sub subtest_fixme {
+    my ( $theme, $file ) = @_;
+    $file = '' if !defined $file;
+    _check_file_lines(
+        $theme, $file,
+        "No FIXME found in $file",
+        sub { grep /\bFIXME\b/, @_ }
+    );
 }
 
 # t/08theme.t
@@ -253,31 +291,22 @@ sub subtest_length {
 # t/24data.t
 sub subtest_data {
     my ( $theme, $file ) = @_;
-    my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => 1 );
-
-SKIP: {
-        if ( !$file ) {
-            $tb->skip( "This test needs the source file for $theme", 1 );
-            last SKIP;
+    $file = '' if !defined $file;
+    _check_file_lines(
+        $theme, $file,
+        "__DATA__ section for $file",
+        sub {
+            my @lines;
+            my $in_data;
+            for my $line (@_) {
+                $in_data++ if $line =~ /^__DATA__$/;
+                next if !$in_data;
+                push @lines, $line
+                    if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
+            }
+            return @lines;
         }
-        open my $fh, $file or do {
-            $tb->skip( "Can't open $file: $!", 1 );
-            last SKIP;
-        };
-
-        my ( $fail, $in_data ) = ( 0, 0 );
-        my @lines;
-        while (<$fh>) {
-            $in_data++ if /^__DATA__$/;
-            next if !$in_data;
-            $fail++, push @lines, $.
-                if /^#/ && !/^# ?(?:names(?: +[-\w]+)*|default)\s*$/;
-        }
-        $tb->is_num( $fail, 0, "__DATA__ section for $file" );
-        $tb->diag("Failed lines: @lines") if @lines;
-        close $fh;
-    }
+    );
 }
 
 sub subtest_version {
@@ -331,6 +360,10 @@ If the C<subtest_load()> test fails, no further test will be run.
 
 The individual tests are run as subtests. All substests but C<subtest_load()>
 assume that the module can be successfully loaded.
+
+=head2 subtest_fixme( $theme, $source )
+
+Checks that the theme source file does not contain the word "FIXME".
 
 =head2 subtest_load( $theme )
 

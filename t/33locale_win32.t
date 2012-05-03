@@ -1,6 +1,12 @@
 use Test::More;
-use Acme::MetaSyntactic::haddock;
 use t::NoLang;
+use File::Spec::Functions;
+
+my $dir;
+BEGIN { $dir = catdir qw( t lib ); }
+
+use lib $dir;
+use Acme::MetaSyntactic::test_ams_locale;
 
 plan tests => 1;
 
@@ -15,6 +21,6 @@ unshift @INC, sub {
 };
 
 $^O   = 'MSWin32';
-$meta = Acme::MetaSyntactic::haddock->new;
+$meta = Acme::MetaSyntactic::test_ams_locale->new;
 is( $meta->lang, 'fr', "Correct default without Win32::Locale" );
 

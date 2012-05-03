@@ -1,8 +1,13 @@
 Revision history for Acme-MetaSyntactic
 
+0.99_04 Wed Apr 11 01:34:50 CEST 2012
+        [TESTS]
+        - improved version of Test::MetaSyntactic, with more subtests
+
 0.99_03 Sat Mar 31 19:41:22 CEST 2012
         [TESTS]
         - moved all tests common to all themes in the Test::MetaSyntactic module
+        - remove possible duplicates in unicode theme
 
 0.99_02 Fri Nov 11 00:06:24 CET 2011
         [TESTS]
