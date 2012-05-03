@@ -4,8 +4,8 @@
 use strict;
 use Test::More;
 
-
 package Acme::MetaSyntactic::yeye;
+no warnings 'once';
 
 use Acme::MetaSyntactic::MultiList;
 our @ISA = qw( Acme::MetaSyntactic::MultiList );
