@@ -1,11 +1,15 @@
 use Test::More;
 use strict;
-use Acme::MetaSyntactic 'summerwine';
+use File::Spec::Functions;
+my $dir;
+BEGIN { $dir = catdir qw( t lib ); }
+use lib $dir;
+use Acme::MetaSyntactic 'test_ams_list';
 
 plan tests => 4;
 
 my @names = metaname();
-my %seen = map { $_ => 1 } @Acme::MetaSyntactic::summerwine::List;
+my %seen = map { $_ => 1 } @Acme::MetaSyntactic::test_ams_list::List;
 ok( exists $seen{$names[0]}, "metaname" );
 
 my @bots = qw( purl url sarko bender );
