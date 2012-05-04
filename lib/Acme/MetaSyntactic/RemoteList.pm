@@ -62,9 +62,12 @@ sub remote_list {
         return;
     }
 
+    # figure out the default category (for an instance)
+    my $category = ref $_[0] ? $_[1] || $_[0]->{category} : $_[1];
+
     # fetch the content
     my @items;
-    my @srcs = $class->sources($_[1]);
+    my @srcs = $class->sources($category);
     my $ua   = LWP::UserAgent->new( env_proxy => 1 );
     foreach my $src (@srcs) {
         my $res  = $ua->request( HTTP::Request->new( GET => $src ) );
