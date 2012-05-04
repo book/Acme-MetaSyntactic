@@ -137,7 +137,6 @@ t/35remote.t
 t/35remote2.t
 t/40inc.t
 t/50usecase.t
-t/90up2date.t
 t/98contributors.t
 t/lib/Acme/MetaSyntactic/test_ams_alias.pm
 t/lib/Acme/MetaSyntactic/test_ams_list.pm

@@ -42,6 +42,7 @@ sub theme_ok {
             $tb->subtest( "$theme import",   sub { subtest_import(@args); } );
             $tb->subtest( "$theme noimport", sub { subtest_noimport(@args); } );
             $tb->subtest( "$theme theme",    sub { subtest_theme(@args); } );
+            $tb->subtest( "$theme remote",   sub { subtest_remote(@args); } );
             $tb->done_testing;
         }
     );
@@ -307,6 +308,54 @@ sub subtest_data {
     );
 }
 
+# t/90up2date.t
+my ($has_lwp_simple, $has_test_diff, $has_network);
+BEGIN {
+    $has_lwp_simple = eval { require LWP::Simple;       1; };
+    #$has_test_diff  = eval { require Test::Differences; 1; };
+    $has_network    = $has_lwp_simple
+        && LWP::Simple::get('http://www.google.com/intl/en/');
+}
+
+sub subtest_remote {
+    my ($theme) = @_;
+    my $class = "Acme::MetaSyntactic::$theme";
+
+    # find out if we're in one of the many cases for skipping
+    my $why
+        = !$ENV{AUTHOR_TESTING}   ? 'Remote list test is AUTHOR_TESTING'
+        : $ENV{AUTOMATED_TESTING} ? "Remote list test isn't AUTOMATED_TESTING"
+        : !$class->has_remotelist ? "Theme $theme does not have a remote list"
+        : !$has_lwp_simple        ? 'Remote list test needs LWP::Simple'
+        : !$has_network           ? 'Remote list test needs network'
+        :                           '';
+
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+
+SKIP: {
+        $tb->skip($why) and last SKIP if $why;
+
+        no warnings 'utf8';
+        my $current = [ sort $class->name(0) ];
+        my $remote  = [ sort $class->remote_list() ];
+
+        $tb->skip("Fetching remote items for $theme probably failed")
+            and last SKIP
+            if !@$remote;
+
+        # compare both lists
+        my %seen;
+        $seen{$_}++ for @$remote;
+        $seen{$_}-- for @$current;
+        $tb->ok( !grep( $_, values %seen ),
+            "Local and remote lists are identical for $theme" )
+            or $tb->diag("Differences between local and remote list:");
+        $tb->diag( $seen{$_} > 0 ? "+ $_" : "- $_" )
+            for grep $seen{$_}, sort keys %seen;
+    }
+}
+
 1;
 
 __END__
@@ -389,6 +438,14 @@ the C<meta$theme> function.
 =head2 subtest_theme( $theme )
 
 Checks that the C<theme()> function returns the theme name.
+
+=head2 subtest_remote( $theme )
+
+For themes with a remote list, checks that the remote list (if any)
+is identical to the current list of items in the theme.
+
+This subtest will only be run if C<AUTHOR_TESTING> is true and
+C<AUTOMATED_TESTING> is false. Requires L<LWP::Simple>.
 
 =head1 AUTHOR
 
