@@ -38,8 +38,10 @@ sub sources {
         return @$src;
     }
     elsif ( ref $src eq 'HASH' ) {
-        return
-            map { ref $_ ? @$_ : $_ } $_[1] ? $src->{ $_[1] } : values %$src;
+        return defined $_[1] && $_[1] ne ':all'
+            ? ref $_[1] ? @$src{ @{ $_[1] } }
+                        : $src->{ $_[1] }
+            : values %$src;
     }
     return $src;
 }
@@ -230,6 +232,8 @@ C<Acme::MetaSyntactic::MultiList>.
 Return the list of source URL. The C<$category> parameter can be used
 to select the sources for a sub-category of the theme (in the case of
 C<Acme::MetaSyntactic::MultiList>).
+
+C<$category> can be an array reference containing a list of categories.
 
 =item extract( $content )
 
