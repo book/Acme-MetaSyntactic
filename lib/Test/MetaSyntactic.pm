@@ -330,29 +330,39 @@ sub subtest_remote {
         : !$has_network           ? 'Remote list test needs network'
         :                           '';
 
-    my $tb = __PACKAGE__->builder;
-    $tb->plan( tests => 1 );
+    my $tb    = __PACKAGE__->builder;
+    my @metas = _theme_sublists($theme);
+    $tb->plan( tests => scalar @metas );
 
 SKIP: {
-        $tb->skip($why) and last SKIP if $why;
+        if ($why) {
+            $tb->skip($why) for 1 .. @metas;
+            last SKIP;
+        }
 
-        no warnings 'utf8';
-        my $current = [ sort $class->name(0) ];
-        my $remote  = [ sort $class->remote_list() ];
 
-        $tb->skip("Fetching remote items for $theme probably failed")
-            and last SKIP
-            if !@$remote;
+        for my $test (@metas) {
+            my ( $ams, $theme ) = @$test;
 
-        # compare both lists
-        my %seen;
-        $seen{$_}++ for @$remote;
-        $seen{$_}-- for @$current;
-        $tb->ok( !grep( $_, values %seen ),
-            "Local and remote lists are identical for $theme" )
-            or $tb->diag("Differences between local and remote list:");
-        $tb->diag( $seen{$_} > 0 ? "+ $_" : "- $_" )
-            for grep $seen{$_}, sort keys %seen;
+            no warnings 'utf8';
+            my $current = [ sort $ams->name(0) ];
+            my $remote  = [ sort $ams->remote_list() ];
+
+            if ( !@$remote ) {
+                $tb->skip("Fetching remote items for $theme probably failed");
+                next;
+            }
+
+            # compare both lists
+            my %seen;
+            $seen{$_}++ for @$remote;
+            $seen{$_}-- for @$current;
+            $tb->ok( !grep( $_, values %seen ),
+                "Local and remote lists are identical for $theme" )
+                or $tb->diag("Differences between local and remote list:");
+            $tb->diag( $seen{$_} > 0 ? "+ $_" : "- $_" )
+                for grep $seen{$_}, sort keys %seen;
+        }
     }
 }
 
