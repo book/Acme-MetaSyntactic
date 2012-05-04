@@ -1,5 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
+0.99_05 Fri May  4 02:49:52 CEST 2012
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::MultiList init() now accepts an argument.
+          (closed RT #40116)
+        [TESTS]
+        - made sure no tests depend on included themes
+
 0.99_04 Wed Apr 11 01:34:50 CEST 2012
         [TESTS]
         - improved version of Test::MetaSyntactic, with more subtests
