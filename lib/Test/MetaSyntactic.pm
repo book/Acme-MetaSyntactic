@@ -91,7 +91,7 @@ sub _theme_sublists {
         }
     }
     elsif( $class->isa('Acme::MetaSyntactic::MultiList') ) {
-        for my $cat ( "Acme::MetaSyntactic::$theme"->categories(), ':all' ) {
+        for my $cat ( "Acme::MetaSyntactic::$theme"->categories() ) {
             push @metas,
                 [ "Acme::MetaSyntactic::$theme"->new( category => $cat ),
                   "$theme, $cat category" ];
