@@ -38,7 +38,8 @@ sub sources {
         return @$src;
     }
     elsif ( ref $src eq 'HASH' ) {
-        return defined $_[1] && $_[1] ne ':all'
+        return grep $_,
+              defined $_[1] && $_[1] ne ':all'
             ? ref $_[1] ? @$src{ @{ $_[1] } }
                         : $src->{ $_[1] }
             : values %$src;
