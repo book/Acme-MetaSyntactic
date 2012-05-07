@@ -333,7 +333,7 @@ sub subtest_version {
     my $tb = __PACKAGE__->builder;
     $tb->plan( tests => 1 );
     no strict 'refs';
-    my $version = "Acme::MetaSyntactic::$theme"->VERSION;
+    my $version = "Acme::MetaSyntactic::$theme"->VERSION || '';
     $tb->ok( $version, "$theme version $version" );
 }
 
