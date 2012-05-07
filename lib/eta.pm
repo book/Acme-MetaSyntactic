@@ -2,10 +2,12 @@ package eta;
 use strict;
 use Acme::MetaSyntactic;
 our @ISA = qw(Acme::MetaSyntactic);
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 "holy cow";
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
