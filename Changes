@@ -1,5 +1,15 @@
 Revision history for Acme-MetaSyntactic
 
+1.000  Mon May  7 2012
+        [NEW THEME 2012/05/07]
+        - contributors
+        [ENHANCEMENTS]
+        - eta.pm provided as a shortcut for one-liners (perl -Meta)
+          (closed RT #28849)
+        [THEME UPDATES]
+        - all themes but foo (the default) and any moved to another
+          distribution: Acme-MetaSyntactic-Themes
+
 0.99_05 Fri May  4 02:49:52 CEST 2012
         [ENHANCEMENTS]
         - Acme::MetaSyntactic::MultiList init() now accepts an argument.
