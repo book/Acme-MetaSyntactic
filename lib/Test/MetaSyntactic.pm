@@ -128,6 +128,9 @@ sub _check_file_lines {
     $tb->plan( tests => 1 );
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
+    # try to find a source file if none given
+    $file ||= { Acme::MetaSyntactic->_find_themes(_starting_points) }->{$theme};
+
 SKIP: {
         my ($fh, $skip);
         if ( $file ) {
