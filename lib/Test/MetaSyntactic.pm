@@ -34,6 +34,7 @@ sub theme_ok {
         $theme,
         sub {
             $tb->subtest( "$theme fixme",    sub { subtest_fixme(@args); } );
+            $tb->subtest( "$theme encoding", sub { subtest_encoding(@args); } );
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
             $tb->subtest( "$theme version",  sub { subtest_version(@args); } );
@@ -175,6 +176,20 @@ sub subtest_fixme {
         $theme, $file,
         "No FIXME found in %s",
         sub { grep /\bFIXME\b/, @_ }
+    );
+}
+
+sub subtest_encoding {
+    my ( $theme, $file ) = @_;
+    $file = '' if !defined $file;
+    _check_file_lines(
+        $theme, $file,
+        "%s should have an =encoding line if it contains non-us-ascii characters",
+        sub {
+            my @non_ascii = grep /[^\x00-\x7f]/,   @_;
+            my @encoding  = grep /^=encoding \S+/, @_;
+            return @encoding ? () : @non_ascii;
+        }
     );
 }
 
@@ -426,6 +441,11 @@ assume that the module can be successfully loaded.
 =head2 subtest_fixme( $theme, $source )
 
 Checks that the theme source file does not contain the word "FIXME".
+
+=head2 subtest_encoding( $theme, $source )
+
+Checks that the theme source files contains an C<=encoding> line if
+it contains some non us-ascii characters.
 
 =head2 subtest_load( $theme )
 
