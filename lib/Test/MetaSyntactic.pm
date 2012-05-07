@@ -131,7 +131,7 @@ sub _check_file_lines {
 SKIP: {
         my ($fh, $skip);
         if ( $file ) {
-            open $fh, $file or do { $skip="Can't open $file: $!"; };
+            open $fh, $file or do { $skip = "Can't open $file: $!"; };
         }
         else {
             $skip = "This test needs the source file for $theme";
@@ -142,8 +142,8 @@ SKIP: {
         }
 
         my @lines = $cb->( <$fh> );
-        $tb->is_num( scalar @lines, 0, $mesg );
-        $tb->diag( "Failed lines:\n", map "  $_\n", @lines ) if @lines;
+        $tb->is_num( scalar @lines, 0, sprintf $mesg, $file );
+        map $tb->diag( $_ ), "Failed lines:\n", map "  $_", @lines if @lines;
         close $fh;
     }
 }
@@ -170,7 +170,7 @@ sub subtest_fixme {
     $file = '' if !defined $file;
     _check_file_lines(
         $theme, $file,
-        "No FIXME found in $file",
+        "No FIXME found in %s",
         sub { grep /\bFIXME\b/, @_ }
     );
 }
@@ -295,7 +295,7 @@ sub subtest_data {
     $file = '' if !defined $file;
     _check_file_lines(
         $theme, $file,
-        "__DATA__ section for $file",
+        "__DATA__ section for %s",
         sub {
             my @lines;
             my $in_data;
