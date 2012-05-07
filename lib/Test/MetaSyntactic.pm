@@ -6,6 +6,7 @@ use Acme::MetaSyntactic ();
 use base 'Test::Builder::Module';
 
 our @EXPORT = qw( all_themes_ok theme_ok );
+our $VERSION = '1.000';
 
 #
 # exported functions
@@ -35,6 +36,7 @@ sub theme_ok {
             $tb->subtest( "$theme fixme",    sub { subtest_fixme(@args); } );
             $tb->subtest( "$theme load",     sub { subtest_load(@args); } )
                 or return;
+            $tb->subtest( "$theme version",  sub { subtest_version(@args); } );
             $tb->subtest( "$theme data",     sub { subtest_data(@args); } );
             $tb->subtest( "$theme format",   sub { subtest_format(@args); } );
             $tb->subtest( "$theme uniq",     sub { subtest_uniq(@args); } );
@@ -308,6 +310,15 @@ sub subtest_data {
     );
 }
 
+sub subtest_version {
+    my ($theme) = @_;
+    my $tb = __PACKAGE__->builder;
+    $tb->plan( tests => 1 );
+    no strict 'refs';
+    my $version = "Acme::MetaSyntactic::$theme"->VERSION;
+    $tb->ok( $version, "$theme version $version" );
+}
+
 # t/90up2date.t
 my ($has_lwp_simple, $has_test_diff, $has_network);
 BEGIN {
@@ -416,6 +427,10 @@ Checks that the theme source file does not contain the word "FIXME".
 =head2 subtest_load( $theme )
 
 Tries to load the theme module.
+
+=head2 subtest_version( $theme )
+
+Checks that the theme has a C<$VERSION>.
 
 =head2 subtest_format( $theme )
 

@@ -7,6 +7,7 @@ use List::Util qw( shuffle );
 use Carp;
 
 our @ISA = qw( Acme::MetaSyntactic::MultiList );
+our $VERSION = '1.000';
 
 sub init {
     # alias the older package variable %Locale to %MultiList

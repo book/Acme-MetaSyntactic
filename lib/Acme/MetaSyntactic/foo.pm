@@ -2,6 +2,7 @@ package Acme::MetaSyntactic::foo;
 use strict;
 use Acme::MetaSyntactic::Locale;
 our @ISA = qw( Acme::MetaSyntactic::Locale );
+our $VERSION = '1.000';
 __PACKAGE__->init();
 1;
 
@@ -23,11 +24,14 @@ Jérôme Fenal and Sébastien Aperghis-Tramoni contributed to the French theme.
 
 Dutch theme contributed by Abigail.
 
-Introduced in version 0.01, published on January 14, 2005.
+Introduced in Acme-MetaSyntactic version 0.01, published on January 14, 2005.
 
 Merged in the French C<toto> theme (which was therefore removed from
 C<Acme::MetaSyntactic>), and added the Dutch theme in version 0.85,
 published on July 31, 2006.
+
+Received its own version number for Acme-MetaSyntactic version 1.000,
+published on May 7, 2012.
 
 =head2 References
 
