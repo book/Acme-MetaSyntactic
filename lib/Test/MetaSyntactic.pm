@@ -341,7 +341,6 @@ sub subtest_version {
 my ($has_lwp_simple, $has_test_diff, $has_network);
 BEGIN {
     $has_lwp_simple = eval { require LWP::Simple;       1; };
-    #$has_test_diff  = eval { require Test::Differences; 1; };
     $has_network    = $has_lwp_simple
         && LWP::Simple::get('http://www.google.com/intl/en/');
 }
