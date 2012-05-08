@@ -500,7 +500,7 @@ Philippe Bruhat (BooK), C<< <book@cpan.org> >>
 
 =head1 COPYRIGHT
 
- Copyright 2012 Philippe Bruhat (BooK), All Rights Reserved.
+Copyright 2012 Philippe Bruhat (BooK), All Rights Reserved.
 
 =head1 LICENSE
 
