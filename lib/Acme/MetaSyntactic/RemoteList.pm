@@ -13,7 +13,7 @@ sub extract {
 
     # provide a very basic default
     my $meth = ref $func eq 'CODE'
-        ? sub { my %seen; return grep { !$seen{$_}++ } $func->( $_[1] ); }
+        ? sub { my %seen; return grep { !$seen{$_}++ } $func->( $_[1], $_[2] ); }
         : sub { return $_[1] };    # very basic default
 
     # put the method in the subclass symbol table (at runtime)
@@ -70,6 +70,15 @@ sub remote_list {
     # figure out the default category (for an instance)
     my $category = ref $_[0] ? $_[1] || $_[0]->{category} : $_[1];
 
+    # reverse mapping url => category
+    # NOTE: if two categories have the same URL, we have a problem
+    my $url2category;
+    {
+        no strict 'refs';
+        $url2category = { reverse %{ ${"$class\::Remote"}{source} } }
+            if ref ${"$class\::Remote"}{source} eq 'HASH';
+    }
+
     # fetch the content
     my @items;
     my @srcs = $class->sources($category);
@@ -84,7 +93,8 @@ sub remote_list {
         # extract, cleanup and return the data
         # if decoding the content fails, we just deal with the raw content
         push @items =>
-            $class->extract( $res->decoded_content() || $res->content() );
+            $class->extract( $res->decoded_content() || $res->content(),
+               $url2category ? $url2category->{$src} : () );
 
     }
 
