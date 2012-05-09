@@ -125,6 +125,8 @@ our $VERSION = '1.000';
 
 =item Simon Myers
 
+=item Olivier Mengué
+
 =back
 
 =cut
