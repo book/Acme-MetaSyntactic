@@ -15,12 +15,26 @@ Here is Acme::MetaSyntactic, designed to fulfill your metasyntactic
 needs. No more will you scratch your head in search of a good variable
 name!
 
-UPDATE
+UPDATES
 
-As from January 17, 2005, the module is updated every week with a new
-list. If you think a important list is missing from the module, please
-send it to me. If you think something's missing from a list, please
-send me a patch.
+From January 2005 to November 2006, I have published a CPAN distribution
+a week, including new themes for Acme::MetaSyntactic (almost) every week.
+
+With the version 1.000 of Acme::MetaSyntactic (published on May 7, 2012),
+I have split the core modules (the ones that provide the list behaviour)
+from the actual themes, making the distribution containing the very
+stable Acme::MetaSyntactic modules driving its behaviour a lot thinner.
+
+If you think a important list is missing from the module, you should
+be able to make a distribution for it yourself. To ensure correctness,
+include the following test script in your t/ directory:
+
+    use Test::MetaSyntactic;
+    all_themes_ok();
+
+If you think something's missing from a list distributed with
+Acme-MetaSyntatic-Themes, please send me a patch against that
+distribution.
 
 INSTALL
 
