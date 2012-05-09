@@ -36,7 +36,7 @@ my $module = "Acme::MetaSyntactic::$theme";
 
 # load the remote theme if needed
 if ( $conf{remote} || $conf{check} || $conf{sources}) {
-    eval "require $module;";
+    eval "require $module; 1;" or die $@;
     die "Theme '$theme' is not updatable!\n"
         unless $module->has_remotelist();
 }
