@@ -70,15 +70,6 @@ sub remote_list {
     # figure out the default category (for an instance)
     my $category = ref $_[0] ? $_[1] || $_[0]->{category} : $_[1];
 
-    # reverse mapping url => category
-    # NOTE: if two categories have the same URL, we have a problem
-    my $url2category;
-    {
-        no strict 'refs';
-        $url2category = { reverse %{ ${"$class\::Remote"}{source} } }
-            if ref ${"$class\::Remote"}{source} eq 'HASH';
-    }
-
     # fetch the content
     my @items;
     my @srcs = $class->sources($category);
@@ -94,7 +85,7 @@ sub remote_list {
         # if decoding the content fails, we just deal with the raw content
         push @items =>
             $class->extract( $res->decoded_content() || $res->content(),
-               $url2category ? $url2category->{$src} : () );
+               $category || () );
 
     }
 
