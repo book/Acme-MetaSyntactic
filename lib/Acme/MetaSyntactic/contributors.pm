@@ -22,7 +22,7 @@ package Acme::MetaSyntactic::contributors;
 use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 {
     my %seen;

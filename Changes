@@ -1,5 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+1.001  Mon May 14 2012
+        [ENHANCEMENTS]
+        - new subtest in Test::MetaSyntactic: subtest_encoding
+        - extract() for MultiList lists that have remote lists
+          can now behave differently for each category (the category
+          is passed as a parameter)
+        [THEME UPDATES]
+        - new contributor added to contributors theme
+
 1.000  Mon May  7 2012
         [NEW THEME 2012/05/07]
         - contributors
