@@ -111,14 +111,8 @@ sub tr_accent {
 }
 
 my %utf2asc = (
-    "\xc3\x89" => 'E',
-    "\xc3\xa0" => 'a',
-    "\xc3\xa1" => 'a',
-    "\xc3\xa9" => 'e',
-    "\xc3\xaf" => 'i',
-    "\xc3\xad" => 'i',
-    "\xc3\xb6" => 'o',
-    "\xc3\xb8" => 'o',
+    "æ"        => 'ae',
+    "Æ"        => 'AE',
     "\xc5\xa0" => 'S',
     "\x{0160}" => 'S',
     # for pokemons
