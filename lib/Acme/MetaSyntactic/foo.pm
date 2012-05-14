@@ -6,6 +6,8 @@ our $VERSION = '1.000';
 __PACKAGE__->init();
 1;
 
+=encoding iso-8859-1
+
 =head1 NAME
 
 Acme::MetaSyntactic::foo - The foo theme
