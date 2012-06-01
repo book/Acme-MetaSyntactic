@@ -171,6 +171,8 @@ sub has_theme { $_[1] ? exists $META{$_[1]} : 0 }
 
 __END__
 
+=encoding iso-8859-1
+
 =head1 NAME
 
 Acme::MetaSyntactic - Themed metasyntactic variables names

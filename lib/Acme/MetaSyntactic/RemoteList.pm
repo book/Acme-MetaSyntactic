@@ -137,6 +137,8 @@ sub tr_utf8_basic {
 
 __END__
 
+=encoding iso-8859-1
+
 =head1 NAME
 
 Acme::MetaSyntactic::RemoteList - Retrieval of a remote source for a theme
