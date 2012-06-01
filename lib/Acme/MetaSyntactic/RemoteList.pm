@@ -1,3 +1,7 @@
+=encoding iso-8859-1
+
+=cut
+
 package Acme::MetaSyntactic::RemoteList;
 use strict;
 use warnings;
@@ -136,8 +140,6 @@ sub tr_utf8_basic {
 1;
 
 __END__
-
-=encoding iso-8859-1
 
 =head1 NAME
 
