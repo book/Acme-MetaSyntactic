@@ -19,7 +19,8 @@ sub init {
     no strict 'refs';
     no warnings;
     ${"$class\::Theme"} = ( split /::/, $class )[-1];
-    @{"$class\::List"} = split /\s+/, $data->{names};
+    @{"$class\::List"}  = do { my %seen;
+         grep !$seen{$_}++, split /\s+/, $data->{names} };
     *{"$class\::import"} = sub {
         my $callpkg = caller(0);
         my $theme   = ${"$class\::Theme"};
