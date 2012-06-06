@@ -289,10 +289,11 @@ module on C<#perlfr>. Welcome in F<CONTRIBUTORS>, Michael! C<:-)>
 L<Acme::MetaSyntactic>, L<Acme::MetaSyntactic::List>,
 L<Acme::MetaSyntactic::Locale>.
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT
 
-Copyright 2005-2006 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2012 Philippe 'BooK' Bruhat, All Rights Reserved.
 
+=head1 LICENSE
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 

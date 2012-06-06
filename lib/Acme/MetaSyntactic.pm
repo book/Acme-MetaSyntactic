@@ -509,9 +509,11 @@ I probably won't be able to include them all before version 1.00.
 
 =back
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT
 
 Copyright 2005-2012 Philippe 'BooK' Bruhat, All Rights Reserved.
+
+=head1 LICENSE
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
