@@ -6,7 +6,7 @@ use Acme::MetaSyntactic ();
 use base 'Test::Builder::Module';
 
 our @EXPORT = qw( all_themes_ok theme_ok );
-our $VERSION = '1.001';
+our $VERSION = '1.002';
 
 #
 # exported functions

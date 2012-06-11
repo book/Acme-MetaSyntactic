@@ -6,7 +6,7 @@ use List::Util qw( shuffle );
 use Carp;
 
 our @ISA = qw( Acme::MetaSyntactic::RemoteList );
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 sub init {
     my ($self, $data) = @_;

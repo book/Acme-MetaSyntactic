@@ -1,5 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
+1.003 Tue Jun 12 2012
+        [ENHANCEMENTS]
+        - Acme::MetaSyntactic::List now automatically removes duplicate
+          items from the initialisation data,
+        - thus making obsolete the subtest_uniq test in Test::MetaSyntactic
+        - give Test::MetaSyntactic a shorter timeout to check for the network
+
 1.002 Mon May 21 2012
         [TESTS]
         - ensure theme names used in tests are unlikely to conflict
