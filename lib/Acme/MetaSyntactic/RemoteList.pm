@@ -195,15 +195,79 @@ The keys are:
 
 =item C<source>
 
-The URL where the data is available.
-This can also be an array reference containing several URLs, whose
-content will be passed to the C<extract> subroutine.
+The URL where the data is available. The content will be passed to the
+C<extract> subroutine.
+
+Because of the various way the data can be made available on the web
+and can be used in L<Acme::MetaSyntactic>, this scheme has evolved to
+support several cases:
+
+Single source URL:
+
+    source => $url
+
+Multiple source URL:
+
+    source => [ $url1, $url2, ... ]
+
+For themes with categories, it's possible to attach a URL for each
+category:
+
+    source => {
+        category1 => $url1,
+        category2 => $url2,
+        ...
+    }
+
+In the case where the C<source> is an array or a hash reference, an
+extra case is supported, in case the source data can only be obtained
+via a C<POST> request. In that case, the source should be provided as
+either:
+
+    source => [
+        [ $url1 => $data1 ],
+        [ $url2 => $data2 ],
+        ...
+    ]
+
+or
+
+    source => {
+        category1 => [ $url1 => $data1 ],
+        category2 => [ $url2 => $data2 ],
+        ...
+    }
+
+It is possible to mix C<POST> and C<GET> URL:
+
+    source => [
+        $url1,                  # GET
+        [ $url2 => $data2 ],    # POST
+        ...
+    ]
+
+or
+
+    source => {
+        category1 => $url1,                  # GET
+        category2 => [ $url2 => $data2 ],    # POST
+        ...
+    }
+
+This means that even if there is only one source and a C<POST> request
+must be used, then it must be provided as a list of a single item:
+
+    source => [ [ $url => $data ] ]
 
 =item C<extract>
 
 A reference to a subroutine that extracts a list of items from a string.
 The string is meant to be the content available at the URL stored in
 the C<source> key.
+
+The coderef may receive an optional parameter corresponding to the name of
+the category (useful if the coderef must behave differently depending on
+the category).
 
 =back
 
