@@ -79,7 +79,16 @@ sub remote_list {
     my @srcs = $class->sources($category);
     my $ua   = LWP::UserAgent->new( env_proxy => 1 );
     foreach my $src (@srcs) {
-        my $res  = $ua->request( HTTP::Request->new( GET => $src ) );
+        my $request = HTTP::Request->new(
+            ref $src
+            ? ( POST => $src->[0],
+                [ content_type => 'application/x-www-form-urlencoded' ],
+                $src->[1]
+                )
+            : ( GET => $src )
+        );
+
+        my $res = $ua->request( $request );
         if ( ! $res->is_success() ) {
             carp "Failed to get content at $src (" . $res->status_line();
             return;
