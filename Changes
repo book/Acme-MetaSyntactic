@@ -6,6 +6,7 @@ Revision history for Acme-MetaSyntactic
           items from the initialisation data,
         - thus making obsolete the subtest_uniq test in Test::MetaSyntactic
         - give Test::MetaSyntactic a shorter timeout to check for the network
+        - fix some encoding issues (fixes RT #77657)
 
 1.002 Mon May 21 2012
         [TESTS]
@@ -18,6 +19,9 @@ Revision history for Acme-MetaSyntactic
         - extract() for MultiList lists that have remote lists
           can now behave differently for each category (the category
           is passed as a parameter)
+        [DOCUMENTATION]
+        - add links to meta(1) from Acme::MetaSyntactic's documentation
+          (fixes RT #77060)
         [THEME UPDATES]
         - new contributor added to contributors theme
 
