@@ -1,5 +1,9 @@
 Revision history for Acme-MetaSyntactic
 
+1.004 Thu June 28 2012
+        [ENHANCEMENTS]
+        - add support for POST request in Acme::MetaSyntactic::RemoteList
+
 1.003 Tue Jun 12 2012
         [ENHANCEMENTS]
         - Acme::MetaSyntactic::List now automatically removes duplicate
