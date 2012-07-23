@@ -18,9 +18,10 @@ my $max = $count >= 6 ? 5 : $count - 1;
 @themes = @themes[ 0 .. $max ];
 
 # the test list is computed now because of cache issues
-my @tests
-    = map { [ ( sort $meta->name( $themes[$_] => 0 ) )[ 0 .. $_ + 1 ] ] }
-    0 .. $max;
+my @tests = map {
+    my @items = sort $meta->name( $themes[$_] => 0 );
+    [ ( (@items) x ( 1 + int( ( $_ + 1 ) / @items ) ) )[ 0 .. $_ + 1 ] ];
+} 0 .. $max;
 
 plan tests => scalar @tests;
 
