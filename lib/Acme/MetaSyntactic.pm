@@ -279,7 +279,7 @@ exports all the convenience functions (C<metaI<theme>()>) needed.
 Note that this method can only create themes that implement the
 C<Acme::MetaSyntactic::List> behaviour.
 
-=item load_data( $class )
+=item load_data( $data )
 
 This method is used by the "behaviour" classes (such as
 C<Acme::MetaSyntactic::List>) to read the content of the C<DATA>
@@ -311,6 +311,11 @@ is trimmed, newlines and duplicate whitespace characters are squashed):
 
 For example, C<Acme::MetaSyntactic::List> uses the single parameter C<names>
 to fetch the lists of names for creating its subclasses.
+
+The C<init()> method in all "behaviour" classes will also accept an optional
+C<$data> hashref and if it provided, will use it instead of reading the
+C<__DATA__> section of the module. The actual structure of the hashref
+depends on the C<Acme::MetaSyntactic::> class.
 
 =back
 
