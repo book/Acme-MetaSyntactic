@@ -42,5 +42,5 @@ zlonk powie
    et en
 français
 # now test/the/slash too
-zamm crr_aaack whamm clank boff
+zamm crr_aaack whamm clank boff # end-of-line comment: will be removed
 

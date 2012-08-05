@@ -120,6 +120,7 @@ sub load_data {
                 $item = \( $last->{ $keys[-1] } = "" );
                 next;
             };
+            s/#.*//;    # remove end-of-line comments
             $$item .= $_;
         }
     }
@@ -290,7 +291,7 @@ following data:
 
     # names
     bam zowie plonk
-    powie kapow
+    powie kapow # comment
     # multi level
       abc    def
     # empty
@@ -298,7 +299,8 @@ following data:
     fr de
 
 C<load_data()> will return the following data structure (the string
-is trimmed, newlines and duplicate whitespace characters are squashed):
+is trimmed, newlines and duplicate whitespace characters are squashed,
+and end-of-line comments are removed):
 
     {
         names => "bam zowie plonk powie kapow",
