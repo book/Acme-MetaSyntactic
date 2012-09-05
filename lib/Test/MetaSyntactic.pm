@@ -328,7 +328,8 @@ sub subtest_remote {
 
     # find out if we're in one of the many cases for skipping
     my $why
-        = !$ENV{AUTHOR_TESTING}   ? 'Remote list test is AUTHOR_TESTING'
+        = !$ENV{RELEASE_TESTING}
+        && !$ENV{AUTHOR_TESTING}  ? 'Remote list test is RELEASE_TESTING'
         : $ENV{AUTOMATED_TESTING} ? "Remote list test isn't AUTOMATED_TESTING"
         : !$class->has_remotelist ? "Theme $theme does not have a remote list"
         : !$has_lwp               ? 'Remote list test needs LWP::UserAgent'
@@ -464,7 +465,8 @@ Checks that the C<theme()> function returns the theme name.
 For themes with a remote list, checks that the remote list (if any)
 is identical to the current list of items in the theme.
 
-This subtest will only be run if C<AUTHOR_TESTING> is true and
+This subtest will only be run if C<RELEASE_TESTING>
+(or C<AUTHOR_TESTING>, for backward compatibility reasons) is true and
 C<AUTOMATED_TESTING> is false. Requires L<LWP::UserAgent>.
 
 =head1 AUTHOR
