@@ -9,7 +9,7 @@ Revision history for Acme-MetaSyntactic
         [TESTS]
         - fix t/31any.t to work with themes having very few items
 
-1.004 Thu June 28 2012
+1.004 Thu Jun 28 2012
         [ENHANCEMENTS]
         - add support for POST request in Acme::MetaSyntactic::RemoteList
 
