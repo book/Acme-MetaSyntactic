@@ -1,5 +1,10 @@
 Revision history for Acme-MetaSyntactic
 
+1.007 Mon Oct  8 2012
+        [ENHANCEMENTS]
+        - Test::MetaSyntactic now supports RELEASE_TESTING
+          (and keeps supporting AUTHOR_TESTING for backwards compatibility)
+
 1.006 Sun Aug 26 2012
         [ENHANCEMENTS]
         - add support for end-of-line comments in the __DATA__ section
