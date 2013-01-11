@@ -125,6 +125,9 @@ sub load_data {
         }
     }
 
+    # avoid leaving all the DATA handles open
+    close $fh;
+
     # clean up the items
     for( @items, $item ) {
         $$_ =~ s/\A\s*//;
