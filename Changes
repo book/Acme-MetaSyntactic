@@ -1,5 +1,12 @@
 Revision history for Acme-MetaSyntactic
 
+1.008 Sun Jan 13 2013
+        [ENHANCEMENTS]
+        - the load_data() method now closes the DATA filehandle when done.
+          Many themes use __DATA__ to store their names, which could cause
+          problems ("Too many open files"), when loading a lot of themes.
+          (see http://www.cpantesters.org/cpan/report/25449004)
+
 1.007 Mon Oct  8 2012
         [ENHANCEMENTS]
         - Test::MetaSyntactic now supports RELEASE_TESTING
