@@ -274,9 +274,12 @@ sub subtest_length {
     for my $t (@metas) {
         my ( $ams, $theme ) = @$t;
         my @items = $ams->name(0);
+
+        # no empty names
         my @failed;
         my $ok = 0;
-        ( length($_) <= 251 && ++$ok ) || push @failed, $_ for @items;
+        ( length($_) >= 1 && length($_) <= 251 && ++$ok ) || push @failed, $_
+            for @items;
         $tb->is_num( $ok, scalar @items, "All names correct for $theme" );
         $tb->diag("Names too long: @failed") if @failed;
     }
