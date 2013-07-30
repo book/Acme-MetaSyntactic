@@ -269,11 +269,14 @@ sub subtest_length {
     my $tb = __PACKAGE__->builder;
 
     my @metas = _theme_sublists($theme);
-    $tb->plan( tests => scalar @metas );
+    $tb->plan( tests => 2 * @metas );
 
     for my $t (@metas) {
         my ( $ams, $theme ) = @$t;
+
+        # no empty themes
         my @items = $ams->name(0);
+        $tb->cmp_ok( 0 + @items, '>=', 1, "$theme has at least one item" );
 
         # no empty names
         my @failed;
