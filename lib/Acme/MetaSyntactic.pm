@@ -382,6 +382,9 @@ The list of available themes can be obtained with the following one-liner:
 The themes are all the C<Acme::MetaSyntactic::I<theme>> classes, with
 I<theme> starting with a lowercase letter.
 
+The items that make up Acme::MetaSyntactic themes are finite lists of
+valid Perl identifiers (not the UTF-8 kind).
+
 =head2 Theme behaviours
 
 C<Acme::MetaSyntactic> provides theme authors with the capability of creating
