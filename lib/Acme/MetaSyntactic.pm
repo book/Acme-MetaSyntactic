@@ -76,7 +76,7 @@ sub add_theme {
         my @badnames = grep { !/^[a-z_]\w*$/i } @{$themes{$theme}};
         croak "Invalid names (@badnames) for theme $theme"
           if @badnames;
-        
+
         my $code = << "EOC";
 package Acme::MetaSyntactic::$theme;
 use strict;
@@ -188,7 +188,7 @@ Acme::MetaSyntactic - Themed metasyntactic variables names
 
     # this sets the default theme and loads Acme::MetaSyntactic::shadok
     my $meta = Acme::MetaSyntactic->new( 'shadok' );
-    
+
     print $meta->name();          # return a single name
     my @names = $meta->name( 4 ); # return 4 distinct names (if possible)
 
@@ -422,7 +422,7 @@ as the original behaviour. The only difference is the theme name.
 
 =back
 
-Over time, new theme "behaviours" will be added. 
+Over time, new theme "behaviours" will be added.
 
 =head1 SEE ALSO
 
@@ -494,7 +494,7 @@ to do with C<Acme::MetaSyntactic>: an IRC bot! See L<Bot::MetaSyntactic>.
     #perlfr Sat Mar  5 01:15 CET 2005
     <Maddingue> BooK: bon, l'API de AMS, tu l'as changé alors ?
     <BooK> je sais pas
-    <Maddingue> comment on fait pour invoquer ton merder 
+    <Maddingue> comment on fait pour invoquer ton merder
     <BooK> ca se mélange dans ma tete
     <BooK> je peux te montrer des use case
     <Maddingue> je veux juste savoir si tu vas changer la commande meta
@@ -515,7 +515,7 @@ with silly names.
 Abigail,
 
 who provided by himself more than 35 themes (I stopped counting after that).
-I probably won't be able to include them all before version 1.00. 
+I probably won't be able to include them all before version 1.00.
 
 =back
 
