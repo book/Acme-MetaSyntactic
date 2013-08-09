@@ -388,8 +388,8 @@ C<Acme::MetaSyntactic> provides theme authors with the capability of creating
 theme "behaviours". Behaviours are implemented as classes from which the
 individual themes inherit.
 
-The themes are all the C<Acme::MetaSyntactic::I<theme>> classes, with
-I<theme> starting with an uppercase letter.
+The behaviours are all the C<Acme::MetaSyntactic::I<type>> classes, with
+I<type> starting with an uppercase letter.
 
 Here are the available behaviours:
 
