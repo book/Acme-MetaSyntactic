@@ -1,5 +1,11 @@
 Revision history for Acme-MetaSyntactic
 
+1.009 Mon Aug 12 2013
+        [ENHANCEMENTS]
+        - Test::MetaSyntactic now enforces stricter rules on themes:
+          a theme will fail if it is empty, or if it returns the empty
+          string as a name
+
 1.008 Sun Jan 13 2013
         [ENHANCEMENTS]
         - the load_data() method now closes the DATA filehandle when done.

@@ -7,7 +7,7 @@ use File::Basename;
 use File::Spec;
 use File::Glob;
 
-our $VERSION = '1.008';
+our $VERSION = '1.009';
 
 # some class data
 our $Theme = 'foo'; # default theme
@@ -524,7 +524,7 @@ I probably won't be able to include them all before version 1.00.
 
 =head1 COPYRIGHT
 
-Copyright 2005-2012 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2013 Philippe 'BooK' Bruhat, All Rights Reserved.
 
 =head1 LICENSE
 
