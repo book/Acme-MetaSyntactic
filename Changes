@@ -1,5 +1,9 @@
 Revision history for Acme-MetaSyntactic
 
+1.010 Mon Aug 12 2013
+        [ENHANCEMENTS]
+        - flip the executable bit on script/metafy
+
 1.009 Mon Aug 12 2013
         [ENHANCEMENTS]
         - Test::MetaSyntactic now enforces stricter rules on themes:
