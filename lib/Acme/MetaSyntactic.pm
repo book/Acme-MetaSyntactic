@@ -155,13 +155,15 @@ sub name {
     }
 
     if( ! exists $self->{meta}{$theme} ) {
-        if( ! $META{$theme} ) {
-            eval "require Acme::MetaSyntactic::$theme;";
-            croak "Metasyntactic list $theme does not exist!" if $@;
+        my ( $Theme, $category ) = split /\//, $theme, 2;
+        if( ! $META{$Theme} ) {
+            eval "require Acme::MetaSyntactic::$Theme;";
+            croak "Metasyntactic list $Theme does not exist!" if $@;
             $META{$theme} = 1; # loaded
         }
-        $self->{meta}{$theme} =
-          "Acme::MetaSyntactic::$theme"->new( %{ $self->{args} } );
+        $self->{meta}{$theme}
+            = "Acme::MetaSyntactic::$Theme"->new( %{ $self->{args} },
+            ( category => $category )x!! $category );
     }
 
     $self->{meta}{$theme}->name( $count );

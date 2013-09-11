@@ -7,7 +7,7 @@ my $dir;
 BEGIN { $dir = catdir qw( t lib ); }
 use lib $dir;
 
-plan tests => 10;
+plan tests => 11;
 
 LIST: {
     my $meta = Acme::MetaSyntactic->new('test_ams_list');
@@ -82,5 +82,9 @@ DEFAULT: {
         { John => 1, Paul => 1, George => 1, Ringo => 1 },
         "Got the whole list"
     );
+
+    @names = $meta->name( 'foo/fr' );
+    %seen = map { $_ => 0 } @{$Acme::MetaSyntactic::foo::MultiList{fr}};
+    ok( exists $seen{$names[0]}, "using name() with a category" );
 }
 
