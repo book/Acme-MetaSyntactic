@@ -1,5 +1,10 @@
 Revision history for Acme-MetaSyntactic
 
+1.011 Mon Sep 16 2013
+        [ENHANCEMENTS]
+        - the name() method now accepts a "$theme/$category" parameter,
+          instead of just "$theme"
+
 1.010 Mon Aug 12 2013
         [ENHANCEMENTS]
         - flip the executable bit on script/metafy
