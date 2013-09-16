@@ -45,8 +45,6 @@ t/lib/Acme/MetaSyntactic/test_ams_list.pm
 t/lib/Acme/MetaSyntactic/test_ams_locale.pm
 t/lib/Acme/MetaSyntactic/test_ams_remote.pm
 t/NoLang.pm
-t/pod-coverage.t
-t/pod.t
 t/remote
 t/remote1
 t/remote2
@@ -70,3 +68,5 @@ t/usecase_locale_fr3
 t/usecase_locale_fr4
 t/usecase_locale_fr5
 t/usecase_locale_fr6
+xt/pod-coverage.t
+xt/pod.t
