@@ -15,14 +15,14 @@ plan tests => 4 * ( @langs + 2 ) + 7;
 
 is_deeply(
     [ sort @langs ],
-    [qw( en fr it x-chiendent x-null yi )],
+    [qw( en fr it x-chiendent yi )],
     "All languages (class)"
 );
 
 @langs = Acme::MetaSyntactic::test_ams_locale->new()->languages();
 is_deeply(
     [ sort @langs ],
-    [qw( en fr it x-chiendent x-null yi )],
+    [qw( en fr it x-chiendent yi )],
     "All languages (instance)"
 );
 
@@ -31,7 +31,6 @@ for my $args ( [], map { [ lang => $_ ] } @langs, 'zz' ) {
     my $lang = $args->[1] || 'fr';
     my ( $one, $four ) = ( 1, 4 );
     $lang = 'fr' if $lang eq 'zz';    # check fallback to default
-    ( $one, $four ) = ( 0, 0 ) if $lang eq 'x-null';    # empty list
     my @digits = $meta->name;
     is( $meta->lang, $lang, "lang() is $lang" );
     is( @digits, $one, "Single item ($one $lang)" );
