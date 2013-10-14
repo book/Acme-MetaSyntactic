@@ -16,7 +16,5 @@ zero un deux trois quatre cinq six sept huit neuf
 zero uno due tre quattro cinque sei sette otto nove
 # names yi
 nul eyn tsvey dray fir finf zeks zibn akht nayn
-# names x-null
 # names x-chiendent
 nain deuil toit carte sein scie sexe huitre veuf disque
-
