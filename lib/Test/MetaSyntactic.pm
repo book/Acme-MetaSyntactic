@@ -2,11 +2,12 @@ package Test::MetaSyntactic;
 use strict;
 use warnings;
 use Acme::MetaSyntactic ();
+use Config ();
 
 use base 'Test::Builder::Module';
 
 our @EXPORT = qw( all_themes_ok theme_ok );
-our $VERSION = '1.004';
+our $VERSION = '1.005';
 
 #
 # exported functions
@@ -169,7 +170,7 @@ sub subtest_load {
     $tb->diag($error) if $error;
 
     # load in isolation
-    local $ENV{PERL5LIB} = join ':', @INC;
+    local $ENV{PERL5LIB} = join $Config::Config{path_sep} || ';', @INC;
     `$^X -MAcme::MetaSyntactic::$theme -e1`;
     $tb->is_eq( $? >> 8, 0, "perl -MAcme::MetaSyntactic::$theme -e1" );
 }
