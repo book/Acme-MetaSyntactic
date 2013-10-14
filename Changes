@@ -1,5 +1,14 @@
 Revision history for Acme-MetaSyntactic
 
+1.012 Mon Oct 14 2013
+        [ENHANCEMENTS]
+        - Test::MetaSyntactic now tries to load each theme in isolation
+        [TESTS]
+        - do not use blib in t/50usecase.t
+        - fix the t/usecase_list8 script to not trigger CPAN.pm
+          recursion detection (when loading pause_id)
+          (this should fix a long standing installation bug)
+
 1.011 Mon Sep 16 2013
         [ENHANCEMENTS]
         - the name() method now accepts a "$theme/$category" parameter,
