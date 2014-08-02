@@ -195,7 +195,7 @@ used AMS when writing tests for C<Sub::Identify>.
 
 I<C<Acme::MetaSyntactic> gave names for regression tests in the Perl core>
 
-See L<http://public.activestate.com/cgi-bin/perlbrowse?patch=26370>.
+See L<https://github.com/Perl/perl5/commit/adc51b978ed1b2e9d4512c9bfa80386ac917d05a>.
 
 =item *
 
