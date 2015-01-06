@@ -205,6 +205,26 @@ them at the snap of a finger!>
 
 -- Gisbert W. Selke
 
+=item *
+
+[...] I<with the help of Acme::MetaSyntatic I’ve been able to do some
+rudimentary code generation techniques that save me a lot of time without
+much outlay.>
+
+-- Mark Fowler
+
+L<http://blog.twoshortplanks.com/2010/07/03/holy_acceleration/>
+
+=item *
+
+I<When writing example applications, I almost always use variable
+names such as foo and bar. This gets boring, and it easily confuse the
+reader. Especially when I need to use more variables.>
+
+-- Gabor Szabo
+
+L<http://perlmaven.com/acme-metasyntactic>
+
 =back
 
 =head1 EXAMPLES OF USE
