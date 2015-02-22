@@ -6,7 +6,7 @@ Acme::MetaSyntactic::contributors - Acme::MetaSyntactic contributors
 
 =head1 DESCRIPTION
 
-The following people contributed to Acme::MetaSyntactic,
+The following people contributed to L<Acme::MetaSyntactic>,
 either by proposing theme ideas, updating existing themes,
 sending bug reports, running the test suite on their machine
 and sending me the report or sending complete lists of items
@@ -14,7 +14,9 @@ for new or existing themes. Thanks for all the work I didn't
 have to do!
 
 They are listed below in chronological order (of when I actually
-used their contributions):
+used their contributions), with the details of their contributions
+(to L<Acme::MetaSyntactic> up to version 0.99, and to
+L<Acme::MetaSyntactic::Themes> up to version 1.028 afterwards).
 
 =cut
 
@@ -22,7 +24,7 @@ package Acme::MetaSyntactic::contributors;
 use strict;
 use Acme::MetaSyntactic::List;
 our @ISA = qw( Acme::MetaSyntactic::List );
-our $VERSION = '1.001';
+our $VERSION = '1.002';
 
 {
     my %seen;
@@ -32,102 +34,104 @@ our $VERSION = '1.001';
                 map { s/_+/_/g; $_ }
                 map { Acme::MetaSyntactic::RemoteList::tr_nonword($_) }
                 map { Acme::MetaSyntactic::RemoteList::tr_accent($_) }
-                map { /^=item (.*)/ ? $1 : () }
+                map { /^=head2 (.*)/ ? $1 : () }
                 split /\n/ => <<'=cut'} );
 
 =pod
 
-=over 4
+=head2 Vahe Sarkissian
 
-=item Vahe Sarkissian
+Ideas: L<Acme::MetaSyntactic::donmartin>.
 
-=item David Landgren
+=head2 David Landgren
 
-=item Sébastien Aperghis-Tramoni
+Ideas:
 
-=item Mike Castle
+=head2 Sébastien Aperghis-Tramoni
 
-=item anonymous
+=head2 Mike Castle
 
-=item Scott Lanning
+=head2 anonymous
 
-=item Michel Rodriguez
+=head2 Scott Lanning
 
-=item Rafael Garcia-Suarez
+=head2 Michel Rodriguez
 
-=item Aldo Calpini
+=head2 Rafael Garcia-Suarez
 
-=item Jérôme Fenal
+=head2 Aldo Calpini
 
-=item Ricardo Signes
+=head2 Jérôme Fenal
 
-=item Hakim Cassimally
+=head2 Ricardo Signes
 
-=item Max Maischein
+=head2 Hakim Cassimally
 
-=item Offer Kaye
+=head2 Max Maischein
 
-=item Cédric Bouvier
+=head2 Offer Kaye
 
-=item Jean Forget
+=head2 Cédric Bouvier
 
-=item Guy Widloecher
+=head2 Jean Forget
 
-=item Xavier Caron
+=head2 Guy Widloecher
 
-=item Paul-Christophe Varoutas
+=head2 Xavier Caron
 
-=item Gábor Szabó
+=head2 Paul-Christophe Varoutas
 
-=item Mark Fowler
+=head2 Gábor Szabó
 
-=item Miss Barbie
+=head2 Mark Fowler
 
-=item Martin Vorländer
+=head2 Miss Barbie
 
-=item Alberto Manuel Brandão Simões
+=head2 Martin Vorländer
 
-=item Nicholas Clark
+=head2 Alberto Manuel Brandão Simões
 
-=item Gaal Yahas
+=head2 Nicholas Clark
 
-=item Estelle Souche
+=head2 Gaal Yahas
 
-=item Abigail
+=head2 Estelle Souche
 
-=item Antoine Hulin
+=head2 Abigail
 
-=item Michael Scherer
+=head2 Antoine Hulin
 
-=item Jan Pieter Cornet
+=head2 Michael Scherer
 
-=item Flavio Poletti
+=head2 Jan Pieter Cornet
 
-=item Leon Brocard
+=head2 Flavio Poletti
 
-=item Anja Krebber
+=head2 Leon Brocard
 
-=item Yanick Champoux
+=head2 Anja Krebber
 
-=item Gisbert W. Selke
+=head2 Yanick Champoux
 
-=item José Castro
+=head2 Gisbert W. Selke
 
-=item David Golden
+=head2 José Castro
 
-=item Matthew Musgrove
+=head2 David Golden
 
-=item David H. Adler
+=head2 Matthew Musgrove
 
-=item Éric Cholet
+=head2 David H. Adler
 
-=item Elliot Shank
+=head2 Éric Cholet
 
-=item Simon Myers
+=head2 Elliot Shank
 
-=item Olivier Mengué
+=head2 Simon Myers
 
-=back
+=head2 Olivier Mengué
+
+=head2 Éric Cassagnard
 
 =cut
 
@@ -145,7 +149,30 @@ Thank you all for making Acme::MetaSyntactic such a successful module!
 
 Philippe Bruhat.
 
-Introduced in Acme-MetaSyntactic version 1.000, published on May 7, 2012.
+=head1 CHANGES
+
+=over 4
+
+=item *
+
+2015-  -  - v1.002
+
+Listed everyone's contributions to L<Acme::Syntactic>.
+
+=item *
+
+2012-05-14 - v1.001
+
+Added Olivier Mengué as a contributor.
+Published in Acme-MetaSyntactic v1.001.
+
+=item *
+
+2012-05-07 - v1.000
+
+Introduced in Acme-MetaSyntactic version 1.000.
+
+=back
 
 =head1 SEE ALSO
 
