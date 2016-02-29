@@ -16,12 +16,15 @@ our $VERSION = '1.005';
 sub all_themes_ok {
     my (@lib) = @_;
     @lib = _starting_points() if !@lib;
-    my %source = Acme::MetaSyntactic->_find_themes( @lib );
+    my %source = Acme::MetaSyntactic->_find_themes(@lib);
 
     my $tb = __PACKAGE__->builder;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
     $tb->plan( tests => scalar keys %source );
-    theme_ok( $_, $source{$_} ) for sort keys %source;
+    my @fail;
+    theme_ok( $_, $source{$_} ) or push @fail, $_ for sort keys %source;
+    $tb->diag("Test suite failed for the following:") if @fail;
+    $tb->diag("- $_") for @fail;
 }
 
 sub theme_ok {
