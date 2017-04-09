@@ -1,5 +1,6 @@
 use Test::More;
-use t::NoLang;
+use lib 't/lib';
+use NoLang;
 use File::Spec::Functions;
 
 my $dir;

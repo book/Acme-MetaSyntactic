@@ -1,6 +1,7 @@
 use Test::More;
 use Acme::MetaSyntactic::any;
-use t::NoLang;
+use lib 't/lib';
+use NoLang;
 
 # "alter" the shuffle method
 {

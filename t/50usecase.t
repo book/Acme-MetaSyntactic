@@ -33,14 +33,14 @@ LOCALE: {
     my %items_fr = map { $_ => 1 } @{$Acme::MetaSyntactic::test_ams_locale::Locale{fr}};
 
     for (@locale_fr_cases) {
-        my $result = `$^X "-I$dir" -Mt::NoLang -Mstrict -w $_`;
+        my $result = `$^X "-I$dir" -MNoLang -Mstrict -w $_`;
         is( $? >> 8, 0, "$_ ran successfully" );
         ok( exists $items_fr{$result},
             "'$result' is an item from the test_ams_locale/fr theme" );
     }
 
     for (@locale_en_cases) {
-        my $result = `$^X "-I$dir" -Mt::NoLang -Mstrict -w $_`;
+        my $result = `$^X "-I$dir" -MNoLang -Mstrict -w $_`;
         is( $? >> 8, 0, "$_ ran successfully" );
         ok( exists $items_en{$result},
             "'$result' is an item from the test_ams_locale/en theme" );

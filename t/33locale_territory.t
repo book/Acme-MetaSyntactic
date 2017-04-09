@@ -1,6 +1,7 @@
 use Test::More;
 use strict;
-use t::NoLang;
+use lib 't/lib';
+use NoLang;
 use Acme::MetaSyntactic;
 
 my %tests = (

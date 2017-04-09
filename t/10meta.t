@@ -1,7 +1,8 @@
 use strict;
 use Test::More;
 use Acme::MetaSyntactic;
-use t::NoLang;
+use lib 't/lib';
+use NoLang;
 use File::Spec::Functions;
 my $dir;
 BEGIN { $dir = catdir qw( t lib ); }
