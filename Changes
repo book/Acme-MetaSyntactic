@@ -1,5 +1,7 @@
 Revision history for Acme-MetaSyntactic
 
+{{$NEXT}}
+
 1.012 Mon Oct 14 2013
     [ENHANCEMENTS]
     - Test::MetaSyntactic now tries to load each theme in isolation
