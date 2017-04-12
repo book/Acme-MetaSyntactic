@@ -524,7 +524,7 @@ I probably won't be able to include them all before version 1.00.
 
 =head1 COPYRIGHT
 
-Copyright 2005-2013 Philippe 'BooK' Bruhat, All Rights Reserved.
+Copyright 2005-2017 Philippe 'BooK' Bruhat, All Rights Reserved.
 
 =head1 LICENSE
 
