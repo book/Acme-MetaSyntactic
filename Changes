@@ -2,6 +2,20 @@ Revision history for Acme-MetaSyntactic
 
 {{$NEXT}}
 
+1.013 2017-04-17 BOOK
+    [ENHANCEMENTS]
+    - Test::MetaSyntactic now prints a summary of failed themes at the end of
+      the all_themes_ok test suite
+    [TESTS]
+    - ensure the test suite works when @INC does not contain '.'
+    [PACKAGING]
+    - switch to Dist::Zilla for maintaining the distribution
+    [DOCUMENTATION]
+    - add quotes and links for two blogs posts about Acme::MetaSyntactic
+    - update a link to the Perl source history (from Perforce to Git)
+    [THEME UPDATE]
+    - contributors
+
 1.012 2013-10-14 BOOK
     [ENHANCEMENTS]
     - Test::MetaSyntactic now tries to load each theme in isolation
