@@ -334,9 +334,9 @@ Philippe Bruhat.
 
 =item *
 
-2015-  -  - v1.002
+2017-04-17 - v1.002
 
-Listed everyone's contributions to L<Acme::Syntactic>.
+Listed everyone's contributions to L<Acme::Syntactic> themes.
 
 =item *
 
