@@ -134,7 +134,7 @@ L<Acme::MetaSyntactic::swords.pm>.
 
 =head2 Guy Widloecher
 
-L<Acme::MetaSyntactic::crypto.pm>
+L<Acme::MetaSyntactic::crypto.pm>.
 
 =head2 Xavier Caron
 
@@ -310,7 +310,7 @@ L<Acme::MetaSyntactic::phonetic.pm>.
 
 =head2 Éric Cassagnard
 
-L<Acme::MetaSyntactic::care_bears.pm>
+L<Acme::MetaSyntactic::care_bears.pm>.
 
 =cut
 
