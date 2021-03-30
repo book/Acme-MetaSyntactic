@@ -2,6 +2,10 @@ Revision history for Acme-MetaSyntactic
 
 {{$NEXT}}
 
+1.015 2021-03-30 BOOK
+    [ENHANCEMENT]
+    - add one transliteration for tr_utf8_basic
+
 1.014 2017-10-30 BOOK
     [ENHANCEMENTS]
     - Restore meta/metafy script installation (ILMARI)
